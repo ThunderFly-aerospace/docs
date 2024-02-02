@@ -8,12 +8,13 @@ nav_order: 1
 # Documentation website for ThunderFly products
 
 
-## ThunderFly apparatures
+## ThunderFly instruments
 
 
 
 ## ThunderFly avionics
 
+[Thunderfly avionics](https://en.wikipedia.org/wiki/Avionics) is comprehensive set of different devices to enhance parameters of UAVs
 
 ### TFRPM01
 Current revision: TFRPM01D
@@ -33,6 +34,7 @@ Current revision: TFHT01B
 ### TFI2CEXT01
 
 ### TFSBEC01
+
 
 ## Accessories
 
