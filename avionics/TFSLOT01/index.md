@@ -23,7 +23,7 @@ Inside the sensor, there are two sampling points connected to the differential p
 In addition to airspeed sensing, the sensor includes an integrated IMU unit that can also serve as an external magnetometer, because airspeed sensors are usually placed away from electromagnetic interference sources.
 
 
-## TFSLOT01 parameters
+## TFSLOT01 features
 - **High Resolution** at low airspeeds (below 10 m/s)
 - **Configurable Sensitivity** by modifying the airfoil profile
 - **Reduced Susceptibility to Clogging**, for instance, by mud or snow upon landing
