@@ -6,12 +6,14 @@ parent: Avionics
 nav_order: "0"
 ---
 
-# TFRPM01D - RPM Measuring Device
+# TFRPM01D - RPM Measuring Sensor
+
+<p align="center">
+  <img src="/avionics/TFRPM01/TFRPM01D.jpg" />
+</p>
 
 ## Overview
 The TFRPM01D is a device designed for measuring revolutions per minute (RPM) in UAVs. It connects directly to Pixhawk controllers like CUAV V5+ via a standard I²C connector and is compatible with PX4 firmware.
-
-![](/doc/img/TFRPM01D.jpg)
 
 ## Specifications
 
@@ -34,7 +36,9 @@ The TFRPM01D is a device designed for measuring revolutions per minute (RPM) in 
 - **Dimensions**: Case - 23.5x42x12.5mm, PCB - 37.5x19mm.
 - **Weather Resistance**: IP40.
 
-![](doc/img/TFRPM01D_pcb_bot.jpg)
+<p align="center">
+  <img src="/avionics/TFRPM01/TFRPM01D_pcb_bot.jpg" />
+</p>
 
 ## Usage
 
@@ -49,20 +53,20 @@ Follows the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Stan
 ### I²C Address Configuration
 Default address is 0x50, changeable to 0x51.
 
-![The default 0x50 address setup](/doc/img/JP1_address_0x50_config.png)
+![The default 0x50 address setup](/avionics/TFRPM01/JP1_address_0x50_config.png)
 
 ### Mounting Options
 Device can be mounted with or without a provided 3D-printed case.
 
-![TFRPM01 PCB dimensions](doc/img/TFRPM01_PCB_dimensions.png)
+![TFRPM01 PCB dimensions](avionics/TFRPM01/TFRPM01_PCB_dimensions.png)
 
 ### Sensor Probe Selection
 Compatible with multiple probe types, including Hall effect and optical probes.
 
-![TFRPM01B hall effect magnetic sensor](/doc/img/TFRPM01B_hall_sensor.jpg)
-![TFRPM01B hall effect magnetic sensor connection](/doc/img/TFRPM01B_hall_connection.jpg)
+![TFRPM01B hall effect magnetic sensor](/avionics/TFRPM01/TFRPM01B_hall_sensor.jpg)
+![TFRPM01B hall effect magnetic sensor connection](/avionics/TFRPM01/TFRPM01B_hall_connection.jpg)
 
 ## Software Configuration
 Supported by PX4 firmware. Setup instructions available on the [PX4 documentation](https://docs.px4.io/main/en/sensor/thunderfly_tachometer.html#software-setup).
 
-![TFRPM01 measuring rotor RPM during the flight](/doc/img/rpm_graph.png)
+![TFRPM01 measuring rotor RPM during the flight](/avionics/TFRPM01/rpm_graph.png)
