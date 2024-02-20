@@ -40,9 +40,8 @@ The TFRPM01D is a device designed for measuring revolutions per minute (RPM) in 
   <img src="/avionics/TFRPM01/TFRPM01D_pcb_bot.jpg" />
 </p>
 
-## Usage
 
-<a href="https://www.tindie.com/products/thunderfly/tfrpm01-drone-rpm-tachometer-sensor/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78" align="right"></a>
+<a href="https://www.tindie.com/products/thunderfly/tfrpm01-drone-rpm-tachometer-sensor/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="200" align="right"></a>
 ### Where to Get It?
 
 Available from [ThunderFly s.r.o.](https://www.thunderfly.cz/) or their [Tindie store](https://www.tindie.com/products/thunderfly/tfrpm01-drone-rpm-tachometer-sensor/).
