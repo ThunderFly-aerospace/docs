@@ -33,6 +33,12 @@ In addition to airspeed sensing, the sensor includes an integrated IMU unit that
 - **Open Design** making the design documentation accessible
 - **Integrated IMU Unit** for measuring vibrations, angle of attack, and more
 
+## Where to get TFSLOT01?
+
+<a href="https://www.tindie.com/products/thunderfly/tfslot01a-airspeed-sensor-with-integrated-imu/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78" align="right"></a>
+
+TFSLOT is available for purchase online through the [Tindie store](https://www.tindie.com/products/thunderfly/tfslot01a-airspeed-sensor-with-integrated-imu/). The package is packed and shipped by us, the ThunderFly team. If you need a larger quantity or custom modifications, please contact us [by email](https://www.thunderfly.cz/contact-us.html) for quotation.
+
 
 ## Support and Integration
 
