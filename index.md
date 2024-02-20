@@ -14,7 +14,7 @@ nav_order: 1
 
 ## ThunderFly avionics
 
-[Thunderfly avionics](https://en.wikipedia.org/wiki/Avionics) is comprehensive set of different devices to enhance parameters of UAVs
+[Thunderfly avionics](/avionics) is comprehensive set of different devices to enhance parameters of UAVs
 
 ### [TFRPM01](/avionics/TFRPM01)
 Current revision: TFRPM01D
