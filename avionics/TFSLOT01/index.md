@@ -1,0 +1,32 @@
+---
+layout: page
+title: "TFSLOT01: Modern airspeed sensor"
+permalink: /avionics/TFSLOT01
+parent: Avionics
+nav_order: "0"
+---
+
+TFSLOT is a state-of-the-art airspeed sensor designed specifically for use in Unmanned Aerial Vehicles (UAVs). Utilizing the principle of the [Venturi effect](https://en.wikipedia.org/wiki/Venturi_effect) with differential pressure sensor for accurate airspeed measurement, this device is also equipped with an integrated [Inertial Measurement Unit](https://en.wikipedia.org/wiki/Inertial_measurement_unit) (IMU). The unique design and features of TFSLOT01 solves common issues associated with Pitot tubes, offering a robust solution for aerial applications.
+
+## How It Works
+The TFSLOT01 sensor uses the Venturi effect to measure airspeed, allowing precise tracking of airspeed even at low speeds. In addition to airspeed measurement, the sensor includes an integrated IMU unit that can also serve as an external magnetometer, because airspeed sensors are usually placed away from electromagnetic interference sources.
+
+
+## TFSLOT01 parameters
+- **High Resolution** at low airspeeds (below 10 m/s)
+- **Configurable Sensitivity** by modifying the airfoil profile
+- **Reduced Susceptibility to Clogging**, for instance, by mud or snow upon landing
+- **Weatherproof**, it can be used in various conditions
+- **Direct Differential Pressure Sensor Integration** without the need for additional tubing
+- **Possibility of Direct Integration** into the drone's mechanical structure
+- **Open Design** making the design documentation accessible
+- **Integrated IMU Unit** for measuring vibrations, angle of attack, and more
+
+
+## Support and Integration
+
+### Drone avionics
+The TFSLOT01A sensor (PCB board [TFASPDIMU02A](https://github.com/ThunderFly-aerospace/TFASPDIMU02)) is currently supported by the PX4 autopilot, where it can be utilized both as an airspeed sensor and as an external IMU unit (external compass). Instructions for integrating the sensor with the PX4 autopilot can be found in the official [PX4 documentation](http://docs.px4.io/master/en/sensor/airspeed.html#airspeed-sensors). The sensor is also hardware-compatible with other autopilots, such as Ardupilot, but currently lacks the computation to convert differential pressure into airspeed.
+
+For other applications, the sensor can be easily connected to any computer with an I2C interface, such as RaspberryPi or a generic desktop with a USB to I2C converter (e.g., [USBI2C02A](https://www.mlab.cz/module/USBI2C01/), [shop it on tindie]()), and the differential pressure values or values from the IMU unit can be read, for example, by a Python script.
+
