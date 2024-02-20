@@ -61,3 +61,9 @@ The TFSLOT01A sensor (PCB board [TFASPDIMU02A](https://github.com/ThunderFly-aer
 
 For other applications, the sensor can be easily connected to any computer with an I2C interface, such as RaspberryPi or a generic desktop with a USB to I2C converter (e.g., [USBI2C02A](https://www.mlab.cz/module/USBI2C01/), [shop it on tindie]()), and the differential pressure values or values from the IMU unit can be read, for example, by a Python script.
 
+
+## FAQ
+
+## Is there a maximum altitude limit on the operation of the TFSLOT sensor?
+
+There is no hard limit of maximum altitude to operate the TFSLOT01A sensor. Although the sensitivity of the sensor decreases with decreasing air density. See the working principle description in the section above for a detailed explanation.
