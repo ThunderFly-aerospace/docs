@@ -17,16 +17,23 @@ TFSLOT is a state-of-the-art airspeed sensor designed specifically for use in Un
 ## How It Works
 The TFSLOT01 sensor uses the Venturi effect to measure airspeed, allowing precise tracking of airspeed even at low speeds.
 
-Air at a certain airspeed enters through an opening between two precisely defined airfoil profiles. As the depth within the sensor increases, the effective cross-section area decreases. Since the same volume of air must pass through a smaller cross-section, the flow velocity inside the sensor increases. As a result, based on the law of conservation of energy, the pressure decreases.
-
-Inside the sensor, there are two sampling points connected to the differential pressure sensor by a small channel. The measured pressure difference is then recalculated into the airspeed at the sensor's inlet.
 
 <p align="center">
   <img src="/avionics/TFSLOT01/tfslot_crossection.svg" />
 </p>
 
 
+Air at a certain airspeed enters through an opening between two precisely defined airfoil profiles. As the depth within the sensor increases, the effective cross-section area decreases. Since the same volume of air must pass through a smaller cross-section, the flow velocity inside the sensor increases. As a result, based on the law of conservation of energy, the pressure decreases.
+
+Inside the sensor, there are two sampling points connected to the differential pressure sensor by a small channel. The measured pressure difference is then recalculated into the airspeed at the sensor's inlet.
+
+
 In addition to airspeed sensing, the sensor includes an integrated IMU unit that can also serve as an external magnetometer, because airspeed sensors are usually placed away from electromagnetic interference sources.
+
+
+<p align="center">
+  <img src="/avionics/TFSLOT01/TFSLOT_4_small.jpg" />
+</p>
 
 
 ## TFSLOT01 features
@@ -45,10 +52,6 @@ In addition to airspeed sensing, the sensor includes an integrated IMU unit that
 
 TFSLOT is available for purchase online through the [Tindie store](https://www.tindie.com/products/thunderfly/tfslot01a-airspeed-sensor-with-integrated-imu/). The package is packed and shipped by us, the ThunderFly team. If you need a larger quantity or custom modifications, please contact us [by email](https://www.thunderfly.cz/contact-us.html) for quotation.
 
-
-<p align="center">
-  <img src="/avionics/TFSLOT01/TFSLOT_4_small.jpg" />
-</p>
 
 ## Support and Integration
 
