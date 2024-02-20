@@ -14,6 +14,17 @@ TFSLOT is a state-of-the-art airspeed sensor designed specifically for use in Un
 </p>
 
 
+## TFSLOT01 features
+- **High Resolution** at low airspeeds (below 10 m/s)
+- **Configurable Sensitivity** by modifying the airfoil profile
+- **Reduced Susceptibility to Clogging**, for instance, by mud or snow upon landing
+- **Weatherproof**, it can be used in various conditions
+- **Direct Differential Pressure Sensor Integration** without the need for additional tubing
+- **Possibility of Direct Integration** into the drone's mechanical structure
+- **Open Design** making the design documentation accessible
+- **Integrated IMU Unit** for measuring vibrations, angle of attack, and more
+
+
 ## How It Works
 The TFSLOT01 sensor uses the Venturi effect to measure airspeed, allowing precise tracking of airspeed even at low speeds.
 
@@ -37,15 +48,8 @@ In addition to airspeed sensing, the sensor includes an integrated IMU unit that
 </p>
 
 
-## TFSLOT01 features
-- **High Resolution** at low airspeeds (below 10 m/s)
-- **Configurable Sensitivity** by modifying the airfoil profile
-- **Reduced Susceptibility to Clogging**, for instance, by mud or snow upon landing
-- **Weatherproof**, it can be used in various conditions
-- **Direct Differential Pressure Sensor Integration** without the need for additional tubing
-- **Possibility of Direct Integration** into the drone's mechanical structure
-- **Open Design** making the design documentation accessible
-- **Integrated IMU Unit** for measuring vibrations, angle of attack, and more
+## TFSLOT parameters
+
 
 ## Where to get TFSLOT01?
 
