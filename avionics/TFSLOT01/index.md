@@ -9,7 +9,16 @@ nav_order: "0"
 TFSLOT is a state-of-the-art airspeed sensor designed specifically for use in Unmanned Aerial Vehicles (UAVs). Utilizing the principle of the [Venturi effect](https://en.wikipedia.org/wiki/Venturi_effect) with differential pressure sensor for accurate airspeed measurement, this device is also equipped with an integrated [Inertial Measurement Unit](https://en.wikipedia.org/wiki/Inertial_measurement_unit) (IMU). The unique design and features of TFSLOT01 solves common issues associated with Pitot tubes, offering a robust solution for aerial applications.
 
 ## How It Works
-The TFSLOT01 sensor uses the Venturi effect to measure airspeed, allowing precise tracking of airspeed even at low speeds. In addition to airspeed measurement, the sensor includes an integrated IMU unit that can also serve as an external magnetometer, because airspeed sensors are usually placed away from electromagnetic interference sources.
+The TFSLOT01 sensor uses the Venturi effect to measure airspeed, allowing precise tracking of airspeed even at low speeds.
+
+Air at a certain airspeed enters through an opening between two precisely defined airfoil profiles. As the depth within the sensor increases, the effective cross-section area decreases. Since the same volume of air must pass through a smaller cross-section, the flow velocity inside the sensor increases. As a result, based on the law of conservation of energy, the pressure decreases.
+
+Inside the sensor, there are two sampling points connected to the differential pressure sensor by a small channel. The measured pressure difference is then recalculated into the airspeed at the sensor's inlet.
+
+![](tfslot_crossection.svg)
+
+
+In addition to airspeed sensing, the sensor includes an integrated IMU unit that can also serve as an external magnetometer, because airspeed sensors are usually placed away from electromagnetic interference sources.
 
 
 ## TFSLOT01 parameters
