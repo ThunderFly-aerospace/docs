@@ -25,7 +25,8 @@ The TFSLOT01 sensor uses the Venturi effect to measure airspeed, allowing precis
 
 Air at a certain airspeed enters through an opening between two precisely defined airfoil profiles. As the depth within the sensor increases, the effective cross-section area decreases. Since the same volume of air must pass through a smaller cross-section, the flow velocity inside the sensor increases. As a result, based on the law of conservation of energy, the pressure decreases.
 
-Inside the sensor, there are two sampling points connected to the differential pressure sensor by a small channel. The measured pressure difference is then recalculated into the airspeed at the sensor's inlet.
+Inside the sensor, there are two sampling points connected to the differential pressure sensor by a small channel. The measured pressure difference is then recalculated into the airspeed at the sensor's inlet. The exact equation for calculating airspeed from differential pressure is described on 
+[TFSLOT01`s github](https://github.com/ThunderFly-aerospace/TFSLOT01?tab=readme-ov-file#working-principle).
 
 
 In addition to airspeed sensing, the sensor includes an integrated IMU unit that can also serve as an external magnetometer, because airspeed sensors are usually placed away from electromagnetic interference sources.
