@@ -25,7 +25,7 @@ TFSLOT is a state-of-the-art airspeed sensor designed specifically for use in Un
 - **Integrated IMU Unit** for measuring vibrations, angle of attack, and more
 
 
-## How It Works
+## How It Works?
 The TFSLOT01 sensor uses the Venturi effect to measure airspeed, allowing precise tracking of airspeed even at low speeds.
 
 
@@ -63,7 +63,7 @@ TFSLOT is available for purchase online through the [Tindie store](https://www.t
 ### Drone avionics
 The TFSLOT01A sensor (PCB board [TFASPDIMU02A](https://github.com/ThunderFly-aerospace/TFASPDIMU02)) is currently supported by the PX4 autopilot, where it can be utilized both as an airspeed sensor and as an external IMU unit (external compass). Instructions for integrating the sensor with the PX4 autopilot can be found in the official [PX4 documentation](http://docs.px4.io/master/en/sensor/airspeed.html#airspeed-sensors). The sensor is also hardware-compatible with other autopilots, such as Ardupilot, but currently lacks the computation to convert differential pressure into airspeed.
 
-For other applications, the sensor can be easily connected to any computer with an I2C interface, such as RaspberryPi or a generic desktop with a USB to I2C converter (e.g., [USBI2C02A](https://www.mlab.cz/module/USBI2C01/), [shop it on tindie]()), and the differential pressure values or values from the IMU unit can be read, for example, by a Python script.
+For other applications, the sensor can be easily connected to any computer with an I2C interface, such as RaspberryPi or a generic desktop with a USB to I2C converter (e.g., [USBI2C02A](https://www.mlab.cz/module/USBI2C01/), [shop it on tindie](https://www.tindie.com/products/mlab-project/mlab-usbi2c01a-usb-to-smbusi2c-bridge/)), and the differential pressure values or values from the IMU unit can be read, for example, by a Python script.
 
 
 ## FAQ
