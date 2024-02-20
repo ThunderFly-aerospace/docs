@@ -6,6 +6,8 @@ parent: Avionics
 nav_order: "0"
 ---
 
+# TFSLOT: Modern airspeed sensor
+
 TFSLOT is a state-of-the-art airspeed sensor designed specifically for use in Unmanned Aerial Vehicles (UAVs). Utilizing the principle of the [Venturi effect](https://en.wikipedia.org/wiki/Venturi_effect) with differential pressure sensor for accurate airspeed measurement, this device is also equipped with an integrated [Inertial Measurement Unit](https://en.wikipedia.org/wiki/Inertial_measurement_unit) (IMU). The unique design and features of TFSLOT01 solves common issues associated with Pitot tubes, offering a robust solution for aerial applications.
 
 
