@@ -16,7 +16,7 @@ Air at a certain airspeed enters through an opening between two precisely define
 Inside the sensor, there are two sampling points connected to the differential pressure sensor by a small channel. The measured pressure difference is then recalculated into the airspeed at the sensor's inlet.
 
 <p align="center">
-  <img src="./tfslot_crossection.svg" />
+  <img src="/avionics/TFSLOT01/tfslot_crossection.svg" />
 </p>
 
 
