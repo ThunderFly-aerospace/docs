@@ -16,7 +16,7 @@ nav_order: 1
 
 [Thunderfly avionics](https://en.wikipedia.org/wiki/Avionics) is comprehensive set of different devices to enhance parameters of UAVs
 
-### TFRPM01
+### [TFRPM01](/avionics/TFRPM01)
 Current revision: TFRPM01D
 
 #### TFPROBE01
@@ -27,7 +27,8 @@ Current revision: TFHT01B
 ### TFGPS01
 
 
-### TFSLOT01
+### [TFSLOT01](/avionics/TFSLOT01)
+Current revision: TFSLOT01A
 
 ### TFI2CADT01
 
