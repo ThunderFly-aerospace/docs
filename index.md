@@ -1,5 +1,5 @@
 ---
-title: ThunderFly documentation page
+title: ThunderFly documentation
 layout: home
 nav_order: 1
 ---
