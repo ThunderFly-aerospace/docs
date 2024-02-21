@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "TFRPM01D: RPM sensor"
+title: "TFRPM01: RPM sensor"
 permalink: /avionics/TFRPM01
 parent: Avionics
 nav_order: "0"
@@ -13,7 +13,7 @@ nav_order: "0"
 </p>
 
 ## Overview
-The TFRPM01D is a device designed for measuring revolutions per minute (RPM) in UAVs. It connects directly to Pixhawk controllers like CUAV V5+ via a standard I²C connector and is compatible with PX4 firmware.
+The TFRPM is a device designed for measuring revolutions per minute (RPM) in UAVs. It connects directly to Pixhawk controllers like CUAV V5+ via a standard I²C connector and is compatible with PX4 firmware.
 
 ## Specifications
 
