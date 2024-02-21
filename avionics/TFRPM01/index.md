@@ -44,7 +44,7 @@ The TFRPM is a device designed for measuring revolutions per minute (RPM) in UAV
 <a href="https://www.tindie.com/products/thunderfly/tfrpm01-drone-rpm-tachometer-sensor/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="200" align="right"></a>
 ### Where to Get It?
 
-Available from [ThunderFly s.r.o.](https://www.thunderfly.cz/) or their [Tindie store](https://www.tindie.com/products/thunderfly/tfrpm01-drone-rpm-tachometer-sensor/).
+TFRPM can be bought directly from us via our contact [email](https://www.thunderfly.cz/contact-us.html). The email can also be used if there are specific requirements for custom modifications or if the product will be inquired in large quantities. TFRPM is also available for online purchase through the [Tindie store](https://www.tindie.com/products/thunderfly/tfrpm01-drone-rpm-tachometer-sensor/).
 
 ### Connection to Pixhawk Autopilot
 Follows the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) with specific color coding.
