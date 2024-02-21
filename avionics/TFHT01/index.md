@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "TFHT01 - UAV Humidity and Temperature Sensor"
-permalink: /avionics/TFHT01000
+permalink: /avionics/TFHT01/
 parent: Avionics
-nav_order: "0"
+nav_order: "20"
 ---
 
 # TFHT01 - UAV Humidity and Temperature Sensor
