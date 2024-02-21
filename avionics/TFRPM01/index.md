@@ -6,7 +6,7 @@ parent: Avionics
 nav_order: "0"
 ---
 
-# TFRPM01D - RPM Measuring Sensor
+# TFRPM01 - RPM Measuring Sensor
 
 <p align="center">
   <img src="/avionics/TFRPM01/TFRPM01D.jpg" />
