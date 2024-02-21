@@ -7,40 +7,37 @@ nav_order: 1
 
 # Documentation website for ThunderFly products
 
+At [ThunderFly s.r.o.](https://www.thunderfly.cz/), we're dedicated to advancing UAV technology with our innovative product lines. Our solutions are designed to enhance the capabilities of UAVs through precise measurement tools and specialized avionics devices. Explore our offerings to find the perfect fit for your technical needs.
 
 ## ThunderFly instruments
 
+Our state-of-the-art measurement solutions are at the forefront of UAV technology. These tools are essential for high-level tasks such as atmospheric measurements, offering unparalleled accuracy and reliability. Our comprehensive solutions include:
 
+- **Measuring Devices Carriers**: Our autogyro carriers (TF-G1 and TF-G2) are engineered for stability in adverse weather conditions.
+- **TF-ATMON Toolchain**: Transform data into actionable insights with our advanced processing software, tailored for atmospheric analysis.
+- **Sensors**: High-sensitivity sensors designed for accurate atmospheric data collection under diverse conditions. Customizable to fit various UAV models.
+- **Software Simulator**: Prepare for your measuring campaigns with our realistic software simulator, ensuring your mission's success.
+
+Whether you're conducting research or commercial operations, our instruments provide the reliability and precision you need.
 
 ## ThunderFly avionics
 
-[Thunderfly avionics](/avionics) is comprehensive set of different devices to enhance parameters of UAVs
+Elevate your UAV's performance with our [avionics line](/avionics), featuring small, powerful hardware devices. These gadgets are designed to tackle specific technical tasks, from airspeed and temperature measurement to telemetry interconnection. Highlights include:
 
-### [TFRPM01](/avionics/TFRPM01)
-Current revision: TFRPM01D
+- **On-board instruments**: Capture precise RPM or airspeed data to optimize UAV performance and safety.
+- **Environmental Sensors**: Monitor dust, atmospheric pollution, or operational temperatures and humidity with high accuracy.
+- **Telemetry Interconnection Solutions**: Ensure seamless communication between UAVs and ground stations with our robust interconnection devices.
 
-#### TFPROBE01
+Our avionics devices are versatile, catering to a wide range of engineering challenges in the UAV industry.
 
-### TFHT01
-Current revision: TFHT01B
+## Why Choose Us?
 
-### TFGPS01
+- **Innovation**: At the core of our products is a commitment to innovation, pushing the boundaries of what UAVs can achieve.
+- **Quality**: We prioritize reliability and precision, using only the highest quality materials and stringent testing procedures.
+- **Support**: Our team is here to support you from selection through implementation, ensuring you get the most out of our products.
 
+## Get in Touch
 
-### [TFSLOT01](/avionics/TFSLOT01)
-Current revision: TFSLOT01A
+Ready to elevate your UAV capabilities with ThunderFly? Contact us at sale@thunderfly.cz or visit our [website](https://www.thunderfly.cz/contact-us.html) for more information.
 
-### TFI2CADT01
-
-### TFI2CEXT01
-
-### TFSBEC01
-
-
-## Accessories
-
-### I2C Cables 
-
-### CAN Cables
-
-### UART/Serial cables
+Thank you for considering ThunderFly for your UAV technology needs. We look forward to partnering with you!
