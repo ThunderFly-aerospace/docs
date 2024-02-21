@@ -57,7 +57,7 @@ In addition to airspeed sensing, the sensor includes an integrated IMU unit that
 
 <a href="https://www.tindie.com/products/thunderfly/tfslot01a-airspeed-sensor-with-integrated-imu/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78" align="right"></a>
 
-TFSLOT is available for purchase online through the [Tindie store](https://www.tindie.com/products/thunderfly/tfslot01a-airspeed-sensor-with-integrated-imu/). The package is packed and shipped by us, the ThunderFly team. If you need a larger quantity or custom modifications, please contact us [by email](https://www.thunderfly.cz/contact-us.html) for quotation.
+TFSLOT can be bought directly from us via our contact [email](https://www.thunderfly.cz/contact-us.html). The email can also be used if there are specific requirements for custom modifications or if the product will be inquired in large quantities. TFSLOT is also available for online purchase through the [Tindie store](https://www.tindie.com/products/thunderfly/tfslot01a-airspeed-sensor-with-integrated-imu/).
 
 
 ## Support and Integration
