@@ -4,9 +4,8 @@ title: Avionics
 alt_text: Avionits
 permalink: /avionics/
 has_children: true
+has_toc: false
 ---
-
-{: .no_toc }
 
 ### [TFRPM01](/avionics/TFRPM01)
 Current revision: TFRPM01D
