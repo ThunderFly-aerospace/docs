@@ -11,6 +11,8 @@ At [ThunderFly s.r.o.](https://www.thunderfly.cz/), we're dedicated to advancing
 
 ## ThunderFly instruments
 
+![UAV autogyro during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_fly_clouds.jpg)
+
 Our state-of-the-art measurement solutions are at the forefront of UAV technology. These tools are essential for high-level tasks such as atmospheric measurements, offering unparalleled accuracy and reliability. Our comprehensive solutions include:
 
 - **Measuring Devices Carriers**: Our autogyro carriers (TF-G1 and [TF-G2](/instruments/TF-G2)) are engineered for stability in adverse weather conditions.
@@ -27,6 +29,8 @@ Elevate your UAV's performance with our [avionics line](/avionics), featuring sm
 - **On-board instruments**: Capture precise [RPM](/avionics/TFRPM01) or [airspeed](/avionics/TFSLOT01) data to optimize UAV performance and safety.
 - **Environmental Sensors**: Monitor dust, atmospheric pollution, or operational temperatures and humidity with high accuracy.
 - **Telemetry Interconnection Solutions**: Ensure seamless communication between UAVs and ground stations with our robust interconnection devices.
+
+![UAV avionic component](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSLOT01/TFSLOT01A/doc/img/TFSLOT_1_small.jpg)
 
 Our avionics devices are versatile, catering to a wide range of engineering challenges in the UAV industry.
 
