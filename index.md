@@ -17,7 +17,6 @@ Our state-of-the-art measurement solutions are at the forefront of UAV technolog
 
 - **Measuring Devices Carriers**: Our autogyro carriers (TF-G1 and [TF-G2](/instruments/TF-G2)) are engineered for stability in adverse weather conditions.
 - **TF-ATMON Toolchain**: Transform data into actionable insights with our advanced processing software, tailored for atmospheric analysis.
-- **Sensors**: High-sensitivity sensors designed for accurate atmospheric data collection under diverse conditions. Customizable to fit various UAV models.
 - **Software Simulator**: Prepare for your measuring campaigns with our realistic software simulator, ensuring your mission's success.
 
 Whether you're conducting research or commercial operations, our instruments provide the reliability and precision you need.
@@ -27,7 +26,7 @@ Whether you're conducting research or commercial operations, our instruments pro
 Elevate your UAV's performance with our [avionics line](/avionics), featuring small, powerful hardware devices. These gadgets are designed to tackle specific technical tasks, from airspeed and temperature measurement to telemetry interconnection. Highlights include:
 
 - **On-board instruments**: Capture precise [RPM](/avionics/TFRPM01) or [airspeed](/avionics/TFSLOT01) data to optimize UAV performance and safety.
-- **Environmental Sensors**: Monitor dust, atmospheric pollution, or operational temperatures and humidity with high accuracy.
+- **Environmental Sensors**: Monitor dust, atmospheric pollution, or operational temperatures and humidity with high-accuracy sensors designed for accurate atmospheric data collection under diverse conditions. Customizable to fit various UAV models.
 - **Telemetry Interconnection Solutions**: Ensure seamless communication between UAVs and ground stations with our robust interconnection devices.
 
 ![UAV avionic component](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSLOT01/TFSLOT01A/doc/img/TFSLOT_1_small.jpg)
