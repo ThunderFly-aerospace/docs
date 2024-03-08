@@ -18,7 +18,7 @@ nav_order: "10"
   * Reduced tendency for clogging due to the absence of a stagnation point.
   * Directly integrated differential pressure sensor, eliminating the need for additional tubing.
   * Customizable 3D-printed case to fit specific applications.
-  * Integrated IMU to vibration diagnostics on AoA measurement. 
+  * Integrated IMU to vibration diagnostics on AoA measurement.
 
 TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/thunderfly/tfslot01a-drone-indicated-airspeed-sensor/).
 
@@ -36,7 +36,7 @@ TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly
 | Dimensions | 35x40x35mm | Default 3D printed Case |
 | Weather resistance | [IP42](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
 
-The TFSLOT uses the [TFASPDIMU02 electronics](https://github.com/ThunderFly-aerospace/TFASPDIMU02) which has many more options for how can be used, please look at its documentation for more details and parameters. 
+The TFSLOT uses the [TFASPDIMU02 electronics](https://github.com/ThunderFly-aerospace/TFASPDIMU02) which has many more options for how can be used, please look at its documentation for more details and parameters.
 
 ## Connection to the Pixhawk-based autopilots
 
@@ -65,6 +65,8 @@ These special cable conductors' winding method greatly improves the signal integ
 
 The sensor uses the [Venturi Effect](https://en.wikipedia.org/wiki/Venturi_effect#Instrumentation_and_measurement) to measure fly velocity in the air.
 
+![TFSLOT01 cross section](/docs/avionics/TFSLOT01/tfslot_crossection.svg)
+
 The velocity and pressure of the fluid are required to meet [Bernoulli's principle](https://en.wikipedia.org/wiki/Bernoulli%27s_principle)
 
 ![The first assumption](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\frac{1}{2}\rho{v_\infty}^{2}&plus;p_\infty=\frac{1}{2}\rho{v}^{2}&plus;p)
@@ -83,7 +85,7 @@ Therefore equations for pressure difference and airspeed velocity could be deriv
 
 <!-- source: \Delta p=\frac{1}{2}\rho{v_\infty}^{2}\left[\left(\frac{v}{v_\infty}\right)^2-1\right]\Rightarrow  v_\infty=\sqrt{\frac{2\Delta p}{\rho\left[\left(\frac{A_D}{A_d}\right)^2-1\right]}} -->
 
-Where 
+Where
 
 | Symbol  | Explanation  |
 |--------|------------------|
@@ -103,7 +105,7 @@ The design has the following advantages compared to a pitot probe:
   * Less tendency to clogging (due to the absence of stagnation point)
   * Direct differential pressure sensor integration without any additional tubing
 
-The improved resolution on low airspeeds is the principal difference from the pitot-static tube. This could be explained by comparing it with the classical equation for pitot-static tube: 
+The improved resolution on low airspeeds is the principal difference from the pitot-static tube. This could be explained by comparing it with the classical equation for pitot-static tube:
 
 ![Pitot-static tube airspeed equation](https://latex.codecogs.com/png.image?\large&space;\dpi{110}v_\infty=\sqrt{\frac{2\Delta&space;p}{\rho}})
 
@@ -111,15 +113,15 @@ The equation for TFSLOT venturi-based sensor (see equations above) differs from 
 
 ![TFSLOT sensitivity factor](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\left(\frac{A_D}{A_d}\right)^2-1)
 
-That means the TFSLOT sensor is more sensitive (e.g. has a higher measurable pressure difference at the same airspeed) than the pitot-static tube (at the same air density) in every configuration where 
+That means the TFSLOT sensor is more sensitive (e.g. has a higher measurable pressure difference at the same airspeed) than the pitot-static tube (at the same air density) in every configuration where
 
 ![TFSLOT sensitivity compared to pitot](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\frac{A_D}{A_d}>\sqrt{2})
 
-The advantage of the higher sensitivity results in increased drag, but it could be negligible at low airspeeds. The best use case of the sensor is the integration of the sensing device into the relatively massive fuselage or other construction geometry. The user is supposed to find the best mounting option for the device or adapt the TFSLOT 3D printed case to fit the specific application. From that perspective, the TFSLOT01 is a fully functional development kit that can cover specific user needs. 
+The advantage of the higher sensitivity results in increased drag, but it could be negligible at low airspeeds. The best use case of the sensor is the integration of the sensing device into the relatively massive fuselage or other construction geometry. The user is supposed to find the best mounting option for the device or adapt the TFSLOT 3D printed case to fit the specific application. From that perspective, the TFSLOT01 is a fully functional development kit that can cover specific user needs.
 
-# Usage 
+# Usage
 
-TFSLOT is equipped with [TFASPDIMU](https://github.com/ThunderFly-aerospace/TFASPDIMU02) electronics, which contains the required differential pressure sensor and an IMU unit through which the pressure sensor is connected. To activate I2C access to it, it is necessary to set the pass-through mode in the IMU unit. The [TFASPDIMU02](https://github.com/ThunderFly-aerospace/TFASPDIMU02) has many options for how can be used, please look at its documentation for more details. 
+TFSLOT is equipped with [TFASPDIMU](https://github.com/ThunderFly-aerospace/TFASPDIMU02) electronics, which contains the required differential pressure sensor and an IMU unit through which the pressure sensor is connected. To activate I2C access to it, it is necessary to set the pass-through mode in the IMU unit. The [TFASPDIMU02](https://github.com/ThunderFly-aerospace/TFASPDIMU02) has many options for how can be used, please look at its documentation for more details.
 
 ## PX4 autopilot
 
@@ -130,30 +132,30 @@ icm20948_i2c_passthrough start -X -b 2 -a 0x68
 sdp3x start -X
 ```
 
-The script assumes a connection to port _I2C 2_. This was set by the `-b` parameter in both commands. The correct bus has to be set by the user. 
+The script assumes a connection to port _I2C 2_. This was set by the `-b` parameter in both commands. The correct bus has to be set by the user.
 
-> The model for converting to the airspeed from an air pressure is not yet in the stable version of the PX4 autopilot source code. Therefore the master upstream needs to be used with the sensor. 
+> The model for converting to the airspeed from an air pressure is not yet in the stable version of the PX4 autopilot source code. Therefore the master upstream needs to be used with the sensor.
 
 Sensor requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. The GitHub [pull-request](https://github.com/PX4/PX4-Autopilot/pull/18593) into the PX4 master is currently open to solve this issue. The airspeed recalculation model should be included in the next stable release. Alternatively, you can temporarily apply [this PR changes](https://github.com/PX4/PX4-Autopilot/compare/master...ThunderFly-Aerospace:tf/aspdimu) or [apply patch](https://patch-diff.githubusercontent.com/raw/PX4/PX4-Autopilot/pull/18593.patch).
 
 ### Configuration
 
-TFSLOT01 contains a specific aerodynamic profile. Therefore it requires a different converting model. This is done by setting the parameter `CAL_AIR_CMODEL` to 3 (Venturi effect-based airspeed sensor). Setting the wrong profile causes the measurement of negative airspeed values, which results in an `airspeed sensor failure` condition during the attempt to fly. 
+TFSLOT01 contains a specific aerodynamic profile. Therefore it requires a different converting model. This is done by setting the parameter `CAL_AIR_CMODEL` to 3 (Venturi effect-based airspeed sensor). Setting the wrong profile causes the measurement of negative airspeed values, which results in an `airspeed sensor failure` condition during the attempt to fly.
 
 ### PX4 Calibration process
 
 ![PXL_20220217_075317802](https://user-images.githubusercontent.com/5196729/154793903-b117aa99-cfa2-4d6b-bd6c-e1d15e969b36.jpg)
 
-The sensor itself is calibrated and the PX4 calibration process aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offsets. It is enough to calibrate (verify) the sensor once it is mounted into the UAV. And there is no need to do it before each flight (as with other types of airspeed sensors). 
+The sensor itself is calibrated and the PX4 calibration process aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offsets. It is enough to calibrate (verify) the sensor once it is mounted into the UAV. And there is no need to do it before each flight (as with other types of airspeed sensors).
 
 The procedure is performed with the help of a calibration tool in a few steps:
   1. Place the calibration tool in the TFSLOT inlet
-  1. Press the tool against the sensor (green arrow) with your hand or rubber band and hold it there during the whole process. 
+  1. Press the tool against the sensor (green arrow) with your hand or rubber band and hold it there during the whole process.
   1. Start the [callibration process](https://docs.px4.io/master/en/config/airspeed.html#performing-the-calibrationhttps://docs.px4.io/master/en/config/airspeed.html#performing-the-calibration) in PX4
       1. Wait for the measure of static offset (no blowing)
       1. PX4 will command you to blow into the airspeed sensor
-  1. Blow from the back of the sensor (blue arrow). If you blow too little, repeat the attempt. 
-  1. PX4 calibration should now be completed, confirmed by a beep, and in the QGC. 
+  1. Blow from the back of the sensor (blue arrow). If you blow too little, repeat the attempt.
+  1. PX4 calibration should now be completed, confirmed by a beep, and in the QGC.
 
 ![calibration procedure](https://user-images.githubusercontent.com/5196729/154794029-8daf515e-4c26-449b-a836-17f068259a1b.png)
 
