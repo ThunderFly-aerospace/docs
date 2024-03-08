@@ -4,9 +4,10 @@ title: Avionics
 alt_text: Avionits
 permalink: /avionics/
 has_children: true
-has_toc: false
+has_toc: true
 ---
 
+<!--
 ### [TFRPM01](/avionics/TFRPM01)
 Current revision: TFRPM01D
 
@@ -35,3 +36,4 @@ Current revision: TFSLOT01A
 ### CAN Cables
 
 ### UART/Serial cables
+-->
