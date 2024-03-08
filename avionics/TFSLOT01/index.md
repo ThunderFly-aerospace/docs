@@ -65,7 +65,7 @@ These special cable conductors' winding method greatly improves the signal integ
 
 The sensor uses the [Venturi Effect](https://en.wikipedia.org/wiki/Venturi_effect#Instrumentation_and_measurement) to measure fly velocity in the air.
 
-![TFSLOT01 cross section](/docs/avionics/TFSLOT01/tfslot_crossection.svg)
+![TFSLOT01 cross section](/avionics/TFSLOT01/tfslot_crossection.svg)
 
 The velocity and pressure of the fluid are required to meet [Bernoulli's principle](https://en.wikipedia.org/wiki/Bernoulli%27s_principle)
 
