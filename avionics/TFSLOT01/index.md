@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "TFSLOT01: Modern airspeed sensor"
+title: "TFSLOT01: Clogging-free airspeed sensor"
 permalink: /avionics/TFSLOT01/
 parent: Avionics
 nav_order: "10"
 ---
 
-# TFSLOT01A - Clog-free airspeed sensor for low-speed UAVs
+# TFSLOT01A - Clogging-free airspeed sensor for low-speed UAVs
 
 ![TFSLOT01A prototype](/avionics/TFSLOT01/TFSLOT_2.jpg)
 
