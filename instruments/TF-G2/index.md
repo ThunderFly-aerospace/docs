@@ -14,7 +14,7 @@ Click on the following video to quickly get an overview:
 [TF-G2](https://www.thunderfly.cz/tf-g2.html) autogyro is well-suited for training UAV operators and for gaining experience with autogyro mission planning. TF-G2 is limited to light payloads, but it shares all the specific properties of larger autogyros in our offering. It may find application in less demanding flight operations, however, its main purpose is to be a tool for low-cost application practice. The autogyro’s small size leads to easy transport, repairs, and maintenance.
 To enhance the ease of learning autogyro technology, we made it possible to [simulate TF-G2 flight](https://github.com/ThunderFly-aerospace/PX4-FlightGear-Bridge) before the real flight training.
 
-![TF-G2 during flight](/doc/img/TF-G2_fly_clouds.jpg)
+![TF-G2 during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_fly_clouds.jpg)
 
 ## The main design highlights
 
@@ -43,7 +43,7 @@ Particulate matter sensing in the atmosphere is a scientific technique used to m
 
 Humidity and temperature sensing in [atmospheric vertical sounding](https://en.wikipedia.org/wiki/Atmospheric_sounding) involve the measurement of atmospheric moisture content and temperature at various altitudes. Instruments like the [TFHT01 sensor](https://github.com/ThunderFly-aerospace/TFHT01)  from ThunderFly are pivotal in collecting this data. These compact and lightweight sensors, designed specifically for UAV applications, can withstand varied atmospheric conditions and provide accurate, high-resolution measurements. Acquiring this data is essential for meteorological forecasts and climate studies, as the vertical distribution of temperature and humidity influences weather patterns, storm development, and overall climate dynamics. The [TFHT01](https://github.com/ThunderFly-aerospace/TFHT01) sensor, with its specialized design and precise data, has become an instrumental tool in advancing our understanding of these complex atmospheric processes.
 
-![TF-G2 atmospheric sounding experiment](https://github.com/ThunderFly-aerospace/TFHT01/blob/TFHT01B/doc/img/TFHT_vertical_profile_measurement.png)
+![TF-G2 atmospheric sounding experiment](https://raw.githubusercontent.com/ThunderFly-aerospace/TFHT01/TFHT01B/doc/img/TFHT_vertical_profile_measurement.png)
 
 An example of an atmospheric profiling experiment. The time difference between the reference and the experiment was around 6 hours. 
 
@@ -51,7 +51,7 @@ An example of an atmospheric profiling experiment. The time difference between t
 
 Electric field monitoring via TF-G2 UAV autogyro near thunderstorms entails the measurement of atmospheric electrical properties associated with storm activities. The charged particles present in thunderstorms create strong electric fields, which can be accurately detected and monitored by [THUNDERMILL01 sensor](https://github.com/UniversalScientificTechnologies/THUNDERMILL01). The TF-G2 autogyro, equipped with specialized sensors, can navigate challenging weather conditions and provide critical, real-time data on the strength and spatial distribution of the electric fields. Understanding these fields is crucial in predicting lightning activity, improving weather forecasts, and contributing to research on storm dynamics and atmospheric electricity. This UAV-autogyro technology offers a unique, mobile platform to safely investigate these intense electrical phenomena without putting human lives at risk.
 
-![TF-G2 with installed THUNDERMILL electric field sensor](./doc/img/TF-G2_THUNDERMILL.jpg)
+![TF-G2 with installed THUNDERMILL electric field sensor](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_THUNDERMILL.jpg)
 
 ### Ionising radiation monitoring
 
