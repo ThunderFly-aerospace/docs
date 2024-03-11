@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "TFSIK"
+title: "TFSIK01: High-reliable wireless data link"
 permalink: /avionics/TFSIK01/
 parent: Avionics
 nav_order: "10"
