@@ -1,3 +1,10 @@
+---
+layout: page
+title: "TFSIK"
+permalink: /avionics/TFSIK01/
+parent: Avionics
+nav_order: "10"
+---
 
 # TFSIK01 Telemetry Modem
 
