@@ -12,7 +12,7 @@ The converter is designed to service and debug operations on UAVs. It respects t
 
 ![TFUSBSERIAL01 Bottom](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUSBSERIAL01/TFUSBSERIAL01A/doc/gen/img/TFUSBSERIAL01-bottom.png)
 
-![TFUSBSERIAL01 Top](doc/gen/img/TFUSBSERIAL01-top.png)
+![TFUSBSERIAL01 Top](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUSBSERIAL01/TFUSBSERIAL01A/doc/gen/img/TFUSBSERIAL01-top.png)
 
 ## Key features
 
@@ -26,12 +26,12 @@ The converter is designed to service and debug operations on UAVs. It respects t
 
 ### Usage
 
-Connect the FMU or peripheral device to corresponding PixHawk connector.  Thestandard serial terminal tools could be used for communication with the devices. 
+Connect the FMU or peripheral device to the corresponding PixHawk connector.  The standard serial terminal tools could be used for communication with the devices. 
 
 ### Self-test
 
 The proper function and cable could be easily tested by connecting the cable between the "to FMU" and "to Peripheral" connectors.
 
-![TFUSBSERIAL01 self test](doc/img/TFUSBSERIAL01_self-test.jpg)
+![TFUSBSERIAL01 self test](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUSBSERIAL01/TFUSBSERIAL01A/doc/img/TFUSBSERIAL01_self-test.jpg)
 
 All communication sent by UART is in that case forwarded in the loop. Therefore the cable behaves the same as "local echo".
