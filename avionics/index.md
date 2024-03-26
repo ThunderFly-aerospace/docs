@@ -5,6 +5,7 @@ alt_text: Avionits
 permalink: /avionics/
 has_children: true
 has_toc: true
+nav_order: 20
 ---
 
 <!--
@@ -31,7 +32,7 @@ Current revision: TFSLOT01A
 
 ## Accessories
 
-### I2C Cables 
+### I2C Cables
 
 ### CAN Cables
 
