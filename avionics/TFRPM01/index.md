@@ -13,7 +13,6 @@ It is designed to direct connection to the Pixhawk controller (CUAV V5+ for exam
 The input of the meter is supposed a pulse signal from an optical encoder, hall sensor, etc. The pulses are counted during a predefined constant interval.
 The hardware is intended to be used for helicopter and autogyro rotor RPM measurement, but its counting capability is up to 20 kHz therefore it should be used for propeller or engine RPM measurement.
 
-
 <p align="center">
   <img src="/avionics/TFRPM01/TFRPM01D.jpg" />
 </p>
@@ -112,6 +111,36 @@ The correct connection of the probe could be checked by the magnet, and the PULS
 
 The sensor could also be used with other probe types. We tested the se [TFPROBE01](https://github.com/ThunderFly-aerospace/TFPROBE01), which combines the optical reflective sensor and magnetic hall-effect sensor in one device.
 
+#### TFPROBE01A - Omnipolar magnetic and reflective optical sensor probe
+
+The sensor is specifically designed for simple RPM measurement with the TFRPM01 sensor board. The probe consists dual sensing technique - optical or magnetic. Therefore the user should select the one most suitable for the application.
+
+<p float="center">
+<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFPROBE01/TFPROBE01A/doc/img/TFPROBE01A_connector.jpg" width="48%" />
+<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFPROBE01/TFPROBE01A/doc/img/TFPROBE01A_sensors.jpg" width="48%" />
+</p>
+
+##### Magnetic Sensing
+
+The magnetic Hall-effect sensor mounted on the probe board can sense both directions of the magnetic field. The strength of the magnetic field is a decisive parameter for the probe's correct function. The magnetic flux is expected to be perpendicular to the sensor PCB surface. The detailed requirements of magnetic flux density are described in [AH3572 datasheet page 4](https://github.com/ThunderFly-aerospace/TFPROBE01/blob/TFPROBE01A/doc/datasheets/AH3572-1483253.pdf).
+
+In magnetic sensing mode, it is recommended to cover the probe in a black shrinking tube.  The covering blocks the potentially unwanted function of a reflective sensor.
+
+##### Optical Sensing
+
+An optical sensor is sensitive to the infrared reflectance of material (usually a rotating disc with marks).
+To details see the [VCNT2020 datasheet page 2](https://github.com/ThunderFly-aerospace/TFPROBE01/blob/TFPROBE01A/doc/datasheets/vcnt2020.pdf) it should be noted that the optical sensor needs highly contrast sulface in IR spectrum. It is also sensitive to ambient sunlight and works correctly only on distances up to two millimeters.  
+
+##### TFPROBE Hardware specification
+The TFPROBE01 is sold and shipped without a soldered header, because its orientation may depend on the customer's use. Connecting cable and two headers (one straight and one right-angled) are included.
+
+![Shipping content](https://raw.githubusercontent.com/ThunderFly-aerospace/TFPROBE01/TFPROBE01A/doc/img/TFPROBE01A_shipping_content.jpg)
+
+##### Optical and magnetic probe positions on PCB
+
+![TFPROBE01A optical probe position](https://raw.githubusercontent.com/ThunderFly-aerospace/TFPROBE01/TFPROBE01A/doc/img/TFPROBE01_sensors_positon.png)
+
+#### Use of other sensors
 
 Technically TFRPM01 could be used by every probe with pulsed output with amplitude in the range of 0 to +5V. However, the TFRPM01 sensor needs to match the input parameters to certain probe types. The default configuration is reflected in the following schematics.
 
