@@ -2,7 +2,7 @@ title: "ThunderFly documentation page"
 email: info@thunderfly.cz
 description: "ThunderFly aerospace"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "docs.thunderfly.cz" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://docs.thunderfly.cz" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username:
 facebook_username:
 github_username:  ThunderFly-aerospace
