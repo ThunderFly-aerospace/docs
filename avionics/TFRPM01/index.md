@@ -36,11 +36,12 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
 |-----------|-------|-------------|
 | Pulse frequency range | 0 - 20 kHz (equal high and low periods) | Maximum RPM value varies by pulse number per revolution |
 | I2C Connector | 2x 4-pin JST-GH | Connected in parallel |
-| RPM connector | 3-pin 2.54mm pitch header | Internal 22k Ohm pullup resistor |
+| RPM connector | 3-pin 2.54mm pitch pin header | Internal 22k Ohm pullup resistor |
+| RPM input switching thresholds | +VT 1.88 V, -VT 1.12 V  Typically@25°C| Hysteresis between VT+ and VT- is 0.756 V |
 | I2C address | 0x50 default | By switching JP1 possible change to 0x51 |
 | I2C SCL clock frequency | Max 100 kHz | Operation on 400 kHz is possible, but unreliable|
 | Operating and storage temperature | −20°C to +40°C | Limited by case material |
-| Operational input voltage | +3.6V to +5.4V | Overvoltage internally protected by Zener diode, Undervoltage is not treated |
+| Operational power voltage | +3.6V to +5.4V | Overvoltage internally protected by Zener diode, Undervoltage is not treated. Current consumption is defined mainly by the used probe. |
 | Mass | 4g PCB + 8g case | Printed case gcode included in docs |
 | Dimensions | 23.5x42x12.5mm / 37.5x19mm | Case / PCB |
 | Weather resistance | [IP40](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
@@ -50,7 +51,7 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
 </p>
 
 The 3Pin probe connector is powered from the I²C bus through an RC filter which limits current and voltage spikes to the sensor probe.
-Therefore sensor is resistant to short circuits at the probe connector power.
+Therefore the sensor is resistant to short circuits at the probe connector power.
 
 The two I²C Pixhawk JST-GH connectors are interconnected. This feature allows easy nesting with other I²C devices to a single Pixhawks I²C port.
 
@@ -176,12 +177,12 @@ Where:
   * Nc is pules counted during the measurement pooling interval
   * Res is the absolute resolution of measurement in +/- RPM
 
-Therefore the absolute resolution of the sensor is independent of the current RPM measured and remains constant depending on sensor configuration, however, relative resolution increases with the RPM measured.  The absolute resolution strongly depends on the length of the pooling interval (a longer interval gets better resolution). The resolution also increases with the number of pulses per revolution, where more pulses per revolution give better RPM resolution. Related terms like precision and accuracy are more difficult to analyze because depend on hardware and firmware versions of Pixhawk, but these errors could be neglected in the usual use cases.
+Therefore the absolute resolution of the sensor is independent of the current RPM measured and remains constant depending on sensor configuration, however, relative resolution increases with the RPM measured.  The absolute resolution strongly depends on the length of the pooling interval (a longer interval gets better resolution). The resolution also increases with the number of pulses per revolution, where more pulses per revolution give better RPM resolution. Related terms like precision and accuracy are more difficult to analyze because they depend on hardware and firmware versions of Pixhawk, but these errors could be neglected in the usual use cases.
 
 ## Does it connect to RPM output from ESC?
 
-Generally yes, the TFRPM could be connected to revolution output from an ESC in case of output logic confirms to 5V TTL.
-The limitation is the RPM resolution here because many ESCs get one pulse per revolution. See the formula above for an explanation.
+Generally yes, the TFRPM could be connected to revolution output from an ESC in case the output logic confirms to 5V TTL.
+The limitation is the RPM resolution here because many ESCs get one pulse per revolution. Please take a look at the formula above for an explanation.
 
 ## Could be used for internal combustion engines?
 
