@@ -41,7 +41,7 @@ The connectors on the top side and the unpopulated connector on the bottom side 
 
 ### Determining the new address of the I2C device
 
-The new device address which should be called by the master could be calculated by doing XOR with the TFI2CADT01 port address and original device address.  The result is the new device address. You can use an [online calculator](https://xor.pw/) to do that. Another approach is determining the new address heuristically by use of the `i2cdetect` command or similar. 
+The new device address which should be called by the master could be calculated by doing XOR with the TFI2CADT01 port address and original device address.  The result is the new device address. You can use an [online calculator](https://xor.pw/). Another approach is determining the new address heuristically using the `i2cdetect` command or similar command. 
 
 ## Example of usage
 
@@ -52,6 +52,9 @@ The TFI2CADT01 could be used with a wide variety of ThunderFly or Pixhawk I²C s
 The TFI2CADT01 could be easily used for the connection of multiple [TFRPM01 tachometer](https://docs.thunderfly.cz/avionics/TFRPM01/) sensors, which is especially useful for multi-rotor airframes.
 
 ![TFI2CADT01A using multiple TFRPM01 sensors](https://raw.githubusercontent.com/ThunderFly-aerospace/TFI2CADT01/TFI2CADT01B/doc/img/TFI2CADT01_multi_TFRPM01.jpg)
+
+{: .note }
+The TFRPM01s without the covers have [changed the I2C address by solder jumpers](https://docs.thunderfly.cz/avionics/TFRPM01/#ic-address-configuration).
 
 ### Redundant airspeed sensors
 
