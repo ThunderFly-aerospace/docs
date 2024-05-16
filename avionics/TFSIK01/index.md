@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "TFSIK01: High-reliable wireless data link"
+title: "TFSIK01: High-reliable wireless telemetry data link"
 permalink: /avionics/TFSIK01/
 parent: Avionics
 nav_order: "10"
 ---
 
-# TFSIK01 Telemetry Modem
+# TFSIK01 - High-Performance Telemetry Modem
 
 ### Overview
 
@@ -27,6 +27,22 @@ The TFSIK01 is a state-of-the-art UAV telemetry modem that incorporates dual ant
   - Integrates MAVLink protocol framing and status reporting
   - Achieves several kilometers of range with a small whip antenna
 - **Open-Source and Highly Configurable**: Loaded with SiK firmware for enhanced customization through AT and RT commands, it supports the MAVLink 2 protocol and is compatible with multiple frequency bands.
+
+
+## Technical Parameters
+
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| Frequency range | 142 MHz - 1050 MHz | Exact frequency band have to be set by factory, actually available 433MHz and 868 MHz|
+| RF power range | -20dBm to 20dBm  | |
+| Input Noise Figure | 0.6 dB |  LNA noise figure |
+| OIP3 |  39.5dBm | Input LNA gain 18.7dB|
+| Bandwidth |  < 4 MHz | RF filter selective | 
+| Operating and storage temperature | −20°C to +40°C | Limited by case material |
+| Operational power voltage | +5V to +5.4V, 500mA max | Undervoltage is not treated. Current consumption is defined mainly by set RF power|
+| Mass | 18g | Including the housing |
+| Dimensions | 55x10x35mm | Housing dimensions |
+| Weather resistance | [IP40](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
 
 ### Applications
 
@@ -60,10 +76,8 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 
 ThunderFly typically configures the TFSIK01A modem for the 433 MHz band. For alternative frequency operations, ThunderFly can customize the modem to meet specific requirements. For detailed information on frequency adjustments, contact ThunderFly directly at [info@thunderfly.cz](mailto:info@thunderfly.cz).
 
-:::note
+{: .important }
 Always verify the modem's compliance with local regulations and laws concerning frequency operation before use. Confirm the necessity for any operational permissions or licenses within your jurisdiction.
-:::
-
 
 
 ## FAQ
