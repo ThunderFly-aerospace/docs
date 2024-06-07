@@ -45,7 +45,7 @@ The TFHT01 sensor could be used for [direct atmospheric sounding](https://en.wik
 
 ## Schematics
 
-[![Schematics](https://github.com/ThunderFly-aerospace/TFHT01/blob/TFHT01B/doc/gen/TFHT01-schematic.svg)](https://github.com/ThunderFly-aerospace/TFHT01/blob/TFHT01B/doc/gen/TFHT01-schematic.pdf)
+[![Schematics](https://raw.githubusercontent.com/ThunderFly-aerospace/TFHT01/TFHT01B/doc/gen/TFHT01-schematic.svg)](https://github.com/ThunderFly-aerospace/TFHT01/blob/TFHT01B/doc/gen/TFHT01-schematic.pdf)
 
 ## Usage in PX4 autopilot firmware
 
