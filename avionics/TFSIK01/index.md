@@ -10,39 +10,56 @@ nav_order: "10"
 
 ### Overview
 
-The TFSIK01 is a state-of-the-art UAV telemetry modem that incorporates dual antenna diversity and exceptional resistance to noise. This open-source hardware solution employs the advanced Si1060 chip from the Si10xx series and is further enhanced by the Si4463 EZRadioPRO transceiver, ensuring robust and secure communication capabilities. The modem's design prioritizes immunity to interference from out-of-band frequencies, guaranteeing reliable performance in challenging environments and securing its position as a top choice for UAV systems that demand utmost data integrity and security.
+The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges of better than 300 meters with a whip antenna kit. The range can be extended to several kilometers with the use of a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between your autopilot and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
+
+The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem that incorporates dual antenna diversity and exceptional resistance to noise. This open-source hardware solution employs the advanced Si1060 chip from the Si10xx series and is further enhanced by the Si4463 EZRadioPRO transceiver, ensuring robust and secure communication capabilities. The modem's design prioritizes immunity to interference from out-of-band frequencies, guaranteeing reliable performance in challenging environments and securing its position as a top choice for UAV systems that demand the utmost data integrity and security.
 
 ### Key Features
 
-- **Superior Noise Immunity**: With a hardware-optimized RF front-end, the modem excels in environments plagued by out-of-band signal interference.
+- **Plug-n-play** for Pixhawk Standard Flight Controllers. The easiest way to connect your Autopilot in the airframe with the Ground Station 
+- **Superior Noise Immunity**: With a hardware-optimized RF front-end, the modem excels in environments plagued by out-of-band signal interference. The feature applies to multiple frequency bands.
 - **Robust Hardware Design**: Housed in a customizable 3D printed enclosure with electromagnetic shielding, it promises both durability and adaptability.
-- **Antenna Diversity**: Employs dual external antennas via MCX connectors, enhancing connectivity flexibility across different frequency bands, with a primary focus on the 433 MHz band for optimal performance.
+- **Antenna Diversity**: Employs dual external antennas via MCX connectors, enhancing connectivity flexibility across different frequency bands requiring different antenna systems.
 - **Cutting-Edge Communication Technologies**:
   - Implements Frequency-Hopping Spread Spectrum (FHSS)
-  - Utilizes Adaptive Time Division Multiplexing (TDM)
+  - Utilizes Adaptive Time Division Multiplexing (TDM) with Configurable duty cycle
   - Supports Listen Before Talk (LBT) and Adaptive Frequency Agility (AFA)
+  - Error correction corrects up to 25% of bit errors 
 - **High-Performance Metrics**:
   - Offers a transparent serial link
   - Facilitates air data rates reaching up to 250kbps
   - Integrates MAVLink protocol framing and status reporting
   - Achieves several kilometers of range with a small whip antenna
-- **Open-Source and Highly Configurable**: Loaded with SiK firmware for enhanced customization through AT and RT commands, it supports the MAVLink 2 protocol and is compatible with multiple frequency bands.
+- **Open-Source and Highly Configurable**: Loaded with SiK firmware for enhanced customization through AT and RT commands, it supports the MAVLink 2 protocol, Configurable through Mission Planner & APM Planner
 
 
 ## Technical Parameters
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
-| Frequency range | 142 MHz - 1050 MHz | Exact frequency band have to be set by factory, actually available 433MHz and 868 MHz|
-| RF power range | -20dBm to 20dBm  | |
+| Frequency range | 142 MHz - 1050 MHz | The Exact frequency band has to be set by the factory, actually available bands are 433MHz and 868 MHz|
+| RF power range | -20dBm to 20dBm (100 mW) | Adjustable by AT commands |
 | Input Noise Figure | 0.6 dB |  LNA noise figure |
 | OIP3 |  39.5dBm | Input LNA gain 18.7dB|
-| Bandwidth |  < 4 MHz | RF filter selective | 
+| Receiver sensitivity|  -117 dBm or better | Depends on datalink bandwidth configuration |
+| Bandwidth |  < 4 MHz | RF filter selective |
+| RF connectors| [MCX](https://en.wikipedia.org/wiki/MCX_connector) on both RF ports | snap-on function prevents damage of connector by extensive external forces|
+| Serial interface| 3.3 V UART | 6-position JST-GH connector with [handshake available](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) |
 | Operating and storage temperature | −20°C to +40°C | Limited by case material |
-| Operational power voltage | +5V to +5.4V, 500mA max | Undervoltage is not treated. Current consumption is defined mainly by set RF power|
+| Operational power voltage | +5V to +5.4V, 500mA max | Undervoltage is not treated. Current consumption is defined mainly by set RF power, Receive current is 25 mA|
 | Mass | 18g | Including the housing |
 | Dimensions | 55x10x35mm | Housing dimensions |
 | Weather resistance | [IP40](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
+
+### LEDs Indicators Status 
+
+The radios have 3 status LEDs, red, orange, and green
+
+- Green LED blinking - searching for another radio
+- Green LED solid - link is established with another radio
+- Red LED flashing - transmitting data
+- Red LED solid - in firmware update mode
+- orange solid or dimm indicates selected antenna port 
 
 ### Applications
 
@@ -77,7 +94,7 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 ThunderFly typically configures the TFSIK01A modem for the 433 MHz band. For alternative frequency operations, ThunderFly can customize the modem to meet specific requirements. For detailed information on frequency adjustments, contact ThunderFly directly at [info@thunderfly.cz](mailto:info@thunderfly.cz).
 
 {: .important }
-Always verify the modem's compliance with local regulations and laws concerning frequency operation before use. Confirm the necessity for any operational permissions or licenses within your jurisdiction.
+Always verify the modem's compliance with local regulations and laws concerning frequency of operation before use. Confirm the necessity for any operational permissions or licenses within your jurisdiction.
 
 
 ## FAQ
