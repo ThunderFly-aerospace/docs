@@ -8,6 +8,9 @@ nav_order: "10"
 
 # TFSIK01 - High-Performance Telemetry Modem
 
+
+![TFSIK01 pair with USB-C converter](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/TFSIK01A/doc/img/TFSIK01_pair.jpg)
+
 ### Overview
 
 The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges of better than 300 meters with a whip antenna kit. The range can be extended to several kilometers with the use of a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between your autopilot and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
