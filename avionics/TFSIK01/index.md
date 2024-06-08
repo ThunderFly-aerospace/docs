@@ -63,7 +63,7 @@ The radios have 3 status LEDs, red, orange, and green
 
 ### Applications
 
-The TFSIK01A is designed with precision for UAV command and control applications, ensuring dependable, long-distance communication links between UAVs and ground control stations. It is also highly effective in ROS2 environments for robotics, providing a reliable long-range wireless datalink.
+The TFSIK01A is designed precisely for UAV command and control applications, ensuring dependable, long-distance communication links between UAVs and ground control stations. It is also highly effective in ROS2 environments for robotics, providing a reliable long-range wireless datalink.
 
 ### Installation and Configuration
 
