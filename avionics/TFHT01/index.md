@@ -12,7 +12,7 @@ The [TFHT01](https://github.com/ThunderFly-aerospace/TFHT01) hygrometer (humidit
 
 Sensors mounted on UAVs can be used for a variety of purposes. TFHT can measure air temperature and humidity, which can be used for meteorological purposes to estimate whether icing may form on aerodynamic surfaces. It could also be used to determine if the flight is conducted within the operating range of the drone. Another use can be to measure the temperature of selected UAV components, for example, the temperature of batteries, ESC, motor, or some bearings.
 
-![TFHT01 view on internal electronics](https://raw.githubusercontent.com/ThunderFly-aerospace/TFHT01/TFHT01B/doc/img/tfht01B_small.png)
+![TFHT01 in box](https://raw.githubusercontent.com/ThunderFly-aerospace/TFHT01/TFHT01B/doc/img/TFHT01B_boxes.jpg)
 
 ## Where to get it?
 TFHT01 can be bought directly from us via our contact [email](https://www.thunderfly.cz/contact-us.html). The email can also be used if there are specific requirements for custom modifications or if the product will be inquired in large quantities. TFHT is also available for online purchase through the [Tindie store](https://www.tindie.com/products/thunderfly/tfht01-aerial-hygrometer-and-thermometer/).
@@ -59,7 +59,13 @@ The TFHT01 sensor could be used for [direct atmospheric sounding](https://en.wik
 ![TFHT01A atmospheric profiling](https://raw.githubusercontent.com/ThunderFly-aerospace/TFHT01/TFHT01B/doc/img/TFHT_vertical_profile_measurement.png)
 
 
-## Schematics
+## Design
+
+
+![TFHT01 view on internal electronics](https://raw.githubusercontent.com/ThunderFly-aerospace/TFHT01/TFHT01B/doc/img/tfht01B_small.png)
+
+
+### Schematics
 
 [![Schematics](https://raw.githubusercontent.com/ThunderFly-aerospace/TFHT01/TFHT01B/doc/gen/TFHT01-schematic.svg)](https://github.com/ThunderFly-aerospace/TFHT01/blob/TFHT01B/doc/gen/TFHT01-schematic.pdf)
 
