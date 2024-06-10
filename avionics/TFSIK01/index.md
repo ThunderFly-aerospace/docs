@@ -104,4 +104,4 @@ Always verify the modem's compliance with local regulations and laws concerning 
 
 ### How can I connect it to a PC/mobile/tablet?
 
-The easiest solution is the use of [TFUSBSERIAL01 gadget](https://github.com/ThunderFly-aerospace/TFUSBSERIAL01) to create a virtual UART/Serial link from a USB-A or USB-C connector.
+The easiest solution is the use of [TFUSBSERIAL01 gadget](https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/) to create a virtual UART/Serial link from a USB-A or USB-C connector.
