@@ -6,9 +6,9 @@ parent: Avionics
 nav_order: "10"
 ---
 
-# TFSLOT01A - Clogging-free airspeed sensor for low-speed UAVs
+# TFSLOT01 - Clogging-free airspeed sensor for low-speed UAVs
 
-![TFSLOT01A prototype](/avionics/TFSLOT01/TFSLOT_2.jpg)
+![TFSLOT01 prototype](/avionics/TFSLOT01/TFSLOT_2.jpg)
 
 [TFSLOT](https://github.com/ThunderFly-aerospace/TFSLOT01) sensor is an airspeed sensor designed to be used on UAVs to measure [IAS](https://en.wikipedia.org/wiki/Indicated_airspeed). Due to the 3D printed case, it is possible to optimize the characteristics according to the location of the sensor on the UAV and specific application requirements on measuring range. The first use of this sensor is on ThunderFly autogyro [TF-G2](https://github.com/ThunderFly-aerospace/TF-G2/).
 
@@ -20,7 +20,7 @@ nav_order: "10"
   * Customizable 3D-printed case to fit specific applications.
   * Integrated IMU to vibration diagnostics on AoA measurement.
 
-TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/thunderfly/tfslot01a-drone-indicated-airspeed-sensor/).
+TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/21790/).
 
 ## Technical Parameters
 
@@ -164,4 +164,4 @@ The procedure is performed with the help of a calibration tool in a few steps:
 
 ## Is there a maximum altitude limit on the operation of the TFSLOT sensor?
 
-There is no hard limit of maximum altitude to operate the TFSLOT01A sensor. Although the sensitivity of the sensor decreases with decreasing air density. See the working principle description in the section above for a detailed explanation.
+There is no hard limit of maximum altitude to operate the TFSLOT01 sensor. Although the sensitivity of the sensor decreases with decreasing air density. See the working principle description in the section above for a detailed explanation.
