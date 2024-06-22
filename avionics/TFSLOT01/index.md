@@ -49,7 +49,7 @@ The I²C interface connectors respect the [Pixhawk connector standard](https://g
 | SDA  | Black |  ![green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green |
 | GND | Black  | ![black](https://user-images.githubusercontent.com/5196729/102204896-b8d1b880-3eca-11eb-8b73-656cac9104e4.png) Black |
 
-The conductor colors in the cable are different from the Pixhawk standard to increase the visual distinction between multiple cables in the UAV.
+The cable's conductor colors differ from the Pixhawk standard to increase the visual distinction between multiple cables in the UAV.
 
 ### I2C Cable Twisting
 
@@ -164,4 +164,4 @@ The procedure is performed with the help of a calibration tool in a few steps:
 
 ## Is there a maximum altitude limit on the operation of the TFSLOT sensor?
 
-There is no hard limit of maximum altitude to operate the TFSLOT01 sensor. Although the sensitivity of the sensor decreases with decreasing air density. See the working principle description in the section above for a detailed explanation.
+There is no hard limit of maximum altitude to operate the TFSLOT01 sensor. However, the sensitivity of the sensor decreases with decreasing air density. Please take a look at the working principle description in the section above for a detailed explanation.
