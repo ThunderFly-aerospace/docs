@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Frequently asked questions
+title: "Frequently asked questions"
 permalink: /avionics/TFRPM01/faq
-parent: TFRPM01: RPM sensor
+parent: "TFRPM01: RPM sensor"
 grand_parent: Avionics
 nav_order: "0"
 ---
