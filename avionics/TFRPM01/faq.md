@@ -4,7 +4,7 @@ title: "Frequently asked questions"
 permalink: /avionics/TFRPM01/faq
 parent: "TFRPM01: RPM sensor"
 grand_parent: Avionics
-nav_order: "0"
+nav_order: "1"
 ---
 
 
