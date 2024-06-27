@@ -153,4 +153,4 @@ After proper connection of the sensor with the sensing probe to an I2C port (Exc
 
 
 # FAQ
-Frequently asked questions are avialible on [separed TFRPM01 FAQ page](./faq). 
+Frequently asked questions are avialible on [separed TFRPM01 FAQ page](./faq.md). 
