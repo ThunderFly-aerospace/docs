@@ -32,11 +32,24 @@ Therefore the absolute resolution of the sensor is independent of the current RP
 
 ## I can't find the parameter PCF8583_EN or the autopilot reports `pcf8583 not found`, what should I do?
 
-If you cannot find parameters related to the `PCF8583` sensor or if you receive the error `nsh: pcf8583 command not found` when attempting to run the pcf8583 driver, it likely means that your firmware does not include this driver.
+The TFRPM01D is a sensor that operates on the I2C bus, which requires a unique address for each device. The TFRPM01D itself allows setting 2 addresses. This way, you can connect a pair of TFRPM01 sensors to each I2C port.
 
-This issue occurs because the PCF8583 driver was disabled in the firmware by the PX4 development team due to memory constraints on some autopilots. However, the solution is simple.
+If you use the [TFI2CADT](../TFI2CADT01) address translator, you can connect 6 TFRPM01 sensors to a single port (with one TFI2CADT). The TFI2CADT01 has two channels with different address translations. The configuration will then look as follows: TFRPM01 sensors without the case have their I2C address changed from 0x50 to 0x51.
 
-You need to enable the `drivers/rpm/pcf8583` driver in the board configuration in PX4 and then recompile the firmware. This will make the TFRPM01D (pcf8583) driver available on your autopilot. For more details on enabling the driver, please refer to the [official PX4 documentation](https://docs.px4.io/main/en/peripherals/serial_configuration.html#configuration-parameter-missing-from-qgroundcontrol).
+It is then recommended to use an additional I2C port for next 6 pices, which will double the possible number of sensors, or to integrate another I2C translator ([TFI2CADT](../TFI2CADT01)) with different address translations into the structure.
+
+(https://docs.px4.io/main/en/peripherals/serial_configuration.html#configuration-parameter-missing-from-qgroundcontrol).
+
+So, you can connect quite a lot of TFRPM01 sensors to a single autopilot—far more than 6, 8, or even 12 units.
+
+
+## How many TFRPM01 sensors can I connect to the autopilot?
+
+The TFRPM01D is a sensor that operates on the I2C bus, which requires a unique address for each device. The TFRPM01D itself allows setting 2 addresses. This way, you can connect a pair of TFRPM01 sensors to each I2C port.
+
+If you use the TFI2CADT address translator, you can connect 6 TFRPM01 sensors to a single port (with one TFI2CADT). The TFI2CADT01 has two channels with different address translations. The configuration will then look as follows. TFRPM01 sensors without the case have their I2C address changed from 0x50 to 0x51.
+![](multiple_tfrpm.jpg)
+
 
 ## Does it connect to RPM output from ESC?
 
