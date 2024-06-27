@@ -93,12 +93,6 @@ The device is designed to be mounted with or without a plastic case. The 3D-prin
   * By default the case could be mounted by the screw on a flat surface (the original screw needs to be replaced by a longer one)
   * The second option is the use of [double-sided adhesive tape](https://www.3m.com/3M/en_US/vhb-tapes-us/) or [reclosable fastener](https://www.3m.com/3M/en_US/dual-lock-reclosable-fasteners-us/) stuck on the side of the TFRPM01 case.
 
-### PCB dimensions
-
-![TFRPM01 PCB dimensions](https://raw.githubusercontent.com/ThunderFly-aerospace/TFRPM01/TFRPM01D/doc/img/TFRPM01_PCB_dimensions.png)
-
-The PCB is designed to be mounted on a flat surface by a center screw hole. The supposed screw diameter is metric 3mm e.g. DIN 912 M3 Hexagon socket Head Cap Screws. The [A2 stainless steel](https://en.wikipedia.org/wiki/SAE_304_stainless_steel) with non-ferromagnetic properties is used for the screw and nut to avoid influence on UAV's magnetometer. 
-
 ### Sensor probe selection
 
 The counter could be used with multiple types of sensor probes. The most used one is a Hall effect probe.  The magnetic probe is ideal for harsh environments, where dirt, dust, and water can contact the sensed rotor. The disadvantage is, that mounting of the magnet is required for proper sensor work.
@@ -157,3 +151,6 @@ After proper connection of the sensor with the sensing probe to an I2C port (Exc
 
 ![TFRPM01 measurement of rotor RPM during the flight](/avionics/TFRPM01/rpm_graph.png)
 
+
+# FAQ
+Frequently asked questions are avialible on [separed TFRPM01 FAQ page](./faq). 
