@@ -96,6 +96,12 @@ The device is designed to be mounted with or without a plastic case. The 3D-prin
 ## Sensor probe selection
 The TFRPM01D can be used with multiple types of sensor probes. The most used one is a Hall effect probe.  The magnetic probe is ideal for harsh environments, where dirt, dust, and water can contact the sensed rotor. The disadvantage is, that mounting of the magnet is required for proper sensor work.
 
+
+<p float="center">
+<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFPROBE01/TFPROBE01A/doc/img/TFPROBE01A_connector.jpg" width="48%" />
+<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFPROBE01/TFPROBE01A/doc/img/TFPROBE01A_sensors.jpg" width="48%" />
+</p>
+
 For more information on the options and selection of the appropriate probe, please refer to the [dedicated page Probe selection](probe.md).
 
 ## Software configuration
