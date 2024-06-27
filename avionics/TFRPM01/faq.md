@@ -30,6 +30,14 @@ Where:
 
 Therefore the absolute resolution of the sensor is independent of the current RPM measured and remains constant depending on sensor configuration, however, relative resolution increases with the RPM measured.  The absolute resolution strongly depends on the length of the pooling interval (a longer interval gets better resolution). The resolution also increases with the number of pulses per revolution, where more pulses per revolution give better RPM resolution. Related terms like precision and accuracy are more difficult to analyze because they depend on hardware and firmware versions of Pixhawk, but these errors could be neglected in the usual use cases.
 
+## I can't find the parameter PCF8583_EN or the autopilot reports `pcf8583 not found`, what should I do?
+
+If you cannot find parameters related to the `PCF8583` sensor or if you receive the error `nsh: pcf8583 command not found` when attempting to run the pcf8583 driver, it likely means that your firmware does not include this driver.
+
+This issue occurs because the PCF8583 driver was disabled in the firmware by the PX4 development team due to memory constraints on some autopilots. However, the solution is simple.
+
+You need to enable the `drivers/rpm/pcf8583` driver in the board configuration in PX4 and then recompile the firmware. This will make the TFRPM01D (pcf8583) driver available on your autopilot. For more details on enabling the driver, please refer to the [official PX4 documentation](https://docs.px4.io/main/en/peripherals/serial_configuration.html#configuration-parameter-missing-from-qgroundcontrol).
+
 ## Does it connect to RPM output from ESC?
 
 Generally yes, the TFRPM could be connected to revolution output from an ESC in case the output logic confirms to 5V TTL.
