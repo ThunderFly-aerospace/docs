@@ -5,6 +5,7 @@ permalink: /avionics/TFRPM01/faq
 parent: "TFRPM01: RPM sensor"
 grand_parent: Avionics
 nav_order: "2"
+has_toc: true
 ---
 
 
