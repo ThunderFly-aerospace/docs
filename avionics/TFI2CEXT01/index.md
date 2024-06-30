@@ -8,8 +8,13 @@ nav_order: "10"
 
 # TFI2CEXT01 - I²C Bus Extender Documentation
 
-## Overview
 The TFI2CEXT01 is an I²C bus extension module designed to extend the possible total length of the I²C bus on UAV's and drones. The module does not contain any configuration or modifiable firmware. Therefore, this module does not require any setup and can be connected to any I2C bus.
+
+
+<p float="center">
+<img src="./TFI2CEXT01A_top.jpg" width="48%" />
+<img src="./TFI2CEXT01A_bottom.jpg" width="48%" />
+</p>
 
 
 ## Availability
