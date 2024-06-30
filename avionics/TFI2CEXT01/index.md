@@ -12,8 +12,8 @@ The TFI2CEXT01 is an I²C bus extension module designed to extend the possible t
 
 
 <p float="center">
-<img src="./TFI2CEXT01A_top.jpg" width="48%" />
-<img src="./TFI2CEXT01A_bottom.jpg" width="48%" />
+<img src="/avionics/TFI2CEXT01/TFI2CEXT01A_top.jpg" width="48%" />
+<img src="/avionics/TFI2CEXT01/TFI2CEXT01A_bottom.jpg" width="48%" />
 </p>
 
 
