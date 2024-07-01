@@ -8,14 +8,12 @@ nav_order: "10"
 
 # TFI2CEXT01 - I²C Bus Extender Documentation
 
-The TFI2CEXT01 is an I²C bus extension module designed to extend the possible total length of the I²C bus on UAV's and drones. The module does not contain any configuration or modifiable firmware. Therefore, this module does not require any setup and can be connected to any I2C bus.
-
+The TFI2CEXT01 is an I²C bus extension module designed to extend the possible total length of the I²C bus on UAVs and drones. The module does not contain any configuration or modifiable firmware. Therefore, this module does not require any setup and can be connected to any I2C bus.
 
 <p float="center">
 <img src="/avionics/TFI2CEXT01/TFI2CEXT01A_top.jpg" width="48%" />
 <img src="/avionics/TFI2CEXT01/TFI2CEXT01A_bottom.jpg" width="48%" />
 </p>
-
 
 ## Availability
 The TFI2CEXT01 I²C bus extender is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/) For purchasing, you can:
@@ -27,12 +25,12 @@ The TFI2CEXT01 I²C bus extender is commercially available from [ThunderFly s.r.
 | Parameter                        | Value             | Description                                                  |
 |----------------------------------|-------------------|--------------------------------------------------------------|
 | Data rate                        | Up to 400 kHz     | Defined by used TCA4307 IC                                   |
-| I²C Connector                    | 2x 4-pin JST-GH   | Connected in parallel, it is possible to exted to 4 JST-GH connectors |
+| I²C Connector                    | 2x 4-pin JST-GH   | Connected in parallel, it is possible to extend to 4 JST-GH connectors |
 | Operating and storage temperature| -20°C to +40°C    | Limited by case material                                     |
-| Operational input voltage        | 3.6V to 5.4V      | Pixhawk standard compatibile                                 |
+| Operational input voltage        | 3.6V to 5.4V      | Pixhawk standard compatible                                 |
 | Mass                             | ~2 g              | PCB                                                          |
-| Dimensions                       | 15x25x6(10.5) mm  | One-sided connectors (10.5 mm with connector on both sides)  |
-| Weather resistance               | IP30              |                                                              |
+| Dimensions                       | 15x25x6(10.5) mm  | One-sided connectors (10.5 mm with the JST-GH connectors on both sides of PCB)  |
+| Weather resistance               | IP30              | Using 3D-printed enclosure                                   |
 
 ## Features
 - **Input Power Status LED Indicator**
