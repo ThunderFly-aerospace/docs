@@ -40,9 +40,10 @@ The TFI2CEXT01 I²C bus extender is commercially available from [ThunderFly s.r.
 - **Device Reset Capability**: Can reset frozen devices.
 - **READY Signal Indication**: Shows correct connection of both I²C bus sides.
 
-The two I²C Pixhawk connectors on the bottom and top are directly connected, facilitating easy integration with other I²C devices on existing bus cabling.
+The two I²C Pixhawk connectors on the bottom and top are directly connected, facilitating easy integration with other I²C devices on existing bus cabling. With dual connectors on both the slave and master sides, the module is also recommended for splitting an existing I²C port into multiple devices.
 
 ## Device Reset Functionality
+
 The TCA4307 features stuck bus recovery, automatically disconnecting the slave side of the bus from the master if it detects either SDAOUT or SCLOUT low for approximately 40 ms. Once disconnected, the device generates up to 16 pulses on SCLOUT to attempt to reset any device holding the bus low.
 
 ## Usage
