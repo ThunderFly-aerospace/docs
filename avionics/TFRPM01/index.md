@@ -11,7 +11,7 @@ has_children: true
 
 Revolutions per minute measurement device for UAV.
 It is designed to direct connection to the Pixhawk controller (CUAV V5+ for example) through a standard I²C connector. The device [is supported by PX4 firmware](https://docs.px4.io/main/en/sensor/thunderfly_tachometer.html).
-The input of the meter is supposed a pulse signal from an optical encoder, hall sensor, etc. The pulses are counted during a predefined constant interval.
+The input of the meter is supposed to be a pulse signal from an optical encoder, hall sensor, etc. The pulses are counted during a predefined constant interval.
 The hardware is intended to be used for helicopter and autogyro rotor RPM measurement, but its counting capability is up to 20 kHz therefore it should be used for propeller or engine RPM measurement.
 
 <p align="center">
@@ -26,7 +26,7 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
 
   * [Schmitt trigger input](https://en.wikipedia.org/wiki/Schmitt_trigger) to shape a non-uniform signal from the RPM sensing element. 
   * Offload the flight controller's MCU, by self-counting and storing the number of counted pulses in I²C accessible internal memory
-  * Input status LED indicator - for easy debug of mechanical configuration
+  * Input status LED indicator - for easy debugging of mechanical configuration
   * Short circuit protection on the probe connector
   * Pass-trough I²C connectors to allow a daisy chain of additional or multiple sensors
   * Highly robust and repairable design. 
@@ -94,7 +94,7 @@ The device is designed to be mounted with or without a plastic case. The 3D-prin
   * The second option is the use of [double-sided adhesive tape](https://www.3m.com/3M/en_US/vhb-tapes-us/) or [reclosable fastener](https://www.3m.com/3M/en_US/dual-lock-reclosable-fasteners-us/) stuck on the side of the TFRPM01 case.
 
 ## Sensor probe selection
-The TFRPM01D can be used with multiple types of sensor probes. The most used one is a Hall effect probe.  The magnetic probe is ideal for harsh environments, where dirt, dust, and water can contact the sensed rotor. The disadvantage is, that mounting of the magnet is required for proper sensor work.
+The TFRPM01D can be used with multiple types of sensor probes. The most used one is a Hall effect probe.  The magnetic probe is ideal for harsh environments, where dirt, dust, and water can contact the sensed rotor. The disadvantage is that magnet mounting is required for proper sensor work.
 
 
 <p float="center">
@@ -102,7 +102,7 @@ The TFRPM01D can be used with multiple types of sensor probes. The most used one
 <img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFPROBE01/TFPROBE01A/doc/img/TFPROBE01A_sensors.jpg" width="48%" />
 </p>
 
-For more information on the options and selection of the appropriate probe, please refer to the [dedicated page Probe selection](probe.md).
+For more information on the options and selection of the appropriate probe, please take a look at the [dedicated page Probe selection](probe.md).
 
 ## Software configuration
 
@@ -113,4 +113,4 @@ After proper connection of the sensor with the sensing probe to an I2C port (Exc
 
 
 # FAQ
-Frequently asked questions are avialible on [separed TFRPM01 FAQ page](./faq.md). 
+Frequently asked questions are available on [separed TFRPM01 FAQ page](./faq.md). 
