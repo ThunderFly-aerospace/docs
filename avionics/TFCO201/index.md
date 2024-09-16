@@ -8,12 +8,12 @@ nav_order: "10"
 
 # TFCO201 - Airborne CO2 Concentration Sensor
 
-The TFCO201 sensor is designed for measuring carbon dioxide (CO2) concentrations in airborne applications. It supports integration with UAVs and can be used with a Pixhawk autopilot system or as a part of the TF-ATMON monitoring system.
+The TFCO201 sensor is designed to measure carbon dioxide (CO2) concentrations in airborne applications. It supports integration with UAVs and can be used with a Pixhawk autopilot system or as a part of the TF-ATMON monitoring system.
 
 
 ![TFCO201 sensor](https://github.com/ThunderFly-aerospace/TFCO201/assets/5196729/bca47559-f115-4941-bb79-61ccec8639b7)
 
-This sensor uses the SCD41 CO2 sensor for high accuracy measurements and includes additional environmental data such as temperature and humidity.
+This sensor uses the SCD41 CO2 sensor for high-accuracy measurements and includes additional environmental data such as temperature and humidity.
 
 ## Features
 - **CO2 measurement range**: 400 – 5000 ppm
@@ -47,14 +47,14 @@ This sensor uses the SCD41 CO2 sensor for high accuracy measurements and include
 
 ## Usage Instructions
 
-The sensor can be integrated directly with UAV systems. It is supported by the PX4 autopilot and allows for real-time data logging and communication with the ground station. For extended usage scenarios and system setup, refer to the sensor’s [GitHub repository](https://github.com/ThunderFly-aerospace/TFCO201).
+The sensor can be integrated directly with UAV systems. The PX4 autopilot supports it and allows real-time data logging and communication with the ground station. For extended usage scenarios and system setup, refer to the sensor’s [GitHub repository](https://github.com/ThunderFly-aerospace/TFCO201).
 
 ### Installation & Calibration
 - **I2C Address Setup**: Default address is 0x62, which can be translated using the TFI2CADT01 module.
 - **Temperature Offset**: The sensor supports temperature offset configuration to improve accuracy.
 
 ## Schematics
-![TFCO201 Schematics](https://github.com/ThunderFly-aerospace/TFCO201/blob/TFCO201A/doc/gen/TFCO201-schematic.pdf)
+[TFCO201 Schematics](https://github.com/ThunderFly-aerospace/TFCO201/blob/TFCO201A/doc/gen/TFCO201-schematic.pdf)
 
 ## Datasheet Reference
 For more detailed technical specifications of the CO2 sensor used, refer to the [Sensirion SCD41 Datasheet](https://sensirion.com/media/documents/E0F04247/631EF271/CD_DS_SCD40_SCD41_Datasheet_D1.pdf).
