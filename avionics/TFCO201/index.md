@@ -32,6 +32,7 @@ This sensor uses the SCD41 CO2 sensor for high accuracy measurements and include
 - **Industrial emission control**: Monitor CO2 emissions from industrial facilities.
 
 ## Sensor Parameters
+
 | Parameter                    | Value                               | Notes                                       |
 |------------------------------|-------------------------------------|---------------------------------------------|
 | **CO2 Sensor Model**          | SCD41                              | Other supported sensors: SCD40, SCD42       |
