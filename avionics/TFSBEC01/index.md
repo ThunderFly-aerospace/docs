@@ -10,8 +10,8 @@ nav_order: "10"
 
 The TFSBEC01 module is designed to provide a stable and efficient power supply for medium-power UAV components such as servos, autopilots, and other accessories. It also includes a measurement system for monitoring current and voltage, which is essential for demanding UAV applications where real-time consumption data is required.
 
-![TFSBEC01 Top View](https://github.com/ThunderFly-aerospace/TFSBEC01/blob/TFSBEC01A/doc/img/TFSBEC01A_top.png)
-![TFSBEC01 Bottom View](https://github.com/ThunderFly-aerospace/TFSBEC01/blob/TFSBEC01A/doc/img/TFSBEC01A_bot.png)
+![TFSBEC01 Top View](./TFSBEC01A_top.png)
+![TFSBEC01 Bottom View](./TFSBEC01A_bot.png)
 
 ## Features
 
@@ -30,10 +30,10 @@ The TFSBEC01 module is designed to provide a stable and efficient power supply f
 | **Input Voltage**               | 6 - 40 V         | Supports 2S to 9S Li-Po batteries                       |
 | **Output Voltage**              | 5.4 V, 5 A       | Adjustable based on PX4 standards                       |
 | **Current Measurement**         | 0 - 50 A         | Range for measuring current                             |
-| **Current Sensitivity**         | 39.6 mV/A        | From the [ACS780 Datasheet](https://www.allegromicro.com)  |
+| **Current Sensitivity**         | 39.6 mV/A        |  |
 | **Current Offset**              | 330 mV           | From component datasheet                                |
 | **Voltage Divider**             | 10.13            | From the schematic                                      |
-| **Regulator Technology**        | Switched step-down | Based on [LMR14050](https://www.ti.com/lit/ds/symlink/lmr14050.pdf) |
+| **Regulator Technology**        | Switched step-down |  |
 | **Connectors**                  | XT30             | Max current: 15 A                                       |
 | **Size**                        | 46 x 30 mm       | Approximate PCB dimensions                              |
 
