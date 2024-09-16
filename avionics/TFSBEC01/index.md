@@ -8,7 +8,7 @@ nav_order: "10"
 
 # TFSBEC01 - High Efficient Power Supply with Measuring Circuit for UAVs
 
-The TFSBEC01 module is designed to provide a stable and efficient power supply for medium-power UAV components such as servos, autopilots, and other accessories. It also includes a measurement system for monitoring current and voltage, which is essential for UAV demanding applications where real-time consumption data is required.
+The TFSBEC01 module is designed to provide a stable and efficient power supply for medium-power UAV components such as servos, autopilots, and other accessories. It also includes a measurement system for monitoring current and voltage, which is essential for demanding UAV applications where real-time consumption data is required.
 
 ![TFSBEC01 Top View](https://github.com/ThunderFly-aerospace/TFSBEC01/blob/TFSBEC01A/doc/img/TFSBEC01A_top.png)
 ![TFSBEC01 Bottom View](https://github.com/ThunderFly-aerospace/TFSBEC01/blob/TFSBEC01A/doc/img/TFSBEC01A_bot.png)
@@ -58,7 +58,7 @@ Where:
 - `A = 25.2525` (BAT1_A_PER_V)
 - `B = 0.33` (BAT_V_OFFS_CURR)
 
-For precise calibration, it is recommended to use QGC's built-in measurement feature to adjust these parameters based on the specific piece in use, but that precise calibration is not required in cases where %5 precision is acceptable. For more details, refer to the [LMR14050](https://www.ti.com/lit/ds/symlink/lmr14050.pdf) and [ACS780](https://www.allegromicro.com) datasheets.
+For precise calibration, it is recommended to use QGC's built-in measurement feature to adjust these parameters based on the specific piece in use, but precise calibration is not required in cases where %5 precision is acceptable. For more details, refer to the [LMR14050](https://www.ti.com/lit/ds/symlink/lmr14050.pdf) and [ACS780](https://www.allegromicro.com) datasheets.
 
 
 
