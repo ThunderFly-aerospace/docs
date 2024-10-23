@@ -12,7 +12,7 @@ has_children: true
 Revolutions per minute measurement device for UAV.
 It is designed to direct connection to the Pixhawk controller (CUAV V5+ for example) through a standard I²C connector. The device [is supported by PX4 firmware](https://docs.px4.io/main/en/sensor/thunderfly_tachometer.html).
 The input of the meter is supposed to be a pulse signal from an optical encoder, hall sensor, etc. The pulses are counted during a predefined constant interval.
-The hardware is intended to be used for helicopter and autogyro rotor RPM measurement, but its counting capability is up to 20 kHz therefore it should be used for propeller or engine RPM measurement.
+The hardware is intended for measuring helicopter and autogyro rotor RPM, but its counting capability is up to 20 kHz, so it should also be used for measuring propeller or engine RPM.
 
 <p align="center">
   <img src="/avionics/TFRPM01/TFRPM01D.jpg" />
@@ -37,8 +37,9 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
 |-----------|-------|-------------|
 | Pulse frequency range | 0 - 20 kHz (equal high and low periods) | Maximum RPM value varies by pulse number per revolution |
 | I2C Connector | 2x 4-pin JST-GH | Connected in parallel |
-| RPM connector | 3-pin 2.54mm pitch pin header | Internal 22k Ohm pullup resistor |
-| RPM input switching thresholds | +VT 1.88 V, -VT 1.12 V  Typically@25°C| Hysteresis between VT+ and VT- is 0.756 V |
+| Pulse input connector | 3-pin 2.54mm pitch pin header | Internal 22k Ohm pull-up resistor |
+| Pulse input voltage range | 0-5V | Negative voltage or overvoltage could damage the input |
+| RPM pulse input switching thresholds | +VT 1.88 V, -VT 1.12 V  Typically@25°C| Hysteresis between VT+ and VT- is 0.756 V |
 | I2C address | 0x50 default | By switching JP1 possible change to 0x51 |
 | I2C SCL clock frequency | Max 100 kHz | Operation on 400 kHz is possible, but unreliable|
 | Operating and storage temperature | −20°C to +40°C | Limited by case material |
@@ -51,7 +52,7 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
   <img src="/avionics/TFRPM01/TFRPM01D_pcb_bot.jpg" />
 </p>
 
-The 3Pin probe connector is powered from the I²C bus through an RC filter which limits current and voltage spikes to the sensor probe.
+The 3Pin probe connector is powered from the I²C bus through an RC filter, limiting current and voltage spikes to the sensor probe.
 Therefore the sensor is resistant to short circuits at the probe connector power.
 
 The two I²C Pixhawk JST-GH connectors are interconnected. This feature allows easy nesting with other I²C devices to a single Pixhawks I²C port.
