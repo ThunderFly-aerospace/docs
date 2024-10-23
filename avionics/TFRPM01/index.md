@@ -37,8 +37,8 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
 |-----------|-------|-------------|
 | Pulse frequency range | 0 - 20 kHz (equal high and low periods) | Maximum RPM value varies by pulse number per revolution |
 | I2C Connector | 2x 4-pin JST-GH | Connected in parallel |
-| Pulse input connector | 3-pin 2.54mm pitch pin header | Internal 22k Ohm pull-up resistor |
-| Pulse input voltage range | 0-5V | Negative voltage or overvoltage could damage the input |
+| RPM Pulse input connector | 3-pin 2.54mm pitch pin header | Internal 22k Ohm pull-up resistor |
+| RPM Pulse input voltage range | 0-5V | Negative voltage or overvoltage could damage the input |
 | RPM pulse input switching thresholds | +VT 1.88 V, -VT 1.12 V  Typically@25°C| Hysteresis between VT+ and VT- is 0.756 V |
 | I2C address | 0x50 default | By switching JP1 possible change to 0x51 |
 | I2C SCL clock frequency | Max 100 kHz | Operation on 400 kHz is possible, but unreliable|
