@@ -36,10 +36,11 @@ For detailed usage instructions or custom integration, please contact **[Thunder
 
 | Parameter      | Value                | Description                         |
 |----------------|----------------------|-------------------------------------|
-| Dimensions     | 55 x 30 mm           | PCB size                         |
-| Output Power   | Up to +22 dBm         | RF output power (SX1262)            |
-| Frequency Range| 150 MHz - 960 MHz     | Supports all major sub-GHz ISM bands like 433 and 868 MHz|
-| Interface      | 7-PIN JST-GH SPI     | [Pixhawk SPI connector defined by standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf)| 
+| Dimensions     | 55 x 30 mm           | PCB size                            |
+| Output Power   | Up to +22 dBm        | RF output power (SX1262)            |
+| Frequency Range| 150 MHz - 960 MHz    | Supports all major sub-GHz ISM bands like 433 and 868 MHz   | 
+| Antenna connector | [MCX RF](https://en.wikipedia.org/wiki/MCX_connector)            |  Connection of an external passive antenna is expected      | 
+| FC Interface   | 7-PIN JST-GH SPI     | [Pixhawk SPI connector defined by standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf)|
 | Power Supply   | 3.7-5.4V@100mA       | Suitable for miniature UAVs   |
 
 ## Usage
