@@ -105,3 +105,11 @@ Always verify the modem's compliance with local regulations and laws concerning 
 ### How can I connect it to a PC/mobile/tablet?
 
 The easiest solution is the use of [TFUSBSERIAL01 gadget](https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/) to create a virtual UART/Serial link from a USB-A or USB-C connector.
+
+
+### How I can update firmware?
+
+Download the latest [firmware release](https://github.com/ThunderFly-aerospace/SiK/releases) and flash it to the TFSIK01 by using the following command:
+
+    python3 uploader.py --port /dev/ttyUSB0 radio~tfsik01a.ihx 
+
