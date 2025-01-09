@@ -2,7 +2,7 @@
 layout: page
 title: "TFSLOT01: Clogging-free airspeed sensor"
 permalink: /avionics/TFSLOT01/
-parent: Avionics
+parent: Sensors
 nav_order: "10"
 ---
 

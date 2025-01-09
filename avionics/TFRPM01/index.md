@@ -2,7 +2,7 @@
 layout: page
 title: "TFRPM01: RPM sensor"
 permalink: /avionics/TFRPM01/
-parent: Avionics
+parent: Sensors
 nav_order: "0"
 has_children: true
 ---

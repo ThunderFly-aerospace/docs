@@ -2,7 +2,7 @@
 layout: page
 title: "TFGPSLITE02 - Compact GNSS Module for Lightweight UAVs"
 permalink: /avionics/TFGPSLITE02/
-parent: Avionics
+parent: Sensors
 nav_order: "10"
 ---
 

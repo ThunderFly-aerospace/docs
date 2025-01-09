@@ -2,7 +2,7 @@
 layout: page
 title: "TFHT01 - UAV Humidity and Temperature Sensor"
 permalink: /avionics/TFHT01/
-parent: Avionics
+parent: Sensors
 nav_order: "20"
 ---
 

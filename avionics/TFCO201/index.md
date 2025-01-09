@@ -2,7 +2,7 @@
 layout: page
 title: "TFCO201 - Airborne CO2 concentration sensor"
 permalink: /avionics/TFCO201/
-parent: Avionics
+parent: Sensors
 nav_order: "10"
 ---
 
