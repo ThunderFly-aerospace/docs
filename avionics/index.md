@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Avionics
-alt_text: Avionits
+alt_text: Avionics
 permalink: /avionics/
 has_children: true
 has_toc: true
