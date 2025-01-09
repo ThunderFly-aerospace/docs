@@ -2,7 +2,7 @@
 layout: page
 title: "TFSIK01: High-reliable wireless telemetry data link"
 permalink: /avionics/TFSIK01/
-parent: Avionics
+parent: "Communication & Interfaces"
 nav_order: "10"
 ---
 

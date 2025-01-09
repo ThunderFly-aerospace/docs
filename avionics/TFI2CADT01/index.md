@@ -2,7 +2,7 @@
 layout: page
 title: "TFI2CADT01: I2C address translator"
 permalink: /avionics/TFI2CADT01/
-parent: Avionics
+parent: "Communication & Interfaces"
 nav_order: "30"
 ---
 

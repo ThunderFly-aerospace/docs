@@ -2,7 +2,7 @@
 layout: page
 title: "TFUSBSERIAL01 - USB Serial Telemetry Interface"
 permalink: /avionics/TFUSBSERIAL01/
-parent: Avionics
+parent: "Communication & Interfaces"
 nav_order: "4"
 ---
 

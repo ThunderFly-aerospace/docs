@@ -2,7 +2,7 @@
 layout: page
 title: "TFLORA01: LoRa and FSK Transceiver"
 permalink: /avionics/TFLORA01/
-parent: Avionics
+parent: "Communication & Interfaces"
 nav_order: "0"
 has_children: false
 ---

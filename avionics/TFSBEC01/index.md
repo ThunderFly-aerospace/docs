@@ -2,7 +2,7 @@
 layout: page
 title: "TFSBEC01 - High efficient power supply with power sensing"
 permalink: /avionics/TFSBEC01/
-parent: Avionics
+parent: "Power & Motor Control"
 nav_order: "10"
 ---
 

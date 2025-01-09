@@ -2,7 +2,7 @@
 layout: page
 title: "TFESC02 - BLDC Motor Driver with I2C Interface"
 permalink: /avionics/TFESC02/
-parent: Avionics
+parent: "Power & Motor Control"
 nav_order: "10"
 ---
 
