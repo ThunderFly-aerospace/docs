@@ -11,19 +11,19 @@ nav_order: "11"
 ![TFGPS01 without enclosure](https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS01A_top.jpg)
 
 ## Overview
-The **TFGPS01** is a high-end precision GNSS navigation module designed for UAV applications. It features multi-constellation reception, high noise immunity, and RTK capability, making it suitable for various drone navigation and payload synchronization tasks. The module can operate as both a standalone UART GPS and a USB GPS receiver.
+The TFGPS01 is a high-end precision GNSS navigation module designed for UAV applications. It features multi-constellation reception, high noise immunity, and RTK capability, making it suitable for various drone navigation and payload synchronization tasks. The module can operate as both a standalone UART GPS and a USB GPS receiver.
 
 ## Key Features
 - **Multi-GNSS Support**: GPS, GLONASS, Galileo, and BeiDou.
 - **RTK Capable**: Achieves centimeter-level accuracy with an RTK-compatible module.
 - **Compatibility**: Works with PX4, Ardupilot, and other common flight stacks.
-- **Integrated Safety Features**: Includes a beeper, safety LED, and an external safety switch connector.
+- **Integrated Safety Features**: A beeper, safety LED, and an external safety switch connector are included.
 - **Payload Interface**: Allows time synchronization and geo-fencing capabilities.
 - **High Noise Immunity**: Optimized for RF-noisy environments with high-linearity and dynamic range LNA.
 - **Daylight Visible LEDs**: Status indicators for power, GPS, RTK, and safety features.
 
 ## Handling Precautions
-- The **TFGPS01A** is a highly sensitive device; handle it with care.
+- The **TFGPS01** is a highly sensitive device; handle it with care.
 - Avoid direct contact with the antenna to prevent damage from sweat acids.
 
 ## Compatible GNSS Receiver Modules
@@ -32,10 +32,10 @@ The module is by default equipped with:
 - It can also be equipped with **[uBlox NEO-8](https://www.u-blox.com/en/product/neo-m8p-series)** for RTK-capable GNSS receiver modes.
 
 ## High Noise Immunity
-The ThunderFly **TFGPS01** GNSS receiver is optimized for operation in RF-noisy environments using a high-linearity LNA at the RF input. This results in higher power usage and slightly lower sensitivity, which can be optimized for the specific application by adjusting **R27** and **R26** resistors.
+The ThunderFly TFGPS01 GNSS receiver is optimized for operation in RF-noisy environments using a high-linearity LNA at the RF input. This results in higher power usage and slightly lower sensitivity, which can be optimized for the specific application by adjusting R27 and R26 resistors.
 
 ## Hardware
-The **TFGPS01A** is designed as **Open-Hardware (GPL v3)**, and all documentation is available in the official repository.
+The TFGPS01 is designed as open hardware (GPL v3), and all documentation is available in the GitHub repository.
 
 ### PCB Layout
 <p float="left">
@@ -44,7 +44,7 @@ The **TFGPS01A** is designed as **Open-Hardware (GPL v3)**, and all documentatio
 </p>
 
 ### Enclosure
-A 3D-printed protective enclosure is available and customizable in **OpenSCAD**.
+A 3D-printed protective enclosure is available and customizable in OpenSCAD.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS_1.jpg" alt="3D printed box" width="80%" />
@@ -54,16 +54,15 @@ A 3D-printed protective enclosure is available and customizable in **OpenSCAD**.
 > TBD
 
 ### Connection Diagram
-The **TFGPS01A** module can be connected simultaneously to an **Autopilot** and **Payload**. Below is a standard setup:
+The **TFGPS01** module can be connected simultaneously to an **Autopilot** and **Payload**. Below is a standard setup:
 
 ![Typical connection of TFGPS01 to the autopilot and payload](https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS01_Payload_connection.jpg)
 
 ### Electronic Schematic
-The full schematic is available in the repositary and also in [PDF preview](hw/cam/docs/TFGPS01A_schematic.pdf).
-
-![Schema](hw/cam/docs/TFGPS01A_schematic.svg)
+The full schematic is available as [KiCAD project in repository](https://github.com/ThunderFly-aerospace/TFGPS01) and also in [PDF preview](hw/cam/docs/TFGPS01A_schematic.pdf).
 
 ## LED Indicators
+
 | LED Label | Description |
 |------|------|
 | ON  | Indicates 5V power in module |
@@ -74,6 +73,7 @@ The full schematic is available in the repositary and also in [PDF preview](hw/c
 
 ## Pinout
 ### GPS & Safety Connector
+
 | Pin | Name | Description |
 |----|------|------------|
 | 1 | Vcc (+5V) | Power for module |
@@ -99,6 +99,7 @@ I2C AUX is I2C1 output from the autopilot. No other device is connected to I2C.
 | 4  | GND |
 
 ### Safety Switch Connector
+
 | Pin | Name | Description |
 |---|-----|-------------|
 | 1  | SAFETY_VCC | +3.3V (low current) |
@@ -111,9 +112,9 @@ I2C AUX is I2C1 output from the autopilot. No other device is connected to I2C.
 ### Payload Connector
 
 
-The module is equipped with a connector designed for payload connection; this feature is useful for time-sync and navigation data, time-stamping or geo-fencing.
+The module is equipped with a connector designed for payload connection; this feature is useful for time-sync and navigation data, time-stamping, or geofencing.
 
-The connector is labelled as `Payload GPS Interface`.
+The connector is labeled as `Payload GPS Interface`.
 
 | Pin | Name | Description |
 |-----|------|-------------|
