@@ -3,7 +3,6 @@ layout: page
 title: "Hardware"
 permalink: /avionics/TFRPM01/hardware
 parent: "TFRPM01: RPM sensor"
-grand_parent: Avionics
 nav_order: "0"
 ---
 

@@ -3,7 +3,6 @@ layout: page
 title: "Probe options"
 permalink: /avionics/TFRPM01/probe
 parent: "TFRPM01: RPM sensor"
-grand_parent: Avionics
 nav_order: "1"
 ---
 
