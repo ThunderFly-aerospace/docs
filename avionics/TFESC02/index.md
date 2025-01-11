@@ -8,11 +8,9 @@ nav_order: "10"
 
 # TFESC02 - BLDC Motor Driver Module with I2C Interface
 
+![TFESC02 - BLDC Motor Driver PCB](https://raw.githubusercontent.com/ThunderFly-aerospace/TFESC02/refs/heads/TFESC02A/doc/img/TFESC02_top3.jpg)
+
 The TFESC02 is a high-performance BLDC motor driver device designed specifically for unmanned aerial vehicle (UAV) applications. At its core uses the [MCF8329A](https://www.ti.com/product/MCF8329A) integrated circuit, which enables advanced Field Oriented Control (FOC) without requiring feedback sensors. The TFESC02 is optimized for integration into UAV systems via the I2C interface and is fully compatible with PX4 autopilot firmware, providing a seamless solution for propulsion systems in small and micro UAVs.
-
-![TFESC02 - ThunderFly BLDC Motor Driver Top view](./TFESC02-top.png)
-
-![TFESC02 - ThunderFly BLDC Motor Driver Bottom view](./TFESC02-bottom.png)
 
 ## Features
 
