@@ -40,6 +40,8 @@ To ensure reliable airspeed measurements, the pitot tube must be installed corre
    - **Adhesive Bonding:** Bond the tube into a pre-fabricated socket or flange on the fuselage or wing structure.
 3. Ensure that the electronic components and I2C cable are sealed against moisture. Only the intake holes at the front of the pitot tube should be exposed to airflow.
 
+The preferred orientation of the mounted sensor is PCB to up. This position ensures that ingressed water can flow out or evaporate. This mounting is especially useful in situations of mounting in the wing. Where the sensor should be screwed from the bottom of the wing. 
+
 ### Electrical Connection
 - Connect the TFPITOT01 to an unused I2C port on the flight controller.
 - Configure the firmware settings to recognize the sdp3x sensor driver for airspeed measurements.
