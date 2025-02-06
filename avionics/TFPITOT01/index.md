@@ -53,31 +53,26 @@ Follow the calibration procedure as outlined in the documentation for your fligh
 
 The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 - For commercial inquiries, contact sale@thunderfly.cz.
-- Orders can be placed via our [Tindie store](https://www.tindie.com/stores/thunderfly/).
+- Orders can be placed via our [Tindie store](https://www.tindie.com/products/37220/).
 - Customization options, including length or diameter modifications, are available upon request (typical lead time: 3 weeks).
 
+### FAQ: Frequently Asked Questions
 
-Here is an FAQ-style response that you can reuse for similar inquiries:  
-
----
-
-### **FAQ: Frequently Asked Questions**  
-
-#### **Q: Can a pitot probe be used on a quadcopter?**  
+#### Can a pitot probe be used on a quadcopter?
 Yes, a pitot probe can measure airspeed on a quadcopter as long as it is facing the relative airflow. In the case where the UAV always flies forward in a specific direction, the pitot tube will register dynamic pressure corresponding to the component of airspeed aligned with its axis.  
 
-#### **Q: How does the quadcopter’s pitch angle affect pitot tube measurements?**  
+#### How does the quadcopter’s pitch angle affect pitot tube measurements?  
 A pitot probe only measures the airspeed component along its own axis. If the quadcopter changes its pitch angle during flight, the probe may not capture the full airspeed but rather its **projection** onto the probe’s axis. This can lead to underestimation of actual airspeed unless compensated.  
 
-#### **Q: How can I correct for pitch angle effects?**  
+#### How can I correct for pitch angle effects?
 There are two common approaches:  
 1. **Using the known attitude** – By integrating pitch angle data from an IMU, you can adjust the pitot tube reading to estimate true airspeed.  
 2. **Using a multi-port airspeed sensor** – The multiple probes or a 5-hole TFPITOT probe can measure both airspeed and roughtly angle of attack, providing more accurate velocity data.  
 
-#### **Q: What airspeed range can a pitot tube measure on a quadcopter?**  
+#### What airspeed range can a pitot tube measure on a quadcopter?
 A pitot probe can generally measure airspeeds starting from a few meters per second. For a flight speed under **10 m/s**, the [TFSLOT01 sensor](https://docs.thunderfly.cz/avionics/TFSLOT01/) is recommended for better accuracy.  
 
-#### **Q: Where should the pitot tube be mounted on an airframe?**  
+#### Where should the pitot tube be mounted on an airframe?  
 For best results, the probe should be placed:  
 - In **clean airflow**, away from propeller wash and frame turbulence.  
 - With the tip facing **directly into the relative wind** to ensure accurate measurements.  

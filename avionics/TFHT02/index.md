@@ -23,7 +23,7 @@ The TFHT02 is a compact and precise hygrometer and temperature sensor designed f
 ## Where to Buy?
 The TFHT02 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). 
 
-For a quotation or support, contact us at sale@thunderfly.cz or visit our [Tindie store](https://www.tindie.com/products/thunderfly/).
+For a quotation or support, contact us at sale@thunderfly.cz or visit our [Tindie store](https://www.tindie.com/stores/thunderfly/).
 
 ## Technical Specifications
 
