@@ -14,7 +14,7 @@ nav_order: "10"
 
 ## Main Features
 
-  * Improved low-speed resolution compared to traditional pitot tubes.
+  * Improved low-speed resolution compared to [traditional pitot tubes](../avionics/TFPITOT01/).
   * Reduced tendency for clogging due to the absence of a stagnation point.
   * Directly integrated differential pressure sensor, eliminating the need for additional tubing.
   * Customizable 3D-printed case to fit specific applications.
@@ -36,7 +36,7 @@ TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly
 | Dimensions | 35x40x35mm | Default 3D printed Case |
 | Weather resistance | [IP42](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
 
-The TFSLOT uses the [TFASPDIMU02 electronics](https://github.com/ThunderFly-aerospace/TFASPDIMU02) which has many more options for how can be used, please look at its documentation for more details and parameters.
+The TFSLOT uses the [TFASPDIMU02 electronics](https://github.com/ThunderFly-aerospace/TFASPDIMU02) which has many more options for how can be used, please look at its documentation for more details and parameters. In cases where you need a lightweight Pitot Tube the [TFPITOT01](../avionics/TFPITOT01/) could be the better option. 
 
 ## Connection to the Pixhawk-based autopilots
 
