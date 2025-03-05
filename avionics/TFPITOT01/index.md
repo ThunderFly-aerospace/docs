@@ -24,7 +24,7 @@ The TFPITOT01 is an ultra-lightweight pitot tube that integrates the SDP33 senso
 - **Accuracy:** ±3% of measured value (corresponds to ±1.5 m/s @ 50 m/s)
 - **Zero Point Accuracy:** 0.2 Pa
 - **Operating Temperature Range:** -40 °C to +85 °C
-- **Dimensions:** 45 mm length, 6 mm diameter
+- **Default tube dimensions:** 45 mm length, 6 mm diameter
 - **Weight:** 3 grams
 - **Default I2C Address:** 0x21 (configurable to 0x22 or 0x23)
 
@@ -53,7 +53,7 @@ Follow the calibration procedure as outlined in the documentation for your fligh
 
 The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 - For commercial inquiries, contact sale@thunderfly.cz.
-- Orders can be placed via our [Tindie store](https://www.tindie.com/products/37220/).
+- Direct orders can be placed via our [Tindie store](https://www.tindie.com/products/37220/).
 - Customization options, including length or diameter modifications, are available upon request (typical lead time: 3 weeks).
 
 ### FAQ: Frequently Asked Questions
@@ -62,12 +62,12 @@ The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 Yes, a pitot probe can measure airspeed on a quadcopter as long as it is facing the relative airflow. In the case where the UAV always flies forward in a specific direction, the pitot tube will register dynamic pressure corresponding to the component of airspeed aligned with its axis.  
 
 #### How does the quadcopter’s pitch angle affect pitot tube measurements?  
-A pitot probe only measures the airspeed component along its own axis. If the quadcopter changes its pitch angle during flight, the probe may not capture the full airspeed but rather its **projection** onto the probe’s axis. This can lead to underestimation of actual airspeed unless compensated.  
+A pitot probe only measures the airspeed component along its axis. If the quadcopter changes its pitch angle during flight, the probe may not capture the full airspeed but rather its projection onto the probe’s axis. This can lead to an underestimation of actual airspeed unless compensated.  
 
 #### How can I correct for pitch angle effects?
 There are two common approaches:  
 1. **Using the known attitude** – By integrating pitch angle data from an IMU, you can adjust the pitot tube reading to estimate true airspeed.  
-2. **Using a multi-port airspeed sensor** – The multiple probes or a 5-hole TFPITOT probe can measure both airspeed and roughtly angle of attack, providing more accurate velocity data.  
+2. **Using a multi-port airspeed sensor** – The multiple probes or a modified 5-hole TFPITOT probe can measure both airspeed and rough angle of attack, providing more accurate velocity data.  
 
 #### What airspeed range can a pitot tube measure on a quadcopter?
 A pitot probe can generally measure airspeeds starting from a few meters per second. For a flight speed under **10 m/s**, the [TFSLOT01 sensor](https://docs.thunderfly.cz/avionics/TFSLOT01/) is recommended for better accuracy.  
