@@ -72,7 +72,7 @@ The modem was originally developed for the transmission of atmospheric data meas
 
 ### Installation and Configuration
 
-Integration into UAV systems is straightforward, requiring only a [Pixhawk-compatible JST-GH UART connection](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The side placement of external antennas, connected through MCX connectors, is specifically selected to increased robustness and easy installation.
+Integration into UAV systems is straightforward, requiring only a [Pixhawk-compatible JST-GH UART connection](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The side placement of external antennas, connected through MCX connectors, is specifically selected to increase robustness and ease of installation.
 
 ### Additional Telemetry Parameters
 
@@ -80,18 +80,17 @@ Integration into UAV systems is straightforward, requiring only a [Pixhawk-compa
 |-----------|-------------|
 | **Baud** (default 57) | The rate at which the mission planner or vehicle communicates with the local radio. "57" = 57600 bits per second. Must match the serial port settings on both ends. |
 | **Air Speed** (default 64) | The rate at which the two radios communicate. "64" = 64kbps. Lowering this rate increases range but reduces data throughput. |
-| **ECC** (default is "on") | Controls whether error correction is used. When on, 12/24 Golay error correction is applied, adding a 16-bit CRC. This improves reliability but halves throughput. Recommended to keep enabled especially at longer ranges. |
-| **MAVlink** (default is "MAVLink") | Optimizes transmission for MAVLink packets. Set to "Low Latency" if using joystick or tablet control. RSSI and error rates are only sent in MAVLink mode. |
-| **Tx Power** (default 20) | Transmission power. Levels: 1=1.3mW, 2=1.5mW, 5=3.2mW, 8=6.3mW, 11=12.5mW, 14=25mW, 17=50mW, 20=100mW. Should comply with local regulations. |
-| **Duty Cycle** (default 100) | Max % of time the radio transmits. A lower duty cycle may enable higher transmit power or broader frequency access (e.g., <10% in EU). Bandwidth decreases with lower duty cycles. A duty cycle of 0 means receive-only mode. |
+| **ECC** (default is "0" off) | Controls whether error correction is used. When on, 12/24 Golay error correction is applied, adding a 16-bit CRC. This theoretically improves reliability but halves throughput. Has minimal benefit in the case of MAVlink framed data. |
+| **MAVlink** (default is "1" (MAVLink) | Optimizes transmission for MAVLink packets. Set to 2 "Low Latency" if using a joystick or tablet control. RSSI and error rates are only sent in MAVLink mode. For general data set to "0" |
+| **Tx Power** (default 20) | Transmission power in dBm. Should comply with local regulations. |
+| **Duty Cycle** (default 100) | Max % of time the radio transmits. A lower duty cycle may enable higher transmit power or broader frequency access (e.g., <10% in the EU). Bandwidth decreases with lower duty cycles. A duty cycle of 0 means receive-only mode. |
 | **Max Window** (default 33) | The interval (in ms) within which the GCS can send a packet. Lower values like 33 reduce latency, especially in "Low Latency" mode. |
-| **LBT Rssi** (default 0) | RSSI threshold for Listen Before Talk (LBT). If >0, radio waits for a quiet channel before transmitting. Formula: `signal_dBm = (RSSI / 1.9) - 127`. Example: 25 = -121 dBm. Required for compliance in some regions. Minimum listen time is 5ms, with randomized delay per EU rules. |
+| **LBT Rssi** (default 0) | RSSI threshold for Listen Before Talk (LBT). If >0, the radio waits for a quiet channel before transmitting. Formula: `signal_dBm = (RSSI / 1.9) - 127`. Example: 25 = -121 dBm. Required for compliance in some regions. Minimum listen time is 5ms, with randomized delay per EU rules. |
 | **RTS CTS** | Enables RTS/CTS hardware flow control. Useful with ArduPilot firmware (post mid-2016) when connected to Pixhawk TELEM ports. Can be set to "auto" to optimize performance. |
-
 
 #### Connecting to Autopilot
 
-Connection to the autopilot is facilitated through a JST-GH cable with a 6-pin connector. While PX4 firmware initially configures the TELEM1 port for telemetry connections, adjustments in the PX4 firmware settings allow for modem connections through any available UART port.
+Connection to the autopilot flight controller is facilitated through a JST-GH cable with a 6-pin connector. While PX4 firmware initially configures the TELEM1 port for telemetry connections, adjustments in the PX4 or Ardupilot firmware settings allow for modem connections through any available UART port. 
 
 #### Ground Station Connectivity
 
