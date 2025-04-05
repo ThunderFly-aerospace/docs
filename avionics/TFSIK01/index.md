@@ -129,3 +129,18 @@ Download the latest [firmware release](https://github.com/ThunderFly-aerospace/S
 
     python3 uploader.py --port /dev/ttyUSB0 radio~tfsik01a.ihx 
 
+
+### How can I monitor the link quality?
+
+The SiK modem firmware provides telemetry signal strength data (RSSI) that can be visualized in Ground Control Station software such as Mission Planner or QGroundControl. Two RSSI values are reported:
+
+    * Local RSSI: signal strength received by the local modem.
+    * Remote RSSI: signal strength received by the remote modem.
+
+Monitoring both values provides insight into the quality and symmetry of the communication link as is demonstrated in the following graph. As seen in the figure, the signal strength for TFSIK01 decreases almost smoothly with increasing distance, making it easier to predict link performance and diagnose issues caused by interference or configuration problems.
+
+![TFSIK01 PX4 RSSI recording during flight](./TFSIK01_RSSI_distance.png)
+
+Thanks to dual antenna diversity system, the TFSIK01 maintains stable signal levels even when the UAV changes orientation. Unlike conventional modems where antenna directionality causes fluctuations, the TFSIK01  switches between two antennas to maintain the best signal. The used [PlotJuggler](https://plotjuggler.io/) layout [could be downloaded here](./Plot_juggler_RSSI.xml).
+
+
