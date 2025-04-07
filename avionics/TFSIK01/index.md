@@ -134,13 +134,31 @@ Download the latest [firmware release](https://github.com/ThunderFly-aerospace/S
 
 The SiK modem firmware provides telemetry signal strength data (RSSI) that can be visualized in Ground Control Station software such as Mission Planner or QGroundControl. Two RSSI values are reported:
 
-    * Local RSSI: signal strength received by the local modem.
-    * Remote RSSI: signal strength received by the remote modem.
+  * Local RSSI: signal strength received by the local modem.
+  * Remote RSSI: signal strength received by the remote modem.
+  * Local Noise: The noise floor being received in the aircraft.
+  * Remote Noise: The nooise level being received on the ground.
+
 
 Monitoring both values provides insight into the quality and symmetry of the communication link as is demonstrated in the following graph. As seen in the figure, the signal strength for TFSIK01 decreases almost smoothly with increasing distance, making it easier to predict link performance and diagnose issues caused by interference or configuration problems.
 
 ![TFSIK01 PX4 RSSI recording during flight](./TFSIK01_RSSI_distance.png)
 
 Thanks to dual antenna diversity system, the TFSIK01 maintains stable signal levels even when the UAV changes orientation. Unlike conventional modems where antenna directionality causes fluctuations, the TFSIK01  switches between two antennas to maintain the best signal. The used [PlotJuggler](https://plotjuggler.io/) layout [could be downloaded here](./Plot_juggler_RSSI.xml).
+
+A reliable telemetry link depends not only on received signal strength (RSSI), but also on the link signal-to-noise ratio (SNR), because the link could be degraded due to background noise.
+This is because the effective **SNR** (RSSI – Noise) becomes too small for reliable demodulation and  basically if the RSSI and background noise level (Noise) meets in the graph, the radio link is lost.
+
+The recommended minimum SNR for a reliable MAVLink connection is approximately 10 dB. If the noise level increases (due to interference or hardware issues), the same RSSI may no longer be sufficient.
+
+The figure above shows both RSSI and Noise values from both ends of the link. If you encounter packet loss or poor range despite good RSSI values, examine the corresponding noise measurements.
+
+If SNR is consistently insufficient, consider:
+
+  - **Reducing interference**: improve RF shielding and move away modem and antenna from EMI emitting  devices such, power supplies, or switching regulators.
+  - **Lowering the air data rate**: slower rates improve link robustness and increase receiver sensitivity.
+  - **Using directional antennas** (especially on ground side) to improve gain and reject side noise.
+
+
 
 
