@@ -79,7 +79,7 @@ Integration into UAV systems is straightforward, requiring only a [Pixhawk-compa
 | Parameter | Description |
 |-----------|-------------|
 | **Baud** (default 57) | The rate at which the mission planner or vehicle communicates with the local radio. "57" = 57600 bits per second. Must match the serial port settings on both ends. |
-| **Air Speed** (default 64) | The rate at which the two radios communicate. "64" = 64kbps. Lowering this rate increases range but reduces data throughput. |
+| **Air Speed** (default 64) | The rate at which the two radios communicate. It is the rate in kbps, truncated to an integer. "9" = 9600 baud, "38" means 38400, "64" = 64kbps, "115" = 115200 etc. Lowering this rate increases range but reduces data throughput. |
 | **ECC** (default is "0" off) | Controls whether error correction is used. When on, 12/24 Golay error correction is applied, adding a 16-bit CRC. This theoretically improves reliability but halves throughput. Has minimal benefit in the case of MAVlink framed data. |
 | **MAVlink** (default is "1" (MAVLink) | Optimizes transmission for MAVLink packets. Set to 2 "Low Latency" if using a joystick or tablet control. RSSI and error rates are only sent in MAVLink mode. For general data set to "0" |
 | **Tx Power** (default 20) | Transmission power in dBm. Should comply with local regulations. |
