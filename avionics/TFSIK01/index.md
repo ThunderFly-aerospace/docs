@@ -15,7 +15,7 @@ nav_order: "10"
 
 The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges of better than one kilometer with a basic whip antenna kit. The range can be extended to several kilometers with the use of a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between the UAV and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
 
-The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem that incorporates dual antenna diversity and exceptional resistance to noise. This open-source hardware solution employs the advanced [Si1060](https://www.silabs.com/documents/public/data-sheets/Si106x-8x.pdf) chip from the Si10xx series and is further enhanced by the Si4463 EZRadioPRO transceiver, ensuring robust and secure communication capabilities. The modem's design prioritizes immunity to interference from out-of-band frequencies, guaranteeing reliable performance in challenging environments and securing its position as a top choice for UAV systems that demand the utmost data integrity and security.
+The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating dual antenna diversity and exceptional resistance to noise. This open-source hardware solution employs the advanced [Si1060](https://www.silabs.com/documents/public/data-sheets/Si106x-8x.pdf) chip from the Si10xx series and is further enhanced by the Si4463 EZRadioPRO transceiver, ensuring robust and secure communication capabilities. The modem's design prioritizes immunity to interference from out-of-band frequencies, guaranteeing reliable performance in challenging environments and securing its position as a top choice for UAV systems that demand the utmost data integrity and security.
 
 ### Key Features
 
@@ -27,7 +27,8 @@ The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem that incorporate
   - Implements Frequency-Hopping Spread Spectrum (FHSS)
   - Utilizes Adaptive Time Division Multiplexing (TDM) with Configurable duty cycle
   - Supports Listen Before Talk (LBT) and Adaptive Frequency Agility (AFA)
-  - Error correction corrects up to 25% of bit errors 
+  - Error correction corrects up to 25% of bit errors
+  - [AES-256 encryption algorithm](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
 - **High-Performance Metrics**:
   - Offers a transparent serial link
   - Facilitates air data rates reaching up to 250kbps
@@ -36,7 +37,7 @@ The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem that incorporate
 - **Open-Source and Highly Configurable**: Loaded with SiK firmware for enhanced customization through AT and RT commands, it supports the MAVLink 2 protocol, Configurable through Mission Planner & APM Planner
 
 
-## Technical Parameters
+## Hardware Parameters
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
@@ -79,7 +80,7 @@ Integration into UAV systems is straightforward, requiring only a [Pixhawk-compa
 | Parameter | Description |
 |-----------|-------------|
 | **Baud** (default 57) | The rate at which the mission planner or vehicle communicates with the local radio. "57" = 57600 bits per second. Must match the serial port settings on both ends. |
-| **Air Speed** (default 64) | The rate at which the two radios communicate. It is the rate in kbps, truncated to an integer. "9" = 9600 baud, "38" means 38400, "64" = 64kbps, "115" = 115200 etc. Lowering this rate increases range but reduces data throughput. |
+| **Air Speed** (default 64) | The rate at which the two radios communicate. It is the rate in kbps, truncated to an integer. "9" = 9600 baud, "38" means 38400, "64" = 64kbps, "115" = 115200, etc. Lowering this rate increases range but reduces data throughput. |
 | **ECC** (default is "0" off) | Controls whether error correction is used. When on, 12/24 Golay error correction is applied, adding a 16-bit CRC. This theoretically improves reliability but halves throughput. Has minimal benefit in the case of MAVlink framed data. |
 | **MAVlink** (default is "1" (MAVLink) | Optimizes transmission for MAVLink packets. Set to 2 "Low Latency" if using a joystick or tablet control. RSSI and error rates are only sent in MAVLink mode. For general data set to "0" |
 | **Tx Power** (default 20) | Transmission power in dBm. Should comply with local regulations. |
@@ -136,18 +137,18 @@ The SiK modem firmware provides telemetry signal strength data (RSSI) that can b
 
   * Local RSSI: signal strength received by the local modem.
   * Remote RSSI: signal strength received by the remote modem.
-  * Local Noise: The noise floor being received in the aircraft.
-  * Remote Noise: The nooise level being received on the ground.
+  * Local Noise: The noise floor is being received in the aircraft.
+  * Remote Noise: The noise level being received on the ground.
 
 
 Monitoring both values provides insight into the quality and symmetry of the communication link as is demonstrated in the following graph. As seen in the figure, the signal strength for TFSIK01 decreases almost smoothly with increasing distance, making it easier to predict link performance and diagnose issues caused by interference or configuration problems.
 
 ![TFSIK01 PX4 RSSI recording during flight](./TFSIK01_RSSI_distance.png)
 
-Thanks to dual antenna diversity system, the TFSIK01 maintains stable signal levels even when the UAV changes orientation. Unlike conventional modems where antenna directionality causes fluctuations, the TFSIK01  switches between two antennas to maintain the best signal. The used [PlotJuggler](https://plotjuggler.io/) layout [could be downloaded here](./Plot_juggler_RSSI.xml).
+Thanks to the dual antenna diversity system, the TFSIK01 maintains stable signal levels even when the UAV changes orientation. Unlike conventional modems where antenna directionality causes fluctuations, the TFSIK01  switches between two antennas to maintain the best signal. The used [PlotJuggler](https://plotjuggler.io/) layout [could be downloaded here](./Plot_juggler_RSSI.xml).
 
-A reliable telemetry link depends not only on received signal strength (RSSI), but also on the link signal-to-noise ratio (SNR), because the link could be degraded due to background noise.
-This is because the effective **SNR** (RSSI – Noise) becomes too small for reliable demodulation and  basically if the RSSI and background noise level (Noise) meets in the graph, the radio link is lost.
+A reliable telemetry link depends not only on received signal strength (RSSI) but also on the link signal-to-noise ratio (SNR) because the link could be degraded due to background noise.
+This is because the effective **SNR** (RSSI – Noise) becomes too small for reliable demodulation and basically if the RSSI and background noise level (Noise) meet in the graph, the radio link is lost.
 
 The recommended minimum SNR for a reliable MAVLink connection is approximately 10 dB. If the noise level increases (due to interference or hardware issues), the same RSSI may no longer be sufficient.
 
@@ -155,9 +156,9 @@ The figure above shows both RSSI and Noise values from both ends of the link. If
 
 If SNR is consistently insufficient, consider:
 
-  - **Reducing interference**: improve RF shielding and move away modem and antenna from EMI emitting  devices such, power supplies, or switching regulators.
+  - **Reducing interference**: improve RF shielding and move away modem and antenna from EMI emitting devices such, as power supplies, or switching regulators.
   - **Lowering the air data rate**: slower rates improve link robustness and increase receiver sensitivity.
-  - **Using directional antennas** (especially on ground side) to improve gain and reject side noise.
+  - **Using directional antennas** (especially on the ground side) to improve gain and reject side noise.
 
 
 
