@@ -28,7 +28,7 @@ The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating du
   - Utilizes Adaptive Time Division Multiplexing (TDM) with Configurable duty cycle
   - Supports Listen Before Talk (LBT) and Adaptive Frequency Agility (AFA)
   - Error correction corrects up to 25% of bit errors
-  - [AES-256 encryption algorithm](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+  - [AES-256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) or another encryption available upon request.
 - **High-Performance Metrics**:
   - Offers a transparent serial link
   - Facilitates air data rates reaching up to 250kbps
