@@ -75,7 +75,7 @@ The modem was originally developed for the transmission of atmospheric data meas
 
 Integration into UAV systems is straightforward, requiring only a [Pixhawk-compatible JST-GH UART connection](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The side placement of external antennas, connected through MCX connectors, is specifically selected to increase robustness and ease of installation.
 
-### Additional Telemetry Parameters
+### Configurable Telemetry Parameters
 
 | Parameter | Description |
 |-----------|-------------|
@@ -133,13 +133,15 @@ Download the latest [firmware release](https://github.com/ThunderFly-aerospace/S
 
 ### How can I monitor the link quality?
 
-The SiK modem firmware provides telemetry signal strength data (RSSI) that can be visualized in Ground Control Station software such as Mission Planner or QGroundControl. Two RSSI values are reported:
+The SiK modem firmware provides telemetry signal strength data (RSSI) that can be visualized in real-time in Ground Control Station software such as Mission Planner, QGroundControl, or post-flight from logs using [PlotJuggler](https://plotjuggler.io/). The following link parameters are reported:
 
   * Local RSSI: signal strength received by the local modem.
   * Remote RSSI: signal strength received by the remote modem.
   * Local Noise: The noise floor is being received in the aircraft.
   * Remote Noise: The noise level being received on the ground.
 
+{: .note }
+The Remote and Local mean from the modem side of view. Therefore the remote is a UAV modem if viewed from GCS and also, the ground modem is remote from the point of view of the UAV modem. The Remote and Local are exchanged in GCS and flight logs. 
 
 Monitoring both values provides insight into the quality and symmetry of the communication link as is demonstrated in the following graph. As seen in the figure, the signal strength for TFSIK01 decreases almost smoothly with increasing distance, making it easier to predict link performance and diagnose issues caused by interference or configuration problems.
 
