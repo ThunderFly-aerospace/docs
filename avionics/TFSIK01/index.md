@@ -11,7 +11,7 @@ nav_order: "10"
 
 ![TFSIK01 pair with USB-C converter](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/TFSIK01A/doc/img/TFSIK01_pair.jpg)
 
-### Overview
+## Overview
 
 The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges of better than one kilometer with a basic whip antenna kit. The range can be extended to several kilometers with the use of a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between the UAV and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
 
@@ -37,11 +37,16 @@ The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating du
 - **Open-Source and Highly Configurable**: Loaded with SiK firmware for enhanced customization through AT and RT commands, it supports the MAVLink 2 protocol, Configurable through Mission Planner & APM Planner
 
 
+### Purchasing Information
+
+The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly in [Tindie store](https://www.tindie.com/products/34682/). We are designers of this modem and therefore have full control of the modem construction and design. This gives us the ability to react even on non-standard requests for modification or functions.
+
+
 ## Hardware Parameters
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
-| Frequency range | 142 MHz - 1050 MHz | The Exact frequency band has to be set by the factory, actually available bands are 433MHz and 868 MHz|
+| Frequency range | 142 MHz - 1050 MHz | The Exact frequency band has to be set by the factory, commonly used bands are 433MHz, 868 MHz, and 915 MHz|
 | RF power range | -20dBm to 20dBm (100 mW) | Adjustable by AT commands |
 | Input Noise Figure | 0.6 dB |  LNA noise figure |
 | OIP3 |  39.5dBm | Input LNA gain 18.7dB|
@@ -105,13 +110,9 @@ To connect the modem to a computer, a USB to UART conversion is essential. The [
 
 This versatile setup ensures the modem's applicability across a wide range of operational scenarios, from desktop-based ground control systems to mobile field deployments.
 
-### Purchasing Information
-
-The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly in [Tindie store](https://www.tindie.com/products/34682/). We are designers of this modem and therefore have full control of the modem construction and design. This gives us the ability to react even on non-standard requests for modification or functions.
-
 ### Frequency Options
 
-ThunderFly typically configures the TFSIK01A modem for the 433 MHz band. For alternative frequency operations, ThunderFly can customize the modem to meet specific requirements. For detailed information on frequency adjustments, contact ThunderFly directly at [info@thunderfly.cz](mailto:info@thunderfly.cz).
+ThunderFly typically configures the TFSIK01A modem for the 433 and 868 MHz bands. For alternative frequency requests, ThunderFly can customize the modem to meet specific applications. For detailed information on frequency adjustments, contact ThunderFly directly at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 
 {: .important }
 Always verify the modem's compliance with local regulations and laws concerning frequency and transmitting power for operation before use. Confirm the necessity for any operational permissions or licenses within your jurisdiction.
