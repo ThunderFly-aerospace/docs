@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "TFI2CEXT01: I²C Bus Extender"
-permalink: /avionics/TFI2CEXT/
+permalink: /avionics/TFI2CEXT01/
 parent: "Communication & Interfaces"
 nav_order: "10"
 ---
