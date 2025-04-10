@@ -11,6 +11,6 @@ nav_order: 20
 
 ## Avionics Components  
 
-ThunderFly's avionics system consists of **compact, high-performance hardware** designed to enhance the capabilities of modern unmanned aerial vehicles. Unlike standalone instruments, these avionics components are built for **seamless integration** into UAV platforms and other advanced systems, ensuring reliable operation in demanding environments.  
+ThunderFly's avionics system consists of **high-performance hardware** designed to enhance the capabilities of standard unmanned aerial vehicles. ThunderFly avionics components are built for seamless integration into existing UAV platforms, ensuring reliable operation in demanding environments where our autogyro sensor carriers usually operate.  
 
-Our devices support a range of applications, from **precision airspeed and temperature measurements** to **advanced telemetry and data communication**. Key offerings include **high-accuracy environmental sensors** for real-time atmospheric data, **onboard instruments for critical flight monitoring**, and **UAV-to-ground station communication solutions**—all developed and manufactured in **Europe** to meet rigorous aerospace and research standards.  
+Our devices are specialized to deliver the best performance in atmospheric sensing applications, supporting the whole workflow from precision airspeed and temperature measurements to advanced telemetry and data communication. Key offerings include **high-accuracy environmental sensors** for real-time atmospheric data acquisition — all developed and manufactured in Europe to meet rigorous aerospace and research standards.  
