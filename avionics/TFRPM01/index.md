@@ -7,12 +7,12 @@ nav_order: "0"
 has_children: true
 ---
 
-# TFRPM01D - RPM measuring device
+# TFRPM01 - RPM measuring device
 
 Revolutions per minute measurement device for UAV.
 It is designed to direct connection to the Pixhawk controller (CUAV V5+ for example) through a standard I²C connector. The device [is supported by PX4 firmware](https://docs.px4.io/main/en/sensor/thunderfly_tachometer.html).
-The input of the meter is supposed to be a pulse signal from an optical encoder, hall sensor, etc. The pulses are counted during a predefined constant interval.
-The hardware is intended for measuring helicopter and autogyro rotor RPM, but its counting capability is up to 20 kHz, so it should also be used for measuring propeller or engine RPM.
+The meter's input is supposed to be a pulse signal from an optical encoder, hall sensor, etc. The pulses are counted during a predefined constant interval.
+The hardware is intended to measure helicopter and autogyro rotor RPM, but its counting capability is up to 20 kHz, so it should also be used to measure propeller or engine RPM.
 
 <p align="center">
   <img src="/avionics/TFRPM01/TFRPM01D.jpg" />
@@ -81,7 +81,7 @@ These special cable conductors' winding method greatly improves the signal integ
 
 ### I²C Address Configuration
 
-By default, the TFRPM01C sensor is manufactured with a 0x50 I²C address. This address is possible to change to 0x51 by altering the JP1 solder junction. The junction connection to GND needs to be cut by knife and then soldered to the opposite side Vcc.
+By default, the TFRPM01 sensor is manufactured with a 0x50 I²C address. This address is possible to change to 0x51 by altering the JP1 solder junction. The junction connection to GND needs to be cut by knife and then soldered to the opposite side Vcc.
 
 The default configuration of the junction corresponds to the following picture, where the center pin is connected to GND by copper trace.
 
@@ -95,7 +95,7 @@ The device is designed to be mounted with or without a plastic case. The 3D-prin
   * The second option is the use of [double-sided adhesive tape](https://www.3m.com/3M/en_US/vhb-tapes-us/) or [reclosable fastener](https://www.3m.com/3M/en_US/dual-lock-reclosable-fasteners-us/) stuck on the side of the TFRPM01 case.
 
 ## Sensor probe selection
-The TFRPM01D can be used with multiple types of sensor probes. The most used one is a Hall effect probe.  The magnetic probe is ideal for harsh environments, where dirt, dust, and water can contact the sensed rotor. The disadvantage is that magnet mounting is required for proper sensor work.
+The TFRPM01 can be used with multiple types of sensor probes. The most used one is a Hall effect probe.  The magnetic probe is ideal for harsh environments, where dirt, dust, and water can contact the sensed rotor. The disadvantage is that magnet mounting is required for proper sensor work.
 
 
 <p float="center">
