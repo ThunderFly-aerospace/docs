@@ -10,7 +10,7 @@ nav_order: "10"
 
 ![TFGPSLITE02 bare](https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPSLITE02/refs/heads/TFGPSLITE02A/doc/img/TFGPSLITE02_top.jpg)
 
-The **TFGPSLITE02** is a compact and high-performance GNSS module designed for small, lightweight UAVs. Featuring the u-blox SAM-M8Q chipset, it provides reliable and accurate navigation by supporting multiple satellite constellations. This module integrates seamlessly with flight controllers via the Pixhawk standard "Basic GPS Port."
+The **TFGPSLITE02** is a compact and high-performance GNSS module designed for small, lightweight UAVs. Featuring the u-blox [SAM-M10Q](https://www.u-blox.com/en/product/sam-m10q-module) or [SAM-M8Q](https://www.u-blox.com/en/product/sam-m8q-module) chipset, it provides reliable and accurate navigation by supporting multiple satellite constellations. This module integrates seamlessly with flight controllers via the Pixhawk standard "Basic GPS Port."
 
 ## Key Features
 
