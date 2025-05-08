@@ -51,11 +51,13 @@ The module is intended to be connected by SPI to the flight controller (FC), wit
 
 Currently, support for connection to LoRaWAN networks is implemented in PX4. This allows the device to transmit telemetry or other data to IoT services such as The Things Network. This use case is intended to secure reliable mission-critical telemetry downloads from UAVs. The control of UAVs is very limited to a  few commands.
 
-### TheTingsNetwork
+#### TheTingsNetwork
 
 The following example demonstrates how to transmit position packets to [The Things Network](https://www.thethingsnetwork.org/).
 
 To enable position transmission using TFLORA, the PX4 firmware must be compiled with the following configuration options:
+
+> Source codes, compiled binaries, and additional support are provided to customers who have purchased the TFLORA01 hardware from ThunderFly.
 
 ```bash
 CONFIG_DRIVERS_TFLORA=y
@@ -68,7 +70,7 @@ For testing purposes, you may also enable the fake GPS data generator:
 CONFIG_EXAMPLES_FAKE_GPS=y
 ```
 
-After flashing the appropriate PX4 firmware, create a file named `tflora.txt` The following is an anonymous example of tflora.txt in the root of the SD card with your TTN connection credentials. You should modify it by using your keys:
+After flashing the appropriate PX4 firmware, create a file named `tflora.txt` containing your TTN connection credentials. The following is an anonymous example content of `tflora.txt` in the root of the SD card. You should modify it by using your keys:
 
 ```
 n:5D5A273AD1F54F2503A8FF99796E3DC9
@@ -132,8 +134,8 @@ Note: At this stage, `lora_gps_vcmd` does not yet process TTN → PX4 messages a
 Example transmission log entries:
 
 ```text
-INFO  [tflora] received lora message for send
-INFO  [tflora] sending lora message...
+INFO  [tflora] received LoRa message for sending
+INFO  [tflora] sending LoRa message...
 EV_TXSTART
 EV_TXCOMPLETE (includes waiting for RX windows)
 ```
