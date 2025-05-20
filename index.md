@@ -15,7 +15,7 @@ At [ThunderFly s.r.o.](https://www.thunderfly.cz/), we're dedicated to advancing
 
 Our state-of-the-art measurement solutions are at the forefront of UAV technology. These tools are essential for high-level tasks such as atmospheric measurements, offering unparalleled accuracy and reliability. Our comprehensive solutions include:
 
-- **Measuring Devices Carriers**: Our autogyro carriers (TF-G1 and [TF-G2](/instruments/TF-G2)) are engineered for stability in adverse weather conditions.
+- **Measuring Devices Carriers**: Our autogyro carriers (TF-G1, [TF-G2](/instruments/TF-G2) and [TF-G250](/instruments/TF-G2250)) are engineered for stability in adverse weather conditions.
 - **TF-ATMON Toolchain**: Transform data into actionable insights with our advanced processing software, tailored for atmospheric analysis.
 - **Software Simulator**: Prepare for your measuring campaigns with our realistic software simulator, ensuring your mission's success.
 
