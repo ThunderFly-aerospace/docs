@@ -12,7 +12,7 @@ The TF-G250 is a miniature unmanned autogyro specifically developed for atmosphe
 
 The TF-G250 autogyro is designed for easy handling, deployment, and maintenance, ensuring affordability and robustness in diverse meteorological conditions. Its compact and lightweight structure (below 250g, complying with the European C0 category) simplifies transport and storage, making it ideal for rapid deployment scenarios.
 
-![TF-G250 during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G250/main/doc/img/TF-G250_flight.jpg)
+![TF-G250 during flight](TF-G250_flight.png)
 
 The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric measurement tools. Unlike traditional solutions, the TF-G250  meteo autogyro drone offers significant operational advantages due to its light weight, absence of parachute, inherent safety mechanisms, and safe-descent capability.
 
@@ -38,7 +38,7 @@ The following table provides a detailed overview of the key meteorological perfo
 | Maximum Take-off Weight       | < 250 g (C0 category)                                                                        |
 | Operational Altitude          | ~3.2 km AGL self-powered, ~32km AMSL balloon-launched                                         |
 | Temperature Range             | –40 to +40 °C                                                                               |
-| Temperature Accuracy          | ±0.3 °C (typical)                                                             |
+| Temperature Accuracy          | ±0.2 °C (typical)                                                             |
 | Temperature Resolution        | 0.01 °C                                                                                      |
 | Relative Humidity Range       | 0–100 %RH                                                                                    |
 | Relative Humidity Accuracy    | ±1.5 % RH (typical)                                                         |
@@ -78,7 +78,7 @@ The TF-G250 supports two main operational procedures for atmospheric profiling:
 
 Future enhancements may include ground-based automation for launch, recovery, and servicing of both operational modes.
 
-### Utilization and Data Processing
+### Data Processing
 
 Meteorological data collected by the TF-G250 are processed using standard meteorological software such as [thundeR](https://bczernecki.github.io/thundeR/) and [SHARPpy](https://github.com/sharppy/SHARPpy), with outputs available in the [BUFR format](https://en.wikipedia.org/wiki/BUFR) for ease of integration into existing meteorological workflows.
 
