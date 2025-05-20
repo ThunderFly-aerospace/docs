@@ -1,0 +1,84 @@
+---
+title: "TF-G250 - Unmanned Aerological Autogyro"
+layout: page
+permalink: /instruments/TF-G250
+parent: Instruments
+nav_order: "3"
+---
+
+# TF-G250 - Unmanned Aerological Autogyro
+
+The TF-G250 is a miniature unmanned autogyro specifically developed for atmospheric boundary layer measurements. It serves as a practical and ecological alternative to conventional balloon-based radiosondes, performing vertical profiling of key meteorological parameters: temperature, humidity, wind speed and direction, and atmospheric pressure.
+
+The TF-G250 autogyro is designed for easy handling, deployment, and maintenance, ensuring affordability and robustness in diverse meteorological conditions. Its compact and lightweight structure (below 250g, complying with the European C0 category) simplifies transport and storage, making it ideal for rapid deployment scenarios.
+
+![TF-G250 during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G250/main/doc/img/TF-G250_flight.jpg)
+
+The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric measurement tools. Unlike traditional solutions, the TF-G250  meteo autogyro drone offers significant operational advantages due to its light weight, absence of parachute, inherent safety mechanisms, and safe-descent capability.
+
+## Key Design Features
+
+* Integrated sensor payload for basic atmospheric measurements (temperature, humidity, pressure, wind speed and direction)
+* Does not require energy for the descent phase, enabling reduced battery weight
+* Automatic fail-safe landing without requiring parachutes or additional mechanisms
+* Effective operational altitude up to 3240 meters above ground
+* Real-time telemetry for atmospheric data publication and processing
+* Extremely low maintenance with easy repairability
+* Optimized rotor design eliminating the need for pre-rotation, suitable even in low-wind conditions
+* Low acoustic signature
+
+These design choices provide the TF-G250 with a distinct competitive edge, allowing safe and controlled descent while significantly improving energy efficiency.
+
+## Technical Specifications
+
+The following table provides a detailed overview of the key meteorological performance parameters of the TF-G250. These specifications are based on the integrated  sensors.
+
+| Parameter                     | Specification                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------------- |
+| Maximum Take-off Weight       | < 250 g (C0 category)                                                                        |
+| Operational Altitude          | ~3.2 km AGL self-powered, ~32km AMSL balloon-launched                                         |
+| Temperature Range             | –40 to +40 °C                                                                               |
+| Temperature Accuracy          | ±0.3 °C (typical)                                                             |
+| Temperature Resolution        | 0.01 °C                                                                                      |
+| Relative Humidity Range       | 0–100 %RH                                                                                    |
+| Relative Humidity Accuracy    | ±1.5 % RH (typical)                                                         |
+| Relative Humidity Resolution  | 0.01 % RH                                                                                    |
+| Pressure Range                | 3–110 kPa                                                                                   |
+| Pressure Accuracy             | ±20 Pa (typical) |
+| Pressure Resolution           | 1 Pa                                                      |
+| Wind Speed Range              | TBD                                                                                          |
+| Wind Speed Accuracy           | ±0.2 m/s                                                                            |
+| Wind Speed Resolution         | 0.1 m/s                                                                            |
+| Wind Direction Range          | 0 to 360°                                                                                 |
+| Wind Direction Accuracy       | ±2°                                                                                 |
+| Wind Direction Resolution     | ±0.1°                                                                                 |
+| Effective Vertical Resolution | 5 m                                                                                          |
+| Data Output Format            | BUFR-compatible                                                                              |
+| Telemetry                     | Real-time via onboard radio modem                                                            |
+
+## Meteorological Applications
+
+The TF-G250 is primarily designed for vertical atmospheric profiling, making it particularly suited for capturing high-resolution meteorological data throughout the atmospheric boundary layer.
+
+* **Temperature and Humidity Measurements:** Temperature and relative humidity are measured directly by a fast-response atmospheric sensor probe, positioned in the undisturbed airflow to ensure high accuracy across vertical profiles essential for weather forecasting, including storm intensity and CAPE estimation.
+* **Wind Speed and Direction:** Wind speed and direction are measured directly during flight using the aircraft's controlled circular trajectory, which enables the autopilot to provide real-time estimates of both parameters with high accuracy.
+* **Atmospheric Pressure:** Air pressure is measured directly by multiple onboard barometric sensors. These measurements are fused in real time together with absolute position data obtained from the GNSS navigation receiver to ensure high accuracy.
+
+### Monitoring of Thermic and Convective Currents
+
+Thanks to its controlled flight capabilities, the TF-G250 enables not only vertical profiling but also real-time localization and measurement of convective airflows. This makes it a valuable tool for identifying and analyzing vertical air movements that are essential for aviation forecasting and atmospheric research.
+
+## Operational Flight Procedure
+
+The TF-G250 supports two main operational procedures for atmospheric profiling:
+
+1. **Automatic Powered Flight:** The autogyro performs vertical profiling by executing a controlled spiral ascent followed by a descent. This method allows adaptation to wind conditions, including straight vertical climbs into the wind when spiral flight is less effective.
+
+2. **Balloon-Assisted Deployment:** For higher altitudes beyond the reach of the autogyro's own propulsion, the TF-G250 can be carried aloft by a traditional meteorological balloon. Upon reaching the desired altitude, the TF-G250 detaches and performs a controlled descent, collecting atmospheric data during both the ascent (via telemetry relay) and the descent phase.
+
+Future enhancements may include ground-based automation for launch, recovery, and servicing of both operational modes.
+
+### Utilization and Data Processing
+
+Meteorological data collected by the TF-G250 are processed using standard meteorological software such as [thundeR](https://bczernecki.github.io/thundeR/) and [SHARPpy](https://github.com/sharppy/SHARPpy), with outputs available in the [BUFR format](https://en.wikipedia.org/wiki/BUFR) for ease of integration into existing meteorological workflows.
+
