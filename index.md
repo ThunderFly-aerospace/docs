@@ -7,15 +7,15 @@ nav_order: 1
 
 # Documentation website for ThunderFly products
 
-At [ThunderFly s.r.o.](https://www.thunderfly.cz/), we're dedicated to advancing UAV technology with our innovative product lines. Our solutions are designed to enhance the capabilities of UAVs through precise measurement tools and specialized avionics devices. Explore our offerings to find the perfect fit for your technical needs.
+At [ThunderFly s.r.o.](https://www.thunderfly.cz/), we're dedicated to advancing UAV technology with our innovative product lines. Our solutions enhance UAV capabilities through precise sensors and specialized avionics devices. Explore our offerings to find the perfect fit for your technical needs.
 
 ## ThunderFly instruments
 
 ![UAV autogyro during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_fly_clouds.jpg)
 
-Our state-of-the-art measurement solutions are at the forefront of UAV technology. These tools are essential for high-level tasks such as atmospheric measurements, offering unparalleled accuracy and reliability. Our comprehensive solutions include:
+Our state-of-the-art measurement solutions are at the forefront of UAV technology. These tools are essential for high-level atmospheric measurements, offering unparalleled accuracy and reliability. Our comprehensive solutions include:
 
-- **Measuring Devices Carriers**: Our autogyro carriers (TF-G1, [TF-G2](/instruments/TF-G2) and [TF-G250](/instruments/TF-G2250)) are engineered for stability in adverse weather conditions.
+- **Measuring Devices Carriers**: Our autogyro carriers (TF-G1, [TF-G2](/instruments/TF-G2) and [TF-G250](/instruments/TF-G250)) are engineered for stability in adverse weather conditions.
 - **TF-ATMON Toolchain**: Transform data into actionable insights with our advanced processing software, tailored for atmospheric analysis.
 - **Software Simulator**: Prepare for your measuring campaigns with our realistic software simulator, ensuring your mission's success.
 
