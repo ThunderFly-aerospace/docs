@@ -3,7 +3,7 @@ title: "TF-ATMON - Toolchain for Atmospheric measurement"
 layout: page
 permalink: /instruments/TF-ATMON
 parent: Instruments
-nav_order: "0"
+nav_order: "4"
 ---
 
 # TF-ATMON - Toolchain for Atmospheric measurement by drones

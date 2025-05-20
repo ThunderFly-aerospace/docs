@@ -3,7 +3,7 @@ title: "TF-G2 - Unmanned Autogyro Development Kit"
 layout: page
 permalink: /instruments/TF-G2
 parent: Instruments
-nav_order: "0"
+nav_order: "2"
 ---
 
 # TF-G2 - Unmanned Autogyro Development Kit

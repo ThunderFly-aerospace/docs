@@ -10,7 +10,7 @@ nav_order: "3"
 
 The TF-G250 is a miniature unmanned autogyro specifically developed for atmospheric boundary layer measurements. It serves as a practical and ecological alternative to conventional balloon-based radiosondes, performing vertical profiling of key meteorological parameters: temperature, humidity, wind speed and direction, and atmospheric pressure.
 
-The TF-G250 autogyro is designed for easy handling, deployment, and maintenance, ensuring affordability and robustness in diverse meteorological conditions. Its compact and lightweight structure (below 250g, complying with the European C0 category) simplifies transport and storage, making it ideal for rapid deployment scenarios.
+The TF-G250 autogyro is designed for easy handling, deployment, and maintenance, ensuring affordability and robustness in diverse meteorological conditions. Its compact and lightweight structure (below 250 grams, complying with the [European C0 category](https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones)) simplifies transport and storage, making it ideal for rapid deployment scenarios.
 
 ![TF-G250 during flight](TF-G250_flight.png)
 
@@ -24,7 +24,7 @@ The TF-G250 addresses a rapidly growing global demand for cost-effective, reusab
 * Effective operational altitude up to 3240 meters above ground
 * Real-time telemetry for atmospheric data publication and processing
 * Extremely low maintenance with easy repairability
-* Optimized rotor design eliminating the need for pre-rotation, suitable even in low-wind conditions
+* Optimized rotor design allows manual spin-up by hand prior to launch, enabling takeoff even without ambient wind
 * Low acoustic signature
 
 These design choices provide the TF-G250 with a distinct competitive edge, allowing safe and controlled descent while significantly improving energy efficiency.
@@ -33,28 +33,28 @@ These design choices provide the TF-G250 with a distinct competitive edge, allow
 
 The following table provides a detailed overview of the key meteorological performance parameters of the TF-G250. These specifications are based on the integrated  sensors.
 
-| Parameter                     | Specification                                                                                |
-| ----------------------------- | -------------------------------------------------------------------------------------------- |
-| Maximum Take-off Weight       | < 250 g (C0 category)                                                                        |
-| Operational Altitude          | ~3.2 km AGL self-powered, ~32km AMSL balloon-launched                                         |
-| Temperature Range             | –40 to +40 °C                                                                               |
-| Temperature Accuracy          | ±0.2 °C (typical)                                                             |
-| Temperature Resolution        | 0.01 °C                                                                                      |
-| Relative Humidity Range       | 0–100 %RH                                                                                    |
-| Relative Humidity Accuracy    | ±1.5 % RH (typical)                                                         |
-| Relative Humidity Resolution  | 0.01 % RH                                                                                    |
-| Pressure Range                | 3–110 kPa                                                                                   |
-| Pressure Accuracy             | ±20 Pa (typical) |
-| Pressure Resolution           | 1 Pa                                                      |
-| Wind Speed Range              | TBD                                                                                          |
-| Wind Speed Accuracy           | ±0.2 m/s                                                                            |
-| Wind Speed Resolution         | 0.1 m/s                                                                            |
-| Wind Direction Range          | 0 to 360°                                                                                 |
-| Wind Direction Accuracy       | ±2°                                                                                 |
-| Wind Direction Resolution     | ±0.1°                                                                                 |
-| Effective Vertical Resolution | 5 m                                                                                          |
-| Data Output Format            | BUFR-compatible                                                                              |
-| Telemetry                     | Real-time via onboard radio modem                                                            |
+| Parameter                     | Specification                                           |
+| ----------------------------- | ------------------------------------------------------- |
+| Maximum Take-off Weight       | < 250 g (C0 category)                                   |
+| Operational Altitude          | ~3.2 km AGL self-powered, ~32km AMSL balloon-launched   |
+| Temperature Range             | –40 to +40 °C                                           |
+| Temperature Accuracy          | ±0.2 °C (typical)                                       |
+| Temperature Resolution        | 0.01 °C                                                 |
+| Relative Humidity Range       | 0–100 %RH                                               |
+| Relative Humidity Accuracy    | ±1.5 % RH (typical)                                     |
+| Relative Humidity Resolution  | 0.01 % RH                                               |
+| Pressure Range                | 3–110 kPa                                               |
+| Pressure Accuracy             | ±20 Pa (typical)                                        |
+| Pressure Resolution           | 1 Pa                                                    |
+| Wind Speed Range              | TBD                                                     |
+| Wind Speed Accuracy           | ±0.2 m/s                                                |
+| Wind Speed Resolution         | 0.1 m/s                                                 |
+| Wind Direction Range          | 0 to 360°                                               |
+| Wind Direction Accuracy       | ±2°                                                     |
+| Wind Direction Resolution     | ±0.1°                                                   |
+| Effective Vertical Resolution | 5 m                                                     |
+| Data Output Format            | BUFR-compatible                                         |
+| Telemetry                     | Real-time via onboard radio modem                       |
 
 ## Meteorological Applications
 
