@@ -60,13 +60,33 @@ The following table provides a detailed overview of the key meteorological perfo
 
 The TF-G250 is primarily designed for vertical atmospheric profiling, making it particularly suited for capturing high-resolution meteorological data throughout the atmospheric boundary layer.
 
-* **Temperature and Humidity Measurements:** Temperature and relative humidity are measured directly by a fast-response atmospheric sensor probe, positioned in the undisturbed airflow to ensure high accuracy across vertical profiles essential for weather forecasting, including storm intensity and CAPE estimation.
+* **Temperature and Humidity Measurements:** Temperature and relative humidity are measured directly by a fast-response atmospheric sensor probe, positioned in the undisturbed airflow to ensure high accuracy across vertical profiles essential for weather forecasting, including storm intensity and its extent.
 * **Wind Speed and Direction:** Wind speed and direction are measured directly during flight using the aircraft's controlled circular trajectory, which enables the autopilot to provide real-time estimates of both parameters with high accuracy.
 * **Atmospheric Pressure:** Air pressure is measured directly by multiple onboard barometric sensors. These measurements are fused in real time together with absolute position data obtained from the GNSS navigation receiver to ensure high accuracy.
 
 ### Monitoring of Thermic and Convective Currents
 
 Thanks to its controlled flight capabilities, the TF-G250 enables not only vertical profiling but also real-time localization and measurement of convective airflows. This makes it a valuable tool for identifying and analyzing vertical air movements that are essential for aviation forecasting and atmospheric research.
+
+
+### Boundary Layer Sounding
+
+The TF-G250 is ideally suited for detailed [atmospheric boundary layer (ABL)](https://en.wikipedia.org/wiki/Planetary_boundary_layer) soundings. The example below illustrates a typical measurement campaign with local atmospheric differences captured in three visualizations:
+
+![Measurement Flight Path](Measurement_flight.png)
+
+3D trajectory showing the flight path used for boundary layer sampling.
+
+![Temperature and Humidity Profile](Temperature_and_relative_humidity_profile.png)
+
+Temperature and relative humidity plotted against altitude above ground level (AGL). A slight difference is visible between the ascent and descent, with increased humidity observed during the descent due to overflight of vegetated terrain near a water body.
+
+![Wind Hodograph](wind_hodograph.png)
+
+Hodograph of wind speed and direction, color-coded by altitude AGL. Wind structure indicates turbulence within the sampled boundary layer.*
+
+In this particular mission, the takeoff and landing occurred at different locations. During landing, the sensor passed over a grassy area near a water surface, which resulted in a localized increases in measured relative humidity. These variations highlight the sensitivity of the TF-G250 system to microclimatic effects within the ABL.
+
 
 ## Operational Flight Procedure
 
