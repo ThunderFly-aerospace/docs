@@ -14,17 +14,17 @@ The TF-G250 autogyro is designed for easy handling, deployment, and maintenance,
 
 ![TF-G250 during flight](TF-G250_flight.png)
 
-The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric measurement tools. Unlike traditional solutions, the TF-G250  meteo autogyro drone offers significant operational advantages due to its light weight, absence of parachute, inherent safety mechanisms, and safe-descent capability.
+The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric measurement tools. Unlike traditional solutions, the TF-G250  meteo autogyro drone offers significant operational advantages due to its lightweight, absence of parachute, inherent safety mechanisms, and safe-descent capability.
 
 ## Key Design Features
 
-* Integrated sensor payload for basic atmospheric measurements (temperature, humidity, pressure, wind speed and direction)
+* Integrated sensor payload for basic atmospheric measurements (temperature, humidity, pressure, wind speed, and direction)
 * Does not require energy for the descent phase, enabling reduced battery weight
 * Automatic fail-safe landing without requiring parachutes or additional mechanisms
 * Effective operational altitude up to 3240 meters above ground
 * Real-time telemetry for atmospheric data publication and processing
 * Extremely low maintenance with easy repairability
-* Optimized rotor design allows manual spin-up by hand prior to launch, enabling takeoff even without ambient wind
+* Optimized rotor design allows manual spin-up by hand before launch, enabling takeoff even without ambient wind
 * Low acoustic signature
 
 These design choices provide the TF-G250 with a distinct competitive edge, allowing safe and controlled descent while significantly improving energy efficiency.
@@ -79,13 +79,13 @@ The TF-G250 is ideally suited for detailed [atmospheric boundary layer (ABL)](ht
 
 ![Temperature and Humidity Profile](Temperature_and_relative_humidity_profile.png)
 
-Temperature and relative humidity plotted against altitude above ground level (AGL). A slight difference is visible between the ascent and descent, with increased humidity observed during the descent due to overflight of vegetated terrain near a water body.
+Temperature and relative humidity are plotted against altitude above ground level (AGL). A slight difference is visible between the ascent and descent, with increased humidity observed during the descent due to the overflight of vegetated terrain near a water body.
 
 ![Wind Hodograph](wind_hodograph.png)
 
 Hodograph of wind speed and direction, color-coded by altitude AGL. Wind structure indicates turbulence within the sampled boundary layer.*
 
-In this particular mission, the takeoff and landing occurred at different locations. During landing, the sensor passed over a grassy area near a water surface, which resulted in a localized increases in measured relative humidity. These variations highlight the sensitivity of the TF-G250 system to microclimatic effects within the ABL.
+In this particular mission, the takeoff and landing occurred at different locations. During landing, the sensor passed over a grassy area near a water surface, which resulted in a localized increase in measured relative humidity. These variations highlight the sensitivity of the TF-G250 system to microclimatic effects within the ABL.
 
 
 ## Operational Flight Procedure
@@ -94,7 +94,10 @@ The TF-G250 supports two main operational procedures for atmospheric profiling:
 
 1. **Automatic Powered Flight:** The autogyro performs vertical profiling by executing a controlled spiral ascent followed by a descent. This method allows adaptation to wind conditions, including straight vertical climbs into the wind when spiral flight is less effective.
 
-2. **Balloon-Assisted Deployment:** For higher altitudes beyond the reach of the autogyro's own propulsion, the TF-G250 can be carried aloft by a traditional meteorological balloon. Upon reaching the desired altitude, the TF-G250 detaches and performs a controlled descent, collecting atmospheric data during both the ascent (via telemetry relay) and the descent phase.
+
+
+
+2. **Balloon-Assisted Deployment:** Radiosonde-like flight - for higher altitudes beyond the reach of the autogyro's own propulsion, the TF-G250 can be carried aloft by a traditional meteorological balloon. Upon reaching the desired altitude, the TF-G250 detaches and performs a controlled descent, collecting atmospheric data during both the ascent (via telemetry relay) and the descent phase.
 
 Future enhancements may include ground-based automation for launch, recovery, and servicing of both operational modes.
 
