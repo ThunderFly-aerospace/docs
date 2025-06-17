@@ -94,10 +94,10 @@ The TF-G250 supports two main operational procedures for atmospheric profiling:
 
 1. **Automatic Powered Flight:** The autogyro performs vertical profiling by executing a controlled spiral ascent followed by a descent. This method allows adaptation to wind conditions, including straight vertical climbs into the wind when spiral flight is less effective.
 
- <div style="width:100%; padding-top: 56.25%;position: relative;overflow: hidden;">
-   <iframe style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;" src="https://youtu.be/DTOk--t4eaM?loop=1">
-   </iframe>
- </div>
+<div style="width:100%; padding-top: 56.25%;position: relative;overflow: hidden;">
+  <iframe style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;" src="https://www.youtube.com/embed/DTOk--t4eaM?loop=1&playlist=DTOk--t4eaM" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 
 2. **Balloon-Assisted Deployment:** Radiosonde-like flight - for higher altitudes beyond the reach of the autogyro's own propulsion, the TF-G250 can be carried aloft by a traditional meteorological balloon. Upon reaching the desired altitude, the TF-G250 detaches and performs a controlled descent, collecting atmospheric data during both the ascent (via telemetry relay) and the descent phase.
