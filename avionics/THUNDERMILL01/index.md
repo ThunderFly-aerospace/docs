@@ -7,17 +7,17 @@ nav_order: "99"
 has_children: false
 ---
 
-## THUNDERMILL01 - Electric Field Sensor for UAV Applications
+## THUNDERMILL01 - Electric Field Sensor for unmanned aircraft system (UAS)
 
 The THUNDERMILL01 is an [electric field mill](https://en.wikipedia.org/wiki/Field_mill) sensor developed for scientific measurements of atmospheric electric fields. It is specifically designed for airborne deployment on UAV platforms, with a focus on real-time monitoring in thunderstorm and atmospheric electricity research.
 
-### UAV Integration: THUNDERMILL01 Variant
+### UAV Integration
 
-The airborne version of THUNDERMILL01, has been specifically designed for use on unmanned aerial vehicles (UAVs) and is optimized for low-noise, mechanical stability, and integration with avionics systems. This version has undergone extensive testing on the [ThunderFly TF-G2 autogyro drone](https://www.thunderfly.cz/tf-g2.html).
+The airborne version of THUNDERMILL01, has been specifically designed for use on unmanned aerial vehicles (UAVs) and is optimized for low-noise, mechanical stability, and integration with avionics systems. This version has undergone extensive testing on the [ThunderFly TF-G2 autogyro](/instruments/TF-G2).
 
 * **Mounting**: The sensor is mounted close to the autogyro rotor hub, taking advantage of the autogyro's principle to reduce electromagnetic interference and maximize measurement reliability.
 
-* **Data Interface**: The THUNDERMILL01 sensor is typically connected to the [TF-ATMON atmospheric monitoring system](https://docs.thunderfly.cz/instruments/TF-ATMON), which handles real-time data acquisition, transmission, and visualization.
+* **Data Interface**: The THUNDERMILL01 sensor is typically connected to the [TF-ATMON atmospheric monitoring system](/instruments/TF-ATMON), which handles real-time data acquisition, transmission, and visualization.
 
 * **Telemetry Support**: Using TF-ATMON, data from the sensor is streamed in real-time to a ground station. There, it is displayed in a 3D visualization environment to assist drone operators in decision-making during measurement flights.
 
