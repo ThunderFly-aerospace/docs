@@ -175,6 +175,23 @@ Some useful commands:
 
 The full list of commands is maintained in the [firmware documentation](https://github.com/ThunderFly-aerospace/SiK).
 
+## Range Optimization
+
+To achieve optimal range and performance with the TFSIK01 modem, it is essential to understand and configure the firmware parameters that influence the radio link. The following subsections provide guidance for adjusting key parameters such as data rate, duty cycle, and physical link geometry.
+
+### Choosing the Air Data Rate
+
+The `AIR_SPEED` parameter is the primary factor controlling the range and throughput of the telemetry radio. Lower values result in longer range but reduced data throughput.
+
+Supported air data rates (in kbps): `2, 4, 8, 16, 19, 24, 32, 48, 64, 96, 128, 192, 250`
+
+Typical configuration tips:
+
+* **Long range, low data requirement:** Use `AIR_SPEED=4` or `AIR_SPEED=8`
+* **Medium range, moderate data:** Default `AIR_SPEED=64` offers a good compromise
+* **High throughput, short range:** Use `AIR_SPEED=192` or higher
+
+Note: If an unsupported rate is selected, the closest higher supported rate is used instead.
 
 ### Duty Cycle Setting
 
@@ -186,6 +203,146 @@ The `DUTY_CYCLE` parameter defines the maximum percentage of time the modem is a
 
 While reducing the duty cycle may reduce the average throughput, the modem can still maintain effective telemetry, since telemetry traffic is often bursty in nature. For example, even with a 10% duty cycle, reliable MAVLink telemetry is possible at 2 Hz using a medium `AIR_SPEED`.
 
+### Noise Resilience
+
+The TFSIK01 modem uses frequency hopping across multiple channels (`NUM_CHANNELS`) and implements TDM-based coordination for time-sharing the spectrum. You may improve range and reliability by:
+
+* Placing antennas far from high-noise components (e.g. motors, ESCs)
+* Minimizing  interference on ground stations (e.g. by using shielded USB cables or externally powered hubs)
+
+Aim to maximize the difference between signal and noise (fade margin). Every 6dB of fade margin doubles range.
+
+## Link Budget
+
+A link budget is a systematic accounting of gain and loss between the transmitter and the receiver. It could predicts whether the received signal will still exceed the receiver‑sensitivity (plus a chosen fade‑margin) after free‑space path loss, antenna gains, cable losses, and other impairments. For a more detailed overview, see the [link budget](https://en.wikipedia.org/wiki/Link_budget).
+
+The simplified formula used throughout this guide is:
+
+```
+P_rx = P_tx  +  G_tx  +  G_rx  −  L_fs  −  L_misc
+```
+
+| Symbol      | Meaning                                          | Example value                                            |
+| ----------- | ------------------------------------------------ | -------------------------------------------------------- |
+| **P\_tx**   | Transmit power (dBm)                             | 20 dBm (TFSIK01 maximum)                                 |
+| **G\_tx**   | Transmit‑side antenna gain                       | 2 dBi (433 MHz) / 3 dBi (868 MHz)                        |
+| **G\_rx**   | Receive‑side antenna gain                        | Same as **G\_tx** (symmetrical setup)                    |
+| **L\_fs**   | Free‑space path loss (dB)                        | Depends on **distance** and **frequency**                |
+| **L\_misc** | Miscellaneous losses (cable, connectors, fading) | Typically 2‑5 dB (not included in simple examples below) |
+
+The receiver sensitivity of the TFSIK01 is ≈ −117 dBm at 64 kbps.  For a reliable link we target ≥ 10 dB fade margin, so the maximum usable path loss is:
+
+```
+L_fs(max)  ≈  P_tx + G_tx + G_rx  −  (P_sens − 10)  ≈  P_tx + G_tx + G_rx + 107
+```
+
+### 433 MHz band
+
+* **Frequency (f):** 433 MHz
+* **Antenna gain:** 2 dBi
+* **Transmit power (P\_tx):** 20 dBm
+* **Target line‑of‑sight distance (d):** 10 km (LOS)
+
+Free‑space path loss (FSPL):
+
+```
+L_fs = 32.44 + 20·log10(d_km) + 20·log10(f_MHz)
+     = 32.44 + 20·log10(10) + 20·log10(433)
+     ≈ 105 dB
+```
+
+Received power:
+
+```
+P_rx = 20 + 2 + 2 − 105 ≈ −81 dBm
+```
+
+Fade margin:
+
+```
+Margin = P_rx − (P_sens) ≈ −81 − (−117) ≈ 36 dB
+```
+
+A 36 dB margin is ample; even after subtracting 10–15 dB for multipath and other losses, the link should remain solid at 10 km.
+
+### 868 MHz band
+
+* **Frequency:** 868 MHz
+* **Antenna gain:** 3 dBi
+* **Transmit power:** 20 dBm
+* **Target distance:** 10 km LOS
+
+FSPL:
+
+```
+L_fs = 32.44 + 20·log10(10) + 20·log10(868)
+     ≈ 111 dB
+```
+
+Received power:
+
+```
+P_rx = 20 + 3 + 3 − 111 ≈ −85 dBm
+```
+
+Fade margin:
+
+```
+Margin ≈ −85 − (−117) ≈ 32 dB
+```
+
+Even at the higher 868 MHz frequency the margin comfortably exceeds the recommended 10 dB.
+
+### Maximum LOS Range (theoretical)
+
+Re‑arranging the FSPL formula gives an estimate of the maximum line‑of‑sight distance **d\_max** (km) when the fade margin is set to 10 dB:
+
+```
+d_max = 10^((P_tx + G_tx + G_rx − (P_sens − 10) − 32.44 − 20·log10(f_MHz))/20)
+```
+
+Using the same parameters:
+
+| Band    | Antenna gain | d\_max (ideal LOS) |
+| ------- | ------------ | ------------------ |
+| 433 MHz | 2 dBi each   | ≈ 195 km           |
+| 868 MHz | 3 dBi each   | ≈ 123 km           |
+
+### Fresnel Zone Constraints and Antenna Height
+
+A radio link is only truly "clear line‑of‑sight" if most of the [first Fresnel zone](https://en.wikipedia.org/wiki/Fresnel_zone) is unobstructed.  Objects intruding into this ellipsoidal volume add extra path‑loss and drastically shorten range.
+
+The radius *r* (m) of the first Fresnel zone at distance *x* on a link of length *d* is
+
+```text
+r ≈ √( λ·x·(d−x) / d )   where λ = c / f
+```
+
+At the worst‑case mid‑point (*x = d/2*):
+
+```text
+r_mid ≈ 8.7 · √( d_km / f_GHz )
+```
+
+| Band    | r<sub>mid</sub> at 10 km | r<sub>mid</sub> at 20 km | r<sub>mid</sub> at 50 km |
+| ------- | ------------------------ | ------------------------ | ------------------------ |
+| 433 MHz | ≈ 42 m                   | ≈ 60 m                   | ≈ 94 m                   |
+| 868 MHz | ≈ 29 m                   | ≈ 42 m                   | ≈ 65 m                   |
+
+A common engineering guideline is to keep **≥ 60 % of this radius clear** along the entire path.
+
+#### Antenna‑height influence
+
+In the case of 433 MHz link and ground antenna 2 m AGL, UAV at 100 m AGL, target distance 20 km.
+
+* First Fresnel radius @ 20 km: **≈ 60 m**  →  60 % clearance required ≈ 36 m.
+* Straight‑line LOS height at mid‑path  ≈ *(h\_g + h\_u)/2*  = (2 m + 100 m)/2  ≈ 51 m.
+
+Clearance margin = 51 m − 36 m ≈ 15 m → seemingly acceptable.  However, even a gentle hill only 40 m high in the middle of the path will cut through the Fresnel zone, adding ≥ 10 dB excess loss and destabilising the link. If the UAV descends to 50 m AGL, LOS at mid‑path drops to 26 m – which is definitely below the required 36 m.  The link will now fade or drop entirely despite high RSSI in case of higher flight. If the ground antenna is raised to 10 m → LOS mid‑height (10 + 50)/2 = 30 m, restoring clearance and link.
+
+That is why high‑altitude platforms and missions provide almost complete Fresnel clearance, which is why TFSIK01 has achieved **hundreds of kilometres** range in stratospheric balloon tests.
+
+## Hardware setup
 
 ### Connecting to Autopilot
 
