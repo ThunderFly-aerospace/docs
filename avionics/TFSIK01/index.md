@@ -203,14 +203,36 @@ The `DUTY_CYCLE` parameter defines the maximum percentage of time the modem is a
 
 While reducing the duty cycle may reduce the average throughput, the modem can still maintain effective telemetry, since telemetry traffic is often bursty in nature. For example, even with a 10% duty cycle, reliable MAVLink telemetry is possible at 2 Hz using a medium `AIR_SPEED`.
 
-### Noise Resilience
 
-The TFSIK01 modem uses frequency hopping across multiple channels (`NUM_CHANNELS`) and implements TDM-based coordination for time-sharing the spectrum. You may improve range and reliability by:
+### Noise, Bandwidth & Channel Planning
 
-* Placing antennas far from high-noise components (e.g. motors, ESCs)
-* Minimizing  interference on ground stations (e.g. by using shielded USB cables or externally powered hubs)
+The TFSIK01 modem mitigates interference by **frequency hopping** across a user‑defined number of channels (`NUM_CHANNELS`) while Time‑Division Multiplexing (TDM).  The two design choices directly affect efficiency of this technique:
 
-Aim to maximize the difference between signal and noise (fade margin). Every 6dB of fade margin doubles range.
+1. **Air data rate (`AIR_SPEED`) ⇒ occupied channel bandwidth.**  An approximation used in SiK is
+
+   ```text
+   BW_channel  ≈  1.2 · AIR_SPEED  (in kHz)   (minimum ≈ 40 kHz, maximum ≈ 300 kHz)
+   ```
+
+   *Example:* 64 kbps ⇒ ≈ 77 kHz occupied bandwidth. 250 kbps ⇒ ≈ 300 kHz.
+
+2. **Number of hopping channels (`NUM_CHANNELS`).**  The usable spectrum between `MIN_FREQ` and `MAX_FREQ` is divided into equal slices. Each sice should be wider than `BW_channel` plus guard space, otherwise adjacent channels overlap and frequency-hopping will be inefficient.
+
+| AIR\_SPEED (kbps) | Approx. BW\_channel | Safe NUM\_CHANNELS in 1.8 MHz band (433 MHz example) |
+| ----------------- | ------------------- | ----------------------------------------------------- |
+| 16                | ≈ 20 kHz            | up to 50                                              |
+| 64 (default)      | ≈ 77 kHz            | 10–25 (default = 10 gives wide guard bands)           |
+| 128               | ≈ 154 kHz           | 8–10                                                  |
+| 250               | ≈ 300 kHz           | ≤ 5                                                   |
+
+The table assumes the common 433.05–434.79 MHz sub‑band (≈ 1.74 MHz wide) used in EU ISM regulations.  For other bands calculate available width accordingly and choose `NUM_CHANNELS` so that `(MAX_FREQ − MIN_FREQ)/(NUM_CHANNELS+2)  ≥  BW_channel` (the “+2” allows for guard channels).
+
+Additionaly to correct use of frequency hopping. The noise sources needs to be reduced to allow effective use of every possible radio channel:
+
+* Place antennas away from wideband EMI sources (motors, ESCs).
+* Use shielded USB cables and externally powered‑hub on the ground station to reduce computer‑generated noise.
+
+Every **6 dB** of extra fade margin roughly doubles the coverage distance.
 
 ### Link Budget
 
