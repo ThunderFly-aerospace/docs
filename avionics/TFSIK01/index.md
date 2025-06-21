@@ -183,15 +183,15 @@ To achieve optimal range and performance with the TFSIK01 modem, it is essential
 
 The `AIR_SPEED` parameter is the primary factor controlling the range and throughput of the telemetry radio. Lower values result in longer range but reduced data throughput.
 
-Supported air data rates (in kbps): `2, 4, 8, 16, 19, 24, 32, 48, 64, 96, 128, 192, 250`
+Supported air data rates (in kbps): 2, 4, 8, 16, 19, 24, 32, 48, 64, 96, 128, 192, 250
 
 Typical configuration tips:
 
-* **Long range, low data requirement:** Use `AIR_SPEED=4` or `AIR_SPEED=8`
-* **Medium range, moderate data:** Default `AIR_SPEED=64` offers a good compromise
-* **High throughput, short range:** Use `AIR_SPEED=192` or higher
+* **Long range, low data requirement:** Use AIR_SPEED 4 or 8
+* **Medium range, moderate data:** Default 64 offers a good compromise
+* **High throughput, short range:** Use 192 or higher
 
-Note: If an unsupported rate is selected, the closest higher supported rate is used instead.
+Note: If an unsupported rate is selected, the closest higher supported rate is used by firmware instead.
 
 ### Duty Cycle Setting
 
@@ -199,22 +199,22 @@ The `DUTY_CYCLE` parameter defines the maximum percentage of time the modem is a
 
 * **Regulatory compliance**: In some regions (e.g., the EU), lower duty cycles (typically under 10%) allow the use of higher transmission power or access to a broader frequency band without the need for special licenses.
 * **Noise mitigation**: Lowering the duty cycle can reduce interference in densely used radio environments by making the transmission "bursty".
-* **Receive-only mode**: Setting `DUTY_CYCLE` to `0` disables transmission, allowing the modem to operate in passive listening mode. That work only for low `NUM_CHANNELS`, otherwise the clock synchronisation will be poor.
+* **Receive-only mode**: Setting `DUTY_CYCLE` to 0 disables transmission, allowing the modem to operate in passive listening mode. That work only for low `NUM_CHANNELS`, otherwise the clock synchronisation will be poor.
 
 While reducing the duty cycle may reduce the average throughput, the modem can still maintain effective telemetry, since telemetry traffic is often bursty in nature. For example, even with a 10% duty cycle, reliable MAVLink telemetry is possible at 2 Hz using a medium `AIR_SPEED`.
 
 
 ### Noise, Bandwidth & Channel Planning
 
-The TFSIK01 modem mitigates interference by **frequency hopping** across a user‑defined number of channels (`NUM_CHANNELS`) while Time‑Division Multiplexing (TDM).  The two design choices directly affect efficiency of this technique:
+The TFSIK01 modem mitigates interference by [**frequency hopping**](https://en.wikipedia.org/wiki/Frequency-hopping_spread_spectrum) across a user‑defined number of channels `NUM_CHANNELS` while [Time‑Division Multiplexing (TDM)](https://en.wikipedia.org/wiki/Time-division_multiplexing).  The two design choices directly affect efficiency of this technique:
 
 1. **Air data rate (`AIR_SPEED`) ⇒ occupied channel bandwidth.**  An approximation used in SiK is
 
    ```text
-   BW_channel  ≈  1.2 · AIR_SPEED  (in kHz)   (minimum ≈ 40 kHz, maximum ≈ 300 kHz)
+   BW_channel  ≈  1.2 · AIR_SPEED  (in kHz)
    ```
-
-   *Example:* 64 kbps ⇒ ≈ 77 kHz occupied bandwidth. 250 kbps ⇒ ≈ 300 kHz.
+   
+   *Example:* 64 kbps ⇒ ≈ 77 kHz occupied bandwidth.  250 kbps ⇒ ≈ 300 kHz.
 
 2. **Number of hopping channels (`NUM_CHANNELS`).**  The usable spectrum between `MIN_FREQ` and `MAX_FREQ` is divided into equal slices. Each sice should be wider than `BW_channel` plus guard space, otherwise adjacent channels overlap and frequency-hopping will be inefficient.
 
@@ -225,7 +225,7 @@ The TFSIK01 modem mitigates interference by **frequency hopping** across a user�
 | 128               | ≈ 154 kHz           | 8–10                                                  |
 | 250               | ≈ 300 kHz           | ≤ 5                                                   |
 
-The table assumes the common 433.05–434.79 MHz sub‑band (≈ 1.74 MHz wide) used in EU ISM regulations.  For other bands calculate available width accordingly and choose `NUM_CHANNELS` so that `(MAX_FREQ − MIN_FREQ)/(NUM_CHANNELS+2)  ≥  BW_channel` (the “+2” allows for guard channels).
+The table assumes the common [433.05–434.79 MHz sub‑band (≈ 1.74 MHz wide) used in EU ISM regulations](https://en.wikipedia.org/wiki/LPD433).  For other bands calculate available width accordingly and choose `NUM_CHANNELS` so that `(MAX_FREQ − MIN_FREQ)/(NUM_CHANNELS+2)  ≥  BW_channel` The “+2” allows for guard channels.
 
 Additionaly to correct use of frequency hopping. The noise sources needs to be reduced to allow effective use of every possible radio channel:
 
@@ -402,7 +402,7 @@ Download the latest [firmware release](https://github.com/ThunderFly-aerospace/S
     python3 uploader.py --port /dev/ttyUSB0 radio~tfsik01a.ihx 
 
 {: .note }
-Use the correct serial port path for your system (e.g., `/dev/ttyUSB0` or `COM3`).
+Use the correct serial port path for your system (e.g., `/dev/ttyUSB1` or `COM3`).
 
 #### Brick Recovery: Forcing bootloader mode
 
