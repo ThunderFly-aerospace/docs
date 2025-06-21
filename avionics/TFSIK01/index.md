@@ -212,7 +212,7 @@ The TFSIK01 modem uses frequency hopping across multiple channels (`NUM_CHANNELS
 
 Aim to maximize the difference between signal and noise (fade margin). Every 6dB of fade margin doubles range.
 
-## Link Budget
+### Link Budget
 
 A link budget is a systematic accounting of gain and loss between the transmitter and the receiver. It could predicts whether the received signal will still exceed the receiver‑sensitivity (plus a chosen fade‑margin) after free‑space path loss, antenna gains, cable losses, and other impairments. For a more detailed overview, see the [link budget](https://en.wikipedia.org/wiki/Link_budget).
 
@@ -224,7 +224,7 @@ P_rx = P_tx  +  G_tx  +  G_rx  −  L_fs  −  L_misc
 
 | Symbol      | Meaning                                          | Example value                                            |
 | ----------- | ------------------------------------------------ | -------------------------------------------------------- |
-| **P\_tx**   | Transmit power (dBm)                             | 20 dBm (TFSIK01 maximum)                                 |
+| **P\_tx**   | Transmit power (dBm)                             | 20 dBm (Regulatory maximum)                                 |
 | **G\_tx**   | Transmit‑side antenna gain                       | 2 dBi (433 MHz) / 3 dBi (868 MHz)                        |
 | **G\_rx**   | Receive‑side antenna gain                        | Same as **G\_tx** (symmetrical setup)                    |
 | **L\_fs**   | Free‑space path loss (dB)                        | Depends on **distance** and **frequency**                |
@@ -236,7 +236,7 @@ The receiver sensitivity of the TFSIK01 is ≈ −117 dBm at 64 kbps.  For
 L_fs(max)  ≈  P_tx + G_tx + G_rx  −  (P_sens − 10)  ≈  P_tx + G_tx + G_rx + 107
 ```
 
-### 433 MHz band
+#### 433 MHz band
 
 * **Frequency (f):** 433 MHz
 * **Antenna gain:** 2 dBi
@@ -265,7 +265,7 @@ Margin = P_rx − (P_sens) ≈ −81 − (−117) ≈ 36 dB
 
 A 36 dB margin is ample; even after subtracting 10–15 dB for multipath and other losses, the link should remain solid at 10 km.
 
-### 868 MHz band
+#### 868 MHz band
 
 * **Frequency:** 868 MHz
 * **Antenna gain:** 3 dBi
@@ -295,7 +295,7 @@ Even at the higher 868 MHz frequency the margin comfortably exceeds the recomm
 
 ### Maximum LOS Range (theoretical)
 
-Re‑arranging the FSPL formula gives an estimate of the maximum line‑of‑sight distance **d\_max** (km) when the fade margin is set to 10 dB:
+Re‑arranging the FSPL formula gives an estimate of the maximum line‑of‑sight distance d\_max (km) when the fade margin is set to 10 dB:
 
 ```
 d_max = 10^((P_tx + G_tx + G_rx − (P_sens − 10) − 32.44 − 20·log10(f_MHz))/20)
@@ -308,7 +308,7 @@ Using the same parameters:
 | 433 MHz | 2 dBi each   | ≈ 195 km           |
 | 868 MHz | 3 dBi each   | ≈ 123 km           |
 
-### Fresnel Zone Constraints and Antenna Height
+#### Fresnel Zone Constraints and Antenna Height
 
 A radio link is only truly "clear line‑of‑sight" if most of the [first Fresnel zone](https://en.wikipedia.org/wiki/Fresnel_zone) is unobstructed.  Objects intruding into this ellipsoidal volume add extra path‑loss and drastically shorten range.
 
@@ -329,13 +329,11 @@ r_mid ≈ 8.7 · √( d_km / f_GHz )
 | 433 MHz | ≈ 42 m                   | ≈ 60 m                   | ≈ 94 m                   |
 | 868 MHz | ≈ 29 m                   | ≈ 42 m                   | ≈ 65 m                   |
 
-A common engineering guideline is to keep **≥ 60 % of this radius clear** along the entire path.
-
-#### Antenna‑height influence
+A common engineering guideline is to keep **≥ 60 % of this radius clear** ideally along the entire path.
 
 In the case of 433 MHz link and ground antenna 2 m AGL, UAV at 100 m AGL, target distance 20 km.
 
-* First Fresnel radius @ 20 km: **≈ 60 m**  →  60 % clearance required ≈ 36 m.
+* First Fresnel radius @ 20 km: ≈ 60 m  →  60 % clearance required ≈ 36 m.
 * Straight‑line LOS height at mid‑path  ≈ *(h\_g + h\_u)/2*  = (2 m + 100 m)/2  ≈ 51 m.
 
 Clearance margin = 51 m − 36 m ≈ 15 m → seemingly acceptable.  However, even a gentle hill only 40 m high in the middle of the path will cut through the Fresnel zone, adding ≥ 10 dB excess loss and destabilising the link. If the UAV descends to 50 m AGL, LOS at mid‑path drops to 26 m – which is definitely below the required 36 m.  The link will now fade or drop entirely despite high RSSI in case of higher flight. If the ground antenna is raised to 10 m → LOS mid‑height (10 + 50)/2 = 30 m, restoring clearance and link.
