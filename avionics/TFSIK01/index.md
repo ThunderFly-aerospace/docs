@@ -119,7 +119,9 @@ This ensures that only one side transmits at any moment, eliminating collisions.
 
 #### Buffering and Flow Control
 
-Data arriving over the UART is stored in a 2048-byte buffer. The modem informs the connected autopilot or ground station about buffer fill levels, allowing adaptive message throttling. If enabled, hardware flow control can further optimize communication, by removing the control symbols from UART data.
+Data arriving over the UART is stored in a 2048-byte buffer. The radio firmware looks for MAVLink HEARTBEAT messages coming from the serial connection and it inject own MAVLink 'RADIO' status packets into the the serial stream. These RADIO packets contain information about the RSSI level at both ends of the link, allowing the ground station or UAV to take action in case the link quality falls too low. The RADIO packets also contain information about error rates, and how full the serial transmit buffer is (as a percentage). If enabled, hardware flow control can further optimize communication, by removing the control symbols from UART data.
+
+If the MAVLINK is to 2, then the radio will look for ``RC_OVERRIDE`` packets (used for joysticks) and ensure that those packets get sent as quickly as possible in addition to doing MAVLink framing. That means the firmware will try to fit multiple MAVLink packets into one radio packet where possible for maximum efficiency. The longest possible radio packet size is 252 bytes. The firmware supports both the MAVLink 1.0 and the MAVLink 2.0 data formats.
 
 #### Adaptive Slot Usage
 
