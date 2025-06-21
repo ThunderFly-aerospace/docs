@@ -13,7 +13,7 @@ nav_order: "10"
 
 ## Overview
 
-The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges of better than one kilometer with a basic whip antenna kit. The range can be extended to several kilometers with the use of a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between the UAV and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
+The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges significantly better than one kilometer with a basic whip antenna kit. The range can be extended to several kilometers with the use of a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between the UAV and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
 
 The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating dual antenna diversity and exceptional resistance to noise. This open-source hardware solution employs the advanced [Si1060](https://www.silabs.com/documents/public/data-sheets/Si106x-8x.pdf) chip from the Si10xx series and is further enhanced by the Si4463 EZRadioPRO transceiver, ensuring robust and secure communication capabilities. The modem's design prioritizes immunity to interference from out-of-band frequencies, guaranteeing reliable performance in challenging environments and securing its position as a top choice for UAV systems that demand the utmost data integrity and security.
 
@@ -80,7 +80,54 @@ The modem was originally developed for the transmission of atmospheric data meas
 
 Integration into UAV systems is straightforward, requiring only a [Pixhawk-compatible JST-GH UART connection](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The side placement of external antennas, connected through MCX connectors, is specifically selected to increase robustness and ease of installation.
 
-### Configurable Telemetry Parameters
+
+## Firmware Architecture and Configuration
+
+The TFSIK01 modem is powered by [SiK firmware](https://github.com/ThunderFly-aerospace/SiK), specifically optimized for long-range UAV telemetry applications. The firmware is designed to ensure high reliability even in noisy environments through the following mechanisms:
+
+### Communication Principles
+
+The modem combines the following radio communication technologies:
+
+* **Frequency-Hopping Spread Spectrum (FHSS)**: The operating frequency band is divided into discrete channels. The hopping pattern is randomized per `NETID`, ensuring resilience against interference and channel collisions and comply with regulatory limits.
+
+* **Adaptive Time Division Multiplexing (TDM)**: Each modem takes turns transmitting data in synchronized time slices to avoid collisions. Transmission timing is dynamically scaled based on data rate and buffer status.
+
+* **Gaussian Frequency Shift Keying (GFSK)**: Provides spectral efficiency and reduced adjacent channel interference.
+
+These features improve communication across various UAV deployment scenarios. The link dynamically balances itself if traffic is asymmetric, and clock synchronization is maintained using embedded timestamps in each transmitted packet.
+
+#### Channel Allocation
+
+To determine channel positions, the firmware uses the formula:
+
+```text
+channel_width = (MAX_FREQ - MIN_FREQ) / (NUM_CHANNELS + 2)
+```
+
+Two guard channels on each edge of the frequency band ensure transmission stays within legal limits. Channels are further shifted based on the `NETID` to prevent cross-talk between neighboring systems.
+
+#### Time Synchronization and Slot Management
+
+Each modem sends 13-bit timestamps in its packets to stay synchronized with its peer. A complete TDM cycle includes:
+
+* One modem's transmit window
+* A silence period (for channel switching and signal settling)
+* The other modem's transmit window
+
+This ensures that only one side transmits at any moment, eliminating collisions. The default timing supports up to three full MAVLink packets per window. Lower latency can be achieved by reducing the `MAX_WINDOW` parameter.
+
+#### Buffering and Flow Control
+
+Data arriving over the UART is stored in a 2048-byte buffer. The modem informs the connected autopilot or ground station about buffer fill levels, allowing adaptive message throttling. If enabled, hardware flow control can further optimize communication, by removing the control symbols from UART data.
+
+#### Adaptive Slot Usage
+
+If one modem has no data to send, it can yield its transmit slot to the other, improving throughput during unbalanced communication (e.g., more telemetry from UAV to GCS).
+
+### Configurable Parameters
+
+The firmware supports runtime parameter configuration via AT commands. These parameters control how the modems communicate, how much power they transmit, and how they handle MAVLink framing and link reliability:
 
 | Parameter | Description |
 |-----------|-------------|
@@ -92,21 +139,65 @@ Integration into UAV systems is straightforward, requiring only a [Pixhawk-compa
 | **Duty Cycle** (default 100) | Max % of time the radio transmits. A lower duty cycle may enable higher transmit power or broader frequency access (e.g., <10% in the EU). Bandwidth decreases with lower duty cycles. A duty cycle of 0 means receive-only mode. |
 | **Max Window** (default 33) | The interval (in ms) within which the GCS can send a packet. Lower values like 33 reduce latency, especially in "Low Latency" mode. |
 | **LBT Rssi** (default 0) | RSSI threshold for Listen Before Talk (LBT). If >0, the radio waits for a quiet channel before transmitting. Formula: `signal_dBm = (RSSI / 1.9) - 127`. Example: 25 = -121 dBm. Required for compliance in some regions. Minimum listen time is 5ms, with randomized delay per EU rules. |
-| **RTS CTS** | Enables RTS/CTS hardware flow control. Useful with ArduPilot firmware (post mid-2016) when connected to Pixhawk TELEM ports. Can be set to "auto" to optimize performance. |
+| **RTS CTS** | Enables RTS/CTS hardware flow control. Can be set to "auto" to optimize performance. |
 
-#### Connecting to Autopilot
+You can query and set these values using AT commands over the serial interface.
+
+### Using AT Commands
+
+To configure the modem, you may access the command interface via a serial terminal (e.g., `picocom`, `minicom`):
+
+```bash
+picocom /dev/ttyUSB0 -b 57600
++++   # wait 1 second before and after typing
+OK
+ATI5  # show all parameters
+```
+
+To change a parameter:
+
+```bash
+ATS4=14   # set Tx power to 14 dBm
+AT&W      # write to EEPROM
+ATZ       # reboot
+```
+
+Some useful commands:
+
+* `ATI1` – Firmware version
+* `ATI5` – List all parameters
+* `ATSx?` / `ATSx=val` – Get/set specific parameter
+* `AT+P=x` – Set Tx power immediately
+* `AT+L` – Lock bootloader
+* `AT+A=1|2` – Override antenna selection (specific to TFSIK01)
+
+The full list of commands is maintained in the [firmware documentation](https://github.com/ThunderFly-aerospace/SiK).
+
+
+### Duty Cycle Setting
+
+The `DUTY_CYCLE` parameter defines the maximum percentage of time the modem is allowed to transmit radio signals. The default setting is 100%, meaning the modems can transmit almost continuously if required. However, reducing this value can be beneficial or even necessary under certain regulatory or operational conditions:
+
+* **Regulatory compliance**: In some regions (e.g., the EU), lower duty cycles (typically under 10%) allow the use of higher transmission power or access to a broader frequency band without the need for special licenses.
+* **Noise mitigation**: Lowering the duty cycle can reduce interference in densely used radio environments by making the transmission "bursty".
+* **Receive-only mode**: Setting `DUTY_CYCLE` to `0` disables transmission, allowing the modem to operate in passive listening mode. That work only for low `NUM_CHANNELS`, otherwise the clock synchronisation will be poor.
+
+While reducing the duty cycle may reduce the average throughput, the modem can still maintain effective telemetry, since telemetry traffic is often bursty in nature. For example, even with a 10% duty cycle, reliable MAVLink telemetry is possible at 2 Hz using a medium `AIR_SPEED`.
+
+
+### Connecting to Autopilot
 
 Connection to the autopilot flight controller is facilitated through a JST-GH cable with a 6-pin connector. While PX4 firmware initially configures the TELEM1 port for telemetry connections, adjustments in the PX4 or Ardupilot firmware settings allow for modem connections through any available UART port. 
 
-#### Ground Station Connectivity
+### Ground Station Connectivity
 
-##### Direct UART Connection
+#### Direct UART Connection
 
 The TFSIK01 modem directly interfaces with ground stations via its UART port, enabling easy integration with Raspberry Pi or similar single-board computers equipped with 3.3V UART outputs. This direct connection method is ideal for configurations demanding low latency and direct data control.
 
-##### USB Connectivity
+#### USB Connectivity
 
-To connect the modem to a computer, a USB to UART conversion is essential. The [TFUSBSERIAL01 module](https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/), specifically designed for this purpose, features an FTDI-based USB chip for reliable data transmission and includes a USB-C connector for easy linking to computers or mobile devices, alongside a UART JST-GH connector for straightforward connection to the TFSIK01 modem.
+To connect the modem to a computer, a USB to UART conversion is essential. The [TFUSBSERIAL01 module](/avionics/TFUSBSERIAL01), specifically designed for this purpose, features an FTDI-based USB chip for reliable data transmission and includes a USB-C connector for easy linking to computers or mobile devices, alongside a UART JST-GH connector for straightforward connection to the TFSIK01 modem.
 
 This versatile setup ensures the modem's applicability across a wide range of operational scenarios, from desktop-based ground control systems to mobile field deployments.
 
@@ -131,6 +222,22 @@ Download the latest [firmware release](https://github.com/ThunderFly-aerospace/S
 
     python3 uploader.py --port /dev/ttyUSB0 radio~tfsik01a.ihx 
 
+{: .note }
+Use the correct serial port path for your system (e.g., `/dev/ttyUSB0` or `COM3`).
+
+#### Brick Recovery: Forcing bootloader mode
+
+In case the device becomes unresponsive due to a corrupted or incompatible firmware (e.g., incomplete upload or incorrect image), it is possible to manually enter bootloader mode:
+
+1. **Power off** the modem.
+2. **Short the CTS and GND pins** on the modem's UART connector (6-pin JST-GH). (Using tweezer is good option)
+   * If you're using the TFUSBSERIAL01, these pins are accessible on JST-GH connector after removing the enclosure.
+3. **Power on** the modem while keeping the short in place.
+4. The **LED should remain solid**, indicating that the modem is in bootloader mode.
+5. Remove the short between CTS and GND once programming begins.
+5. Run the firmware upload command as usual.
+
+This procedure bypasses normal startup and allows recovery even if the modem firmware fails to boot properly.
 
 ### How can I monitor the link quality?
 
