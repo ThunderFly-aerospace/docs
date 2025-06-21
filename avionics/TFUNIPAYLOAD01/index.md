@@ -18,7 +18,7 @@ Its key advantage lies in the use of [MAVLink Tunnel packets](https://mavlink.io
 
 * **No firmware modification** of PX4 or ArduPilot is necessary
 * **Standardized MAVLink interface** allows inspection and logging tools (QGC, uLog, MAVSDK)
-* **Sensor abstraction**: only the payload firmware knows the sensor-specific protocol and interface
+* **Sensor abstraction**: Only the payload firmware knows the sensor-specific protocol and interface
 * **Flexible and portable**: The same approach works across multiple autopilot flight stacks
 
 ## Hardware Overview
@@ -36,6 +36,8 @@ TFUNIPAYLOAD01 is intended for users developing or deploying atmospheric or scie
 * Experimental sensors under development
 * Rare or proprietary measurement devices
 * Quick integration of payloads without altering autopilot code
+
+The example of this approach is the [TFPM01 airborne particulate matter sensor](/avionics/TFPM01/) demonstrator. 
 
 ## Communication Principle
 
