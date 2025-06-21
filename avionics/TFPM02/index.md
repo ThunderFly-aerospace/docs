@@ -8,7 +8,7 @@ nav_order: "54"
 
 # TFPM02 - Particulate Matter Sensor for ThunderFly TF-ATMON system
 
-The TFPM02 sensor is a modular device for measuring particulate matter concentration in atmospheric research applications, particularly within the [TF-ATMON system](https://github.com/ThunderFly-aerospace/TF-ATMON). It exists in two hardware variants:
+The TFPM02 sensor is a modular device for measuring particulate matter concentration in atmospheric research applications, particularly within the [TF-ATMON system](/instruments/TF-ATMON). It exists in two hardware variants:
 
 * **TFPM02A** based on the Sensirion **SPS30** sensor
 * **TFPM02B** based on the Sensirion **SEN5x** sensor
