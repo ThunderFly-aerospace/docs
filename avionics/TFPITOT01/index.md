@@ -18,6 +18,13 @@ The TFPITOT01 is an ultra-lightweight pitot tube that integrates the SDP33 senso
 - **High Moisture Resistance** – Designed to handle condensation and humidity, maintaining performance in challenging environments.
 - **PX4 & Ardupilot Compatibility** – Seamless integration with popular flight control software for UAV applications.
 
+## Availability and Customization
+
+The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
+- Direct orders can be placed via [Tindie store](https://www.tindie.com/products/37220/).
+- For commercial inquiries, contact sale@thunderfly.cz.
+- Customization, including length, diameter, or mounting modifications, is available upon request (typical lead time: 3 weeks).
+
 ## Technical Specifications
 - **Sensor Type:** Sensirion SDP33
 - **Measurement Range:** ±1500 Pa (1 m/s to 50 m/s)
@@ -40,7 +47,7 @@ To ensure reliable airspeed measurements, the pitot tube must be installed corre
    - **Adhesive Bonding:** Bond the tube into a pre-fabricated socket or flange on the fuselage or wing structure.
 3. Ensure that the electronic components and I2C cable are sealed against moisture. Only the intake holes at the front of the pitot tube should be exposed to airflow.
 
-The preferred orientation of the mounted sensor is PCB to up. This position ensures that ingressed water can flow out or evaporate. This mounting is especially useful in situations of mounting in the wing. Where the sensor should be screwed from the bottom of the wing. 
+The preferred orientation of the mounted sensor is PCB up. This position ensures that ingressed water can flow out or evaporate. This mounting is especially useful in situations of mounting inside the wing. Where the sensor should be screwed from the bottom of the wing. 
 
 ### Electrical Connection
 - Connect the TFPITOT01 to an unused I2C port on the flight controller.
@@ -48,13 +55,6 @@ The preferred orientation of the mounted sensor is PCB to up. This position ensu
 
 ### Calibration
 Follow the calibration procedure as outlined in the documentation for your flight control firmware (PX4/Ardupilot) to achieve optimal accuracy.
-
-## Availability and Customization
-
-The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
-- For commercial inquiries, contact sale@thunderfly.cz.
-- Direct orders can be placed via our [Tindie store](https://www.tindie.com/products/37220/).
-- Customization options, including length or diameter modifications, are available upon request (typical lead time: 3 weeks).
 
 ### FAQ: Frequently Asked Questions
 
@@ -70,11 +70,11 @@ There are two common approaches:
 2. **Using a multi-port airspeed sensor** – The multiple probes or a modified 5-hole TFPITOT probe can measure both airspeed and rough angle of attack, providing more accurate velocity data.  
 
 #### What airspeed range can a pitot tube measure on a quadcopter?
-A pitot probe can generally measure airspeeds starting from a few meters per second. For a flight speed under **10 m/s**, the [TFSLOT01 sensor](https://docs.thunderfly.cz/avionics/TFSLOT01/) is recommended for better accuracy.  
+A pitot probe can generally measure airspeeds starting from a few meters per second. For a flight speed under 10 m/s, the [TFSLOT01 sensor](https://docs.thunderfly.cz/avionics/TFSLOT01/) is recommended for better accuracy.  
 
 #### Where should the pitot tube be mounted on an airframe?  
 For best results, the probe should be placed:  
 - In **clean airflow**, away from propeller wash and frame turbulence.  
 - With the tip facing **directly into the relative wind** to ensure accurate measurements.  
-- Ideally on a boom or mast extending forward to minimize aerodynamic disturbances.  
+- Ideally, on a boom or mast extending forward to minimize aerodynamic disturbances.  
 
