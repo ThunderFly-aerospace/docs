@@ -8,7 +8,7 @@ nav_order: "3"
 
 # TF-G250 - Unmanned Aerological Autogyro
 
-The TF-G250 is a miniature unmanned autogyro specifically developed for atmospheric boundary layer measurements. It serves as a practical and ecological alternative to conventional balloon-based radiosondes, performing vertical profiling of key meteorological parameters: temperature, humidity, wind speed and direction, and atmospheric pressure.
+The TF-G250 is a miniature unmanned autogyro specifically developed for atmospheric boundary layer measurements. It serves as a practical and ecological alternative to conventional balloon-based radiosondes, performing [atmospheric profiling](https://en.wikipedia.org/wiki/Atmospheric_sounding) of key meteorological parameters: temperature, humidity, wind speed and direction, and atmospheric pressure.
 
 The TF-G250 autogyro is designed for easy handling, deployment, and maintenance, ensuring affordability and robustness in diverse meteorological conditions. Its compact and lightweight structure (below 250 grams, complying with the [European C0 category](https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones)) simplifies transport and storage, making it ideal for rapid deployment scenarios.
 
