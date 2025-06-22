@@ -8,13 +8,13 @@ nav_order: "3"
 
 # TF-G250 - Unmanned Aerological Autogyro
 
-The TF-G250 is a miniature unmanned autogyro specifically developed for atmospheric boundary layer measurements. It serves as a practical and ecological alternative to conventional balloon-based radiosondes, performing [atmospheric profiling](https://en.wikipedia.org/wiki/Atmospheric_sounding) of key meteorological parameters: temperature, humidity, wind speed and direction, and atmospheric pressure.
+The TF-G250 is a miniature unmanned autogyro specifically designed for atmospheric boundary layer sounding. It serves as a practical and ecological alternative to conventional balloon-based radiosondes, performing [atmospheric profiling](https://en.wikipedia.org/wiki/Atmospheric_sounding) of key meteorological parameters: temperature, humidity, wind speed and direction, and atmospheric pressure.
 
 The TF-G250 autogyro is designed for easy handling, deployment, and maintenance, ensuring affordability and robustness in diverse meteorological conditions. Its compact and lightweight structure (below 250 grams, complying with the [European C0 category](https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones)) simplifies transport and storage, making it ideal for rapid deployment scenarios.
 
 ![TF-G250 during flight](TF-G250_flight.png)
 
-The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric measurement tools. Unlike traditional solutions, the TF-G250  meteo autogyro drone offers significant operational advantages due to its lightweight, absence of parachute, inherent safety mechanisms, and safe-descent capability.
+The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric sounding tools. Unlike traditional radiosonde solutions, the TF-G250 meteo autogyro drone offers significant operational advantages due to its lightweight, absence of parachute, inherent safety mechanisms, and safe-descent design.
 
 ## Key Design Features
 
