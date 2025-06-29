@@ -10,9 +10,7 @@ nav_order: "4"
 
 The converter is designed to service and debug operations on UAVs. It respects the [Pixhawk DS-009](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) connector standard.
 
-![TFUSBSERIAL01 Bottom](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUSBSERIAL01/TFUSBSERIAL01A/doc/gen/img/TFUSBSERIAL01-bottom.png)
-
-![TFUSBSERIAL01 Top](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUSBSERIAL01/TFUSBSERIAL01A/doc/gen/img/TFUSBSERIAL01-top.png)
+![TFUSBSERIAL01 Enclosure](TFUSBSERIAL01.JPG)
 
 ## Key features
 
@@ -22,6 +20,10 @@ The converter is designed to service and debug operations on UAVs. It respects t
   * Supports hardware flow control
   * The power delivered from USB is protected from excess current possibly drawn by peripheral or FMU
   * The accidental power from FMU to USB is protected by reverse diode
+
+## Where to get it?
+
+ThunderFly Serial Telemetry Interface is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to sale@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/34364/).
 
 
 ### Usage
