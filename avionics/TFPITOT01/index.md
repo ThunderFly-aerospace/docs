@@ -41,8 +41,19 @@ The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 The TFPITOT01 is designed for use in Unmanned Aerial Vehicles (UAVs), providing precise airspeed measurements for atmospheric monitoring, navigation, and performance optimization.
 
 ## Installation Guide
+
+The airspeed sensor is supposed to be mounted in aircraft nose or in wing. 
+
+![TFPITOT01 aircraft wing mount](TFPITOT01_wing_mount.png)
+
+
+![TFPITOT01 aircraft nose mount](TFPITOT01_nose_mount.png)
+
+
 ### Mounting Instructions
+
 To ensure reliable airspeed measurements, the pitot tube must be installed correctly:
+
 1. The tube must be parallel to the airflow to guarantee accurate readings.
 2. Mounting possibilities:
    - **Clamp Mounting:** Use a dedicated bracket or clamp to secure the tube.
@@ -58,7 +69,7 @@ The preferred orientation of the mounted sensor is PCB up. This position ensures
 ### Calibration
 Follow the calibration procedure as outlined in the documentation for your flight control firmware (PX4/Ardupilot) to achieve optimal accuracy.
 
-### FAQ: Frequently Asked Questions
+## FAQ: Frequently Asked Questions
 
 #### Can a pitot probe be used on a quadcopter?
 Yes, a pitot probe can measure airspeed on a quadcopter as long as it is facing the relative airflow. In the case where the UAV always flies forward in a specific direction, the pitot tube will register dynamic pressure corresponding to the component of airspeed aligned with its axis.  
