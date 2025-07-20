@@ -31,9 +31,11 @@ The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 - **Accuracy:** ±3% of measured value (corresponds to ±1.5 m/s @ 50 m/s)
 - **Zero Point Accuracy:** 0.2 Pa
 - **Operating Temperature Range:** -40 °C to +85 °C
-- **Default tube dimensions:** 45 mm length, 6 mm diameter
+- **Default tube dimensions:** 45 mm L, 5.1 mm D
 - **Weight:** 3.8 grams
 - **Default I2C Address:** 0x21 (configurable to 0x22 or 0x23)
+
+[![TFPITOT01 technical drawing](TFPITOT01_dimensions.png)](TFPITOT01_dimensions.pdf)
 
 ## Applications
 The TFPITOT01 is designed for use in Unmanned Aerial Vehicles (UAVs), providing precise airspeed measurements for atmospheric monitoring, navigation, and performance optimization.
