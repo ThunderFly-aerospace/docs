@@ -26,6 +26,7 @@ The following table lists wholesale prices for avionics components for orders up
 | [TFI2CADT01](https://docs.thunderfly.cz/avionics/TFI2CADT01/) | €89,00 | €84,55 | €80,10 |
 | [TFSLOT01](https://docs.thunderfly.cz/avionics/TFSLOT01/) | €390,00 | €370,50 | €351,00 |
 | [TFHT01](https://docs.thunderfly.cz/avionics/TFHT01/) | €81,00 | €76,95 | €72,90 |
+| [TFHT02](https://docs.thunderfly.cz/avionics/TFHT02/) |	€60,75 | €57,71	| €54,68 |
 | [TFUSBSERIAL01](https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/) | €86,00 | €81,70 | €77,40 |
 | [TFPITOT01](https://docs.thunderfly.cz/avionics/TFPITOT01/) | €148,00 | €140,60 | €133,20 |
 | [TFGPS01](https://docs.thunderfly.cz/avionics/TFGPS01/) | €280,00 | €266,00 | €252,00 |
@@ -38,7 +39,7 @@ The following table lists wholesale prices for avionics components for orders up
 
 > **Note:**
 > - All prices are in EUR and **exclude VAT and shipping costs**.
-> - Pricing valid from **15 April 2025**.
+> - Pricing valid from **21 July 2025**.
 > - **Payment**: In advance via bank transfer based on a proforma invoice.
 > - **Shipping**: Costs depend on destination and carrier; quotes available on request.
 > - **Lead time**: Standard quantities are usually shipped within a week, with a maximum lead time of up to 4 weeks. Lead times for bulk orders may vary.
