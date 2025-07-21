@@ -30,7 +30,7 @@ The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 - **Measurement Range:** ±1500 Pa (1 m/s to 50 m/s)
 - **Accuracy:** ±3% of measured value (corresponds to ±1.5 m/s @ 50 m/s)
 - **Zero Point Accuracy:** 0.2 Pa
-- **Operating Temperature Range:** -40 °C to +85 °C
+- **Operating Temperature Range:** -40 °C to +65 °C
 - **Default tube dimensions:** 45 mm L, 5.1 mm D
 - **Weight:** 3.8 grams
 - **Default I2C Address:** 0x21 (configurable to 0x22 or 0x23)
@@ -38,7 +38,7 @@ The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 [![TFPITOT01 technical drawing](TFPITOT01_dimensions.png)](TFPITOT01_dimensions.pdf)
 
 ## Applications
-The TFPITOT01 is designed for use in Unmanned Aerial Vehicles (UAVs), providing precise airspeed measurements for atmospheric monitoring, navigation, and performance optimization.
+The TFPITOT01 is designed for Unmanned Aerial Vehicles (UAVs), providing precise airspeed measurements for atmospheric monitoring, navigation, and performance optimization.
 
 ## Installation Guide
 
@@ -60,7 +60,7 @@ To ensure reliable airspeed measurements, the pitot tube must be installed corre
    - **Adhesive Bonding:** Bond the tube into a pre-fabricated socket or flange on the fuselage or wing structure.
 3. Ensure that the electronic components and I2C cable are sealed against moisture. Only the intake holes at the front of the pitot tube should be exposed to airflow.
 
-The preferred orientation of the mounted sensor is PCB up. This position ensures that ingressed water can flow out or evaporate. This mounting is especially useful in situations of mounting inside the wing. Where the sensor should be screwed from the bottom of the wing. 
+The preferred orientation of the mounted sensor is PCB up. This position ensures that ingressed water can flow out or evaporate. This mounting is especially useful in situations of mounting inside the wing. The sensor should be screwed to the bottom of the wing, and electronics covered by a cap. 
 
 ### Electrical Connection
 - Connect the TFPITOT01 to an unused I2C port on the flight controller.
