@@ -28,7 +28,7 @@ The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 ## Technical Specifications
 - **Sensor Configuration**: Pitot-static tube with dynamic and static pressure ports integrated
 - **Sensor Type:** Sensirion SDP33
-- **Measurement Range:** ±1500 Pa (1 m/s to 50 m/s)
+- **Measurement Range:** ±1500 Pa (1 m/s to 50 m/s), allowable overpressure 50 kPa
 - **Accuracy:** ±3% of measured value (corresponds to ±1.5 m/s @ 50 m/s)
 - **Zero Point Accuracy:** 0.2 Pa
 - **Operating Temperature Range:** -40 °C to +65 °C
@@ -61,7 +61,7 @@ To ensure reliable airspeed measurements, the pitot tube must be installed corre
    - **Adhesive Bonding:** Bond the tube into a pre-fabricated socket or flange on the fuselage or wing structure.
 3. Ensure that the electronic components and I2C cable are sealed against moisture. Only the intake holes at the front of the pitot tube should be exposed to airflow.
 
-The preferred orientation of the mounted sensor is PCB up. This position ensures that ingressed water can flow out or evaporate. This mounting is especially useful in situations of mounting inside the wing. The sensor should be screwed to the bottom of the wing, and electronics covered by a cap. 
+The preferred orientation of the mounted sensor is PCB up. This position ensures that ingressed water can flow out or evaporate. This mounting is especially useful in situations where mounting is inside the wing. The sensor should be screwed to the bottom of the wing, and the electronics covered by a cap. 
 
 ### Electrical Connection
 - Connect the TFPITOT01 to an unused I2C port on the flight controller. It is recommended to use the [EMC enhanced TFCAB01 I2C cables](/avionics/TFCAB01/).
