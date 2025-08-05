@@ -364,6 +364,9 @@ That is why high‑altitude platforms and missions provide almost complete Fresn
 
 ## Hardware setup
 
+{: .warning }
+Like most RF devices, the TFSIK01 must not be operated without a properly connected and matched antenna. Doing so can damage the RF output stage.
+
 ### Connecting to Autopilot
 
 Connection to the autopilot flight controller is facilitated through a JST-GH cable with a 6-pin connector. While PX4 firmware initially configures the TELEM1 port for telemetry connections, adjustments in the PX4 or Ardupilot firmware settings allow for modem connections through any available UART port. 
