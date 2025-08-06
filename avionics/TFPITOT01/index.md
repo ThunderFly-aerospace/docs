@@ -29,7 +29,7 @@ The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 - **Sensor Configuration**: Pitot-static tube with dynamic and static pressure ports integrated
 - **Sensor Type:** Sensirion SDP33
 - **Measurement Range:** ±1500 Pa (1 m/s to 50 m/s), allowable overpressure 50 kPa
-- **Accuracy:** ±3% of measured value (corresponds to ±1.5 m/s @ 50 m/s)
+- **Repeatability:** ±3% of measured value (corresponds to ±1.5 m/s @ 50 m/s)
 - **Zero Point Accuracy:** 0.2 Pa
 - **Operating Temperature Range:** -40 °C to +65 °C
 - **Default tube dimensions:** 45 mm L, 5.1 mm D
