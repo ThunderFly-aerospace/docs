@@ -75,6 +75,14 @@ Follow the calibration check procedure as outlined in the documentation for your
 
 ## FAQ: Frequently Asked Questions
 
+### Why wasn't a "more accurate" differential pressure sensor used instead of the SDP33?
+
+Although some membrane-based differential pressure sensors such as MS4525DO, DLVR-L30D, ELVH-L30D, or AUAV-L10D-M2515-RR-N may claim higher static accuracy, they are not necessarily better suited for UAV airspeed sensing.
+
+In real-world applications, what matters more than raw accuracy is the stability of the offset, high resolution, and repeatability. That significantly influence autopilot performance. Membrane sensors tend to suffer from mechanical hysteresis, offset drift, and sensitivity to vibration.
+
+By contrast, the SDP33, a flow-based sensor used in the TFPITOT01, offers excellent resolution, offset stability and minimal hysteresis. This leads to more consistent and reliable readings, especially in systems where flight controllers such as PX4 or ArduPilot apply onboard corrections (e.g., IAS → CAS → EAS → TAS). An additional practical advantage of the flow-based principle is that it allows slow airflow through the sensor, which helps remove accumulated moisture from the measuring tube.
+
 ### Can a pitot probe be used on a quadcopter?
 Yes, a pitot probe can measure airspeed on a quadcopter as long as it is facing the relative airflow. In the case where the UAV always flies forward in a specific direction, the pitot tube will register dynamic pressure corresponding to the component of airspeed aligned with its axis.  
 
