@@ -50,6 +50,9 @@ The airspeed sensor is supposed to be mounted in an aircraft's nose or a wing.
 
 ![TFPITOT01 aircraft nose mount](TFPITOT01_nose_mount.png)
 
+In typical UAV applications, it is generally sufficient for the static pressure ports to be positioned at a distance of approximately 10 times the outer diameter of the tube from nearby airframe structures (such as the nose). Longer protrusions introduce unnecessary challenges related to stiffness, vibrations, and structural stability, unless used for specialized aerodynamic measurements.
+
+Modern flight controllers (e.g., PX4, ArduPilot) further reduce the need for extended pitot tubes by dynamically correcting Indicated Airspeed (IAS) to Calibrated (CAS) and Equivalent Airspeed (EAS) using GPS and IMU data. These corrections effectively mitigate airframe-induced pressure distortions and allows to reliable airspeed readings even with shorter tubes.
 
 ### Mounting Instructions
 
