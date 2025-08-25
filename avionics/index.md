@@ -11,11 +11,20 @@ nav_order: 20
 
 ## Avionics Components  
 
-ThunderFly's avionics system consists of **high-performance hardware** designed to enhance the capabilities of standard unmanned aerial vehicles. ThunderFly avionics components are built for seamless integration into existing UAV platforms, ensuring reliable operation in demanding environments where our autogyro sensor carriers usually operate.  
+ThunderFly's avionics system consists of **high-performance hardware** designed to enhance the capabilities of standard unmanned aerial vehicles. ThunderFly avionics components are built for seamless integration into existing UAV platforms like [PX4](https://px4.io/) or [Ardupilot](https://ardupilot.org/).   
 
-Our devices are specialized to deliver the best performance in atmospheric sensing applications, supporting the whole workflow from precision airspeed and temperature measurements to advanced telemetry and data communication. Key offerings include **high-accuracy environmental sensors** for real-time atmospheric data acquisition — all developed and manufactured in Europe to meet rigorous aerospace and research standards.  
+The development was originally motivated by the [TF-ATMON](https://docs.thunderfly.cz/instruments/TF-ATMON), which focuses on atmospheric measurements in harsh conditions. Therefore solution covers the entire workflow — from sensors and in-flight data acquisition, through data transmission, to final visualization — and this use case shaped the design of our avionics. All developed and manufactured in Europe to meet rigorous aerospace and research standards.  
 
-## Components Pricing
+### How to Order
+
+You can order avionics components in following ways:
+
+- **Directly from ThunderFly** — use our [Contact us](https://www.thunderfly.cz/contact-us.html) page to request a quotation, check lead times, or discuss bulk pricing.
+- **Online marketplaces**
+  - **[Tindie](https://www.tindie.com/stores/thunderfly/)** — suitable for worldwide orders
+  - **[Lectronz](https://lectronz.com/stores/thunderfly)** — recommended for customers in Europe.
+
+### Components Pricing
 
 The following table lists wholesale prices for avionics components for orders up to 50 units. For bulk pricing (51+ units), please contact us directly.
 
