@@ -39,7 +39,7 @@ The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating du
 
 ### Purchasing Information
 
-The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly in [Tindie store](https://www.tindie.com/products/34682/). We are designers of this modem and therefore have full control of the modem construction and design. This gives us the ability to react even on non-standard requests for modification or functions.
+The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly from [Tindie store](https://www.tindie.com/products/34682/) or [Lectronz](https://lectronz.com/products/tfsik01-high-performance-uav-telemetry-modem) marketplaces. We are designers of this modem and therefore have full control of the modem construction and design. This gives us the ability to react even to non-standard requests for modification or functions.
 
 
 ## Hardware Parameters
@@ -55,7 +55,7 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 | RF connectors| [MCX](https://en.wikipedia.org/wiki/MCX_connector) on both RF ports | snap-on function prevents damage of connector by extensive external forces|
 | Serial interface| 3.3 V UART | 6-position JST-GH connector with [handshake available](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) |
 | Operating and storage temperature | −20°C to +40°C | Limited by case material |
-| Operational power voltage | +5V to +5.4V, 500mA max | Undervoltage is not treated. Current consumption is defined mainly by set RF power, Receive current is 25 mA|
+| Operational power voltage | +5V to +5.4V, 500mA max | Undervoltage is not treated. Current consumption is defined mainly by the set RF power. Receive current is 25 mA|
 | Mass | 18g | Including the housing |
 | Dimensions | 55x10x35mm | Housing dimensions |
 | Weather resistance | [IP40](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
