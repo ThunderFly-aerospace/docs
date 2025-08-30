@@ -1,9 +1,10 @@
+---
 layout: page
 title: "TFESC03 - Miniature BLDC Motor Driver with I2C Interface"
 permalink: /avionics/TFESC03/
 parent: "Power & Motor Control"
 nav_order: "11"
-----------------
+---
 
 # TFESC03 - Miniature BLDC Motor Driver Module with I2C Interface
 
@@ -35,7 +36,7 @@ The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs a
 * **Operating Temperature**: –40°C to +125°C
 * **Dimensions**: 34.0x15.0 mm Compact PCB, optimized for UAV integration
 
-![TFESC03 - BLDC Motor Driver PCB](TFESC03-schematic.png)
+![TFESC03 - BLDC Motor Driver schematics](TFESC03-schematic.png)
 
 ## Connectors
 
