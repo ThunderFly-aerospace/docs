@@ -70,6 +70,8 @@ The preferred orientation of the mounted sensor is PCB up. This position ensures
 - Connect the TFPITOT01 to an unused I2C port on the flight controller. It is recommended to use the [EMC enhanced TFCAB01 I2C cables](/avionics/TFCAB01/).
 - Configure the firmware settings to recognize the sdp3x sensor driver for airspeed measurements.
 
+![TFPITOT01 schematics](TFPITOT01-schematic.png)
+
 ### Calibration
 Follow the calibration check procedure as outlined in the documentation for your flight control firmware (PX4/Ardupilot) to achieve optimal accuracy.
 
