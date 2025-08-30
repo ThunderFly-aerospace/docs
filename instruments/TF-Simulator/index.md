@@ -19,7 +19,7 @@ Together, these tools provide both environmental data collection and realistic U
 
 ## How TF-simulator Works
 
-The TF-simulator leverages the **PX4-FlightGear-Bridge** to connect the PX4 autopilot software stack with the FlightGear simulator. FlightGear provides:
+The TF-simulator leverages the **PX4-FlightGear-Bridge** to connect the [PX4 autopilot software stack with the FlightGear simulator](https://docs.px4.io/main/en/sim_flightgear/). FlightGear provides:
 
 * Realistic flight dynamics for multiple UAV models (including [TF-G1](https://github.com/ThunderFly-aerospace/TF-G1) and [TF-G2](/instruments/TF-G2) autogyros).
 * Advanced weather and environment simulations.
@@ -52,7 +52,7 @@ For inquiries, training, or paid support options, contact: **[sale@thunderfly.cz
 
 ## Support and Services
 
-ThunderFly provides **paid support** for:
+ThunderFly provides paid support for:
 
 * Simulator setup and customization.
 * Integration of new UAV models (defined in [YASim](https://wiki.flightgear.org/YASim)).
