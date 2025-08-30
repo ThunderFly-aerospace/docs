@@ -7,27 +7,25 @@ nav_order: 1
 
 # Documentation website for ThunderFly products
 
-At [ThunderFly s.r.o.](https://www.thunderfly.cz/), we're dedicated to advancing UAV technology with our innovative product lines. Our solutions enhance UAV capabilities through precise sensors and specialized avionics devices. Explore our offerings to find the perfect fit for your technical needs.
+At [ThunderFly s.r.o.](https://www.thunderfly.cz/), we're dedicated to advancing UAV technology with our innovative product lines. Our solutions enhance UAV capabilities through sensors and specialized avionics devices. Explore our offerings to find the perfect fit for your technical needs.
 
 ## ThunderFly instruments
 
 ![UAV autogyro during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_fly_clouds.jpg)
 
-Our state-of-the-art measurement solutions are at the forefront of UAV technology. These tools are essential for high-level atmospheric measurements, offering unparalleled accuracy and reliability. Our comprehensive solutions include:
+Our state-of-the-art measurement solutions of UAV technology. These tools are designed for atmospheric measurements, offering accuracy and reliability. Our solutions include:
 
 - **Measuring Devices Carriers**: Our autogyro carriers (TF-G1, [TF-G2](/instruments/TF-G2) and [TF-G250](/instruments/TF-G250)) are engineered for stability in adverse weather conditions.
-- **TF-ATMON Toolchain**: Transform data into actionable insights with our advanced processing software, tailored for atmospheric analysis.
-- **Software Simulator**: Prepare for your measuring campaigns with our realistic software simulator, ensuring your mission's success.
-
-Whether you're conducting research or commercial operations, our instruments provide the reliability and precision you need.
+- **[TF-ATMON Toolchain](/instruments/TF-ATMON)**: Transform data into actionable insights with our advanced processing software, tailored for atmospheric analysis.
+- **TF-Simulator**: Prepare for your measuring campaigns with our software simulator, ensuring your mission's success.
 
 ## ThunderFly avionics
 
-Elevate your UAV's performance with our [avionics line](/avionics), featuring small, powerful hardware devices. These gadgets are designed to tackle specific technical tasks, from airspeed and temperature measurement to telemetry interconnection. Highlights include:
+Improve your UAV's performance with [ThunderFly avionics line](/avionics), featuring small, powerful hardware devices. These gadgets are designed to tackle specific technical tasks, from airspeed and temperature measurement to telemetry interconnection. Highlights include:
 
 - **On-board instruments**: Capture precise [RPM](/avionics/TFRPM01) or [airspeed](/avionics/TFSLOT01) data to optimize UAV performance and safety.
-- **Environmental Sensors**: Monitor dust, atmospheric pollution, or operational temperatures and humidity with high-accuracy sensors designed for accurate atmospheric data collection under diverse conditions. Customizable to fit various UAV models.
-- **Telemetry Interconnection Solutions**: Ensure seamless communication between UAVs and ground stations with our robust interconnection devices.
+- **Environmental Sensors**: Monitor [dust, atmospheric pollution](/avionics/TFPM02/), or operational [temperatures and humidity](/avionics/TFHT01/) with high-accuracy sensors designed for atmospheric data collection. Customizable to fit various UAV models.
+- **Telemetry Interconnection Solutions**: Ensure seamless communication between UAVs and ground stations with our [robust telemetry modems](/avionics/TFSIK01/).
 
 ![UAV avionic component](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSLOT01/TFSLOT01A/doc/img/TFSLOT_1_small.jpg)
 
