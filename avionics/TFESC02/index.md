@@ -34,6 +34,12 @@ The TFESC02 is a high-performance BLDC motor driver device designed specifically
   - Supply under-voltage lockout (UVLO), over-current protection (OCP), thermal shutdown (TSD), and motor lock detection.
   - Anti-voltage surge protection to guard on board electronics against spikes.
 
+## Availability and Customization
+
+The TFESC02 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
+- For commercial inquiries, contact sale@thunderfly.cz.
+- Customization, or mounting modifications, is available upon request.
+
 ## Technical Specifications
 
 - **Input Voltage Range**: 4.5 to 24 V

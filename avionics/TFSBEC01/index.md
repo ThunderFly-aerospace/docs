@@ -23,6 +23,12 @@ The TFSBEC01 module is designed to provide a stable and efficient power supply f
 - **Size:** Approx. 46 x 30 mm
 - **Compatibility:** Designed for Pixhawk-based drones but can be used in other UAV systems.
 
+## Availability and Customization
+
+The TFSBEC01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
+- For commercial inquiries, contact sale@thunderfly.cz.
+- Customization, or mounting modifications, is available upon request.
+
 ## Technical Specifications
 
 | Parameter                      | Value            | Description                                             |
