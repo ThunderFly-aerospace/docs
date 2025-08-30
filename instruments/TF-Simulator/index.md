@@ -11,7 +11,7 @@ nav_order: "5"
 The **TF-simulator** is a solution combining atmospheric measurement and flight mission simulation. It bridges two complementary systems:
 
 * **[TF-ATMON](/instruments/TF-ATMON)**: ThunderFly’s toolchain for in-flight atmospheric measurements using UAVs.
-* **PX4-FlightGear-Bridge**: A simulation environment based on [FlightGear](https://www.flightgear.org/), enabling advanced training and mission rehearsal.
+* **[PX4-FlightGear-Bridge](https://github.com/ThunderFly-aerospace/PX4-FlightGear-Bridge)**: A simulation environment based on [FlightGear](https://www.flightgear.org/), enabling advanced training and mission rehearsal.
 
 Together, these tools provide both environmental data collection and realistic UAV mission training, suitable for research, education, and operator preparation.
 
