@@ -8,7 +8,10 @@ nav_order: "11"
 
 # TFESC03 - Miniature BLDC Motor Driver Module with I2C Interface
 
-![TFESC03 - BLDC Motor Driver PCB](https://raw.githubusercontent.com/ThunderFly-aerospace/TFESC03/refs/heads/main/doc/gen/img/TFESC03-top.png)
+![TFESC03 - BLDC Motor Driver PCB top side](TFESC03-top.png)
+
+![TFESC03 - BLDC Motor Driver PCB bottom side](TFESC03-bottom.png)
+
 
 The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs and other embedded systems where space and efficiency are critical. It is based on the [MCF8316C-Q1](https://www.ti.com/product/MCF8316C-Q1) integrated circuit, enabling **sensorless Field Oriented Control (FOC)**. TFESC03 integrates directly into UAV avionics through an PixHawk I2C interface and is fully compatible with PX4 autopilot firmware.
 
