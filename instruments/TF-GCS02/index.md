@@ -3,7 +3,7 @@ title: "TF-GCS02 - Portable Ground Control Station"
 layout: page
 permalink: /instruments/TF-GCS02
 parent: Instruments
-nav_order: "5"
+nav_order: "6"
 ---
 
 # TF-GCS02 - ThunderFly portable Ground Control Station
