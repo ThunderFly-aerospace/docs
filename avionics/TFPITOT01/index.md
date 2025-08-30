@@ -20,7 +20,7 @@ The TFPITOT01 is an ultra-lightweight pitot tube that integrates the SDP33 senso
 
 ## Availability and Customization
 
-The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
+The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 - Direct orders can be placed via [Tindie store](https://www.tindie.com/products/37220/).
 - For commercial inquiries, contact sale@thunderfly.cz.
 - Customization, including length, diameter, or mounting modifications, is available upon request (typical lead time: 3 weeks).
