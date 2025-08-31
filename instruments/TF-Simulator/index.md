@@ -61,3 +61,76 @@ ThunderFly provides paid support for:
 
 Contact ThunderFly for tailored solutions at [info@thunderfly.cz](mailto:info@thunderfly.cz).
 
+## Technical Information
+
+The TF-simulator builds directly on the [PX4-FlightGear-Bridge](https://github.com/ThunderFly-aerospace/PX4-FlightGear-Bridge) and is compatible with the PX4 SITL framework. Below are technical details for setup and operation (see the [PX4 documentation](https://docs.px4.io/main/en/sim_flightgear/) for more complete reference).
+
+### Installation (Ubuntu Linux)
+
+1. Install the PX4 development environment ([PX4 guide](https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html)).
+2. Install FlightGear via PPA:
+   ```sh
+   sudo add-apt-repository ppa:saiarcot895/flightgear
+   sudo apt update
+   sudo apt install flightgear
+   ```
+3. Set write permissions for FlightGear Protocols folder:
+   ```sh
+   sudo chmod a+w /usr/share/games/flightgear/Protocol
+   ```
+
+### Running a Simulation
+
+[![PX4-FlightGear Rascal110 Simulation](https://img.youtube.com/vi/iqdcN5Gj4wI/maxresdefault.jpg)](https://www.youtube.com/watch?v=iqdcN5Gj4wI)
+
+From the PX4-Autopilot directory, build and run PX4 SITL with the desired vehicle target:
+
+```sh
+cd /path/to/PX4-Autopilot
+make px4_sitl_nolockstep flightgear_rascal   # Standard plane
+make px4_sitl_nolockstep flightgear_tf-g1    # TF-G1 autogyro
+make px4_sitl_nolockstep flightgear_tf-g2    # TF-G2 autogyro
+make px4_sitl_nolockstep flightgear_tf-r1    # TF-R1 rover
+```
+
+_QGroundControl_ will automatically connect to the simulated vehicle.
+
+### Taking it to the Sky
+
+
+Once PX4 SITL and FlightGear are running and connected, the vehicle will be ready after initialization. In the PX4 console, wait until you see messages about GPS fusion starting. At this point you can arm the vehicle and take off:
+
+
+```sh
+pxh> commander takeoff
+```
+
+You should see the simulated UAV (or rover/plane) become active in the FlightGear window. Use **Ctrl+V** in FlightGear to change the camera view.
+
+![FlightGear ThunderFly Rascal model](flightgearUI.jpg)
+
+
+### Configuration Options
+
+- `FG_BINARY` – Path to the FlightGear binary (can be AppImage).
+- `FG_MODELS_DIR` – Path to additional aircraft model directory.
+- `FG_ARGS_EX` – Extra FlightGear runtime arguments.
+
+Examples:
+- Start simulation at Honolulu airport:
+  ```sh
+  FG_ARGS_EX="--airport=PHNL" make px4_sitl_nolockstep flightgear_rascal
+  ```
+- Show frame rate in FlightGear: **View > View Options > Show frame rate**
+
+### Extending Simulation
+
+Custom UAVs can be added by:
+1. Placing aircraft models into the `models` directory.
+2. Creating a `.json` configuration file for each model.
+3. Adding the model into PX4 build system (`sitl_target.cmake`).
+
+Further development and customization are possible via the [PX4-FlightGear-Bridge source code](https://github.com/ThunderFly-aerospace/PX4-FlightGear-Bridge).
+
+
+
