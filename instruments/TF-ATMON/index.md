@@ -39,13 +39,13 @@ TF-ATMON has been successfully integrated into various aerial platforms for atmo
 
 * **Autogyros**
 
-  * [TF-G250](/instruments/TF-G250) – smaller, compact autogyro platform for basic training and atmospheric sondes
+  * [TF-G250](/instruments/TF-G250) – Ultra-compact aerological autogyro platform for atmospheric sounding
   * [TF-G2](/instruments/TF-G2) – larger, more robust autogyro platform suitable for advanced sensor integration and research flights
-* **Multicopters** – flexible UAV platforms (documentation to be linked)
+* **Multicopters** – Customer specific integrations
 * **Stratospheric balloons**
-
+  
   * [TF-B1](/instruments/TF-B1) – high-altitude experimental balloon platform
-* **Fixed-wing aircraft** – supported for long-endurance atmospheric missions (documentation to be linked)
+* **Fixed-wing aircraft** – supported for long-endurance atmospheric missions (customer-specific integrations)
 
 These supported airframes allow TF-ATMON to cover a wide range of atmospheric measurement and research applications.
 
