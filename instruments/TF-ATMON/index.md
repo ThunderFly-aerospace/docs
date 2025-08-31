@@ -4,12 +4,21 @@ title: "TF-ATMON - Toolchain for Atmospheric measurement"
 layout: page
 permalink: /instruments/TF-ATMON
 parent: Instruments
-nav\_order: "4"
+nav_order: "4"
 ---
 
 # TF-ATMON - Toolchain for Atmospheric measurement by drones
 
-Public part of the TF-ATMON tool product. In case you need more details, please contact [ThunderFly s.r.o.](https://www.thunderfly.cz/) with a request. Generic information you could find in the [TF-ATMON fact sheet](https://www.thunderfly.cz/tf-atmon/ThunderFly_TFATMON_factsheet_en.pdf)
+ThunderFly TF-ATMON is a complete system for performing in-situ atmospheric measurements. It provides a universal tool for increasing the effectiveness of scientific measurements, simplifying pre-flight preparations, and improving the quality of collected data. The system combines an aerial platform carrying specialized sensors (for humidity, gases, airborne particles, ionizing radiation, electric fields, etc.) with a ground station for real-time data visualization and flight planning.
+
+The ground station not only allows operators to monitor data live, but also supports smart trajectory optimization based on measured values. This reduces the need for pilot interventions and ensures measurements are conducted efficiently and with higher spatial resolution. Thanks to its modular design, TF-ATMON can be integrated with different types of unmanned platforms — from autogyros and multicopters to fixed-wing aircraft or even stratospheric balloons — depending on mission requirements.
+
+### System features
+
+* **Measured quantities:** temperature, humidity, airborne particles (PM0.5–PM10), ionizing radiation, gases (CO2, O3, SOx, NOx…), electric field intensity. Additional sensor types can be integrated on request.
+* **Ground control station:** provides real-time visualization, operator terminal, and a smart trajectory optimization algorithm.
+* **Planning algorithm:** decreases dependency on the pilot and ensures measurements are performed optimally with respect to quality and duration.
+* **System infrastructure:** TF-ATMON is built on existing multi-vendor UAV avionics and communication infrastructure, using a telemetry link and the [MAVlink transmission protocol](https://en.wikipedia.org/wiki/MAVLink) for reliable data exchange between the aerial platform and ground station.
 
 See the following video for a demonstration flight of a particulate matter sensor mounted on [TF-G2 autogyro](/instruments/TF-G2) and looking for a smoke atmospheric pollution source.
 
@@ -56,4 +65,5 @@ The entire TF-ATMON system is also compatible with the [TF-Simulator](/instrumen
 ## Scientific papers
 
   * [MEASUREMENT OF THE REGENER-PFOTZER MAXIMUM USING DIFFERENT TYPES OF IONISING RADIATION DETECTORS AND A NEW TELEMETRY SYSTEM TF-ATMON ](https://pubmed.ncbi.nlm.nih.gov/36005953/)
+  
 
