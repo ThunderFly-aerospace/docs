@@ -4,6 +4,7 @@ layout: page
 permalink: /instruments/TF-simulator
 parent: Instruments
 nav_order: "5"
+has_children: true
 ---
 
 # TF-simulator - Mission Training and Atmospheric Measurement Simulator
