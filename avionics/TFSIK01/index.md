@@ -60,6 +60,21 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 | Dimensions | 55x10x35mm | Housing dimensions |
 | Weather resistance | [IP40](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
 
+### Frequency Band Specifications
+
+| Band | Center Frequency | Usable Frequency Range | Regional Allocation |
+|------|------------------|------------------|-------------------|-------------------|
+| 433 MHz | 434.0 MHz | 432.0 - 436.0 MHz | ISM band (worldwide) |
+| 868 MHz | 869.0 MHz | 865.0 - 873.0 MHz | ISM SRD band (Europe) |
+| 915 MHz | 915.0 MHz | 902.0 - 928.0 MHz | ISM band (Americas, Asia-Pacific) |
+
+**Notes:**
+- The exact frequency configuration is set during manufacturing and cannot be changed by the user
+- Regional regulatory compliance must be verified before operation
+- Custom frequency bands between 142-1050 MHz are available upon request
+- Each frequency variant uses optimized SAW filtering for maximum selectivity and noise rejection
+
+
 ### LEDs Indicators Status 
 
 The radios have 3 status LEDs, red, orange, and green
