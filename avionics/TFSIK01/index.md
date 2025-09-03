@@ -62,7 +62,7 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 
 ### Frequency Band Specifications
 
-| Band | Center Frequency | Usable Frequency Range | Regional Allocation |
+| TFSIK01 Band | Center Frequency | Usable Frequency Range | Regional Allocation |
 |------|------------------|------------------|-------------------|-------------------|
 | 433 MHz | 434.0 MHz | 432.0 - 436.0 MHz | ISM band (worldwide) |
 | 868 MHz | 869.0 MHz | 865.0 - 873.0 MHz | ISM SRD band (Europe) |
@@ -77,7 +77,7 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 
 ### LEDs Indicators Status 
 
-The radios have 3 status LEDs, red, orange, and green
+The radios have 3 status LEDs: red, orange, and green
 
 - Green LED blinking - searching for another radio
 - Green LED solid - link is established with another radio
@@ -89,7 +89,7 @@ The radios have 3 status LEDs, red, orange, and green
 
 The TFSIK01A is designed precisely for UAV command and control applications, ensuring dependable, long-distance communication links between UAVs and ground control stations. It is also highly effective in ROS2 environments for robotics, providing a reliable long-range wireless datalink.
 
-The modem was originally developed for the transmission of atmospheric data measured in real-time using the [TF-ATMON system](https://docs.thunderfly.cz/instruments/TF-ATMON).
+The modem was originally developed to transmit atmospheric data measured in real time using the [TF-ATMON system](https://docs.thunderfly.cz/instruments/TF-ATMON).
 
 ### Installation and Configuration
 
@@ -134,9 +134,9 @@ This ensures that only one side transmits at any moment, eliminating collisions.
 
 #### Buffering and Flow Control
 
-Data arriving over the UART is stored in a 2048-byte buffer. The radio firmware looks for MAVLink HEARTBEAT messages coming from the serial connection and it inject own MAVLink 'RADIO' status packets into the the serial stream. These RADIO packets contain information about the RSSI level at both ends of the link, allowing the ground station or UAV to take action in case the link quality falls too low. The RADIO packets also contain information about error rates, and how full the serial transmit buffer is (as a percentage). If enabled, hardware flow control can further optimize communication, by removing the control symbols from UART data.
+Data arriving over the UART is stored in a 2048-byte buffer. The radio firmware looks for MAVLink HEARTBEAT messages coming from the serial connection, and it injects its own MAVLink 'RADIO' status packets into the serial stream. These RADIO packets contain information about the RSSI level at both ends of the link, allowing the ground station or UAV to take action in case the link quality falls too low. The RADIO packets also contain information about error rates and how full the serial transmit buffer is (as a percentage). If enabled, hardware flow control can further optimize communication by removing the control symbols from UART data.
 
-If the MAVLINK is to 2, then the radio will look for ``RC_OVERRIDE`` packets (used for joysticks) and ensure that those packets get sent as quickly as possible in addition to doing MAVLink framing. That means the firmware will try to fit multiple MAVLink packets into one radio packet where possible for maximum efficiency. The longest possible radio packet size is 252 bytes. The firmware supports both the MAVLink 1.0 and the MAVLink 2.0 data formats.
+If the MAVLINK is to 2, then the radio will look for ``RC_OVERRIDE`` packets (used for joysticks) and ensure that those packets get sent as quickly as possible, in addition to doing MAVLink framing. That means the firmware will try to fit multiple MAVLink packets into one radio packet where possible for maximum efficiency. The longest possible radio packet size is 252 bytes. The firmware supports both the MAVLink 1.0 and the MAVLink 2.0 data formats.
 
 #### Adaptive Slot Usage
 
@@ -196,7 +196,7 @@ To achieve optimal range and performance with the TFSIK01 modem, it is essential
 
 ### Choosing the Air Data Rate
 
-The `AIR_SPEED` parameter is the primary factor controlling the range and throughput of the telemetry radio. Lower values result in longer range but reduced data throughput.
+The `AIR_SPEED` parameter is the primary factor controlling the range and throughput of the telemetry radio. Lower values result in a longer range but reduced data throughput.
 
 Supported air data rates (in kbps): 2, 4, 8, 16, 19, 24, 32, 48, 64, 96, 128, 192, 250
 
@@ -206,7 +206,7 @@ Typical configuration tips:
 * **Medium range, moderate data:** Default 64 offers a good compromise
 * **High throughput, short range:** Use 192 or higher
 
-Note: If an unsupported rate is selected, the closest higher supported rate is used by firmware instead.
+Note: If an unsupported rate is selected, the closest higher supported rate is used by the firmware instead.
 
 ### Duty Cycle Setting
 
@@ -214,14 +214,14 @@ The `DUTY_CYCLE` parameter defines the maximum percentage of time the modem is a
 
 * **Regulatory compliance**: In some regions (e.g., the EU), lower duty cycles (typically under 10%) allow the use of higher transmission power or access to a broader frequency band without the need for special licenses.
 * **Noise mitigation**: Lowering the duty cycle can reduce interference in densely used radio environments by making the transmission "bursty".
-* **Receive-only mode**: Setting `DUTY_CYCLE` to 0 disables transmission, allowing the modem to operate in passive listening mode. That work only for low `NUM_CHANNELS`, otherwise the clock synchronisation will be poor.
+* **Receive-only mode**: Setting `DUTY_CYCLE` to 0 disables transmission, allowing the modem to operate in passive listening mode. That works only for low `NUM_CHANNELS`, otherwise the clock synchronisation will be poor.
 
 While reducing the duty cycle may reduce the average throughput, the modem can still maintain effective telemetry, since telemetry traffic is often bursty in nature. For example, even with a 10% duty cycle, reliable MAVLink telemetry is possible at 2 Hz using a medium `AIR_SPEED`.
 
 
 ### Noise, Bandwidth & Channel Planning
 
-The TFSIK01 modem mitigates interference by [**frequency hopping**](https://en.wikipedia.org/wiki/Frequency-hopping_spread_spectrum) across a user‑defined number of channels `NUM_CHANNELS` while [Time‑Division Multiplexing (TDM)](https://en.wikipedia.org/wiki/Time-division_multiplexing).  The two design choices directly affect efficiency of this technique:
+The TFSIK01 modem mitigates interference by [**frequency hopping**](https://en.wikipedia.org/wiki/Frequency-hopping_spread_spectrum) across a user‑defined number of channels `NUM_CHANNELS` while [Time‑Division Multiplexing (TDM)](https://en.wikipedia.org/wiki/Time-division_multiplexing).  The two design choices directly affect the efficiency of this technique:
 
 1. **Air data rate (`AIR_SPEED`) ⇒ occupied channel bandwidth.**  An approximation used in SiK is
 
@@ -231,7 +231,7 @@ The TFSIK01 modem mitigates interference by [**frequency hopping**](https://en.w
    
    *Example:* 64 kbps ⇒ ≈ 77 kHz occupied bandwidth.  250 kbps ⇒ ≈ 300 kHz.
 
-2. **Number of hopping channels (`NUM_CHANNELS`).**  The usable spectrum between `MIN_FREQ` and `MAX_FREQ` is divided into equal slices. Each sice should be wider than `BW_channel` plus guard space, otherwise adjacent channels overlap and frequency-hopping will be inefficient.
+2. **Number of hopping channels (`NUM_CHANNELS`).**  The usable spectrum between `MIN_FREQ` and `MAX_FREQ` is divided into equal slices. Each slice should be wider than `BW_channel` plus guard space; otherwise, adjacent channels overlap and frequency-hopping will be inefficient.
 
 | AIR\_SPEED (kbps) | Approx. BW\_channel | Safe NUM\_CHANNELS in 1.8 MHz band (433 MHz example) |
 | ----------------- | ------------------- | ----------------------------------------------------- |
@@ -242,16 +242,16 @@ The TFSIK01 modem mitigates interference by [**frequency hopping**](https://en.w
 
 The table assumes the common [433.05–434.79 MHz sub‑band (≈ 1.74 MHz wide) used in EU ISM regulations](https://en.wikipedia.org/wiki/LPD433).  For other bands calculate available width accordingly and choose `NUM_CHANNELS` so that `(MAX_FREQ − MIN_FREQ)/(NUM_CHANNELS+2)  ≥  BW_channel` The “+2” allows for guard channels.
 
-Additionaly to correct use of frequency hopping. The noise sources needs to be reduced to allow effective use of every possible radio channel:
+Additionally, to correct the use of frequency hopping. The noise sources need to be reduced to allow effective use of every possible radio channel:
 
 * Place antennas away from wideband EMI sources (motors, ESCs).
-* Use shielded USB cables and externally powered‑hub on the ground station to reduce computer‑generated noise.
+* Use shielded USB cables and an externally powered USB hub on the ground station to reduce computer‑generated noise.
 
 Every **6 dB** of extra fade margin roughly doubles the coverage distance.
 
 ### Link Budget
 
-A link budget is a systematic accounting of gain and loss between the transmitter and the receiver. It could predicts whether the received signal will still exceed the receiver‑sensitivity (plus a chosen fade‑margin) after free‑space path loss, antenna gains, cable losses, and other impairments. For a more detailed overview, see the [link budget](https://en.wikipedia.org/wiki/Link_budget).
+A link budget is a systematic accounting of gain and loss between the transmitter and the receiver. It could predict whether the received signal will still exceed the receiver‑sensitivity (plus a chosen fade‑margin) after free‑space path loss, antenna gains, cable losses, and other impairments. For a more detailed overview, see the [link budget](https://en.wikipedia.org/wiki/Link_budget).
 
 The simplified formula used throughout this guide is:
 
@@ -267,7 +267,7 @@ P_rx = P_tx  +  G_tx  +  G_rx  −  L_fs  −  L_misc
 | **L\_fs**   | Free‑space path loss (dB)                        | Depends on **distance** and **frequency**                |
 | **L\_misc** | Miscellaneous losses (cable, connectors, fading) | Typically 2‑5 dB (not included in simple examples below) |
 
-The receiver sensitivity of the TFSIK01 is ≈ −117 dBm at 64 kbps.  For a reliable link we target ≥ 10 dB fade margin, so the maximum usable path loss is:
+The receiver sensitivity of the TFSIK01 is ≈ −117 dBm at 64 kbps.  For a reliable link, we target ≥ 10 dB fade margin, so the maximum usable path loss is:
 
 ```
 L_fs(max)  ≈  P_tx + G_tx + G_rx  −  (P_sens − 10)  ≈  P_tx + G_tx + G_rx + 107
@@ -328,7 +328,7 @@ Fade margin:
 Margin ≈ −85 − (−117) ≈ 32 dB
 ```
 
-Even at the higher 868 MHz frequency the margin comfortably exceeds the recommended 10 dB.
+Even at the higher 868 MHz frequency, the margin comfortably exceeds the recommended 10 dB.
 
 ### Maximum LOS Range (theoretical)
 
@@ -373,7 +373,7 @@ In the case of 433 MHz link and ground antenna 2 m AGL, UAV at 100 m AGL, 
 * First Fresnel radius @ 20 km: ≈ 60 m  →  60 % clearance required ≈ 36 m.
 * Straight‑line LOS height at mid‑path  ≈ *(h\_g + h\_u)/2*  = (2 m + 100 m)/2  ≈ 51 m.
 
-Clearance margin = 51 m − 36 m ≈ 15 m → seemingly acceptable.  However, even a gentle hill only 40 m high in the middle of the path will cut through the Fresnel zone, adding ≥ 10 dB excess loss and destabilising the link. If the UAV descends to 50 m AGL, LOS at mid‑path drops to 26 m – which is definitely below the required 36 m.  The link will now fade or drop entirely despite high RSSI in case of higher flight. If the ground antenna is raised to 10 m → LOS mid‑height (10 + 50)/2 = 30 m, restoring clearance and link.
+Clearance margin = 51 m − 36 m ≈ 15 m → seemingly acceptable.  However, even a gentle hill only 40 m high in the middle of the path will cut through the Fresnel zone, adding ≥ 10 dB excess loss and destabilising the link. If the UAV descends to 50 m AGL, LOS at mid‑path drops to 26 m, which is definitely below the required 36 m.  The link will now fade or drop entirely, despite high RSSI, in the case of higher flight. If the ground antenna is raised to 10 m → LOS mid‑height (10 + 50)/2 = 30 m, restoring clearance and link.
 
 That is why high‑altitude platforms and missions provide almost complete Fresnel clearance, which is why TFSIK01 has achieved **hundreds of kilometres** range in stratospheric balloon tests.
 
@@ -427,8 +427,8 @@ Use the correct serial port path for your system (e.g., `/dev/ttyUSB1` or `COM3`
 In case the device becomes unresponsive due to a corrupted or incompatible firmware (e.g., incomplete upload or incorrect image), it is possible to manually enter bootloader mode:
 
 1. **Power off** the modem.
-2. **Short the CTS and GND pins** on the modem's UART connector (6-pin JST-GH). (Using tweezer is good option)
-   * If you're using the TFUSBSERIAL01, these pins are accessible on JST-GH connector after removing the enclosure.
+2. **Short the CTS and GND pins** on the modem's UART connector (6-pin JST-GH). (Using tweezers is a good option)
+   * If you're using the TFUSBSERIAL01, these pins are accessible on the JST-GH connector after removing the enclosure.
 3. **Power on** the modem while keeping the short in place.
 4. The **LED should remain solid**, indicating that the modem is in bootloader mode.
 5. Remove the short between CTS and GND once programming begins.
@@ -446,16 +446,16 @@ The SiK modem firmware provides telemetry signal strength data (RSSI) that can b
   * Remote Noise: The noise level being received on the ground.
 
 {: .note }
-The Remote and Local mean from the modem side of view. Therefore the remote is a UAV modem if viewed from GCS and also, the ground modem is remote from the point of view of the UAV modem. The Remote and Local are exchanged in GCS and flight logs. 
+The Remote and Local mean from the modem side of view. Therefore, the remote is a UAV modem if viewed from GCS, and also, the ground modem is remote from the point of view of the UAV modem. The Remote and Local are exchanged in GCS and flight logs. 
 
-Monitoring both values provides insight into the quality and symmetry of the communication link as is demonstrated in the following graph. As seen in the figure, the signal strength for TFSIK01 decreases almost smoothly with increasing distance, making it easier to predict link performance and diagnose issues caused by interference or configuration problems.
+Monitoring both values provides insight into the quality and symmetry of the communication link, as is demonstrated in the following graph. As seen in the figure, the signal strength for TFSIK01 decreases almost smoothly with increasing distance, making it easier to predict link performance and diagnose issues caused by interference or configuration problems.
 
 ![TFSIK01 PX4 RSSI recording during flight](./TFSIK01_RSSI_distance.png)
 
-Thanks to the dual antenna diversity system, the TFSIK01 maintains stable signal levels even when the UAV changes orientation. Unlike conventional modems where antenna directionality causes fluctuations, the TFSIK01  switches between two antennas to maintain the best signal. The used [PlotJuggler](https://plotjuggler.io/) layout [could be downloaded here](./Plot_juggler_RSSI.xml).
+Thanks to the dual antenna diversity system, the TFSIK01 maintains stable signal levels even when the UAV changes orientation. Unlike conventional modems, where antenna directionality causes fluctuations, the TFSIK01  switches between two antennas to maintain the best signal. The used [PlotJuggler](https://plotjuggler.io/) layout [could be downloaded here](./Plot_juggler_RSSI.xml).
 
 A reliable telemetry link depends not only on received signal strength (RSSI) but also on the link signal-to-noise ratio (SNR) because the link could be degraded due to background noise.
-This is because the effective **SNR** (RSSI – Noise) becomes too small for reliable demodulation and basically if the RSSI and background noise level (Noise) meet in the graph, the radio link is lost.
+This is because the effective **SNR** (RSSI – Noise) becomes too small for reliable demodulation, and basically, if the RSSI and background noise level (Noise) meet in the graph, the radio link is lost.
 
 The recommended minimum SNR for a reliable MAVLink connection is approximately 10 dB. If the noise level increases (due to interference or hardware issues), the same RSSI may no longer be sufficient.
 
@@ -463,7 +463,7 @@ The figure above shows both RSSI and Noise values from both ends of the link. If
 
 If SNR is consistently insufficient, consider:
 
-  - **Reducing interference**: improve RF shielding and move away modem and antenna from EMI emitting devices such, as power supplies, or switching regulators.
+  - **Reducing interference**: improve RF shielding and move away modem and antenna from EMI emitting devices such as power supplies, or switching regulators.
   - **Lowering the air data rate**: slower rates improve link robustness and increase receiver sensitivity.
   - **Using directional antennas** (especially on the ground side) to improve gain and reject side noise.
 
