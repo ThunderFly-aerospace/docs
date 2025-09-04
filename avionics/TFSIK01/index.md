@@ -62,9 +62,9 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 
 ### Frequency Band Specifications
 
-Each TFSIK01 modem variant is hardware-optimized for a specific frequency band through RF front-end tuning. Operating outside the designated hardware-optimized band will result in significantly degraded RF performance. For optimal performance, range, and regulatory compliance, always use the modem variant specifically designed for your target frequency band.
+Each TFSIK01 modem variant is hardware-optimized for a specific frequency band through RF front-end tuning. Operating outside the designated hardware-optimized band will result in significantly degraded RF performance. For optimal performance, range, and regulatory compliance, always use the modem variant specifically designed for your target frequency band. The table below shows frequency ranges for commonly used TFSIK01 band variants.
 
-| TFSIK01 Band | Center Frequency | Usable Frequency Range | Regional Allocation |
+| TFSIK01 Band | Center Frequency | Applicable Frequency Range | Regional Allocation |
 |------|------------------|------------------|-------------------|-------------------|
 | 433 MHz | 434.0 MHz | 432.0 - 436.0 MHz | ISM band (worldwide) |
 | 868 MHz | 869.0 MHz | 865.0 - 873.0 MHz | ISM SRD band (Europe) |
