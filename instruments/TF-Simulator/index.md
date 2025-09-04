@@ -20,13 +20,13 @@ Together, these tools provide both environmental data collection and realistic U
 
 ## How TF-simulator Works
 
-The TF-simulator leverages the **PX4-FlightGear-Bridge** to connect the [PX4 autopilot software stack with the FlightGear simulator](https://docs.px4.io/main/en/sim_flightgear/). FlightGear provides:
+The TF-simulator leverages the [PX4-FlightGear-Bridge](https://github.com/ThunderFly-aerospace/PX4-FlightGear-Bridge) to connect the [PX4 autopilot software stack with the FlightGear simulator](https://docs.px4.io/main/en/sim_flightgear/). FlightGear provides:
 
 * Realistic flight dynamics for multiple UAV models (including [TF-G1](https://github.com/ThunderFly-aerospace/TF-G1) and [TF-G2](/instruments/TF-G2) autogyros).
 * Advanced weather and environment simulations.
 * Support for training missions in diverse conditions.
 
-Meanwhile, TF-ATMON complements this environment by offering real sensor integration and payload data handling, making the simulator not just a training tool but also a platform for testing measurement workflows.
+Meanwhile, [TF-ATMON](https://github.com/ThunderFly-aerospace/TF-ATMON) complements this environment by offering sensor integration and payload data handling, making the simulator not just a training tool but also a platform for testing measurement workflows.
 
 ## Vendor Information
 
@@ -64,7 +64,7 @@ Contact ThunderFly for tailored solutions at [info@thunderfly.cz](mailto:info@th
 
 ## Technical Information
 
-The TF-simulator builds directly on the [PX4-FlightGear-Bridge](https://github.com/ThunderFly-aerospace/PX4-FlightGear-Bridge) and is compatible with the PX4 SITL framework. Below are technical details for setup and operation (see the [PX4 documentation](https://docs.px4.io/main/en/sim_flightgear/) for more complete reference).
+The TF-simulator builds directly on the [PX4-FlightGear-Bridge](https://github.com/ThunderFly-aerospace/PX4-FlightGear-Bridge) and is compatible with the PX4 SITL framework. Below are technical details for setup and operation (see the [PX4 documentation](https://docs.px4.io/main/en/sim_flightgear/) for a more complete reference).
 
 ### Installation (Ubuntu Linux)
 
@@ -75,7 +75,7 @@ The TF-simulator builds directly on the [PX4-FlightGear-Bridge](https://github.c
    sudo apt update
    sudo apt install flightgear
    ```
-3. Set write permissions for FlightGear Protocols folder:
+3. Set write permissions for the FlightGear Protocols folder:
    ```sh
    sudo chmod a+w /usr/share/games/flightgear/Protocol
    ```
@@ -99,7 +99,7 @@ _QGroundControl_ will automatically connect to the simulated vehicle.
 ### Taking it to the Sky
 
 
-Once PX4 SITL and FlightGear are running and connected, the vehicle will be ready after initialization. In the PX4 console, wait until you see messages about GPS fusion starting. At this point you can arm the vehicle and take off:
+Once PX4 SITL and FlightGear are running and connected, the vehicle will be ready after initialization. In the PX4 console, wait until you see messages about GPS fusion starting. At this point, you can arm the vehicle and take off:
 
 
 ```sh
