@@ -46,7 +46,7 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
-| Frequency range | 142 MHz - 1050 MHz | The Exact frequency band has to be set by the factory, commonly used bands are 433MHz, 868 MHz, and 915 MHz|
+| Frequency range | 142 MHz - 1050 MHz | The Exact frequency band has to be set by the factory; commonly used bands are 433MHz, 868 MHz, and 915 MHz|
 | RF power range | -20dBm to 20dBm (100 mW) | Adjustable by AT commands |
 | Input Noise Figure | 0.6 dB |  LNA noise figure |
 | OIP3 |  39.5dBm | Input LNA gain 18.7dB|
@@ -62,6 +62,8 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 
 ### Frequency Band Specifications
 
+Each TFSIK01 modem variant is hardware-optimized for a specific frequency band through RF front-end tuning. Operating outside the designated hardware-optimized band will result in significantly degraded RF performance. For optimal performance, range, and regulatory compliance, always use the modem variant specifically designed for your target frequency band.
+
 | TFSIK01 Band | Center Frequency | Usable Frequency Range | Regional Allocation |
 |------|------------------|------------------|-------------------|-------------------|
 | 433 MHz | 434.0 MHz | 432.0 - 436.0 MHz | ISM band (worldwide) |
@@ -70,7 +72,7 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 
 **Notes:**
 - The exact frequency configuration is set during manufacturing and cannot be changed by the user
-- Regional regulatory compliance must be verified before operation
+- Regional regulatory compliance must be verified before operation, while the modem hardware supports a wider bandwidth than the local regulations may allow within this range
 - Custom frequency bands between 142-1050 MHz are available upon request
 - Each frequency variant uses optimized SAW filtering for maximum selectivity and noise rejection
 
@@ -83,7 +85,7 @@ The radios have 3 status LEDs: red, orange, and green
 - Green LED solid - link is established with another radio
 - Red LED flashing - transmitting data
 - Red LED solid - in firmware update mode
-- Orange LED solid or dimm indicates the selected antenna port 
+- Orange LED solid or dim indicates the selected antenna port 
 
 ### Applications
 
