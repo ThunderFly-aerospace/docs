@@ -28,7 +28,7 @@ You can order avionics components in the following ways:
 
 ### Components Pricing
 
-The following table lists wholesale prices for avionics components for orders up to 50 units. For bulk pricing (51+ units), please contact us directly.
+The following table lists wholesale prices for avionics components for orders up to 50 units. For bulk pricing or special requirements, please directly contact sale@thunderfly.cz.
 
 | Product Name       | Price (1–3 pcs) | Price (4–10 pcs) | Price (11–50 pcs) |
 |--------------------|------------------|-------------------|--------------------|
