@@ -17,6 +17,30 @@ ThunderFly's avionics system consists of **high-performance hardware** designed 
 
 The development was originally motivated by the [TF-ATMON](https://docs.thunderfly.cz/instruments/TF-ATMON), which focuses on atmospheric measurements in harsh conditions. Therefore solution covers the entire workflow — from sensors and in-flight data acquisition, through data transmission, to final visualization — and this use case shaped the design of our avionics. All are developed and manufactured in Europe to meet rigorous aerospace and research standards.  
 
+### PCB Form Factor
+
+ThunderFly avionics modules are designed according to an internal PCB form factor standard. This ensures compatibility between different modules and allows them to be mounted in 3D-printed slots positioned in UAV or combined into larger avionics blocks.
+
+![TF PCB form factor](TFPCB_avionics.png)
+
+The dimensions are defined by three parameters:
+
+- **a** – additional width (integer, may also be 0)  
+- **b** – lengt (integer)  
+- **c** – additional mounting holes positions (integer, may also be 0)  
+
+> Most commonly, the moule width is 15 mm or 20 mm (a=0, a=5), depending on the JST-GH connector number of pins (typically 4-pin for I²C).  
+> This is why width sizing does not follow the same multiples as horizontal sizing.
+
+Other important features:
+
+- **Mounting notches** with a radius of **1.5 mm** are positioned on both sides of the PCB. May be skipped (even assymetrically) for relevant construction reasons.  
+  Their placement is always measured from the connector edge, ensuring consistent mechanical alignment.
+- The design allows avionics modules to be slid into slots in UAV structures, making it easy to assemble multiple boards into a compact block, or distribute them individually across the airframe.
+
+This standardized approach guarantees that ThunderFly avionics are not random in size, but instead follow a **systematic and modular design philosophy**.
+
+
 ### How to Order
 
 You can order avionics components in the following ways:
