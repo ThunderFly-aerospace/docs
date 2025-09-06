@@ -19,7 +19,7 @@ The development was originally motivated by the [TF-ATMON](https://docs.thunderf
 
 ### PCB Form Factor
 
-ThunderFly avionics modules are designed according to an internal PCB form factor standard. This ensures compatibility between different modules and allows them to be mounted in 3D-printed slots positioned in UAV or combined into larger avionics blocks.
+ThunderFly avionics modules are designed according to an internal PCB form factor standard. This ensures compatibility between different modules and allows them to be mounted in 3D-printed slots positioned in the airframe structure or combined into larger avionics blocks.
 
 ![TF PCB form factor](TFPCB_avionics.png)
 
@@ -29,14 +29,14 @@ The dimensions are defined by three parameters:
 - **b** – lengt (integer)  
 - **c** – additional mounting holes positions (integer, may also be 0)  
 
-> Most commonly, the moule width is 15 mm or 20 mm (a=0, a=5), depending on the JST-GH connector number of pins (typically 4-pin for I²C).  
+> Most commonly, the module width is 15 mm or 20 mm (a=0, a=5), depending on the JST-GH connector number of pins (typically 4-pin for I²C).  
 > This is why width sizing does not follow the same multiples as horizontal sizing.
 
 Other important features:
 
-- **Mounting notches** with a radius of **1.5 mm** are positioned on both sides of the PCB. May be skipped (even assymetrically) for relevant construction reasons.  
+- **Mounting notches** with a radius of **1.5 mm** are positioned on both sides of the PCB. May be skipped (even asymmetrically) for relevant construction reasons.  
   Their placement is always measured from the connector edge, ensuring consistent mechanical alignment.
-- The design allows avionics modules to be slid into slots in UAV structures, making it easy to assemble multiple boards into a compact block, or distribute them individually across the airframe.
+- The design allows avionics modules to be slid into slots in UAV structures, making it easy to assemble multiple boards into a compact block or distribute them individually across the airframe.
 
 This standardized approach guarantees that ThunderFly avionics are not random in size, but instead follow a **systematic and modular design philosophy**.
 
