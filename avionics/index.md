@@ -11,39 +11,36 @@ nav_order: 20
 
 ## Avionics Components  
 
-ThunderFly's avionics system consists of **high-performance hardware** designed to enhance the capabilities of standard unmanned aerial vehicles. ThunderFly avionics components are built for seamless integration into existing UAV platforms like [PX4](https://px4.io/) or [Ardupilot](https://ardupilot.org/).   
+ThunderFly's avionics system consists of **high-performance hardware** designed to enhance the capabilities of standard unmanned aerial vehicles (multicopter, airplane, etc.). ThunderFly avionics components are built for seamless integration into existing UAV platforms like [PX4](https://px4.io/) or [Ardupilot](https://ardupilot.org/).   
 
 ![TFSIK01 pair with USB-C converter](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/TFSIK01A/doc/img/TFSIK01_pair.jpg)
 
-The development was originally motivated by the [TF-ATMON](https://docs.thunderfly.cz/instruments/TF-ATMON), which focuses on atmospheric measurements in harsh conditions. Therefore solution covers the entire workflow — from sensors and in-flight data acquisition, through data transmission, to final visualization — and this use case shaped the design of our avionics. All are developed and manufactured in Europe to meet rigorous aerospace and research standards.  
+The development was originally motivated by the hardware requirements of [TF-ATMON](https://docs.thunderfly.cz/instruments/TF-ATMON), which focuses on atmospheric measurements in harsh conditions. Therefore, the solution covers the entire workflow — from sensors and in-flight data acquisition, through data transmission, to final visualization — and this use case shaped the design of avionics. All modules are developed and manufactured in Europe to meet common aerospace and research standards.  
 
 ### ThunderFly Form Factor
 
-ThunderFly avionics modules are designed according to an internal PCB form factor standard. This ensures compatibility between different modules.
+ThunderFly avionics modules are designed according to an internal PCB form factor standard. This allows for reducing weight and maintaining compatibility between different devices.
 
 ![TF PCB form factor](TFPCB_avionics.png)
 
-The dimensions are defined by three parameters:
+The dimensions of PCB are defined by three parameters:
 
 - **a** – additional width (integer, may also be 0)  
 - **b** – lengt (integer)  
 - **c** – additional mounting holes positions (integer, may also be 0)  
 
-> Most commonly, the module width is 15 mm or 20 mm (a=0, a=5), depending on the JST-GH connector number of pins (typically 4-pin for I²C).  
-> This is why width sizing does not follow the same multiples as horizontal sizing.
-> Mounting notches with a radius of 1.5 mm are positioned on both sides of the PCB. May be skipped (even asymmetrically) for relevant construction reasons. Their placement is always measured from the connector edge, ensuring consistent mechanical alignment.
+> Most commonly, the module width is 15 mm or 20 mm (e.g., a=0 or a=5), depending on the JST-GH connector number of pins (typically 4-pin for I²C).
+> Mounting notches with a radius of 1.5 mm are positioned on both sides of the PCB. May be skipped (even asymmetrically) for relevant construction reasons. Their placement is measured from the connector edge.
 
 #### Example of Enclosure Mounting
 
-The standardized PCB form factor also makes it straightforward to design **protective enclosures**.  
-Modules can be fixed inside 3D-printed or CNC-machined cases using the PCB notches. These notches slides in slots of the enclosure and allow secure mounting with just two screws.
+The standardized PCB form factor allows straightforward design of **protective enclosures**.   Modules can be fixed inside 3D-printed or CNC-machined cases using the PCB notches. PCB then slides into the slots of the enclosure, and notches enable secure mounting with just two screws.
 
 ![Module in enclosure, perspective view](TFPCB_box.png)
 
 ![ThunderFly module in enclosure, top view, with screws](TFPCB_box_mounting_screws.png)
 
-This approach ensures that avionics modules remain mechanically protected while still being lightweight and easily accesible to service.  
-The modular block concept allows either grouping multiple avionics units together or distributing them in different airframe compartments depending on mission requirements.
+This approach results in avionics modules mechanically protected while still being lightweight and accessible to service.  The described modular block concept allows either grouping multiple avionics units together or distributing them in different airframe compartments, depending on application requirements.
 
 ### How to Order
 
