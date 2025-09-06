@@ -17,9 +17,9 @@ ThunderFly's avionics system consists of **high-performance hardware** designed 
 
 The development was originally motivated by the [TF-ATMON](https://docs.thunderfly.cz/instruments/TF-ATMON), which focuses on atmospheric measurements in harsh conditions. Therefore solution covers the entire workflow — from sensors and in-flight data acquisition, through data transmission, to final visualization — and this use case shaped the design of our avionics. All are developed and manufactured in Europe to meet rigorous aerospace and research standards.  
 
-### PCB Form Factor
+### ThunderFly Form Factor
 
-ThunderFly avionics modules are designed according to an internal PCB form factor standard. This ensures compatibility between different modules and allows them to be mounted in 3D-printed slots positioned in the airframe structure or combined into larger avionics blocks.
+ThunderFly avionics modules are designed according to an internal PCB form factor standard. This ensures compatibility between different modules.
 
 ![TF PCB form factor](TFPCB_avionics.png)
 
@@ -31,15 +31,19 @@ The dimensions are defined by three parameters:
 
 > Most commonly, the module width is 15 mm or 20 mm (a=0, a=5), depending on the JST-GH connector number of pins (typically 4-pin for I²C).  
 > This is why width sizing does not follow the same multiples as horizontal sizing.
+> Mounting notches with a radius of 1.5 mm are positioned on both sides of the PCB. May be skipped (even asymmetrically) for relevant construction reasons. Their placement is always measured from the connector edge, ensuring consistent mechanical alignment.
 
-Other important features:
+#### Example of Enclosure Mounting
 
-- **Mounting notches** with a radius of **1.5 mm** are positioned on both sides of the PCB. May be skipped (even asymmetrically) for relevant construction reasons.  
-  Their placement is always measured from the connector edge, ensuring consistent mechanical alignment.
-- The design allows avionics modules to be slid into slots in UAV structures, making it easy to assemble multiple boards into a compact block or distribute them individually across the airframe.
+The standardized PCB form factor also makes it straightforward to design **protective enclosures**.  
+Modules can be fixed inside 3D-printed or CNC-machined cases using the PCB notches. These notches slides in slots of the enclosure and allow secure mounting with just two screws.
 
-This standardized approach guarantees that ThunderFly avionics are not random in size, but instead follow a **systematic and modular design philosophy**.
+![Module in enclosure, perspective view](TFPCB_box.png)
 
+![ThunderFly module in enclosure, top view, with screws](TFPCB_box_mounting_screws.png)
+
+This approach ensures that avionics modules remain mechanically protected while still being lightweight and easily accesible to service.  
+The modular block concept allows either grouping multiple avionics units together or distributing them in different airframe compartments depending on mission requirements.
 
 ### How to Order
 
