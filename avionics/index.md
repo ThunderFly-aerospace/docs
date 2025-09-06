@@ -23,7 +23,7 @@ ThunderFly avionics modules are designed according to an internal PCB form facto
 
 ![TF PCB form factor](TFPCB_avionics.png)
 
-The dimensions of PCB are defined by three parameters:
+The dimensions of the PCB are defined by three parameters:
 
 - **a** – additional width (integer, may also be 0)  
 - **b** – lengt (integer)  
@@ -31,6 +31,14 @@ The dimensions of PCB are defined by three parameters:
 
 > Most commonly, the module width is 15 mm or 20 mm (e.g., a=0 or a=5), depending on the JST-GH connector number of pins (typically 4-pin for I²C).
 > Mounting notches with a radius of 1.5 mm are positioned on both sides of the PCB. May be skipped (even asymmetrically) for relevant construction reasons. Their placement is measured from the connector edge.
+
+#### Status Indicators
+
+Each ThunderFly avionics module is equipped with status LEDs to provide quick visual feedback during operation. Typical meaning is as follows: 
+
+- **Green LED** – usually indicates either power presence or that the module is functioning correctly.  
+- **Red LED** – typically used for error or fault indication, highlighting abnormal states.  
+- **Other colors** (blue, orange, yellow) – reserved for different operational statuses depending on the specific module.  
 
 #### Example of Enclosure Mounting
 
