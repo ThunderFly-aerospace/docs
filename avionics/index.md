@@ -61,16 +61,16 @@ flowchart TD
     FC --> TFUSBSERIAL01[TFUSBSERIAL01]
     click TFUSBSERIAL01 "https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/" "TFUSBSERIAL01 Documentation"
 
-    %% Power (wavy line)
-    BATT[Battery Pack] ~~~> FC
-    BATT ~~~> TFESC02
+    %% Power: use solid line with label (Mermaid v10 flowcharts don't support wavy ~~~>)
+    BATT[Battery Pack] -- PWR --> FC
+    BATT -- PWR --> TFESC02
 
     %% Legend
     subgraph Legend
-      SPI==>SPI_Device
-      I2C-.->I2C_Device
-      UART-->UART_Device
-      Power~~~>Power_Device
+      SPINodeA==>SPINodeB
+      I2CNodeA-.->I2CNodeB
+      UARTNodeA-->UARTNodeB
+      PowerNodeA-- PWR -->PowerNodeB
     end
 ```
 
