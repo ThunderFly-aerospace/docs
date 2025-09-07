@@ -16,8 +16,9 @@ ThunderFly's avionics system consists of **high-performance hardware** designed 
 ```mermaid
 flowchart TD
 
+
 %% Nodes
-FC["TFPILOTBASEBOARD01<br/>(Pixhawk-class flight controller)"]
+FC["TFPILOTBASEBOARD01<br/>(Pixhawk-compatible flight controller)"]
 TFLORA[TFLORA]
 TFI2CADT01[TFI2CADT01]
 TFESC02[TFESC02]
@@ -30,7 +31,17 @@ TFSLOT01[TFSLOT01]
 TFGPS01[TFGPS01]
 TFGPSLITE02[TFGPSLITE02]
 TFUSBSERIAL01[TFUSBSERIAL01]
+TFSIK01[TFSIK01]
+TFPROBE01[TFPROBE01]
 BATT[Battery Pack]
+
+
+%% Point-to-point cable instances (unique IDs, same visible label)
+CAB15_HT01["TFCAB15I2C01"]
+CAB20_HT02["TFCAB20I2C01"]
+CAB20_RPM["TFCAB20I2C01"]
+CAB20_SLOT["TFCAB20I2C01"]
+CAB45_PITOT["TFCAB45I2C01"]
 
 
 %% Edges (plain)
@@ -40,25 +51,33 @@ FC --> TFESC02
 
 
 TFI2CADT01 --> TFI2CEXT01
-TFI2CEXT01 --> TFPITOT01
 
 
-TFI2CADT01 --> TFHT01
-TFI2CADT01 --> TFHT02
-TFI2CADT01 --> TFRPM01
-TFI2CADT01 --> TFSLOT01
+%% Sensors over dedicated cables
+TFI2CADT01 --> CAB15_HT01 --> TFHT01
+TFI2CADT01 --> CAB20_HT02 --> TFHT02
+TFI2CADT01 --> CAB20_RPM --> TFRPM01
+TFI2CADT01 --> CAB20_SLOT --> TFSLOT01
+TFI2CEXT01 --> CAB45_PITOT --> TFPITOT01
 
 
+%% Probe on TFRPM01
+TFRPM01 --> TFPROBE01
+
+
+%% Other peripherals
 FC --> TFGPS01
 FC --> TFGPSLITE02
-FC --> TFUSBSERIAL01
+FC <--> TFUSBSERIAL01
+FC <--> TFSIK01
 
 
+%% Power
 BATT --> FC
 BATT --> TFESC02
 
 
-%% Clickable docs (modules only)
+%% Clickable docs
 click TFLORA "https://docs.thunderfly.cz/avionics/TFLORA/" "TFLORA Documentation"
 click TFI2CADT01 "https://docs.thunderfly.cz/avionics/TFI2CADT01/" "TFI2CADT01 Documentation"
 click TFI2CEXT01 "https://docs.thunderfly.cz/avionics/TFI2CEXT01/" "TFI2CEXT01 Documentation"
@@ -66,10 +85,18 @@ click TFPITOT01 "https://docs.thunderfly.cz/avionics/TFPITOT01/" "TFPITOT01 Docu
 click TFHT01 "https://docs.thunderfly.cz/avionics/TFHT01/" "TFHT01 Documentation"
 click TFHT02 "https://docs.thunderfly.cz/avionics/TFHT02/" "TFHT02 Documentation"
 click TFRPM01 "https://docs.thunderfly.cz/avionics/TFRPM01/" "TFRPM01 Documentation"
+click TFPROBE01 "https://docs.thunderfly.cz/avionics/TFRPM01/probe#tfprobe01a---omnipolar-magnetic-and-reflective-optical-sensor-probe" "TFPROBE01 Documentation"
 click TFSLOT01 "https://docs.thunderfly.cz/avionics/TFSLOT01/" "TFSLOT01 Documentation"
 click TFGPS01 "https://docs.thunderfly.cz/avionics/TFGPS01/" "TFGPS01 Documentation"
 click TFGPSLITE02 "https://docs.thunderfly.cz/avionics/TFGPSLITE02/" "TFGPSLITE02 Documentation"
 click TFUSBSERIAL01 "https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/" "TFUSBSERIAL01 Documentation"
+click TFSIK01 "https://docs.thunderfly.cz/avionics/TFSIK01/" "TFSIK01 Documentation"
+click TFESC02 "https://docs.thunderfly.cz/avionics/TFESC02/" "TFESC02 Documentation"
+click CAB15_HT01 "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
+click CAB20_HT02 "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
+click CAB20_RPM "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
+click CAB20_SLOT "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
+click CAB45_PITOT "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
 ```
 
 The development was originally motivated by the hardware requirements of [TF-ATMON](https://docs.thunderfly.cz/instruments/TF-ATMON), which focuses on atmospheric measurements in harsh conditions. Therefore, the solution covers the entire workflow — from sensors and in-flight data acquisition, through data transmission, to final visualization — and this use case shaped the design of avionics. All modules are developed and manufactured in Europe to meet common aerospace and research standards.  
@@ -135,7 +162,7 @@ The following table lists wholesale prices for avionics components for orders up
 | [TFI2CEXT01](https://docs.thunderfly.cz/avionics/TFI2CEXT01/) | €92,00 | €87,40 | €82,80 |
 | [TFSIK01](https://docs.thunderfly.cz/avionics/TFSIK01/) | €323,83 | €307,64 | €291,45 |
 | [TFCAB15I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €8,00 | €7,60 | €7,20 |
-| [TFCAB20I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €8,50 | €8,08 | €7,65 |
+| [TFCAB30I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €8,50 | €8,08 | €7,65 |
 | [TFCAB45I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €9,00 | €8,55 | €8,10 |
 
 > **Note:**
