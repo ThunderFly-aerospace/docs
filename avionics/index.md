@@ -15,63 +15,61 @@ ThunderFly's avionics system consists of **high-performance hardware** designed 
 
 ```mermaid
 flowchart TD
-    %% Central flight controller
-    FC[TFPILOTBASEBOARD01 (Pixhawk-class flight controller)]
 
-    %% SPI peripherals (double line)
-    FC ==> TFLORA[TFLORA]
-    click TFLORA "https://docs.thunderfly.cz/avionics/TFLORA/" "TFLORA Documentation"
+%% Nodes
+FC["TFPILOTBASEBOARD01<br/>(Pixhawk-class flight controller)"]
+TFLORA[TFLORA]
+TFI2CADT01[TFI2CADT01]
+TFESC02[TFESC02]
+TFI2CEXT01[TFI2CEXT01]
+TFPITOT01[TFPITOT01]
+TFHT01[TFHT01]
+TFHT02[TFHT02]
+TFRPM01[TFRPM01]
+TFSLOT01[TFSLOT01]
+TFGPS01[TFGPS01]
+TFGPSLITE02[TFGPSLITE02]
+TFUSBSERIAL01[TFUSBSERIAL01]
+BATT[Battery Pack]
 
-    %% I2C peripherals (dashed line)
-    FC -.-> TFI2CADT01[TFI2CADT01]
-    click TFI2CADT01 "https://docs.thunderfly.cz/avionics/TFI2CADT01/" "TFI2CADT01 Documentation"
 
-    %% I2C ESC connected directly to FC
-    FC -.-> TFESC02[TFESC02]
+%% Edges (plain)
+FC --> TFLORA
+FC --> TFI2CADT01
+FC --> TFESC02
 
-    %% I2C extension chain
-    TFI2CADT01 -.-> TFI2CEXT01[TFI2CEXT01]
-    click TFI2CEXT01 "https://docs.thunderfly.cz/avionics/TFI2CEXT01/" "TFI2CEXT01 Documentation"
 
-    TFI2CEXT01 -.-> TFPITOT01[TFPITOT01]
-    click TFPITOT01 "https://docs.thunderfly.cz/avionics/TFPITOT01/" "TFPITOT01 Documentation"
+TFI2CADT01 --> TFI2CEXT01
+TFI2CEXT01 --> TFPITOT01
 
-    %% Sensors attached via I2C directly to ADT
-    TFI2CADT01 -.-> TFHT01[TFHT01]
-    click TFHT01 "https://docs.thunderfly.cz/avionics/TFHT01/" "TFHT01 Documentation"
 
-    TFI2CADT01 -.-> TFHT02[TFHT02]
-    click TFHT02 "https://docs.thunderfly.cz/avionics/TFHT02/" "TFHT02 Documentation"
+TFI2CADT01 --> TFHT01
+TFI2CADT01 --> TFHT02
+TFI2CADT01 --> TFRPM01
+TFI2CADT01 --> TFSLOT01
 
-    TFI2CADT01 -.-> TFRPM01[TFRPM01]
-    click TFRPM01 "https://docs.thunderfly.cz/avionics/TFRPM01/" "TFRPM01 Documentation"
 
-    %% TFSLOT01 is an I2C sensor (dashed line)
-    TFI2CADT01 -.-> TFSLOT01[TFSLOT01]
-    click TFSLOT01 "https://docs.thunderfly.cz/avionics/TFSLOT01/" "TFSLOT01 Documentation"
+FC --> TFGPS01
+FC --> TFGPSLITE02
+FC --> TFUSBSERIAL01
 
-    %% UART devices (solid line)
-    FC --> TFGPS01[TFGPS01]
-    click TFGPS01 "https://docs.thunderfly.cz/avionics/TFGPS01/" "TFGPS01 Documentation"
 
-    FC --> TFGPSLITE02[TFGPSLITE02]
-    click TFGPSLITE02 "https://docs.thunderfly.cz/avionics/TFGPSLITE02/" "TFGPSLITE02 Documentation"
+BATT --> FC
+BATT --> TFESC02
 
-    %% USB/Serial converter
-    FC --> TFUSBSERIAL01[TFUSBSERIAL01]
-    click TFUSBSERIAL01 "https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/" "TFUSBSERIAL01 Documentation"
 
-    %% Power: use solid line with label (Mermaid v10 flowcharts don't support wavy ~~~>)
-    BATT[Battery Pack] -- PWR --> FC
-    BATT -- PWR --> TFESC02
-
-    %% Legend
-    subgraph Legend
-      SPINodeA==>SPINodeB
-      I2CNodeA-.->I2CNodeB
-      UARTNodeA-->UARTNodeB
-      PowerNodeA-- PWR -->PowerNodeB
-    end
+%% Clickable docs (modules only)
+click TFLORA "https://docs.thunderfly.cz/avionics/TFLORA/" "TFLORA Documentation"
+click TFI2CADT01 "https://docs.thunderfly.cz/avionics/TFI2CADT01/" "TFI2CADT01 Documentation"
+click TFI2CEXT01 "https://docs.thunderfly.cz/avionics/TFI2CEXT01/" "TFI2CEXT01 Documentation"
+click TFPITOT01 "https://docs.thunderfly.cz/avionics/TFPITOT01/" "TFPITOT01 Documentation"
+click TFHT01 "https://docs.thunderfly.cz/avionics/TFHT01/" "TFHT01 Documentation"
+click TFHT02 "https://docs.thunderfly.cz/avionics/TFHT02/" "TFHT02 Documentation"
+click TFRPM01 "https://docs.thunderfly.cz/avionics/TFRPM01/" "TFRPM01 Documentation"
+click TFSLOT01 "https://docs.thunderfly.cz/avionics/TFSLOT01/" "TFSLOT01 Documentation"
+click TFGPS01 "https://docs.thunderfly.cz/avionics/TFGPS01/" "TFGPS01 Documentation"
+click TFGPSLITE02 "https://docs.thunderfly.cz/avionics/TFGPSLITE02/" "TFGPSLITE02 Documentation"
+click TFUSBSERIAL01 "https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/" "TFUSBSERIAL01 Documentation"
 ```
 
 The development was originally motivated by the hardware requirements of [TF-ATMON](https://docs.thunderfly.cz/instruments/TF-ATMON), which focuses on atmospheric measurements in harsh conditions. Therefore, the solution covers the entire workflow — from sensors and in-flight data acquisition, through data transmission, to final visualization — and this use case shaped the design of avionics. All modules are developed and manufactured in Europe to meet common aerospace and research standards.  
