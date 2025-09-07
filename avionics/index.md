@@ -13,7 +13,66 @@ nav_order: 20
 
 ThunderFly's avionics system consists of **high-performance hardware** designed to enhance the capabilities of standard unmanned aerial vehicles (multicopter, airplane, etc.). ThunderFly avionics components are built for seamless integration into existing UAV platforms like [PX4](https://px4.io/) or [Ardupilot](https://ardupilot.org/).   
 
-![TFSIK01 pair with USB-C converter](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/TFSIK01A/doc/img/TFSIK01_pair.jpg)
+```mermaid
+flowchart TD
+    %% Central flight controller
+    FC[TFPILOTBASEBOARD01 (Pixhawk-class flight controller)]
+
+    %% SPI peripherals (double line)
+    FC ==> TFLORA[TFLORA]
+    click TFLORA "https://docs.thunderfly.cz/avionics/TFLORA/" "TFLORA Documentation"
+
+    %% I2C peripherals (dashed line)
+    FC -.-> TFI2CADT01[TFI2CADT01]
+    click TFI2CADT01 "https://docs.thunderfly.cz/avionics/TFI2CADT01/" "TFI2CADT01 Documentation"
+
+    %% I2C ESC connected directly to FC
+    FC -.-> TFESC02[TFESC02]
+
+    %% I2C extension chain
+    TFI2CADT01 -.-> TFI2CEXT01[TFI2CEXT01]
+    click TFI2CEXT01 "https://docs.thunderfly.cz/avionics/TFI2CEXT01/" "TFI2CEXT01 Documentation"
+
+    TFI2CEXT01 -.-> TFPITOT01[TFPITOT01]
+    click TFPITOT01 "https://docs.thunderfly.cz/avionics/TFPITOT01/" "TFPITOT01 Documentation"
+
+    %% Sensors attached via I2C directly to ADT
+    TFI2CADT01 -.-> TFHT01[TFHT01]
+    click TFHT01 "https://docs.thunderfly.cz/avionics/TFHT01/" "TFHT01 Documentation"
+
+    TFI2CADT01 -.-> TFHT02[TFHT02]
+    click TFHT02 "https://docs.thunderfly.cz/avionics/TFHT02/" "TFHT02 Documentation"
+
+    TFI2CADT01 -.-> TFRPM01[TFRPM01]
+    click TFRPM01 "https://docs.thunderfly.cz/avionics/TFRPM01/" "TFRPM01 Documentation"
+
+    %% TFSLOT01 is an I2C sensor (dashed line)
+    TFI2CADT01 -.-> TFSLOT01[TFSLOT01]
+    click TFSLOT01 "https://docs.thunderfly.cz/avionics/TFSLOT01/" "TFSLOT01 Documentation"
+
+    %% UART devices (solid line)
+    FC --> TFGPS01[TFGPS01]
+    click TFGPS01 "https://docs.thunderfly.cz/avionics/TFGPS01/" "TFGPS01 Documentation"
+
+    FC --> TFGPSLITE02[TFGPSLITE02]
+    click TFGPSLITE02 "https://docs.thunderfly.cz/avionics/TFGPSLITE02/" "TFGPSLITE02 Documentation"
+
+    %% USB/Serial converter
+    FC --> TFUSBSERIAL01[TFUSBSERIAL01]
+    click TFUSBSERIAL01 "https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/" "TFUSBSERIAL01 Documentation"
+
+    %% Power (wavy line)
+    BATT[Battery Pack] ~~~> FC
+    BATT ~~~> TFESC02
+
+    %% Legend
+    subgraph Legend
+      SPI==>SPI_Device
+      I2C-.->I2C_Device
+      UART-->UART_Device
+      Power~~~>Power_Device
+    end
+```
 
 The development was originally motivated by the hardware requirements of [TF-ATMON](https://docs.thunderfly.cz/instruments/TF-ATMON), which focuses on atmospheric measurements in harsh conditions. Therefore, the solution covers the entire workflow — from sensors and in-flight data acquisition, through data transmission, to final visualization — and this use case shaped the design of avionics. All modules are developed and manufactured in Europe to meet common aerospace and research standards.  
 
