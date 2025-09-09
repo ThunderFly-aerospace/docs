@@ -11,7 +11,7 @@ nav_order: 20
 
 ## Avionics Components  
 
-ThunderFly's avionics system consists of **high-performance hardware** designed to enhance the capabilities of standard unmanned aerial vehicles (multicopter, airplane, etc.). ThunderFly avionics components are built for seamless integration into existing UAV platforms like [PX4](https://px4.io/) or [Ardupilot](https://ardupilot.org/).   
+ThunderFly's avionics system consists of **high-performance hardware** designed to enhance the capabilities of standard unmanned aerial vehicles (multicopter, airplane, etc.). ThunderFly avionics components are built for seamless integration into existing UAV platforms like [PX4](https://px4.io/) or [Ardupilot](https://ardupilot.org/).  The following clickable diagram shows an example interconnection of different ThunderFly avionics components; usually, only a fraction of this diagram is used in the actual UAV:
 
 ```mermaid
 flowchart TD
@@ -109,7 +109,7 @@ ThunderFly avionics modules are designed according to an internal PCB form facto
 The dimensions of the PCB are defined by three parameters:
 
 - **a** – additional width (integer, may also be 0)  
-- **b** – lengt (integer)  
+- **b** – additional length (integer)  
 - **c** – additional mounting holes positions (integer, may also be 0)  
 
 > Most commonly, the module width is 15 mm or 20 mm (e.g., a=0 or a=5), depending on the JST-GH connector number of pins (typically 4-pin for I²C).
@@ -131,7 +131,7 @@ The standardized PCB form factor allows straightforward design of **protective e
 
 ![ThunderFly module in enclosure, top view, with screws](TFPCB_box_mounting_screws.png)
 
-This approach results in avionics modules mechanically protected while still being lightweight and accessible to service.  The described modular block concept allows either grouping multiple avionics units together or distributing them in different airframe compartments, depending on application requirements.
+This approach results in avionics modules that are mechanically protected while still being lightweight and accessible to service.  The described modular block concept allows either grouping multiple avionics units together or distributing them in different airframe compartments, depending on application requirements.
 
 ### How to Order
 
