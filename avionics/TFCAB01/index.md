@@ -96,8 +96,7 @@ The TFCABxxUART01 series is used for **serial communication**, connecting autopi
 - **Straight-through wiring**: Ensure that RX/TX and RTS/CTS are properly swapped in devices.
 
 ## Where to Buy
-TFCAB cables can be purchased from ThunderFly’s [Tindie store](https://www.tindie.com/products/30113/) or via direct email inquiry at sale@thunderfly.cz.
-
-For additional details, visit the [ThunderFly website](https://www.thunderfly.cz/).
+TFCAB cables can be purchased from [Lectronz](https://lectronz.com/products/1060), [Tindie](https://www.tindie.com/products/30113/), or via direct email inquiry at sale@thunderfly.cz.
+For additional contacts, visit the [ThunderFly website](https://www.thunderfly.cz/contact-us.html).
 
 
