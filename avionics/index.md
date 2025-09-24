@@ -49,7 +49,7 @@ CAB45_PITOT["TFCAB45I2C01"]
 
 
 %% Edges (plain)
-FC <--> TFLORA
+FC <--> TFLORA01
 FC <--> TFI2CADT01
 FC <--> TFESC02
 FC <--> TFESC03
@@ -103,6 +103,7 @@ click TFUNIPAYLOAD01 "https://docs.thunderfly.cz/avionics/TFUNIPAYLOAD01/" "TFUN
 click TFSIK01 "https://docs.thunderfly.cz/avionics/TFSIK01/" "TFSIK01 Documentation"
 click TFESC02 "https://docs.thunderfly.cz/avionics/TFESC02/" "TFESC02 Documentation"
 click TFESC03 "https://docs.thunderfly.cz/avionics/TFESC03/" "TFESC03 Documentation"
+click TFSBEC01 "https://docs.thunderfly.cz/avionics/TFESC03/" "TFSBEC01 Documentation"
 click CAB15_HT01 "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
 click CAB20_HT02 "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
 click CAB20_RPM "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
