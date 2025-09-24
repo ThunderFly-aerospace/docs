@@ -9,8 +9,8 @@ has_children: true
 
 # TFRPM01 - RPM measuring device
 
-Revolutions per minute measurement device for UAV.
-It is designed to direct connection to the Pixhawk controller (CUAV V5+ for example) through a standard I²C connector. The device [is supported by PX4 firmware](https://docs.px4.io/main/en/sensor/thunderfly_tachometer.html).
+A revolutions per minute measurement device for a UAV.
+It is designed for direct connection to the Pixhawk controller (CUAV V5+, for example) through a standard I²C connector. The device [is supported by PX4 firmware](https://docs.px4.io/main/en/sensor/thunderfly_tachometer.html).
 The meter's input is supposed to be a pulse signal from an optical encoder, hall sensor, etc. The pulses are counted during a predefined constant interval.
 The hardware is intended to measure helicopter and autogyro rotor RPM, but its counting capability is up to 20 kHz, so it should also be used to measure propeller or engine RPM.
 
@@ -20,7 +20,7 @@ The hardware is intended to measure helicopter and autogyro rotor RPM, but its c
 
 ## Where to get it?
 
-ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/20376/).
+ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Lectronz](https://lectronz.com/products/1055) or [Tindie](https://www.tindie.com/products/20376/) stores.
 
 ## Main Features
 
@@ -28,7 +28,7 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
   * Offload the flight controller's MCU, by self-counting and storing the number of counted pulses in I²C accessible internal memory
   * Input status LED indicator - for easy debugging of mechanical configuration
   * Short circuit protection on the probe connector
-  * Pass-trough I²C connectors to allow a daisy chain of additional or multiple sensors
+  * Pass-through I²C connectors to allow a daisy chain of additional or multiple sensors
   * Highly robust and repairable design. 
 
 ## Parameters
@@ -53,13 +53,13 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
 </p>
 
 The 3Pin probe connector is powered from the I²C bus through an RC filter, limiting current and voltage spikes to the sensor probe.
-Therefore the sensor is resistant to short circuits at the probe connector power.
+Therefore, the sensor is resistant to short circuits at the probe connector power.
 
-The two I²C Pixhawk JST-GH connectors are interconnected. This feature allows easy nesting with other I²C devices to a single Pixhawks I²C port.
+The two I²C Pixhawk JST-GH connectors are interconnected. This feature allows easy nesting with other I²C devices to a single Pixhawk I²C port.
 
 ## Connection to the Pixhawk autopilot
 
-The I²C interface connectors respect the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The signal and color coding of the connector and supplied cable are described by following table (ThunderFly color scheme):
+The I²C interface connectors respect the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The signal and color coding of the connector and supplied cable are described by the following table (ThunderFly color scheme):
 
 |Signal | Pixhawk Color | ThunderFly color |
 |--------|------------------|---------------------|
@@ -81,9 +81,9 @@ These special cable conductors' winding method greatly improves the signal integ
 
 ### I²C Address Configuration
 
-By default, the TFRPM01 sensor is manufactured with a 0x50 I²C address. This address is possible to change to 0x51 by altering the JP1 solder junction. The junction connection to GND needs to be cut by knife and then soldered to the opposite side Vcc.
+By default, the TFRPM01 sensor is manufactured with a 0x50 I²C address. This address is possible to change to 0x51 by altering the JP1 solder junction. The junction connection to GND needs to be cut by a knife and then soldered to the opposite side of Vcc.
 
-The default configuration of the junction corresponds to the following picture, where the center pin is connected to GND by copper trace.
+The default configuration of the junction corresponds to the following picture, where the center pin is connected to GND by a copper trace.
 
 ![The default 0x50 address setup](/avionics/TFRPM01/JP1_address_0x50_config.png)
 
@@ -91,7 +91,7 @@ The default configuration of the junction corresponds to the following picture, 
 
 The device is designed to be mounted with or without a plastic case. The 3D-printed case is intended to be adjustable to particular sensor mount options. The supplied variant of the 3D-printed case supports two mount options:
 
-  * By default the case could be mounted by the screw on a flat surface (the original screw needs to be replaced by a longer one)
+  * By default, the case could be mounted by the screw on a flat surface (the original screw needs to be replaced by a longer one)
   * The second option is the use of [double-sided adhesive tape](https://www.3m.com/3M/en_US/vhb-tapes-us/) or [reclosable fastener](https://www.3m.com/3M/en_US/dual-lock-reclosable-fasteners-us/) stuck on the side of the TFRPM01 case.
 
 ## Sensor probe selection
@@ -107,11 +107,11 @@ For more information on the options and selection of the appropriate probe, plea
 
 ## Software configuration
 
-The TFRPM01 revolution counter is currently supported by PX4 firmware only. (Ardupilot pull requests are welcomed)
-After proper connection of the sensor with the sensing probe to an I2C port (Except port I2C3) of PX4-based autopilot you should follow instructions to [PX4 software setup](https://docs.px4.io/main/en/sensor/thunderfly_tachometer.html#software-setup). After proper setup, you should get an uLog containing the RPM logged during the flight. Here is an example of rotor RPM captured during the flight of [TF-G2 autogyro](https://github.com/ThunderFly-aerospace/TF-G2). The graph is rendered by [flight_review](https://github.com/ThunderFly-aerospace/flight_review).
+The TFRPM01 revolution counter is currently supported by PX4 firmware only. (Ardupilot pull requests are welcome)
+After proper connection of the sensor with the sensing probe to an I2C port (Except port I2C3) of the PX4-based autopilot, you should follow instructions to [PX4 software setup](https://docs.px4.io/main/en/sensor/thunderfly_tachometer.html#software-setup). After proper setup, you should get a uLog containing the RPM logged during the flight. Here is an example of rotor RPM captured during the flight of [TF-G2 autogyro](https://github.com/ThunderFly-aerospace/TF-G2). The graph is rendered by [flight_review](https://github.com/ThunderFly-aerospace/flight_review).
 
 ![TFRPM01 measurement of rotor RPM during the flight](/avionics/TFRPM01/rpm_graph.png)
 
 
 # FAQ
-Frequently asked questions are available on [separed TFRPM01 FAQ page](./faq.md). 
+Frequently asked questions are available on [separated TFRPM01 FAQ page](./faq.md). 
