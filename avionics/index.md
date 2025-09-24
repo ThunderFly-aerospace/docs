@@ -19,7 +19,7 @@ flowchart TD
 
 %% Nodes
 FC["TFPILOTBASEBOARD01<br/>(Pixhawk-compatible flight controller)"]
-TFLORA[TFLORA]
+TFLORA01[TFLORA01]
 TFI2CADT01[TFI2CADT01]
 TFESC02[TFESC02]
 TFESC03[TFESC03]
@@ -82,6 +82,8 @@ BATT --> FC
 BATT --> TFESC02
 BATT --> TFESC03
 BATT --> TFSBEC01
+
+TFSBEC01 --> FC
 
 %% Clickable docs
 click TFLORA01 "https://docs.thunderfly.cz/avionics/TFLORA01/" "TFLORA01 Documentation"
