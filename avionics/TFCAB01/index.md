@@ -21,7 +21,7 @@ Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). All
 
 ## I²C Cables
 
-The TFCABxxI2C01 series is optimized for **I²C communication**, featuring twisted design to minimize internal cross-talk and capacitance. This ensures reliable data transmission in avionics environments.
+The TFCABxxI2C01 series is optimized for **I²C communication**, featuring a twisted design to minimize internal cross-talk and capacitance. This ensures reliable data transmission in avionics environments.
 
 ![TFCABxxI2C01](https://user-images.githubusercontent.com/5196729/234793444-a4d4c73b-5eb9-4614-a92b-722d95fa6c30.jpg)
 
