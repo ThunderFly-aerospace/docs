@@ -22,15 +22,19 @@ FC["TFPILOTBASEBOARD01<br/>(Pixhawk-compatible flight controller)"]
 TFLORA[TFLORA]
 TFI2CADT01[TFI2CADT01]
 TFESC02[TFESC02]
+TFESC03[TFESC03]
+TFSBEC01[TFSBEC01]
 TFI2CEXT01[TFI2CEXT01]
 TFPITOT01[TFPITOT01]
 TFHT01[TFHT01]
 TFHT02[TFHT02]
+TFCO201[TFCO201]
 TFRPM01[TFRPM01]
 TFSLOT01[TFSLOT01]
 TFGPS01[TFGPS01]
 TFGPSLITE02[TFGPSLITE02]
 TFUSBSERIAL01[TFUSBSERIAL01]
+TFUNIPAYLOAD01[TFUNIPAYLOAD01]
 TFSIK01[TFSIK01]
 TFPROBE01[TFPROBE01]
 BATT[Battery Pack]
@@ -48,9 +52,13 @@ CAB45_PITOT["TFCAB45I2C01"]
 FC <--> TFLORA
 FC <--> TFI2CADT01
 FC <--> TFESC02
-
+FC <--> TFESC03
+FC <--> TFUSBSERIAL01
+FC <--> TFSIK01
+FC <--> TFUNIPAYLOAD01
 
 TFI2CADT01 <--> TFI2CEXT01
+TFI2CADT01 <--> TFCO201
 
 
 %% Sensors over dedicated cables
@@ -60,6 +68,7 @@ TFI2CADT01 <--> CAB20_RPM <--> TFRPM01
 TFI2CADT01 <--> CAB20_SLOT <--> TFSLOT01
 TFI2CEXT01 <--> CAB45_PITOT <--> TFPITOT01
 
+
 %% Probe on TFRPM01
 TFPROBE01 -->  TFRPM01
 
@@ -67,30 +76,31 @@ TFPROBE01 -->  TFRPM01
 %% Other peripherals
 TFGPS01 --> FC
 TFGPSLITE02 --> FC
-FC <--> TFUSBSERIAL01
-FC <--> TFSIK01
-
 
 %% Power
 BATT --> FC
 BATT --> TFESC02
-
+BATT --> TFESC03
+BATT --> TFSBEC01
 
 %% Clickable docs
-click TFLORA "https://docs.thunderfly.cz/avionics/TFLORA/" "TFLORA Documentation"
+click TFLORA01 "https://docs.thunderfly.cz/avionics/TFLORA01/" "TFLORA01 Documentation"
 click TFI2CADT01 "https://docs.thunderfly.cz/avionics/TFI2CADT01/" "TFI2CADT01 Documentation"
 click TFI2CEXT01 "https://docs.thunderfly.cz/avionics/TFI2CEXT01/" "TFI2CEXT01 Documentation"
 click TFPITOT01 "https://docs.thunderfly.cz/avionics/TFPITOT01/" "TFPITOT01 Documentation"
 click TFHT01 "https://docs.thunderfly.cz/avionics/TFHT01/" "TFHT01 Documentation"
 click TFHT02 "https://docs.thunderfly.cz/avionics/TFHT02/" "TFHT02 Documentation"
+click TFCO201 "https://docs.thunderfly.cz/avionics/TFCO201/" "TFHT02 Documentation"
 click TFRPM01 "https://docs.thunderfly.cz/avionics/TFRPM01/" "TFRPM01 Documentation"
 click TFPROBE01 "https://docs.thunderfly.cz/avionics/TFRPM01/probe#tfprobe01a---omnipolar-magnetic-and-reflective-optical-sensor-probe" "TFPROBE01 Documentation"
 click TFSLOT01 "https://docs.thunderfly.cz/avionics/TFSLOT01/" "TFSLOT01 Documentation"
 click TFGPS01 "https://docs.thunderfly.cz/avionics/TFGPS01/" "TFGPS01 Documentation"
 click TFGPSLITE02 "https://docs.thunderfly.cz/avionics/TFGPSLITE02/" "TFGPSLITE02 Documentation"
 click TFUSBSERIAL01 "https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/" "TFUSBSERIAL01 Documentation"
+click TFUNIPAYLOAD01 "https://docs.thunderfly.cz/avionics/TFUNIPAYLOAD01/" "TFUNIPAYLOAD01 Documentation"
 click TFSIK01 "https://docs.thunderfly.cz/avionics/TFSIK01/" "TFSIK01 Documentation"
 click TFESC02 "https://docs.thunderfly.cz/avionics/TFESC02/" "TFESC02 Documentation"
+click TFESC03 "https://docs.thunderfly.cz/avionics/TFESC03/" "TFESC03 Documentation"
 click CAB15_HT01 "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
 click CAB20_HT02 "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
 click CAB20_RPM "https://docs.thunderfly.cz/avionics/TFCAB01/" "Cables Documentation"
@@ -144,7 +154,7 @@ You can order avionics components in the following ways:
 
 ### Components Pricing
 
-The following table lists wholesale prices for avionics components for orders up to 50 units. For bulk pricing or special requirements, please directly contact sale@thunderfly.cz.
+The following table lists wholesale prices for avionics components for orders up to 50 units. For bulk pricing, unlisted items or special requirements, please directly contact sale@thunderfly.cz.
 
 | Product Name       | Price (1–3 pcs) | Price (4–10 pcs) | Price (11–50 pcs) |
 |--------------------|------------------|-------------------|--------------------|
