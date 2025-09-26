@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "TFPM02 - UAS Particulate matter sensor"
+title: "TFPM02 - Particulate matter and NOx sensor"
 permalink: /avionics/TFPM02/
 parent: Sensors
 nav_order: "54"
@@ -14,28 +14,6 @@ The TFPM02 sensor is a modular device for measuring particulate matter concentra
 * **TFPM02B** based on the Sensirion **SEN5x** sensor
 
 Each variant offers distinct advantages and is optimized for different types of measurements.
-
----
-
-## TFPM02A – SPS30-based variant
-
-This variant is built around the [Sensirion SPS30](https://sensirion.com/products/catalog/SPS30/) laser particulate matter sensor. It provides both mass and number concentrations of aerosol particles.
-
-### Key Features
-
-* **Mass concentration** for PM1.0, PM2.5, PM4, PM10: 0 – 1000 μg/m³ (Accuracy ±10%)
-* **Number concentration** for PM0.5, PM1.0, PM2.5, PM4, PM10: 0 – 3000 #/cm³
-* Compact and lightweight design suitable for UAV deployment
-
-> **Note:** This variant does **not** provide ambient temperature or humidity data. For environmental compensation, it is recommended to use it with the [TFHT02 sensor](/avionics/TFHT02).
-
-### Connectivity
-
-The modified SPS30 sensor is connected to PX4 autopilot-supported hardware using a **ZHR-5 to JST-GH** cable. Sensor is then controlled directly by the autopilot firmware and data transmitted via MAVLink.
-
-![Bottom view on TFPM02A](https://raw.githubusercontent.com/ThunderFly-aerospace/TFPM02/refs/heads/TFPM02A/doc/img/TFPM02_bottom.jpg)
-
-![Top view on TFPM02A](https://raw.githubusercontent.com/ThunderFly-aerospace/TFPM02/refs/heads/TFPM02A/doc/img/TFPM02_top.jpg)
 
 ---
 
@@ -62,15 +40,37 @@ The sensor is connected directly to the PX4 autopilot via **JST-GH** cable over 
 
 ---
 
+## TFPM02A – SPS30-based variant
+
+This variant is built around the [Sensirion SPS30](https://sensirion.com/products/catalog/SPS30/) laser particulate matter sensor. It provides both mass and number concentrations of aerosol particles.
+
+### Key Features
+
+* **Mass concentration** for PM1.0, PM2.5, PM4, PM10: 0 – 1000 μg/m³ (Accuracy ±10%)
+* **Number concentration** for PM0.5, PM1.0, PM2.5, PM4, PM10: 0 – 3000 #/cm³
+* Compact and lightweight design suitable for UAV deployment
+
+> **Note:** This variant does **not** provide ambient temperature or humidity data. For environmental compensation, it is recommended to expand it with the [TFHT02 sensor](/avionics/TFHT02) or use TFPM02B revision.
+
+### Connectivity
+
+The modified SPS30 sensor is connected to PX4 autopilot-supported hardware using a **ZHR-5 to JST-GH** cable. The sensor is then controlled directly by the autopilot firmware, and data is transmitted via MAVLink.
+
+![Bottom view on TFPM02A](https://raw.githubusercontent.com/ThunderFly-aerospace/TFPM02/refs/heads/TFPM02A/doc/img/TFPM02_bottom.jpg)
+
+![Top view on TFPM02A](https://raw.githubusercontent.com/ThunderFly-aerospace/TFPM02/refs/heads/TFPM02A/doc/img/TFPM02_top.jpg)
+
+---
+
 ## Availability
 
-The ThunderFly TFPM02 sensors (both A and B variants) are commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Please contact [info@thunderfly.cz](mailto:info@thunderfly.cz) for inquiries, pricing, or customization.
+The ThunderFly TFPM02 sensors (both A and B variants) are commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Please contact [sale@thunderfly.cz](mailto:info@thunderfly.cz) for inquiries, pricing, or customization.
 
 ---
 
 ## Demonstration
 
-A typical use-case and demonstration of TFPM02 sensor in flight onboard a [TF-G2 autogyro](https://github.com/ThunderFly-aerospace/TF-G2) can be viewed in the following video:
+A typical use-case and demonstration of the TFPM02 sensor in flight onboard a [TF-G2 autogyro](https://github.com/ThunderFly-aerospace/TF-G2) can be viewed in the following video:
 
 [![TF-ATMON particulate matter sensing demonstration](https://img.youtube.com/vi/KUhktPDEi8I/hqdefault.jpg)](https://www.youtube.com/watch?v=KUhktPDEi8I)
 
