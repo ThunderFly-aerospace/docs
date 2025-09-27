@@ -67,7 +67,7 @@ Each TFSIK01 modem variant is hardware-optimized for a specific frequency band t
 | TFSIK01 Band | Center Frequency | Applicable Frequency Range | Regional Allocation |
 |------|------------------|------------------|-------------------|-------------------|
 | 433 MHz | 434.0 MHz | 432.0 - 436.0 MHz | ISM band (worldwide) |
-| 868 MHz | 869.0 MHz | 865.0 - 873.0 MHz | ISM SRD band (Europe) |
+| 868 MHz | 869.0 MHz | 865.0 - 873.0 MHz | [ISM SRD860](https://en.wikipedia.org/wiki/Short-range_device#SRD860) band (Europe) |
 | 915 MHz | 915.0 MHz | 902.0 - 928.0 MHz | ISM band (Americas, Asia-Pacific) |
 
 **Notes:**
