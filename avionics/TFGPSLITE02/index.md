@@ -30,7 +30,7 @@ The **TFGPSLITE02** is a compact and high-performance GNSS module designed for s
 ## Where to Buy
 The TFGPSLITE02 can be purchased directly from us. For direct orders, bulk inquiries, or custom modifications, please contact us via [email](https://www.thunderfly.cz/contact-us.html). 
 
-It is also available for online purchase through our [Tindie store](https://www.tindie.com/products/37121/).
+It is also available for online purchase through [Lectronz](https://lectronz.com/products/1068) or [Tindie store](https://www.tindie.com/products/37121/).
 
 ## Technical Specifications
 
