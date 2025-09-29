@@ -20,7 +20,7 @@ nav_order: "10"
   * Customizable 3D-printed case to fit specific applications.
   * Integrated IMU to vibration diagnostics on AoA measurement.
 
-TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/21790/).
+TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to sale@thunderfly.cz or shop at [Lectronz](https://lectronz.com/products/1058) or [Tindie store](https://www.tindie.com/products/21790/).
 
 ## Technical Parameters
 
@@ -73,13 +73,13 @@ The velocity and pressure of the fluid are required to meet [Bernoulli's princip
 
 <!-- source: \frac{1}{2}\rho{v_\infty}^{2}+p_\infty=\frac{1}{2}\rho{v}^{2}+p -->
 
-Then the velocities are in relation to cross sections in the plane of pressure measurement ports
+Then the velocities are in relation to cross sections in the plane of the pressure measurement ports
 
 ![Area assuption from bernouli principle](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\frac{v}{v_\infty}=\frac{A_D}{A_d})
 
 <!-- source: \frac{v}{v_\infty}=\frac{A_D}{A_d} -->
 
-Therefore equations for pressure difference and airspeed velocity could be derived.
+Therefore, equations for pressure difference and airspeed velocity could be derived.
 
 ![Resulting equation for TFSLOT airspeed](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\Delta&space;p=\frac{1}{2}\rho{v_\infty}^{2}\left[\left(\frac{v}{v_\infty}\right)^2-1\right]\Rightarrow&space;&space;v_\infty=\sqrt{\frac{2\Delta&space;p}{\rho\left[\left(\frac{A_D}{A_d}\right)^2-1\right]}})
 
@@ -121,7 +121,7 @@ The advantage of the higher sensitivity results in increased drag, but it could 
 
 # Usage
 
-TFSLOT is equipped with [TFASPDIMU](https://github.com/ThunderFly-aerospace/TFASPDIMU02) electronics, which contains the required differential pressure sensor and an IMU unit through which the pressure sensor is connected. To activate I2C access to it, it is necessary to set the pass-through mode in the IMU unit. The [TFASPDIMU02](https://github.com/ThunderFly-aerospace/TFASPDIMU02) has many options for how can be used, please look at its documentation for more details.
+TFSLOT is equipped with [TFASPDIMU](https://github.com/ThunderFly-aerospace/TFASPDIMU02) electronics, which contain the required differential pressure sensor and an IMU unit through which the pressure sensor is connected. To activate I2C access to it, it is necessary to set the pass-through mode in the IMU unit. The [TFASPDIMU02](https://github.com/ThunderFly-aerospace/TFASPDIMU02) has many options for how it can be used. Please look at its documentation for more details.
 
 ## PX4 autopilot
 
@@ -134,24 +134,24 @@ sdp3x start -X
 
 The script assumes a connection to port _I2C 2_. This was set by the `-b` parameter in both commands. The correct bus has to be set by the user.
 
-> The model for converting to the airspeed from an air pressure is not yet in the stable version of the PX4 autopilot source code. Therefore the master upstream needs to be used with the sensor.
+> The model for converting to the airspeed from an air pressure is not yet in the stable version of the PX4 autopilot source code. Therefore, the master upstream needs to be used with the sensor.
 
 Sensor requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. The GitHub [pull-request](https://github.com/PX4/PX4-Autopilot/pull/18593) into the PX4 master is currently open to solve this issue. The airspeed recalculation model should be included in the next stable release. Alternatively, you can temporarily apply [this PR changes](https://github.com/PX4/PX4-Autopilot/compare/master...ThunderFly-Aerospace:tf/aspdimu) or [apply patch](https://patch-diff.githubusercontent.com/raw/PX4/PX4-Autopilot/pull/18593.patch).
 
 ### Configuration
 
-TFSLOT01 contains a specific aerodynamic profile. Therefore it requires a different converting model. This is done by setting the parameter `CAL_AIR_CMODEL` to 3 (Venturi effect-based airspeed sensor). Setting the wrong profile causes the measurement of negative airspeed values, which results in an `airspeed sensor failure` condition during the attempt to fly.
+TFSLOT01 contains a specific aerodynamic profile. Therefore, it requires a different conversion model. This is done by setting the parameter `CAL_AIR_CMODEL` to 3 (Venturi effect-based airspeed sensor). Setting the wrong profile causes the measurement of negative airspeed values, which results in an `airspeed sensor failure` condition during the attempt to fly.
 
 ### PX4 Calibration process
 
 ![PXL_20220217_075317802](https://user-images.githubusercontent.com/5196729/154793903-b117aa99-cfa2-4d6b-bd6c-e1d15e969b36.jpg)
 
-The sensor itself is calibrated and the PX4 calibration process aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offsets. It is enough to calibrate (verify) the sensor once it is mounted into the UAV. And there is no need to do it before each flight (as with other types of airspeed sensors).
+The sensor itself is calibrated, and the PX4 calibration process aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offsets. It is enough to calibrate (verify) the sensor once it is mounted into the UAV. And there is no need to do it before each flight (as with other types of airspeed sensors).
 
 The procedure is performed with the help of a calibration tool in a few steps:
   1. Place the calibration tool in the TFSLOT inlet
-  1. Press the tool against the sensor (green arrow) with your hand or rubber band and hold it there during the whole process.
-  1. Start the [callibration process](https://docs.px4.io/master/en/config/airspeed.html#performing-the-calibrationhttps://docs.px4.io/master/en/config/airspeed.html#performing-the-calibration) in PX4
+  1. Press the tool against the sensor (green arrow) with your hand or a rubber band and hold it there during the whole process.
+  1. Start the [calibration process](https://docs.px4.io/master/en/config/airspeed.html#performing-the-calibrationhttps://docs.px4.io/master/en/config/airspeed.html#performing-the-calibration) in PX4
       1. Wait for the measure of static offset (no blowing)
       1. PX4 will command you to blow into the airspeed sensor
   1. Blow from the back of the sensor (blue arrow). If you blow too little, repeat the attempt.
