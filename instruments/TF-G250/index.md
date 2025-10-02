@@ -10,9 +10,16 @@ nav_order: "3"
 
 The TF-G250 is a miniature unmanned autogyro specifically designed for atmospheric boundary layer sounding. It serves as a practical and ecological alternative to conventional balloon-based radiosondes, performing [atmospheric profiling](https://en.wikipedia.org/wiki/Atmospheric_sounding) of key meteorological parameters: temperature, humidity, wind speed and direction, and atmospheric pressure.
 
+![TF-G250 during flight](TF-G250_flight.png)
+
 The TF-G250 autogyro is designed for easy handling, deployment, and maintenance, ensuring affordability and robustness in diverse meteorological conditions. Its compact and lightweight structure (below 250 grams, complying with the [European C0 category](https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones)) simplifies transport and storage, making it ideal for rapid deployment scenarios.
 
-![TF-G250 during flight](TF-G250_flight.png)
+<div style="width:100%; padding-top: 56.25%;position: relative;overflow: hidden;">
+  <iframe style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;" 
+          src="https://www.youtube.com/embed/cQeZ3FQAzD4?loop=1&playlist=cQeZ3FQAzD4&mute=1" 
+          frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric sounding tools. Unlike traditional radiosonde solutions, the TF-G250 meteo autogyro drone offers significant operational advantages due to its lightweight, absence of parachute, inherent safety mechanisms, and safe-descent design.
 
@@ -95,7 +102,7 @@ The TF-G250 supports two main operational procedures for atmospheric profiling:
 1. **Automatic Powered Flight:** The autogyro performs vertical profiling by executing a controlled spiral ascent followed by a descent. This method allows adaptation to wind conditions, including straight vertical climbs into the wind when spiral flight is less effective.
 
 <div style="width:100%; padding-top: 56.25%;position: relative;overflow: hidden;">
-  <iframe style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;" src="https://www.youtube.com/embed/DTOk--t4eaM?loop=1&playlist=DTOk--t4eaM" frameborder="0" allowfullscreen>
+  <iframe style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;" src="https://www.youtube.com/embed/DTOk--t4eaM?loop=1&playlist=DTOk--t4eaM&mute=1" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
