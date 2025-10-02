@@ -16,7 +16,7 @@ The TF-G250 autogyro is designed for easy handling, deployment, and maintenance,
 
 <div style="width:100%; padding-top: 56.25%;position: relative;overflow: hidden;">
   <iframe style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;" 
-          src="https://www.youtube.com/embed/cQeZ3FQAzD4?loop=1&playlist=cQeZ3FQAzD4&mute=1" 
+          src="https://www.youtube.com/embed/cQeZ3FQAzD4?mute=1" 
           frameborder="0" allowfullscreen>
   </iframe>
 </div>
