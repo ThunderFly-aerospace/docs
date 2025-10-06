@@ -116,6 +116,8 @@ Collected profiles are suitable for numerical weather prediction (NWP), aviation
 
 ### Transport and Field Deployment
 
+![TF-G250 transport box](TF-G250_packaging.jpg)
+
 The autogyro and accessories are packaged in a rugged **Eurobox-type logistics container (60 × 40 × 9 cm)**, with one handle on the long side, suitable for field logistics and automated handling systems.
 
   - Outer dimensions: 60 × 40 × 9 cm  
