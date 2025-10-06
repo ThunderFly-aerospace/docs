@@ -17,8 +17,8 @@ The TFI2CEXT01 is an I²C bus extension module designed to extend the possible t
 
 ## Availability
 The TFI2CEXT01 I²C bus extender is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/) For purchasing, you can:
-- Email: [info@thunderfly.cz](mailto:info@thunderfly.cz)
-- Purchase online: [Tindie](https://www.tindie.com/products/26352/)
+- Email: [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
+- Or shop directly at [Lectronz](https://lectronz.com/products/1059) or [Tindie](https://www.tindie.com/products/26352/)
 
 ## Parameters
 
@@ -53,6 +53,6 @@ Optimal performance is achieved when the TFI2CEXT01A is positioned in the middle
 Special attention is required for proper connection due to the device reset capability of the TFI2CEXT01A. The connector closer to the LEDs should be connected to the Master device (e.g., autopilot). The opposite connector, farther from the LEDs, should be connected to I²C slaves, such as sensors.
 
 
-# Current version
+# Changelog
 
-**TFI2CEXT01A**: Current version is TFI2CEXT01A
+**TFI2CEXT01A**: The first available version.
