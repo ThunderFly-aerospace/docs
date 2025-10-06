@@ -12,16 +12,26 @@ The TF-G250 is a miniature unmanned autogyro specifically designed for atmospher
 
 ![TF-G250 during flight](TF-G250_flight.png)
 
-The TF-G250 autogyro is designed for easy handling, deployment, and maintenance, ensuring affordability and robustness in diverse meteorological conditions. Its compact and lightweight structure (below 250 grams, complying with the [European C0 category](https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones)) simplifies transport and storage, making it ideal for rapid deployment scenarios.
+The TF-G250 combines the simplicity of a balloon with the control of a drone — providing an innovative, reusable platform for high-resolution atmospheric profiling. It is designed for easy handling, deployment, and maintenance, ensuring affordability and robustness in diverse meteorological conditions. Its compact and lightweight structure (below 250 grams, complying with the [European C0 category](https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones)) simplifies transport and storage, making it ideal for rapid deployment scenarios.
 
 <div style="width:100%; padding-top: 56.25%;position: relative;overflow: hidden;">
-  <iframe style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;" 
-          src="https://www.youtube.com/embed/cQeZ3FQAzD4?mute=1" 
+  <iframe style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;"
+          src="https://www.youtube.com/embed/cQeZ3FQAzD4?mute=1"
           frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
 The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric sounding tools. Unlike traditional radiosonde solutions, the TF-G250 meteo autogyro drone offers significant operational advantages due to its lightweight, absence of parachute, inherent safety mechanisms, and safe-descent design.
+
+## Why Choose the TF-G250?
+
+* **Fully controlled and safe descent** — autorotation eliminates the need for a parachute.
+* **Energy-efficient design** — energy recuperation during descent reduces battery mass.
+* **Low operating cost and high reusability** — unlike disposable sondes.
+* **Greater usable ceiling** than typical multirotors of comparable weight.
+* **Benign glide path** ensures low risk in case of emergency.
+
+These properties make TF-G250 an ideal solution for research institutions and meteorological services seeking sustainable and repeatable atmospheric profiling alternative to classical radiosondes.
 
 ## Key Design Features
 
@@ -34,22 +44,20 @@ The TF-G250 addresses a rapidly growing global demand for cost-effective, reusab
 * Optimized rotor design allows manual spin-up by hand before launch, enabling takeoff even without ambient wind
 * Low acoustic signature
 
-These design choices provide the TF-G250 with a distinct competitive edge, allowing safe and controlled descent while significantly improving energy efficiency.
-
 ### Purchasing Information
 
 The TF-G250 is currently available for research, testing, and pilot deployments. For quotations, technical consultations, or cooperation proposals, please contact [ThunderFly s.r.o.](https://www.thunderfly.cz/) directly at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 
-We are the original developers and manufacturers of the TF-G250 platform, which gives us full control over its design and customization. This allows us to adapt the configuration to specific mission profiles or integrate additional instrumentation upon request.
+We are the original developers and manufacturers of the TF-G250 platform, which gives us full control over its design and customization. This allows us to adapt the configuration to specific mission profiles or integrate additional instrumentation upon request. Custom configurations (sensor payloads, telemetry frequencies, or autopilot integration) can be supplied individually.
 
 ## Technical Specifications
-
-The following table provides a detailed overview of the key meteorological performance parameters of the TF-G250. These specifications are based on the integrated  sensors.
 
 | Parameter                     | Specification                                           |
 | ----------------------------- | ------------------------------------------------------- |
 | Maximum Take-off Weight       | < 250 g (C0 category)                                   |
 | Operational Altitude          | ~3.2 km AGL self-powered, ~32km AMSL balloon-launched   |
+| Power Supply                  | 2S Li-ion battery (2×18650, ~19 Wh)                    |
+| Endurance                     | ~17 min climb / ~20 min total cycle                    |
 | Temperature Range             | –40 to +40 °C                                           |
 | Temperature Accuracy          | ±0.2 °C (typical)                                       |
 | Temperature Resolution        | 0.01 °C                                                 |
@@ -92,14 +100,32 @@ The TF-G250 is ideally suited for detailed [atmospheric boundary layer (ABL)](ht
 
 ![Temperature and Humidity Profile](Temperature_and_relative_humidity_profile.png)
 
-Temperature and relative humidity are plotted against altitude above ground level (AGL). A slight difference is visible between the ascent and descent, with increased humidity observed during the descent due to the overflight of vegetated terrain near a water body.
+Temperature and relative humidity plotted against altitude above ground level (AGL). A slight difference between ascent and descent is visible, with increased humidity during descent due to overflight of vegetated terrain near a water body.
 
 ![Wind Hodograph](wind_hodograph.png)
 
-Hodograph of wind speed and direction, color-coded by altitude AGL. Wind structure indicates turbulence within the sampled boundary layer.*
+Hodograph of wind speed and direction, color-coded by altitude AGL, indicating turbulence structure within the boundary layer.
 
 In this particular mission, the takeoff and landing occurred at different locations. During landing, the sensor passed over a grassy area near a water surface, which resulted in a localized increase in measured relative humidity. These variations highlight the sensitivity of the TF-G250 system to microclimatic effects within the ABL.
 
+## Ground Segment and Data Use
+
+A compact **ground station** accompanies the TF-G250 system, including a QFH antenna, tripod, receiver, and telemetry visualization tools. Data can be directly processed using [thundeR](https://bczernecki.github.io/thundeR/) or [SHARPpy](https://github.com/sharppy/SHARPpy), producing BUFR-compatible profiles for integration into meteorological networks.
+
+Collected profiles are suitable for numerical weather prediction (NWP), aviation and storm forecasting, air-quality studies, and climate research.
+
+### Transport and Field Deployment
+
+The autogyro and accessories are packaged in a rugged **Eurobox-type logistics container (60 × 40 × 9 cm)**, with one handle on the long side, suitable for field logistics and automated handling systems.
+
+  - Outer dimensions: 60 × 40 × 9 cm  
+  - Material: High-quality PP  
+  - Packaging weight**: ~2.5 kg
+  - Euro-pallet capacity: up to 108 containers per 120 × 80 cm pallet  
+
+All components — the TF-G250 vehicle, spare rotor blades, ground station, antennas, cabling, and spare parts — are organized into custom-fit compartments.
+The standard Eurobox format allows secure stacking, efficient palletization, and simple integration into existing logistics systems.
+Thanks to this design, the entire system can be shipped and handled like conventional laboratory or industrial equipment, reducing handling risk and streamlining deployment workflows.
 
 ## Operational Flight Procedure
 
@@ -117,7 +143,4 @@ The TF-G250 supports two main operational procedures for atmospheric profiling:
 
 Future enhancements may include ground-based automation for launch, recovery, and servicing of both operational modes.
 
-### Data Processing
-
-Meteorological data collected by the TF-G250 are processed using standard meteorological software such as [thundeR](https://bczernecki.github.io/thundeR/) and [SHARPpy](https://github.com/sharppy/SHARPpy), with outputs available in the [BUFR format](https://en.wikipedia.org/wiki/BUFR) for ease of integration into existing meteorological workflows.
 
