@@ -22,9 +22,12 @@ The TFGPS01 is a high-end precision GNSS navigation module designed for UAV appl
 - **High Noise Immunity**: Optimized for RF-noisy environments with high-linearity and dynamic range LNA.
 - **Daylight Visible LEDs**: Status indicators for power, GPS, RTK, and safety features.
 
-## Handling Precautions
-- The **TFGPS01** is a highly sensitive device; handle it with care.
-- Avoid direct contact with the antenna to prevent damage from sweat acids.
+## Availability
+
+The TFGPS01A module is available for purchase from:
+- [ThunderFly s.r.o.](https://www.thunderfly.cz/)
+- [Lectronz](https://lectronz.com/products/1057) or [Tindie](https://www.tindie.com/products/21789/)
+- For inquiries, contact: sale@thunderfly.cz
 
 ## Compatible GNSS Receiver Modules
 The module is by default equipped with:
@@ -89,7 +92,7 @@ The full schematic is available as [KiCAD project in repository](https://github.
 
 ### I2C AUX Connector
 
-I2C AUX is I2C1 output from the autopilot. No other device is connected to I2C.
+I2C AUX is I2C1 output from the autopilot. No other device is connected to the I2C.
 
 | Pin | Name |
 |---|-----|
@@ -132,16 +135,15 @@ USB is connected directly to the uBlox module for configuration and testing.
 Configuration via [u-center](https://www.u-blox.com/en/product/u-center).
 
 ## Technical Specifications
+
 - **Dimensions**: 50x50x11mm.
 - **Weight**: 31g.
 - **Power Consumption**: 40mA (without beeper active).
 
-## Availability
-The **TFGPS01A** module is available for purchase from:
-- [ThunderFly s.r.o.](https://www.thunderfly.cz/)
-- [Tindie Store](https://www.tindie.com/products/21789/)
-- For inquiries, contact: **sale@thunderfly.cz**
-
 For more detailed documentation and open-hardware design files, refer to the [GitHub repository](https://github.com/ThunderFly-aerospace/TFGPS01).
+
+## Handling Precautions
+- The TFGPS01 is a highly sensitive device; handle it with care.
+- Avoid direct contact with the antenna to prevent damage from sweat acids.
 
 
