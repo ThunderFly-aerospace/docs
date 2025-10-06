@@ -16,10 +16,8 @@ The TFI2CEXT01 is an I²C bus extension module designed to extend the possible t
 </p>
 
 ## Availability
-The TFI2CEXT01 I²C bus extender is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/) For purchasing, you can:
-- Email: [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
-- Or shop directly at [Lectronz](https://lectronz.com/products/1059) or [Tindie](https://www.tindie.com/products/26352/)
-
+The TFI2CEXT01 I²C bus extender is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/) For purchasing, you can shop directly at [Lectronz](https://lectronz.com/products/1059) or [Tindie](https://www.tindie.com/products/26352/). For special requests or modifications, please write an inquiry to [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+ 
 ## Parameters
 
 | Parameter                        | Value             | Description                                                  |
