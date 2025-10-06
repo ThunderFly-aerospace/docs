@@ -100,7 +100,7 @@ The TF-G250 is ideally suited for detailed [atmospheric boundary layer (ABL)](ht
 
 ![Temperature and Humidity Profile](Temperature_and_relative_humidity_profile.png)
 
-Temperature and relative humidity plotted against altitude above ground level (AGL). A slight difference between ascent and descent is visible, with increased humidity during descent due to overflight of vegetated terrain near a water body.
+Temperature and relative humidity plotted against altitude above ground level (AGL). A slight difference between ascent and descent is visible, with increased humidity during descent due to the overflight of vegetated terrain near a water body.
 
 ![Wind Hodograph](wind_hodograph.png)
 
@@ -110,7 +110,7 @@ In this particular mission, the takeoff and landing occurred at different locati
 
 ## Ground Segment and Data Use
 
-A compact **ground station** accompanies the TF-G250 system, including a QFH antenna, tripod, receiver, and telemetry visualization tools. Data can be directly processed using [thundeR](https://bczernecki.github.io/thundeR/) or [SHARPpy](https://github.com/sharppy/SHARPpy), producing BUFR-compatible profiles for integration into meteorological networks.
+A compact ground station accompanies the TF-G250 system, including a QFH antenna, tripod, receiver, and telemetry visualization tools. Data can be directly processed using [thundeR](https://bczernecki.github.io/thundeR/) or [SHARPpy](https://github.com/sharppy/SHARPpy), producing BUFR-compatible profiles for integration into meteorological networks.
 
 Collected profiles are suitable for numerical weather prediction (NWP), aviation and storm forecasting, air-quality studies, and climate research.
 
@@ -122,8 +122,8 @@ The autogyro and accessories are packaged in a rugged **Eurobox-type logistics c
 
   - Outer dimensions: 60 × 40 × 9 cm  
   - Material: High-quality PP  
-  - Packaging weight**: ~2.5 kg
-  - Euro-pallet capacity: up to 108 containers per 120 × 80 cm pallet  
+  - Packaging weight: ~2.5 kg
+  - Euro-pallet capacity: up to 108 units per 120 × 80 cm pallet  
 
 All components — the TF-G250 vehicle, spare rotor blades, ground station, antennas, cabling, and spare parts — are organized into custom-fit compartments.
 The standard Eurobox format allows secure stacking, efficient palletization, and simple integration into existing logistics systems.
@@ -131,18 +131,16 @@ Thanks to this design, the entire system can be shipped and handled like convent
 
 ## Operational Flight Procedure
 
-The TF-G250 supports two main operational procedures for atmospheric profiling:
+The TF-G250 supports several flight procedures for atmospheric profiling:
 
-1. **Automatic Powered Flight:** The autogyro performs vertical profiling by executing a controlled spiral ascent followed by a descent. This method allows adaptation to wind conditions, including straight vertical climbs into the wind when spiral flight is less effective.
+- **Automatic Powered Flight:** The autogyro performs vertical profiling by executing a controlled spiral ascent followed by a descent. This method allows adaptation to wind conditions, including straight vertical climbs into the wind when spiral flight is less effective.
 
 <div style="width:100%; padding-top: 56.25%;position: relative;overflow: hidden;">
   <iframe style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;" src="https://www.youtube.com/embed/DTOk--t4eaM?loop=1&playlist=DTOk--t4eaM&mute=1" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-
-2. **Balloon-Assisted Deployment:** Radiosonde-like flight - for higher altitudes beyond the reach of the autogyro's own propulsion, the TF-G250 can be carried aloft by a traditional meteorological balloon. Upon reaching the desired altitude, the TF-G250 detaches and performs a controlled descent, collecting atmospheric data during both the ascent (via telemetry relay) and the descent phase.
-
-Future enhancements may include ground-based automation for launch, recovery, and servicing of both operational modes.
+- **Balloon-Assisted Deployment:** Radiosonde-like flight - for higher altitudes beyond the reach of the autogyro's own propulsion, the TF-G250 can be carried aloft by a traditional meteorological balloon. Upon reaching the desired altitude, the TF-G250 detaches and performs a controlled descent, collecting atmospheric data during the ascent (via telemetry relay) and the descent phase.
 
 
+- **Automated Ground Vehicle Launch and Recovery:** The TF-G250 can be launched and retrieved automatically using a small autonomous ground vehicle. This method is compatible with existing stratospheric balloon infrastructure, which typically consists of a reinforced flat area and a compact shelter or garage where the equipment is stored. Such automation enables repeated launches and recoveries with minimal human presence, improving operational efficiency during long-term or remote-site campaigns.
