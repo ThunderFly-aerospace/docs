@@ -30,9 +30,7 @@ Meanwhile, [TF-ATMON](https://github.com/ThunderFly-aerospace/TF-ATMON) compleme
 
 ## Vendor Information
 
-The TF-simulator, including professional support, is provided by [ThunderFly s.r.o.](https://www.thunderfly.cz/).
-
-For inquiries, training, or paid support options, contact: **[sale@thunderfly.cz](mailto:sale@thunderfly.cz)**
+The TF-simulator, including professional support, is provided by [ThunderFly s.r.o.](https://www.thunderfly.cz/). For inquiries, training, or paid support options, contact: **[sale@thunderfly.cz](mailto:sale@thunderfly.cz)**
 
 ## Key Features
 

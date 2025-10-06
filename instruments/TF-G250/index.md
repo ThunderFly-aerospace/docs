@@ -36,6 +36,12 @@ The TF-G250 addresses a rapidly growing global demand for cost-effective, reusab
 
 These design choices provide the TF-G250 with a distinct competitive edge, allowing safe and controlled descent while significantly improving energy efficiency.
 
+### Purchasing Information
+
+The TF-G250 is currently available for research, testing, and pilot deployments. For quotations, technical consultations, or cooperation proposals, please contact [ThunderFly s.r.o.](https://www.thunderfly.cz/) directly at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+
+We are the original developers and manufacturers of the TF-G250 platform, which gives us full control over its design and customization. This allows us to adapt the configuration to specific mission profiles or integrate additional instrumentation upon request.
+
 ## Technical Specifications
 
 The following table provides a detailed overview of the key meteorological performance parameters of the TF-G250. These specifications are based on the integrated  sensors.
