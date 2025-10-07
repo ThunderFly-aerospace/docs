@@ -29,9 +29,10 @@ The TF-G250 addresses a rapidly growing global demand for cost-effective, reusab
 * **Energy-efficient design** — energy recuperation during descent reduces battery mass.
 * **Low operating cost and high reusability** — unlike disposable sondes.
 * **Greater usable ceiling** than typical multirotors of comparable weight.
-* **Benign glide path** ensures low risk in case of emergency.
+* **Wind gust resistance** — The autogyro airframe is inherently stable by principle of flight and, therefore, less affected by sudden gusts than multirotor or fixed-wing platforms, ensuring operation even under turbulent weather.
+* **Benign glide path** ensures low airspace risk in case of emergency.
 
-These properties make TF-G250 an ideal solution for research institutions and meteorological services seeking sustainable and repeatable atmospheric profiling alternative to classical radiosondes.
+These properties make TF-G250 an ideal solution for research institutions and meteorological services seeking a sustainable and repeatable atmospheric profiling alternative to classical radiosondes.
 
 ## Key Design Features
 
@@ -42,6 +43,7 @@ These properties make TF-G250 an ideal solution for research institutions and me
 * Real-time telemetry for atmospheric data publication and processing
 * Extremely low maintenance with easy repairability
 * Optimized rotor design allows manual spin-up by hand before launch, enabling takeoff even without ambient wind
+* High resistance to icing — the centrifugal rotor effect combined with ice-phobic surface treatment provides passive anti-icing protection
 * Low acoustic signature
 
 ### Purchasing Information
