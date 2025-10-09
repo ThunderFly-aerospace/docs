@@ -56,7 +56,7 @@ We are the original developers and manufacturers of the TF-G250 platform, which 
 
 | Parameter                     | Specification                                           |
 | ----------------------------- | ------------------------------------------------------- |
-| Maximum Take-off Weight       | < 250 g (C0 category)                                   |
+| Maximum Take-off Weight       | 250 grams (C0 category)                                   |
 | Operational Altitude          | ~3.2 km AGL self-powered, ~32km AMSL balloon-launched   |
 | Power Supply                  | 2S Li-ion battery (2×18650, ~19 Wh)                    |
 | Endurance                     | ~17 min climb / ~20 min total cycle                    |
@@ -78,6 +78,16 @@ We are the original developers and manufacturers of the TF-G250 platform, which 
 | Effective Vertical Resolution | 5 m                                                     |
 | Data Output Format            | BUFR-compatible                                         |
 | Telemetry                     | Real-time via onboard radio modem                       |
+
+### Optional Sensors
+
+* **UV Spectral Sensor:** Measures ultraviolet spectrum for atmospheric radiation studies.
+* **VIS Light Sensor:** Detects optical flashes for storm proximity lightning monitoring and light-pollution monitoring.
+* **FLIR Thermal Imaging Matrix:**
+  * **Downward orientation:** Surface temperature mapping for boundary-layer studies.
+  * **Upward orientation:** Cloud-base detection and thermal cloud analysis.
+  * **Lateral orientation:** Navigation toward convective or storm cloud formations.
+* **CO₂ Sensor:** Enables detection and mapping of volcanic gas emissions or geothermal vent activity.
 
 ## Meteorological Applications
 
