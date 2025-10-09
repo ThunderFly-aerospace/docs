@@ -18,19 +18,22 @@ To enhance the ease of learning autogyro technology, we made it possible to [sim
 
 ## The main design highlights
 
-  * Micro payload load capacity suitable for multiple types of [TF-ATMON atmospheric sensors](https://www.thunderfly.cz/tf-atmon.html)
+  * Micro payload load capacity suitable for multiple types of [TF-ATMON atmospheric sensors](/instruments/TF-ATMON)
   * Low audible noise
   * High maneuverability and agility
   * Extreme tolerance to rotor blade damage
   * Repairable and low maintenance
   * Use of 3D printing flexibility
-  * [Simulation model available](https://github.com/ThunderFly-aerospace/FlightGear-TF-G2)
-  * [Car roof takeoff ready](https://github.com/ThunderFly-aerospace/TF-SIMPLEPLATFORM)
+  * [Simulation model available](/instruments/TF-simulator/Vehicles#tf-g2-uav-autogyro)
+  * [Car roof takeoff capable](https://youtu.be/3rhRHRPYnNQ)
 
 Based on those features, the TF-G2 is perfectly suitable for [atmospheric measurement applications](https://www.thunderfly.cz/tf-atmon.html). That could be illustrated by the [successful integration of multiple sensor types](https://github.com/ThunderFly-aerospace/TFUNIPAYLOAD01). 
 
+
+
+
 ## Applications
-Here are some examples of existing use cases for TF-G2 as a lightweight sensor carrier. These application-specific use cases extend the integrated sensing possibilities provided by existing autogyro avionics. The inherently existing onboard sensors in avionics are position, time, wind speed, direction and velocity, and atmospheric pressure.
+Here are some examples of existing use cases for TF-G2 as a lightweight sensor carrier. These application-specific use cases extend the integrated sensing possibilities provided by existing autogyro avionics. The inherently existing onboard sensors in avionics are position, time, wind speed, direction, velocity, and atmospheric pressure.
 
 ### Particulate matter sensing
 
@@ -60,7 +63,7 @@ Electric field monitoring via TF-G2 UAV autogyro near thunderstorms entails the 
 
 ![TF-G2 with installed THUNDERMILL electric field sensor](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_THUNDERMILL.jpg)
 
-### Ionising radiation monitoring
+### Ionizing radiation monitoring
 
 Ionizing radiation monitoring in the atmosphere involves detecting and quantifying radioactive particles using specialized devices like semiconductor-based ionizing radiation [AIRDOS03](/avionics/AIRDOS03) spectrometer and dosimeter. This instrument measures the intensity and spectral distribution of ionizing radiation, such as alpha, beta, gamma, and X-ray emissions that can originate from natural sources or human activities. The compact and precise nature of semiconductor-based devices allows for sensitive detection and accurate quantification of radiation levels. Monitoring atmospheric ionizing radiation is vital for assessing environmental radiation hazards, managing nuclear emergencies, and supporting research in fields such as meteorology, geology, and climate science. These advanced devices help ensure public safety and enhance our understanding of natural and anthropogenic radioactive processes in the atmosphere.
 
