@@ -21,9 +21,9 @@ The TF-G250 combines the simplicity of a balloon with the control of a drone —
   </iframe>
 </div>
 
-The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric sounding tools. Unlike traditional radiosonde solutions, the TF-G250 meteo autogyro drone offers significant operational advantages due to its lightweight, absence of parachute, inherent safety mechanisms, and safe-descent design.
+The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric sounding tools. Unlike traditional radiosonde solutions, the TF-G250 meteo autogyro drone offers significant operational advantages due to its lightweight, absence of a parachute, inherent safety mechanisms, and safe-descent design.
 
-## Why Choose the TF-G250?
+## Why Choose Autogyro?
 
 * **Fully controlled and safe descent** — autorotation eliminates the need for a parachute.
 * **Energy-efficient design** — energy recuperation during descent reduces battery mass.
@@ -59,7 +59,7 @@ We are the original developers and manufacturers of the TF-G250 platform, which 
 | Maximum Take-off Weight       | 250 grams (C0 category)                                   |
 | Operational Altitude          | ~3.2 km AGL self-powered, ~32km AMSL balloon-launched   |
 | Power Supply                  | 2S Li-ion battery (2×18650, ~19 Wh)                    |
-| Endurance                     | ~17 min climb / ~20 min total cycle                    |
+| Endurance                     | ~17 min climb / ~25 min total cycle                    |
 | Temperature Range             | –40 to +40 °C                                           |
 | Temperature Accuracy          | ±0.2 °C (typical)                                       |
 | Temperature Resolution        | 0.01 °C                                                 |
@@ -82,7 +82,7 @@ We are the original developers and manufacturers of the TF-G250 platform, which 
 ### Optional Sensors
 
 * **UV Spectral Sensor:** Measures ultraviolet spectrum for atmospheric radiation studies.
-* **VIS Light Sensor:** Detects optical flashes for storm proximity lightning monitoring and light-pollution monitoring.
+* **VIS Light Sensor:** Detects optical flashes for storm proximity lightning, and light-pollution monitoring.
 * **FLIR Thermal Imaging Matrix:**
   * **Downward orientation:** Surface temperature mapping for boundary-layer studies.
   * **Upward orientation:** Cloud-base detection and thermal cloud analysis.
