@@ -8,7 +8,7 @@ nav_order: "2"
 
 # TF-G2 - Unmanned Autogyro Development Kit
 
-Check the introducting video to quickly get an overview: 
+Check the introductory video to quickly get an overview: 
 [![ThuderFly_TFG2_training_autogyro_prototype](https://user-images.githubusercontent.com/5196729/144823035-37a70a1a-de21-4eb6-ab80-2aa2d4ea78db.gif)](http://www.youtube.com/watch?v=6PtS-MwnM_8)
 
 [TF-G2](https://www.thunderfly.cz/tf-g2.html) Autogyro is well-suited for training and for gaining experience with autogyro mission planning. TF-G2 is limited to light payloads, but it shares all the specific properties of larger autogyros in our offering. It may find application in less demanding flight operations; however, its main purpose is to be a tool for low-cost application practice. The autogyro’s small size leads to easy transport, repairs, and maintenance.
@@ -43,11 +43,11 @@ To enhance the ease of learning autogyro technology, we made it possible to [sim
 | Launch methods | Hand or car-roof takeoff |
 | EASA Category | C2 |
 
-Optionally Measured quantities: Temperature, humidity, airborne particles (PM₀․₅–PM₁₀), ionizing radiation, gases (CO₂, O₃, SOₓ, NOₓ …), and electric field intensity. Additional sensor types can be integrated on request
+Optionally measured quantities: Temperature, humidity, airborne particles (PM₀․₅–PM₁₀), ionizing radiation, gases (CO₂, O₃, SOₓ, NOₓ …), thermal imaging matrix, and electric field intensity. Additional sensor types can be integrated on request
 
 ## Application Examples
 
-Here are some examples of use cases for TF-G2 as a lightweight sensor carrier. These application-specific use cases of the integrated sensing possibilities provided by additional avionics. The default onboard sensors measure position, time, wind speed, direction, velocity, and atmospheric pressure.
+Here are some examples of use cases for TF-G2 as a lightweight sensor carrier. These application-specific use cases of the integrated sensing possibilities are provided by additional avionics. The default onboard sensors measure position, time, wind speed, direction, velocity, and atmospheric pressure.
 
 ### Particulate matter sensing
 
@@ -65,7 +65,7 @@ Particulate matter sensing in the atmosphere is a scientific technique used to m
 
 ### Humidity and temperature sensing
 
-Humidity and temperature sensing in [atmospheric vertical sounding](https://en.wikipedia.org/wiki/Atmospheric_sounding) involves the measurement of atmospheric moisture content and temperature at various altitudes. Instruments like the [TFHT01 sensor](/avionics/TFHT01) could be used. These compact and lightweight sensors, designed specifically for UAV applications.
+Humidity and temperature sensing in [atmospheric vertical sounding](https://en.wikipedia.org/wiki/Atmospheric_sounding) involves the measurement of atmospheric moisture content and temperature at various altitudes. Instruments like the [TFHT01 sensor](/avionics/TFHT01) could be used. These compact and lightweight sensors are designed specifically for UAV applications.
 
 ![TF-G2 atmospheric sounding experiment](https://raw.githubusercontent.com/ThunderFly-aerospace/TFHT01/TFHT01B/doc/img/TFHT_vertical_profile_measurement.png)
 
@@ -73,11 +73,11 @@ An example of an atmospheric profiling experiment. The time difference between t
 
 ### Electric field monitoring
 
-The charged particles present in thunderstorms create strong electric fields, which can be detected and monitored by [THUNDERMILL01 sensor](/avionics/THUNDERMILL01). The TF-G2 autogyro, equipped with this sensor, can navigate challenging weather conditions and provide, real-time data on the strength and spatial distribution of the electric fields. This UAV-autogyro technology offers a unique, mobile platform to safely investigate these intense electrical phenomena.
+The charged particles present in thunderstorms create strong electric fields, which can be detected and monitored by [THUNDERMILL01 sensor](/avionics/THUNDERMILL01). The TF-G2 autogyro, equipped with this sensor, can navigate challenging weather conditions and provide real-time data on the strength and spatial distribution of the electric fields. This UAV-autogyro technology offers a unique, mobile platform to safely investigate these intense electrical phenomena.
 
 ![TF-G2 with installed THUNDERMILL electric field sensor](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_THUNDERMILL.jpg)
 
 ### Ionizing radiation monitoring
 
-Ionizing radiation monitoring in the atmosphere involves detecting and quantifying radioactive particles using specialized devices like semiconductor-based ionizing radiation [AIRDOS03](/avionics/AIRDOS03) spectrometer and dosimeter. This instrument measures the intensity and spectral distribution of ionizing radiation, such as alpha, beta, gamma, and X-ray emissions that can originate from natural sources or human activities. The compact semiconductor-based devices allows for detection and quantification of radiation intensity. Monitoring atmospheric ionizing radiation for assessing environmental radiation hazards, managing nuclear emergencies, and supporting research in fields such as meteorology, geology, and climate science.
+Ionizing radiation monitoring in the atmosphere involves detecting and quantifying radioactive particles using specialized devices like semiconductor-based ionizing radiation [AIRDOS03](/avionics/AIRDOS03) spectrometer and dosimeter. This instrument measures the intensity and spectral distribution of ionizing radiation, such as alpha, beta, gamma, and X-ray emissions that can originate from natural sources or human activities. The compact semiconductor-based devices allow for the detection and quantification of radiation intensity. Monitoring atmospheric ionizing radiation for assessing environmental radiation hazards, managing nuclear emergencies, and supporting research in fields such as meteorology, geology, and climate science.
 
