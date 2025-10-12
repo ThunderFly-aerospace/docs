@@ -16,9 +16,11 @@ That is a common problem in case multiple I2C sensors with the same address (or 
 The module is based on [LTC4317](https://www.analog.com/media/en/technical-documentation/data-sheets/4317fa.pdf) I2C address translator IC.
 The module is designed and optimized for use on Pixhawk-compatible drones, especially UAVs. The design of the module is compatible with the [dronecode connectors standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf).
 
-## Where to get it?
+## How to Buy
 
-ThunderFly I2C address translator is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/thunderfly/tfi2cadt01-i2c-address-translator/).
+- Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for quotations, customizations, or volume pricing handled directly by ThunderFly s.r.o.
+- [Purchase TFI2CADT01 on Lectronz](https://lectronz.com/products/1063) for EU-friendly fulfillment.
+- [Purchase TFI2CADT01 on Tindie](https://www.tindie.com/products/thunderfly/tfi2cadt01-i2c-address-translator/) for worldwide availability.
 
 ## Translation function
 

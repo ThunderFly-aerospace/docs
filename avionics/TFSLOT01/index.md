@@ -20,7 +20,11 @@ nav_order: "10"
   * Customizable 3D-printed case to fit specific applications.
   * Integrated IMU to vibration diagnostics on AoA measurement.
 
-TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to sale@thunderfly.cz or shop at [Lectronz](https://lectronz.com/products/1058) or [Tindie store](https://www.tindie.com/products/21790/).
+## How to Buy
+
+- Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) with your requirements for quotations or tailored configurations provided by ThunderFly s.r.o.
+- [Purchase TFSLOT01 on Lectronz](https://lectronz.com/products/1058) for convenient EU logistics.
+- [Purchase TFSLOT01 on Tindie](https://www.tindie.com/products/21790/) for global delivery options.
 
 ## Technical Parameters
 

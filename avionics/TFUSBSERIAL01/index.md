@@ -21,9 +21,11 @@ The converter is designed to service and debug operations on UAVs. It respects t
   * The power delivered from USB is protected from excess current possibly drawn by peripheral or FMU
   * The accidental power from FMU to USB is protected by reverse diode
 
-## Where to get it?
+## How to Buy
 
-ThunderFly Serial Telemetry Interface is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to sale@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/34364/).
+- Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) to request quotations, customization details, or volume pricing provided by ThunderFly s.r.o.
+- [Purchase TFUSBSERIAL01 on Lectronz](https://lectronz.com/products/1066) for streamlined EU fulfillment.
+- [Purchase TFUSBSERIAL01 on Tindie](https://www.tindie.com/products/34364/) for worldwide availability.
 
 
 ### Usage
