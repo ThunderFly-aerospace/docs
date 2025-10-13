@@ -11,9 +11,9 @@ At [ThunderFly s.r.o.](https://www.thunderfly.cz/), we're dedicated to advancing
 
 ## ThunderFly instruments
 
-![UAV autogyro during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_fly_clouds.jpg)
-
 Our state-of-the-art measurement solutions for UAV technology. These tools are designed for atmospheric measurements in demanding conditions, offering accuracy and reliability.
+
+![UAV autogyro during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_fly_clouds.jpg)
 
 - **Measuring Devices Carriers**: The autogyro airframes (TF-G1, [TF-G2](/instruments/TF-G2) and [TF-G250](/instruments/TF-G250)) are engineered for extreme stability in adverse weather conditions.
 - **[TF-ATMON Toolchain](/instruments/TF-ATMON)**: Transform data into actionable insights by advanced processing software, tailored for atmospheric analysis.
@@ -21,13 +21,13 @@ Our state-of-the-art measurement solutions for UAV technology. These tools are d
 
 ## ThunderFly avionics
 
-Improve your UAV's performance with [ThunderFly avionics line](/avionics), featuring small, powerful hardware devices. These gadgets are designed to handle specific technical tasks, from airspeed and temperature measurement to telemetry data transmission. Highlights include:
+Improve your UAV's performance with [ThunderFly avionics line](/avionics), featuring small, powerful hardware devices. These gadgets are designed to handle specific technical tasks, from airspeed and temperature measurement to telemetry data transmission.
+
+![UAV avionic component](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSLOT01/TFSLOT01A/doc/img/TFSLOT_1_small.jpg)
 
 - **On-board instruments**: Capture precise [RPM](/avionics/TFRPM01) or [airspeed](/avionics/TFSLOT01) data to optimize UAV performance and safety.
 - **[Environmental Sensors](https://docs.thunderfly.cz/avionics/sensors/)**: Monitor [dust, atmospheric pollution](/avionics/TFPM02/), or operational [temperatures and humidity](/avionics/TFHT01/) with high-accuracy sensors designed for atmospheric data collection. Customizable to fit various drone airframes.
-- **[Telemetry Interconnection Solutions](https://docs.thunderfly.cz/avionics/communication/)**: Ensure seamless communication between UAVs and ground stations with our [robust telemetry modems](/avionics/TFSIK01/).
-
-![UAV avionic component](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSLOT01/TFSLOT01A/doc/img/TFSLOT_1_small.jpg)
+- **[Telemetry Solutions](https://docs.thunderfly.cz/avionics/communication/)**: Ensure seamless communication between UAVs and ground stations with our [robust telemetry modems](/avionics/TFSIK01/).
 
 The avionics devices are versatile and modular to solve a wide range of engineering challenges in the UAV industry.
 
