@@ -32,6 +32,14 @@ ThunderFly maintains multiple autogyro configurations to address diverse researc
 
 Across the lineup, ThunderFly autogyros stand out for their inherent stability in turbulent weather at low forward speeds.  These make them ideal for atmospheric sampling, scientific payload testing. The [TF-B1 balloon platform](/instruments/TF-B1/) extends reach into the stratosphere. Because all platforms adopt standardized [ThunderFly avionics](/avionics/), teams can migrate payloads, ground control procedures, and maintenance practices from one airframe to another with minimal retraining.
 
+### Learning resources
+
+For those who are new to the principles of autogyro flight and would like to gain hands-on experience before working with professional research platforms, several hobby-grade RC kits are available from third parties.  
+A good example is the **LAHeli LA500 autogyro kit** ([link](https://laheli.com/web/product.php?model=j&pid=886)), which allows basic rotor handling and flight control practice using standard RC components.
+
+> Note: These third-party kits are not affiliated with ThunderFly and are intended solely for hobby use.
+
+
 ## Telemetry and control link options
 
 Reliable telemetry is mandatory for operations and data-processing backends.  ThunderFly systems support multiple communication tiers that can be matched to mission distance, bandwidth requirements, and regulatory constraints.
