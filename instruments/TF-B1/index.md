@@ -28,7 +28,26 @@ The [TF-B1](https://github.com/ThunderFly-aerospace/TF-B1) stratospheric balloon
   * Ground monitoring direcly by [TFUSBSERIAL01](/avionics/TFUSBSERIAL01)
 
 
-![Block diagram](block_schematics.png)
+## Technical specifications
+
+| Parameter | Typical value | Notes |
+|------------|----------------|-------|
+| **Maximum altitude** | 30 km | Verified in test flights |
+| **Payload capacity** | up to 2 kg | Depends on balloon size and helium fill |
+| **Flight duration** | 2–4 hours | Depending on ascent rate and burst altitude |
+| **Ascent rate** | 5–6 m/s | Typical for 2 kg payload with 1200–1600 g latex balloon |
+| **Descent system** | Parachute recovery | Automatically deployed after burst |
+| **Operating temperature range** | –60 °C to +40 °C | Electronics rated for stratospheric conditions |
+| **Power supply** | Li-ion battery pack, 7.2 V nominal | Managed by [TFSBEC01](/avionics/TFSBEC01) |
+| **Telemetry** | TFSIK01 (primary), TFLORA01 (backup) | Redundant communication systems |
+| **Positioning** | TFGPS01 GNSS receiver | Continuous location and altitude tracking |
+| **Sensor integration** | TFHT01 / TFHT02 / TF-ATMON | Atmospheric and environmental sensors |
+| **Data logging** | Onboard SD storage + real-time telemetry | Supports full mission replay |
+| **Structure** | EPP/foam gondola with modular avionics bay | Shock-resistant and lightweight |
+| **Launch method** | Free balloon launch with tether release | Compliant with national aviation regulations |
+| **Recovery** | GNSS-based tracking beacon | Enables field retrieval |
+
+![Block diagram](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-B1/refs/heads/main/doc/img/block_schematics.png)
 
 ## Applications
 
@@ -46,7 +65,7 @@ TF-B1 offers an accessible way for students and researchers to conduct real high
 
 ## Reference flights
 
-TF-B1 has been successfully deployed in multiple missions, proving its reliability and flexibility:
+TF-B1 has been successfully deployed in multiple missions:
 
 * [FIK-9 experiment](https://github.com/ODZ-UJF-AV-CR/FIK-9)
 * [FIK-6 high-altitude balloon flight](https://github.com/ODZ-UJF-AV-CR/FIK-6)
