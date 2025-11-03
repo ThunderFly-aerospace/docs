@@ -35,7 +35,7 @@ Sensors mounted on UAVs can be used for a variety of purposes. TFHT can measure 
 | Operational input voltage | 3.6 - 5.4V | Overvoltage internally protected by zener diode |
 | Mass | 2 g | PCB without cabling |
 | Dimensions | 30 x 15 x 6.5 mm |  PCB |
-| Weather resistance | IP40 | External connectors fully occupied. The sensor itself could be protected by IP67 according the [sensirion datasheet](https://sensirion.com/media/documents/9D103E42/61641F0F/Sensirion_Humidity_Sensors_SHT3x_Datasheet_Filter_Membrane.pdf) |
+| Weather resistance | IP40 | External connectors fully occupied. The sensor itself could be protected by IP67 according the [sensirion datasheet](https://sensirion.com/media/documents/9D103E42/67EB901F/HT_DS_SHT3x_Membrane.pdf) |
 
 
 ## Plastic case
@@ -80,7 +80,7 @@ After connecting to the autopilot and powering it on, a green LED on the sensor 
 
 ## Usage in PX4 autopilot firmware
 
-The [PX4 autopilot](https://github.com/PX4/PX4-Autopilot) firmware supports the sensor. Multiple sensors can be connected to one autopilot. The measured data are immediately sent to the ground station and they are also logged in the onboard ulog file. Sensor support can be enabled by setting the [SENS_EN_SHT3X](http://docs.px4.io/master/en/advanced_config/parameter_reference.html#SENS_EN_SHT3X) parameter to 1.
+The [PX4 autopilot](https://github.com/PX4/PX4-Autopilot) firmware supports the sensor. Multiple sensors can be connected to one autopilot. The measured data are immediately sent to the ground station, and they are also logged in the onboard ulog file. Sensor support can be enabled by setting the [SENS_EN_SHT3X](http://docs.px4.io/master/en/advanced_config/parameter_reference.html#SENS_EN_SHT3X) parameter to 1.
 
 
 ### Driver Commands Examples
@@ -101,7 +101,7 @@ Print the last measured values
 
     sht3x reset
 
-Reinitialize senzor, reset flags
+Reinitialize sensor, reset flags
 
 ### PX4 Driver Usage
 
@@ -130,7 +130,7 @@ sht3x <command> [arguments...]
 
 ## Usage in Ardupilot firmware
 
-In the Ardupilot firmware, the corresponding sht3x driver for TFHT01 is currently missing. The contributions are welcomed.
+In the Ardupilot firmware, the corresponding sht3x driver for TFHT01 is currently missing. The contributions are welcome.
 
 ## FAQ
 
