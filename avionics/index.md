@@ -167,19 +167,19 @@ The following table lists wholesale prices for avionics components for orders up
 | [TFSLOT01](https://docs.thunderfly.cz/avionics/TFSLOT01/) | €298,00 | €283,10 | €268,20 |
 | [TFHT01](https://docs.thunderfly.cz/avionics/TFHT01/) | €81,00 | €76,95 | €72,90 |
 | [TFHT02](https://docs.thunderfly.cz/avionics/TFHT02/) |	€60,75 | €57,71	| €54,68 |
-| [TFUSBSERIAL01](https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/) | €86,00 | €81,70 | €77,40 |
+| [TFUSBSERIAL01](https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/) | €41,00 |	€38,95 |€36,90 |
 | [TFPITOT01](https://docs.thunderfly.cz/avionics/TFPITOT01/) | €148,00 | €140,60 | €133,20 |
 | [TFGPS01](https://docs.thunderfly.cz/avionics/TFGPS01/) | €280,00 | €266,00 | €252,00 |
 | [TFGPSLITE02](https://docs.thunderfly.cz/avionics/TFGPSLITE02/) | €143,00 | €135,85 | €128,70 |
 | [TFI2CEXT01](https://docs.thunderfly.cz/avionics/TFI2CEXT01/) | €92,00 | €87,40 | €82,80 |
-| [TFSIK01](https://docs.thunderfly.cz/avionics/TFSIK01/) (pair e.g. 2pcs)| €323,83 | €307,64 | €291,45 |
+| [TFSIK01](https://docs.thunderfly.cz/avionics/TFSIK01/) | €161,92 |	€153,82 |	€145,72 |
 | [TFCAB15I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €8,00 | €7,60 | €7,20 |
 | [TFCAB30I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €8,50 | €8,08 | €7,65 |
 | [TFCAB45I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €9,00 | €8,55 | €8,10 |
 
 > **Note:**
 > - All prices are in EUR and **exclude VAT and shipping costs**.
-> - Pricing valid from **28 August 2025**.
+> - Pricing valid from **5 November 2025**.
 > - **Payment**: In advance via bank transfer based on a proforma invoice.
 > - **Shipping**: Costs depend on destination and carrier; quotes available on request.
 > - **Lead time**: Standard quantities are usually shipped within a week, with a maximum lead time of up to 4 weeks. Lead times for bulk orders may vary.
