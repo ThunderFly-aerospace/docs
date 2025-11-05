@@ -163,7 +163,7 @@ The following table lists wholesale prices for avionics components for orders up
 |--------------------|------------------|-------------------|--------------------|
 | [TFRPM01](https://docs.thunderfly.cz/avionics/TFRPM01/) | €74,00 | €70,30 | €66,60 |
 | [TFPROBE01](https://docs.thunderfly.cz/avionics/TFRPM01/probe#tfprobe01a---omnipolar-magnetic-and-reflective-optical-sensor-probe) | €27,00 | €25,65 | €24,30 |
-| [TFI2CADT01](https://docs.thunderfly.cz/avionics/TFI2CADT01/) | €89,00 | €84,55 | €80,10 |
+| [TFI2CADT01](https://docs.thunderfly.cz/avionics/TFI2CADT01/) | €69,00	| €65,55 |	€62,10 |
 | [TFSLOT01](https://docs.thunderfly.cz/avionics/TFSLOT01/) | €298,00 | €283,10 | €268,20 |
 | [TFHT01](https://docs.thunderfly.cz/avionics/TFHT01/) | €81,00 | €76,95 | €72,90 |
 | [TFHT02](https://docs.thunderfly.cz/avionics/TFHT02/) |	€60,75 | €57,71	| €54,68 |
@@ -171,7 +171,7 @@ The following table lists wholesale prices for avionics components for orders up
 | [TFPITOT01](https://docs.thunderfly.cz/avionics/TFPITOT01/) | €148,00 | €140,60 | €133,20 |
 | [TFGPS01](https://docs.thunderfly.cz/avionics/TFGPS01/) | €280,00 | €266,00 | €252,00 |
 | [TFGPSLITE02](https://docs.thunderfly.cz/avionics/TFGPSLITE02/) | €143,00 | €135,85 | €128,70 |
-| [TFI2CEXT01](https://docs.thunderfly.cz/avionics/TFI2CEXT01/) | €92,00 | €87,40 | €82,80 |
+| [TFI2CEXT01](https://docs.thunderfly.cz/avionics/TFI2CEXT01/) | €52,00 | €49,40 | €46,80 |
 | [TFSIK01](https://docs.thunderfly.cz/avionics/TFSIK01/) | €161,92 |	€153,82 |	€145,72 |
 | [TFCAB15I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €8,00 | €7,60 | €7,20 |
 | [TFCAB30I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €8,50 | €8,08 | €7,65 |
