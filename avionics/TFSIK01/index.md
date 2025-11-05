@@ -13,7 +13,7 @@ nav_order: "10"
 
 ## Overview
 
-The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges significantly better than one kilometer with a basic whip antenna kit. The range can be extended to several kilometers with the use of a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between the UAV and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
+The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges significantly better than one kilometer with a basic whip antenna kit. The range can be extended to several kilometers using a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between the UAV and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
 
 The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating dual antenna diversity and exceptional resistance to noise. This open-source hardware solution employs the advanced [Si1060](https://www.silabs.com/documents/public/data-sheets/Si106x-8x.pdf) chip from the Si10xx series and is further enhanced by the Si4463 EZRadioPRO transceiver, ensuring robust and secure communication capabilities. The modem's design prioritizes immunity to interference from out-of-band frequencies, guaranteeing reliable performance in challenging environments and securing its position as a top choice for UAV systems that demand the utmost data integrity and security.
 
@@ -39,7 +39,7 @@ The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating du
 
 ### Purchasing Information
 
-The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly from [Tindie store](https://www.tindie.com/products/34682/) or [Lectronz](https://lectronz.com/products/tfsik01-high-performance-uav-telemetry-modem) marketplaces. We are designers of this modem and therefore have full control of the modem construction and design. This gives us the ability to react even to non-standard requests for modification or functions.
+The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly from [Tindie store](https://www.tindie.com/products/34682/) or [Lectronz](https://lectronz.com/products/1067) marketplaces. We are the designers of this modem and therefore have full control of the modem's construction and design. This gives us the ability to react even to non-standard requests for modification or functions.
 
 
 ## Hardware Parameters
@@ -106,7 +106,7 @@ The TFSIK01 modem is powered by [SiK firmware](https://github.com/ThunderFly-aer
 
 The modem combines the following radio communication technologies:
 
-* **Frequency-Hopping Spread Spectrum (FHSS)**: The operating frequency band is divided into discrete channels. The hopping pattern is randomized per `NETID`, ensuring resilience against interference and channel collisions and comply with regulatory limits.
+* **Frequency-Hopping Spread Spectrum (FHSS)**: The operating frequency band is divided into discrete channels. The hopping pattern is randomized per `NETID`, ensuring resilience against interference and channel collisions, and complying with regulatory limits.
 
 * **Adaptive Time Division Multiplexing (TDM)**: Each modem takes turns transmitting data in synchronized time slices to avoid collisions. Transmission timing is dynamically scaled based on data rate and buffer status.
 
@@ -194,7 +194,7 @@ The full list of commands is maintained in the [firmware documentation](https://
 
 ## Range Optimization
 
-To achieve optimal range and performance with the TFSIK01 modem, it is essential to understand and configure the firmware parameters that influence the radio link. The following subsections provide guidance for adjusting key parameters such as data rate, duty cycle, and physical link geometry.
+To achieve optimal range and performance with the TFSIK01 modem, it is essential to understand and configure the firmware parameters that influence the radio link. The following subsections guide adjusting key parameters such as data rate, duty cycle, and physical link geometry.
 
 ### Choosing the Air Data Rate
 
@@ -415,7 +415,7 @@ Always verify the modem's compliance with local regulations and laws concerning 
 The easiest solution is the use of [TFUSBSERIAL01 gadget](https://docs.thunderfly.cz/avionics/TFUSBSERIAL01/) to create a virtual UART/Serial link from a USB-A or USB-C connector.
 
 
-### How I can update the firmware?
+### How can I update the firmware?
 
 Download the latest [firmware release](https://github.com/ThunderFly-aerospace/SiK/releases) and flash it to the TFSIK01 by using the following command:
 
