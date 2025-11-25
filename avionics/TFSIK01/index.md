@@ -11,6 +11,11 @@ nav_order: "10"
 
 ![TFSIK01 pair with USB-C converter](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/TFSIK01A/doc/img/TFSIK01_pair.jpg)
 
+### Purchasing Information
+
+The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly from [Tindie store](https://www.tindie.com/products/34682/) or [Lectronz](https://lectronz.com/products/1067) marketplaces. We are the designers of this modem and therefore have full control of the modem's construction and design. This gives us the ability to react even to non-standard requests for modification or functions.
+
+
 ## Overview
 
 The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges significantly better than one kilometer with a basic whip antenna kit. The range can be extended to several kilometers using a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between the UAV and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
@@ -35,12 +40,6 @@ The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating du
   - Integrates MAVLink protocol framing and status reporting
   - Achieves several kilometers of range with a small whip antenna
 - **Open-Source and Highly Configurable**: Loaded with SiK firmware for enhanced customization through AT and RT commands, it supports the MAVLink 2 protocol, Configurable through Mission Planner & APM Planner
-
-
-### Purchasing Information
-
-The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly from [Tindie store](https://www.tindie.com/products/34682/) or [Lectronz](https://lectronz.com/products/1067) marketplaces. We are the designers of this modem and therefore have full control of the modem's construction and design. This gives us the ability to react even to non-standard requests for modification or functions.
-
 
 ## Hardware Parameters
 
