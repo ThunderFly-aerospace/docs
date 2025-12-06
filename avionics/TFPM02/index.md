@@ -10,12 +10,10 @@ nav_order: "54"
 
 The TFPM02 sensor is a modular device for measuring particulate matter concentration in atmospheric research applications, particularly within the [TF-ATMON system](/instruments/TF-ATMON). It exists in two hardware variants:
 
-* **TFPM02A** based on the Sensirion **SPS30** sensor
-* **TFPM02B** based on the Sensirion **SEN5x** sensor
+* **TFPM02A** based on the Sensirion SPS30 sensor
+* **TFPM02B** based on the Sensirion SEN5x sensor
 
 Each variant offers distinct advantages and is optimized for different types of measurements.
-
----
 
 ## TFPM02B – SEN55-based variant
 
@@ -34,7 +32,7 @@ The TFPM02B variant integrates the [Sensirion SEN55](https://sensirion.com/produ
 
 ### Connectivity
 
-The sensor is connected directly to the PX4 autopilot via **JST-GH** cable over I²C. Output is translated to MAVLink via uOrb messages, enabling logging and real-time transmission to [TF-ATMON enabled GCS](/instruments/TF-GCS02).
+The sensor is connected directly to the PX4 autopilot via a JST-GH cable over I²C. Output is translated to MAVLink via uOrb messages, enabling logging and real-time transmission to [TF-ATMON enabled GCS](/instruments/TF-GCS02).
 
 ![View on TFPM02B sensor](https://raw.githubusercontent.com/ThunderFly-aerospace/TFPM02/refs/heads/TFPM02B/doc/img/SEN5x.jpg)
 
@@ -54,19 +52,14 @@ This variant is built around the [Sensirion SPS30](https://sensirion.com/product
 
 ### Connectivity
 
-The modified SPS30 sensor is connected to PX4 autopilot-supported hardware using a **ZHR-5 to JST-GH** cable. The sensor is then controlled directly by the autopilot firmware, and data is transmitted via MAVLink.
-
-![Bottom view on TFPM02A](https://raw.githubusercontent.com/ThunderFly-aerospace/TFPM02/refs/heads/TFPM02A/doc/img/TFPM02_bottom.jpg)
+The modified SPS30 sensor is connected to PX4 autopilot-supported hardware using a ZHR-5 to JST-GH cable. The sensor is then controlled directly by the autopilot firmware, and data is transmitted via MAVLink.
 
 ![Top view on TFPM02A](https://raw.githubusercontent.com/ThunderFly-aerospace/TFPM02/refs/heads/TFPM02A/doc/img/TFPM02_top.jpg)
 
----
 
 ## Availability
 
 The ThunderFly TFPM02 sensors (both A and B variants) are commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Please contact [sale@thunderfly.cz](mailto:info@thunderfly.cz) for inquiries, pricing, or customization.
-
----
 
 ## Demonstration
 
