@@ -9,7 +9,7 @@ nav_order: "10"
 # TFSIK01 - High-Performance Telemetry Modem
 
 
-![TFSIK01 pair with USB-C converter](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/TFSIK01A/doc/img/TFSIK01_pair.jpg)
+![TFSIK01 modem](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/refs/heads/TFSIK01C/doc/img/TFSIK01.jpg)
 
 ### Purchasing Information
 
@@ -383,6 +383,16 @@ That is why high‑altitude platforms and missions provide almost complete Fresn
 {: .warning }
 Like most RF devices, the TFSIK01 must not be operated without a properly connected and matched antenna. Doing so can damage the RF output stage.
 
+### TFSIK antenna kit
+
+External antennas are connected to the TFSIK modem by a pair of [MCX connectors](https://en.wikipedia.org/wiki/MCX_connector). For ease of use, we prepared a kit with simple whip antennas. This kit could be manufactured for multiple frequency bands. Here is 868 MHz as an example. The antenna kit strictly pairs only with the TFSIK modem tuned on the same frequency band.  
+
+![TFSIK01 antenna kit UAV variant](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/refs/heads/TFSIK01C/doc/img/868_MHz_antenna_kit_UAV.jpg)
+
+As you can see, the antenna kit contains two antennas. The antenna is tightened in position by SMA connectors. The optimal position depends on your exact setup, but generally, the antennae should be orthogonal to each other due to their "donut" radiation patterns.
+
+The whole setup of TFSIK01 with the antenna kit should be mounted by a pair of screws in the holes of the antenna kit.
+
 ### Connecting to Autopilot
 
 Connection to the autopilot flight controller is facilitated through a JST-GH cable with a 6-pin connector. While PX4 firmware initially configures the TELEM1 port for telemetry connections, adjustments in the PX4 or Ardupilot firmware settings allow for modem connections through any available UART port. 
@@ -397,7 +407,7 @@ The TFSIK01 modem directly interfaces with ground stations via its UART port, en
 
 To connect the modem to a computer, a USB to UART conversion is essential. The [TFUSBSERIAL01 module](/avionics/TFUSBSERIAL01), specifically designed for this purpose, features an FTDI-based USB chip for reliable data transmission and includes a USB-C connector for easy linking to computers or mobile devices, alongside a UART JST-GH connector for straightforward connection to the TFSIK01 modem.
 
-This versatile setup ensures the modem's applicability across a wide range of operational scenarios, from desktop-based ground control systems to mobile field deployments.
+![TFSIK01 pair with USB-C converter](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/TFSIK01A/doc/img/TFSIK01_pair.jpg)
 
 ### Frequency Options
 
