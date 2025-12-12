@@ -387,9 +387,10 @@ Like most RF devices, the TFSIK01 must not be operated without a properly connec
 
 External antennas are connected to the TFSIK modem by a pair of [MCX connectors](https://en.wikipedia.org/wiki/MCX_connector). For ease of use, we prepared a kit with simple whip antennas. These kits are available for multiple frequency bands; 868 MHz is shown here as an example. Each antenna kit must be used only with a TFSIK modem tuned to the same frequency band, otherwise RF performance will be severely degraded.  
 
-Two mechanically different variants of the antenna kit are available, optimized for different use cases. The both antenna kits are mounted to the flat surface using two screws through the mounting holes. The each antenna kit contains two antennas. The optimal installation depends on your exact setup, but generally, the antennae should be orthogonal to each other due to the "donut" radiation pattern of the each antenna.
-
 ![Typical whip antenna radiation pattern](./whip_antenna_radiation_pattern.png)
+
+
+Two mechanically different variants of the antenna kit are available, optimized for different use cases. The both antenna kits are mounted to the flat surface using two screws through the mounting holes. The each antenna kit contains two antennas. The optimal installation depends on your exact setup, but generally, the antennae should be orthogonal to each other due to the "donut" radiation pattern of the each antenna.
 
 #### UAV variant (vibration-resistant)
 
