@@ -248,7 +248,7 @@ Additionally, to correct the use of frequency hopping. The noise sources need to
 * Place antennas away from wideband EMI sources (motors, ESCs).
 * Use shielded USB cables and an externally powered USB hub on the ground station to reduce computer‑generated noise.
 
-Every **6 dB** of extra fade margin roughly doubles the coverage distance.
+Every 6 dB of extra fade margin roughly doubles the coverage distance.
 
 ### Link Budget
 
@@ -264,8 +264,8 @@ P_rx = P_tx  +  G_tx  +  G_rx  −  L_fs  −  L_misc
 | ----------- | ------------------------------------------------ | -------------------------------------------------------- |
 | **P\_tx**   | Transmit power (dBm)                             | 20 dBm (Regulatory maximum)                                 |
 | **G\_tx**   | Transmit‑side antenna gain                       | 2 dBi (433 MHz) / 3 dBi (868 MHz)                        |
-| **G\_rx**   | Receive‑side antenna gain                        | Same as **G\_tx** (symmetrical setup)                    |
-| **L\_fs**   | Free‑space path loss (dB)                        | Depends on **distance** and **frequency**                |
+| **G\_rx**   | Receive‑side antenna gain                        | Same as G\_tx (symmetrical setup)                    |
+| **L\_fs**   | Free‑space path loss (dB)                        | Depends on distance and frequency                |
 | **L\_misc** | Miscellaneous losses (cable, connectors, fading) | Typically 2‑5 dB (not included in simple examples below) |
 
 The receiver sensitivity of the TFSIK01 is ≈ −117 dBm at 64 kbps.  For a reliable link, we target ≥ 10 dB fade margin, so the maximum usable path loss is:
@@ -310,8 +310,6 @@ A 36 dB margin is ample; even after subtracting 10–15 dB for multipath and
 * **Transmit power:** 20 dBm
 * **Target distance:** 10 km LOS
 
-FSPL:
-
 ```
 L_fs = 32.44 + 20·log10(10) + 20·log10(868)
      ≈ 111 dB
@@ -329,7 +327,7 @@ Fade margin:
 Margin ≈ −85 − (−117) ≈ 32 dB
 ```
 
-Even at the higher 868 MHz frequency, the margin comfortably exceeds the recommended 10 dB.
+Even at the higher 868 MHz frequency, the margin comfortably exceeds the suggested 10 dB.
 
 ### Maximum LOS Range (theoretical)
 
@@ -367,7 +365,7 @@ r_mid ≈ 8.7 · √( d_km / f_GHz )
 | 433 MHz | ≈ 42 m                   | ≈ 60 m                   | ≈ 94 m                   |
 | 868 MHz | ≈ 29 m                   | ≈ 42 m                   | ≈ 65 m                   |
 
-A common engineering guideline is to keep **≥ 60 % of this radius clear** ideally along the entire path.
+A common engineering guideline is to keep ≥ 60 % of this radius clear ideally along the entire path.
 
 In the case of 433 MHz link and ground antenna 2 m AGL, UAV at 100 m AGL, target distance 20 km.
 
@@ -376,7 +374,7 @@ In the case of 433 MHz link and ground antenna 2 m AGL, UAV at 100 m AGL, 
 
 Clearance margin = 51 m − 36 m ≈ 15 m → seemingly acceptable.  However, even a gentle hill only 40 m high in the middle of the path will cut through the Fresnel zone, adding ≥ 10 dB excess loss and destabilising the link. If the UAV descends to 50 m AGL, LOS at mid‑path drops to 26 m, which is definitely below the required 36 m.  The link will now fade or drop entirely, despite high RSSI, in the case of higher flight. If the ground antenna is raised to 10 m → LOS mid‑height (10 + 50)/2 = 30 m, restoring clearance and link.
 
-That is why high‑altitude platforms and missions provide almost complete Fresnel clearance, which is why TFSIK01 has achieved **hundreds of kilometres** range in stratospheric balloon tests.
+That is why high‑altitude platforms and missions provide almost complete Fresnel clearance, which is why TFSIK01 has achieved hundreds of kilometres range in stratospheric balloon tests.
 
 ## Hardware setup
 
@@ -479,7 +477,7 @@ Monitoring both values provides insight into the quality and symmetry of the com
 Thanks to the dual antenna diversity system, the TFSIK01 maintains stable signal levels even when the UAV changes orientation. Unlike conventional modems, where antenna directionality causes fluctuations, the TFSIK01  switches between two antennas to maintain the best signal. The used [PlotJuggler](https://plotjuggler.io/) layout [could be downloaded here](./Plot_juggler_RSSI.xml).
 
 A reliable telemetry link depends not only on received signal strength (RSSI) but also on the link signal-to-noise ratio (SNR) because the link could be degraded due to background noise.
-This is because the effective **SNR** (RSSI – Noise) becomes too small for reliable demodulation, and basically, if the RSSI and background noise level (Noise) meet in the graph, the radio link is lost.
+This is because the effective SNR (RSSI – Noise) becomes too small for reliable demodulation, and basically, if the RSSI and background noise level (Noise) meet in the graph, the radio link is lost.
 
 The recommended minimum SNR for a reliable MAVLink connection is approximately 10 dB. If the noise level increases (due to interference or hardware issues), the same RSSI may no longer be sufficient.
 
