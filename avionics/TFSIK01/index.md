@@ -8,7 +8,6 @@ nav_order: "10"
 
 # TFSIK01 - High-Performance Telemetry Modem
 
-
 ![TFSIK01 modem](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/refs/heads/TFSIK01C/doc/img/TFSIK01.jpg)
 
 ### Purchasing Information
@@ -88,7 +87,7 @@ The radios have 3 status LEDs: red, orange, and green
 
 ### Applications
 
-The TFSIK01A is designed precisely for UAV command and control applications, ensuring dependable, long-distance communication links between UAVs and ground control stations. It is also highly effective in ROS2 environments for robotics, providing a reliable long-range wireless datalink.
+The TFSIK01 is designed precisely for UAV command and control applications, ensuring dependable, long-distance communication links between UAVs and ground control stations. It is also highly effective in ROS2 environments for robotics, providing a reliable long-range wireless datalink.
 
 The modem was originally developed to transmit atmospheric data measured in real time using the [TF-ATMON system](https://docs.thunderfly.cz/instruments/TF-ATMON).
 
@@ -422,7 +421,7 @@ To connect the modem to a computer, a USB to UART conversion is essential. The [
 
 ### Frequency Options
 
-ThunderFly typically configures the TFSIK01A modem for the 433 and 868 MHz bands. For alternative frequency requests, ThunderFly can customize the modem to meet specific applications. For detailed information on frequency adjustments, contact ThunderFly directly at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+ThunderFly typically configures the TFSIK01 modem for the 433 and 868 MHz bands. For alternative frequency requests, ThunderFly can customize the modem to meet specific applications. For detailed information on frequency adjustments, contact ThunderFly directly at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 
 {: .important }
 Always verify the modem's compliance with local regulations and laws concerning frequency and transmitting power for operation before use. Confirm the necessity for any operational permissions or licenses within your jurisdiction.
