@@ -383,15 +383,27 @@ That is why high‑altitude platforms and missions provide almost complete Fresn
 {: .warning }
 Like most RF devices, the TFSIK01 must not be operated without a properly connected and matched antenna. Doing so can damage the RF output stage.
 
-### TFSIK antenna kit
+### The basic TFSIK antenna kit
 
-External antennas are connected to the TFSIK modem by a pair of [MCX connectors](https://en.wikipedia.org/wiki/MCX_connector). For ease of use, we prepared a kit with simple whip antennas. This kit could be manufactured for multiple frequency bands. Here is 868 MHz as an example. The antenna kit strictly pairs only with the TFSIK modem tuned on the same frequency band.  
+External antennas are connected to the TFSIK modem by a pair of [MCX connectors](https://en.wikipedia.org/wiki/MCX_connector). For ease of use, we prepared a kit with simple whip antennas. These kits are available for multiple frequency bands; 868 MHz is shown here as an example. Each antenna kit must be used only with a TFSIK modem tuned to the same frequency band, otherwise RF performance will be severely degraded.  
+
+Two mechanically different variants of the antenna kit are available, optimized for different use cases. The both antenna kits are mounted to the flat surface using two screws through the mounting holes. The each antenna kit contains two antennas. The optimal installation depends on your exact setup, but generally, the antennae should be orthogonal to each other due to the "donut" radiation pattern of the each antenna.
+
+![Typical whip antenna radiation pattern](./whip_antenna_radiation_pattern.png)
+
+#### UAV variant (vibration-resistant)
 
 ![TFSIK01 antenna kit UAV variant](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/refs/heads/TFSIK01C/doc/img/868_MHz_antenna_kit_UAV.jpg)
 
-As you can see, the antenna kit contains two antennas. The antenna is tightened in position by SMA connectors. The optimal position depends on your exact setup, but generally, the antennae should be orthogonal to each other due to their "donut" radiation patterns.
+The UAV antenna kit is intended for airborne applications where vibrations and mechanical shocks are present.
+In this variant, the SMA connectors of both antennas are secured using lock nuts, which prevents the connectors from loosening during flight due to vibration. 
 
-The whole setup of TFSIK01 with the antenna kit should be mounted by a pair of screws in the holes of the antenna kit.
+#### GCS variant (quick-reconfigurable)
+
+![TFSIK01 antenna kit GCS variant](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/refs/heads/TFSIK01C/doc/img/868_MHz_antenna_kit_GCS.jpg)
+
+The GCS (Ground Control Station) antenna kit is optimized for stationary use where vibrations are negligible.
+In this variant, the SMA connectors are not mechanically locked, allowing the antennas to be easily loosened, repositioned, or replaced without tools. 
 
 ### Connecting to Autopilot
 
