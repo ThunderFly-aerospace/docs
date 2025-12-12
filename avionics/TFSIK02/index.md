@@ -1,102 +1,172 @@
 ---
 layout: page
-title: "TFSIK02: High-power wireless telemetry data link"
+title: "TFSIK02: Secure High‑Power Telemetry Modem"
 permalink: /avionics/TFSIK02/
 parent: "Communication & Interfaces"
 nav_order: "11"
 ---
 
-# TFSIK02 - High-Power Telemetry Modem
+# TFSIK02 – Secure High‑Power Telemetry Modem
 
 ### Purchasing Information
 
-The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation. We are the designers of this modem and therefore have full control of the modem's construction and design. This gives us the ability to react even to non-standard requests for modification or functions.
+The device can be purchased from ThunderFly s.r.o.. For commercial quotations or special configurations (frequency bands, output power, cryptographic handling), contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+TFSIK02 is developed and manufactured in‑house, which allows  hardware configuration and traceable customization required by defense and security‑sensitive users.
 
 ## Overview
 
-The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges significantly better than one kilometer with a basic whip antenna kit. The range can be extended to several kilometers using a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between the UAV and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
+TFSIK02 is a defense‑oriented variant of the TFSIK telemetry modem family, designed for secure and robust command, control, and telemetry links in environments where interference resistance, controlled frequency allocation, and link confidentiality are primary requirements.
 
-The TFSIK02 is a state-of-the-art SiK-based UAV telemetry modem incorporating dual antenna diversity and exceptional resistance to noise. This open-source hardware solution employs the advanced [Si1060](https://www.silabs.com/documents/public/data-sheets/Si106x-8x.pdf) chip from the Si10xx series and is further enhanced by the Si4463 EZRadioPRO transceiver, ensuring robust and secure communication capabilities. The modem's design prioritizes immunity to interference from out-of-band frequencies, guaranteeing reliable performance in challenging environments and securing its position as a top choice for UAV systems that demand the utmost data integrity and security.
+While TFSIK02 is technically derived from the TFSIK01 platform, it is not intended  for hobby or civil UAV telemetry. Instead, it targets:
 
-### Key Features
+* Defense and security UAVs
 
-- **Plug-n-play** for Pixhawk Standard Flight Controllers. The easiest way to connect your Autopilot in the airframe with the Ground Station 
-- **Superior Noise Immunity**: With a hardware-optimized RF front-end, the modem excels in environments plagued by out-of-band signal interference. The feature applies to multiple frequency bands.
-- **Robust Hardware Design**: Housed in a customizable 3D printed enclosure with electromagnetic shielding, it promises both durability and adaptability.
-- **Antenna Diversity**: Employs dual external antennas via MCX connectors, enhancing connectivity flexibility across different frequency bands requiring different antenna systems.
-- **Cutting-Edge Communication Technologies**:
-  - Implements Frequency-Hopping Spread Spectrum (FHSS)
-  - Utilizes Adaptive Time Division Multiplexing (TDM) with Configurable duty cycle
-  - Supports Listen Before Talk (LBT) and Adaptive Frequency Agility (AFA)
-  - Error correction corrects up to 25% of bit errors
-  - [AES-256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) or another encryption available upon request.
-- **High-Performance Metrics**:
-  - Offers a transparent serial link
-  - Facilitates air data rates reaching up to 250kbps
-  - Integrates MAVLink protocol framing and status reporting
-  - Achieves several kilometers of range with a small whip antenna
-- **Open-Source and Highly Configurable**: Loaded with SiK firmware for enhanced customization through AT and RT commands, it supports the MAVLink 2 protocol, Configurable through Mission Planner & APM Planner
+* Government and institutional unmanned systems
+
+* Applications where key management and link isolation are required
+
+For general SiK firmware operation, radio principles (FHSS, TDM, LBT), and AT‑command configuration, refer to the corresponding sections in the TFSIK01 documentation.
+
+## Designed for Defense Use
+
+Compared to TFSIK01, TFSIK02 emphasizes:
+
+* **Higher RF output power** (hardware‑configured)
+* **Controlled frequency planning** outside standard hobby ISM usage
+* **Deterministic link pairing** (no accidental association with third‑party radios)
+* **Explicit cryptographic workflows** adapted to operational use
+
+The modem remains based on open and inspectable hardware and firmware principles, which allows security audits and controlled deployment, while avoiding black‑box radio behavior.
+
+## Key Features
+
+* **High RF output power** (up to 35 dBm, factory‑set)
+* **Dual‑antenna diversity** for spatial robustness
+* **FHSS + TDM architecture** resilient against narrowband jamming
+* **Configurable duty cycle and channel plans**
+* **Multiple encryption and key‑handling concepts** (see below)
+* **Point‑to‑point operational model** (no broadcast or mesh by default)
+
+Generic SiK firmware features are described in the *TFSIK01* documentation and are not repeated here.
 
 ## Hardware Parameters
 
-| Parameter | Value | Description |
-|-----------|-------|-------------|
-| Frequency range | 142 MHz - 1050 MHz | The Exact frequency band has to be set by the factory|
-| RF power range | 20dBm to 35dBm | Adjustable by AT commands |
-| Input Noise Figure | 0.6 dB |  LNA noise figure |
-| OIP3 |  39.5dBm | Input LNA gain 18.7dB|
-| Receiver sensitivity|  -117 dBm or better | Depends on datalink bandwidth configuration |
-| Bandwidth |  < 4 MHz | RF filter selective |
-| RF connectors| [MCX](https://en.wikipedia.org/wiki/MCX_connector) on both RF ports | snap-on function prevents damage of connector by extensive external forces|
-| Serial interface| 3.3 V UART | 6-position JST-GH connector with [handshake available](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) |
-| Operating and storage temperature | −20°C to +40°C | Limited by case material |
-| Operational power voltage | +5V to +5.4V, 500mA max | Undervoltage is not treated. Current consumption is defined mainly by the set RF power. Receive current is 25 mA|
-| Mass | 18g | Including the housing |
-| Dimensions | 55x10x35mm | Housing dimensions |
-| Weather resistance | [IP40](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
+| Parameter             | Value                      | Notes                                            |
+| --------------------- | -------------------------- | ------------------------------------------------ |
+| Frequency range       | 142 MHz – 1050 MHz         | Factory configured, band‑specific RF front‑end   |
+| RF output power       | 20 dBm – 35 dBm            | Fixed per configuration, regulatory dependent    |
+| Receiver sensitivity  | ≤ −117 dBm                 | 64 kbps air data rate                         |
+| RF bandwidth          | < 4 MHz                    | Hardware‑filtered                                     |
+| Antenna connectors    | MCX (dual)                 | Supports diversity                               |
+| Interface             | 3.3 V UART or SPI (JST‑GH) | Pixhawk‑compatible                               |
+| Supply voltage        | 5 V                        | Power consumption depends on RF power (Up to 2A) |
+| Operating temperature | −20 °C to +40 °C           | Cooling‑limited                                  |
 
-### LEDs Indicators Status 
+## Frequency Bands of Interest for Defense Users
 
-The radios have 3 status LEDs: red, orange, and green
+| Nominal Band    | Typical Use Case                   |
+| --------------- | ---------------------------------- |
+| **225–400 MHz** | Military UHF / long‑range LOS      |
+| **400–450 MHz** | Tactical UAV telemetry             |
+| **433 MHz**     | Shared / experimental environments |
+| **460–500 MHz** | Government‑allocated channels      |
+| **800–900 MHz** | High‑throughput short‑range links  |
+| **915 MHz**     | Export‑friendly configurations     |
 
-- Green LED blinking - searching for another radio
-- Green LED solid - link is established with another radio
-- Red LED flashing - transmitting data
-- Red LED solid - in firmware update mode
-- Orange LED solid or dim indicates the selected antenna port 
+⚠️ Regulatory compliance is entirely deployment‑dependent. TFSIK02 hardware is configured per project and not user‑retunable across bands.
 
-### Applications
+## Secure Communication and Encryption Concepts
 
-The TFSIK01 is designed precisely for UAV command and control applications, ensuring dependable, long-distance communication links between UAVs and ground control stations. It is also highly effective in ROS2 environments for robotics, providing a reliable long-range wireless datalink.
+TFSIK02 supports multiple encryption and key‑management models, depending on how the modem pair is deployed and integrated.
 
-The modem was originally developed to transmit atmospheric data measured in real time using the [TF-ATMON system](https://docs.thunderfly.cz/instruments/TF-ATMON).
+### Fixed Paired Modems (Pre‑Shared Key)
 
-### Installation and Configuration
+In the simplest and most robust model, TFSIK02 is delivered as a fixed modem pair:
 
-Integration into UAV systems is straightforward, requiring only a [Pixhawk-compatible JST-GH UART connection](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The side placement of external antennas, connected through MCX connectors, is specifically selected to increase robustness and ease of installation.
+* One modem for the UAV (UAS)
+* One modem for the Control / Ground Station (CGS)
 
-## Hardware setup
+Both modems share a pre‑programmed cryptographic key set during manufacturing. The pair is intended to operate exclusively with each other.
 
-{: .warning }
-Like most RF devices, the TFSIK01 must not be operated without a properly connected and matched antenna. Doing so can damage the RF output stage.
+**Advantages:** Maximum simplicity, No field configuration required, Minimal attack surface
 
-### Connecting to Autopilot
+**Typical use:** single‑mission platforms, expendable UAVs, classified environments.
 
-Connection to the autopilot flight controller is facilitated through a JST-GH cable with a 6-pin connector. While PX4 firmware initially configures the TELEM1 port for telemetry connections, adjustments in the PX4 or Ardupilot firmware settings allow for modem connections through any available UART port. 
+### QR‑Code / Label‑Based Key Provisioning
 
-### Ground Station Connectivity
+In this model, each UAV modem carries a unique cryptographic key, represented as a machine‑readable code (QR / DataMatrix) on a physical label attached to the device.
 
-#### Direct UART Connection
+UAV modem is installed on the airframe
 
-The TFSIK01 modem directly interfaces with ground stations via its UART port, enabling easy integration with Raspberry Pi or similar single-board computers equipped with 3.3V UART outputs. This direct connection method is ideal for configurations demanding low latency and direct data control.
+Operator reads the code from the label
 
-#### USB Connectivity
+CGS modem is configured with the corresponding key before the mission
 
-To connect the modem to a computer, a USB to UART conversion is essential. The [TFUSBSERIAL01 module](/avionics/TFUSBSERIAL01), specifically designed for this purpose, features an FTDI-based USB chip for reliable data transmission and includes a USB-C connector for easy linking to computers or mobile devices, alongside a UART JST-GH connector for straightforward connection to the TFSIK01 modem.
+**Advantages:** Field pairing without digital interfaces. No wireless key exchange, Suitable for logistics‑heavy operations
+
+**Typical use:** small series UAVs, mixed fleets, forward deployment.
+
+### Dynamic Key Management (Per‑Flight Keys)
+
+For reusable UAV platforms, TFSIK02 can be integrated into a higher‑level key‑management system, where:
+
+* A new cryptographic key is generated for each mission
+* Keys are injected via secure ground infrastructure
+* Lost or captured UAVs do not compromise future links
+
+This model assumes the existence of a trusted pre‑deployment infrastructure, procedural control over the entire cryptographic key lifecycle, and integration at the system level rather than relying on modem‑only configuration.
+
+**Advantages:** Highest security level, Compartmentalization of missions
+**Typical use:** reusable defense UAVs, long‑term platforms.
+
+## Threat Model
+
+### Unauthorized Pairing and Link Takeover
+
+Unauthorized pairing of third‑party radios is prevented at the cryptographic level. A TFSIK02 modem will only establish a functional link if the peer modem possesses the correct cryptographic key. Without the valid key, received frames are discarded and no valid telemetry or command stream is produced.
+
+As a consequence, passive eavesdropping using SDR receivers yields encrypted data only, while active attempts to inject or replay packets fail without knowledge of the cryptographic key. Accidental pairing with foreign or third‑party SiK‑based radios is therefore effectively impossible.
+
+This makes common SDR‑based penetration techniques (traffic replay, packet injection, blind fuzzing) ineffective unless the cryptographic material is compromised.
+
+### Loss or Capture of UAV
+
+Loss of the UAV platform does not automatically compromise the communication system. When using per‑flight or short‑lived keys:
+
+* Keys used during a mission are not reused
+* Compromise of one UAV does not affect other vehicles
+* Future missions remain secure
+
+For higher security requirements, TFSIK02 can be configured such that cryptographic keys are stored only in volatile memory. In this mode keys are erased immediately upon power loss and physical capture of an unpowered UAV does not reveal past or future keys.
+
+### Key Lifecycle Assumptions
+
+The overall security of the system depends on correct **operational key handling**, including:
+
+* Secure generation of keys
+* Controlled key injection into UAV and CGS
+* Proper destruction of expired keys
+
+TFSIK02 provides the technical mechanisms to support these workflows, while procedural enforcement remains the responsibility of the operator.
+
+## Installation and Integration Notes
+
+Mechanical installation, antenna placement, and UART wiring follow the same principles as described in the TFSIK01 Hardware Setup and Installation sections. Only band‑specific antenna systems and RF power considerations differ.
+
+## Export and Use Disclaimer
+
+TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance and cryptographic policy. Because it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01]().
+
+Depending on the selected frequency band, output power, and cryptographic configuration, the device may be subject to export control regulations in certain jurisdictions.
+
+This documentation does not constitute legal advice. The responsibility for following activities rests solely with the user or purchasing organization.
+
+* Compliance with national and international export regulations
+* Frequency allocation and licensing
+* Cryptographic policy and approval
+
+ThunderFly s.r.o. supplies TFSIK02 as a configurable hardware platform. Final system classification, certification, and lawful use depend on how the device is integrated and deployed.
 
 
-### Frequency Options
-
-ThunderFly typically configures the TFSIK02 modem for the 433 and 868 MHz bands. For alternative frequency requests, ThunderFly can customize the modem to meet specific applications. For detailed information on frequency adjustments, contact ThunderFly directly at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 
 
