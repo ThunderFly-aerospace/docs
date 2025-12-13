@@ -20,9 +20,7 @@ TFSIK02 is a defense‑oriented variant of the TFSIK telemetry modem family, des
 While TFSIK02 is technically derived from the [TFSIK01](/avionics/TFSIK01) design, it is not intended  for hobby or civil UAV telemetry. Instead, it targets:
 
 * Defense and security UAVs
-
 * Government and institutional unmanned systems
-
 * Applications where key management and link isolation are required
 
 For general SiK firmware operation, radio principles (FHSS, TDM, LBT), and AT‑command configuration, refer to the corresponding sections in the [TFSIK01 documentation](/avionics/TFSIK01).
@@ -31,21 +29,20 @@ For general SiK firmware operation, radio principles (FHSS, TDM, LBT), and AT‑
 
 Compared to [TFSIK01](/avionics/TFSIK01), TFSIK02 emphasizes:
 
-* **Higher RF output power** (hardware‑configured)
-* **Controlled frequency planning** outside standard hobby ISM usage
-* **Deterministic link pairing** (no accidental association with third‑party radios)
-* **Explicit cryptographic workflows** adapted to operational use
+* **Higher RF output power** - using robust hardware Power Amplifier 
+* **Controlled frequency planning** - outside standard hobby ISM usage
+* **Deterministic link pairing** - removes accidental association with third‑party radios
+* **Explicit cryptographic workflows** - adapted to operational use
 
 The modem remains based on open and inspectable hardware and firmware principles, which allows security audits and controlled deployment, while avoiding black‑box radio behavior.
 
 ## Key Features
 
-* **High RF output power** (up to 35 dBm, factory‑set)
-* **Dual‑antenna diversity** for spatial robustness
-* **FHSS + TDM architecture** resilient against narrowband jamming
-* **Configurable duty cycle and channel plans**
-* **Multiple encryption and key‑handling concepts** (see below)
-* **Point‑to‑point operational model** (no broadcast or mesh by default)
+* **High RF output power**  - up to 35 dBm, factory‑set
+* **Dual‑antenna diversity** - for spatial robustness
+* **FHSS + TDM architecture** - resilient against narrowband jamming
+* **Multiple encryption and key‑handling concepts** - detailed description below
+* **Point‑to‑point operational model** - no broadcast or mesh by default
 
 Generic SiK firmware features are described in the [TFSIK01 documentation](/avionics/TFSIK01) and are not repeated here.
 
