@@ -15,7 +15,7 @@ TFSIK02 is developed and manufactured in‑house and localised in the EU, which 
 
 ## Overview
 
-TFSIK02 is a defense‑oriented variant of the TFSIK telemetry modem family, designed for secure and robust command, control, and telemetry links in environments where interference resistance, controlled frequency allocation, and link confidentiality are primary requirements.
+TFSIK02 is a defense‑oriented variant of the TFSIK telemetry modem, designed for secure and long-range command, control, and telemetry links in environments where interference resistance, controlled frequency allocation, and link confidentiality are primary requirements.
 
 While TFSIK02 is technically derived from the [TFSIK01](/avionics/TFSIK01) design, it is not intended  for hobby or civil UAV telemetry. Instead, it targets:
 
@@ -29,22 +29,16 @@ For general SiK firmware operation, radio principles (FHSS, TDM, LBT), and AT‑
 
 Compared to [TFSIK01](/avionics/TFSIK01), TFSIK02 emphasizes:
 
-* **Higher RF output power** - using robust hardware Power Amplifier 
+* **High RF output power**  - up to 35 dBm, using robust hardware Power Amplifier
 * **Controlled frequency planning** - outside standard hobby ISM usage
-* **Deterministic link pairing** - removes accidental association with third‑party radios
-* **Explicit cryptographic workflows** - adapted to operational use
-
-The modem remains based on open and inspectable hardware and firmware principles, which allows security audits and controlled deployment, while avoiding black‑box radio behavior.
-
-## Key Features
-
-* **High RF output power**  - up to 35 dBm, factory‑set
 * **Dual‑antenna diversity** - for spatial robustness
 * **FHSS + TDM architecture** - resilient against narrowband jamming
-* **Multiple encryption and key‑handling concepts** - detailed description below
-* **Point‑to‑point operational model** - no broadcast or mesh by default
+* **Multiple encryption and key‑handling concepts** - Explicit cryptographic workflows detailed in description below
+* **Point‑to‑point operational model** - solves encrypted transmission between the two UART ports (UAV <-> GCS)
+* **Deterministic link pairing** - removes accidental association with third‑party radios
 
-Generic SiK firmware features are described in the [TFSIK01 documentation](/avionics/TFSIK01) and are not repeated here.
+Generic SiK firmware features are described in the [TFSIK01 documentation](/avionics/TFSIK01) and are not repeated here. The modem remains based on open and inspectable hardware and firmware principles, which allows security audits and controlled deployment, while avoiding black‑box radio behavior.
+
 
 ## Hardware Parameters
 
@@ -55,7 +49,7 @@ Generic SiK firmware features are described in the [TFSIK01 documentation](/avio
 | Receiver sensitivity  | ≤ −117 dBm                 | 64 kbps air data rate                         |
 | RF bandwidth          | < 4 MHz                    | Hardware‑filtered                                     |
 | Antenna connectors    | MCX (dual)                 | Supports diversity                               |
-| Interface             | 3.3 V UART or SPI (JST‑GH) | Pixhawk‑compatible                               |
+| Interface             | 3.3 V UART (JST‑GH)        | Pixhawk‑compatible                               |
 | Supply voltage        | 5 V                        | Power consumption depends on RF power (Up to 2A) |
 | Operating temperature | −20 °C to +40 °C           | Cooling‑limited                                  |
 
@@ -74,7 +68,7 @@ Generic SiK firmware features are described in the [TFSIK01 documentation](/avio
 
 ## Secure Communication and Encryption Concepts
 
-TFSIK02 supports multiple encryption and key‑management models, depending on how the modem pair is deployed and integrated.
+TFSIK02 supports multiple encryption and key‑management models, depending on how the modem pair is deployed and integrated. Its general principle is drop-in replacement of an unencrypted Mavlink modem connected on UART, by an encrypted wireless datalink between two UART ports. 
 
 ### Fixed Paired Modems (Pre‑Shared Key)
 
