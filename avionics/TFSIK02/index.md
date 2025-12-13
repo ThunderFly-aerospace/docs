@@ -10,8 +10,8 @@ nav_order: "11"
 
 ### Purchasing Information
 
-The device can be purchased from ThunderFly s.r.o.. For commercial quotations or special configurations (frequency bands, output power, cryptographic handling), contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
-TFSIK02 is developed and manufactured in‑house and localised in EU, which allows  hardware configuration and traceable customization required by defense and security‑sensitive users.
+The device can be purchased from ThunderFly s.r.o. For commercial quotations or special configurations (frequency bands, output power, cryptographic handling), contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+TFSIK02 is developed and manufactured in‑house and localised in the EU, which allows  hardware configuration and traceable customization required by defense and security‑sensitive users.
 
 ## Overview
 
@@ -85,22 +85,18 @@ In the simplest and most robust model, TFSIK02 is delivered as a fixed modem pai
 
 Both modems share a pre‑programmed cryptographic key set during manufacturing. The pair is intended to operate exclusively with each other.
 
-**Advantages:** Maximum simplicity, No field configuration required, Minimal attack surface
-
+**Advantages:** Maximum simplicity, no field configuration required, Minimal attack surface.
 **Typical use:** single‑mission platforms, expendable UAVs, classified environments.
 
 ### QR‑Code / Label‑Based Key Provisioning
 
 In this model, each UAV modem carries a unique cryptographic key, represented as a machine‑readable code (QR / DataMatrix) on a physical label attached to the device.
 
-UAV modem is installed on the airframe
+  * The UAV modem is installed on the airframe
+  * The operator reads the code from the label
+  * The CGS modem is configured with the corresponding key before the mission
 
-Operator reads the code from the label
-
-CGS modem is configured with the corresponding key before the mission
-
-**Advantages:** Field pairing without digital interfaces. No wireless key exchange, Suitable for logistics‑heavy operations
-
+**Advantages:** Field pairing without digital interfaces. No wireless key exchange. Suitable for logistics‑heavy operations.
 **Typical use:** small series UAVs, mixed fleets, forward deployment.
 
 ### Dynamic Key Management (Per‑Flight Keys)
@@ -120,11 +116,9 @@ This model assumes the existence of a trusted pre‑deployment infrastructure, p
 
 ### Unauthorized Pairing and Link Takeover
 
-Unauthorized pairing of third‑party radios is prevented at the cryptographic level. A TFSIK02 modem will only establish a functional link if the peer modem possesses the correct cryptographic key. Without the valid key, received frames are discarded and no valid telemetry or command stream is produced.
+Unauthorized pairing of third‑party radios is prevented at the cryptographic level. A TFSIK02 modem will only establish a functional link if the peer modem possesses the correct cryptographic key. Without the valid key, received frames are discarded, and no valid telemetry or command stream is produced.
 
-As a consequence, passive eavesdropping using SDR receivers yields encrypted data only, while active attempts to inject or replay packets fail without knowledge of the cryptographic key. Accidental pairing with foreign or third‑party SiK‑based radios is therefore effectively impossible.
-
-This makes common SDR‑based penetration techniques (traffic replay, packet injection, blind fuzzing) ineffective unless the cryptographic material is compromised.
+As a consequence, passive eavesdropping using SDR receivers yields encrypted data only, while active attempts to inject or replay packets fail without knowledge of the cryptographic key. Accidental pairing with foreign or third‑party SiK‑based radios is therefore effectively impossible. This makes common SDR‑based penetration techniques (traffic replay, packet injection, blind fuzzing) ineffective unless the cryptographic material is compromised.
 
 ### Loss or Capture of UAV
 
@@ -134,7 +128,7 @@ Loss of the UAV platform does not automatically compromise the communication sys
 * Compromise of one UAV does not affect other vehicles
 * Future missions remain secure
 
-For higher security requirements, TFSIK02 can be configured such that cryptographic keys are stored only in volatile memory. In this mode keys are erased immediately upon power loss and physical capture of an unpowered UAV does not reveal past or future keys.
+For higher security requirements, TFSIK02 can be configured such that cryptographic keys are stored only in volatile memory. In this mode, keys are erased immediately upon power loss, and physical capture of an unpowered UAV does not reveal past or future keys.
 
 ### Key Lifecycle Assumptions
 
@@ -152,13 +146,11 @@ Mechanical installation, antenna placement, and UART wiring follow the same prin
 
 ## Export and Use Disclaimer
 
-TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance and cryptographic policy. Because it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01](/avionics/TFSIK01).
+TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance, and cryptographic policy. Because it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01](/avionics/TFSIK01). Depending on the selected frequency band, output power, and cryptographic configuration, the device may be subject to export control.
 
-Depending on the selected frequency band, output power, and cryptographic configuration, the device may be subject to export control regulations in certain jurisdictions.
+The responsibility for the following activities rests solely with the user or purchasing organization.
 
-This documentation does not constitute legal advice. The responsibility for following activities rests solely with the user or purchasing organization.
-
-* Compliance with national and international export regulations
+* Compliance with national and international regulations
 * Frequency allocation and licensing
 * Cryptographic policy and approval
 
