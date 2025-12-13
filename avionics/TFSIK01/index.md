@@ -32,7 +32,6 @@ The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating du
   - Utilizes Adaptive Time Division Multiplexing (TDM) with Configurable duty cycle
   - Supports Listen Before Talk (LBT) and Adaptive Frequency Agility (AFA)
   - Error correction corrects up to 25% of bit errors
-  - [AES-256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) or another encryption available upon request.
 - **High-Performance Metrics**:
   - Offers a transparent serial link
   - Facilitates air data rates reaching up to 250kbps
@@ -57,6 +56,8 @@ The TFSIK01 is a state-of-the-art SiK-based UAV telemetry modem incorporating du
 | Mass | 18g | Including the housing |
 | Dimensions | 55x10x35mm | Housing dimensions |
 | Weather resistance | [IP40](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
+
+For encryption or higher RF power go to [TFSIK02](/avionics/TFSIK02). 
 
 ### Frequency Band Specifications
 
@@ -428,6 +429,10 @@ Always verify the modem's compliance with local regulations and laws concerning 
 
 
 ## FAQ
+
+### Could I increase RF output power above 20 dBm?
+
+The power limit conforms to civil use-cases for military and defense applications go for [TFSIK02](/avionics/TFSIK02). 
 
 ### How can I connect it to a PC/mobile/tablet?
 

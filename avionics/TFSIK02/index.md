@@ -11,7 +11,7 @@ nav_order: "11"
 ### Purchasing Information
 
 The device can be purchased from ThunderFly s.r.o.. For commercial quotations or special configurations (frequency bands, output power, cryptographic handling), contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
-TFSIK02 is developed and manufactured in‑house, which allows  hardware configuration and traceable customization required by defense and security‑sensitive users.
+TFSIK02 is developed and manufactured in‑house and localised in EU, which allows  hardware configuration and traceable customization required by defense and security‑sensitive users.
 
 ## Overview
 
@@ -29,7 +29,7 @@ For general SiK firmware operation, radio principles (FHSS, TDM, LBT), and AT‑
 
 ## Designed for Defense Use
 
-Compared to TFSIK01, TFSIK02 emphasizes:
+Compared to [TFSIK01](avionics/TFSIK01), TFSIK02 emphasizes:
 
 * **Higher RF output power** (hardware‑configured)
 * **Controlled frequency planning** outside standard hobby ISM usage
@@ -141,7 +141,7 @@ For higher security requirements, TFSIK02 can be configured such that cryptograp
 
 ### Key Lifecycle Assumptions
 
-The overall security of the system depends on correct **operational key handling**, including:
+The overall security of the system depends on correct operational key handling, including:
 
 * Secure generation of keys
 * Controlled key injection into UAV and CGS
@@ -151,11 +151,11 @@ TFSIK02 provides the technical mechanisms to support these workflows, while proc
 
 ## Installation and Integration Notes
 
-Mechanical installation, antenna placement, and UART wiring follow the same principles as described in the TFSIK01 Hardware Setup and Installation sections. Only band‑specific antenna systems and RF power considerations differ.
+Mechanical installation, antenna placement, and UART wiring follow the same principles as described in the [TFSIK01](avionics/TFSIK01) Hardware Setup and Installation sections. Only band‑specific antenna systems and RF power considerations differ.
 
 ## Export and Use Disclaimer
 
-TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance and cryptographic policy. Because it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01]().
+TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance and cryptographic policy. Because it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01](avionics/TFSIK01).
 
 Depending on the selected frequency band, output power, and cryptographic configuration, the device may be subject to export control regulations in certain jurisdictions.
 
