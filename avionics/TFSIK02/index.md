@@ -17,7 +17,7 @@ TFSIK02 is developed and manufactured in‑house and localised in EU, which allo
 
 TFSIK02 is a defense‑oriented variant of the TFSIK telemetry modem family, designed for secure and robust command, control, and telemetry links in environments where interference resistance, controlled frequency allocation, and link confidentiality are primary requirements.
 
-While TFSIK02 is technically derived from the TFSIK01 platform, it is not intended  for hobby or civil UAV telemetry. Instead, it targets:
+While TFSIK02 is technically derived from the [TFSIK01](/avionics/TFSIK01) design, it is not intended  for hobby or civil UAV telemetry. Instead, it targets:
 
 * Defense and security UAVs
 
@@ -25,11 +25,11 @@ While TFSIK02 is technically derived from the TFSIK01 platform, it is not intend
 
 * Applications where key management and link isolation are required
 
-For general SiK firmware operation, radio principles (FHSS, TDM, LBT), and AT‑command configuration, refer to the corresponding sections in the TFSIK01 documentation.
+For general SiK firmware operation, radio principles (FHSS, TDM, LBT), and AT‑command configuration, refer to the corresponding sections in the [TFSIK01 documentation](/avionics/TFSIK01).
 
 ## Designed for Defense Use
 
-Compared to [TFSIK01](avionics/TFSIK01), TFSIK02 emphasizes:
+Compared to [TFSIK01](/avionics/TFSIK01), TFSIK02 emphasizes:
 
 * **Higher RF output power** (hardware‑configured)
 * **Controlled frequency planning** outside standard hobby ISM usage
@@ -47,7 +47,7 @@ The modem remains based on open and inspectable hardware and firmware principles
 * **Multiple encryption and key‑handling concepts** (see below)
 * **Point‑to‑point operational model** (no broadcast or mesh by default)
 
-Generic SiK firmware features are described in the *TFSIK01* documentation and are not repeated here.
+Generic SiK firmware features are described in the [TFSIK01 documentation](/avionics/TFSIK01) and are not repeated here.
 
 ## Hardware Parameters
 
@@ -151,11 +151,11 @@ TFSIK02 provides the technical mechanisms to support these workflows, while proc
 
 ## Installation and Integration Notes
 
-Mechanical installation, antenna placement, and UART wiring follow the same principles as described in the [TFSIK01](avionics/TFSIK01) Hardware Setup and Installation sections. Only band‑specific antenna systems and RF power considerations differ.
+Mechanical installation, antenna placement, and UART wiring follow the same principles as described in the [TFSIK01](/avionics/TFSIK01) Hardware Setup and Installation sections. Only band‑specific antenna systems and RF power considerations differ.
 
 ## Export and Use Disclaimer
 
-TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance and cryptographic policy. Because it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01](avionics/TFSIK01).
+TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance and cryptographic policy. Because it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01](/avionics/TFSIK01).
 
 Depending on the selected frequency band, output power, and cryptographic configuration, the device may be subject to export control regulations in certain jurisdictions.
 
