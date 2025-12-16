@@ -12,7 +12,7 @@ nav_order: "10"
 
 ### Purchasing Information
 
-The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly from [Tindie store](https://www.tindie.com/products/34682/) or [Lectronz](https://lectronz.com/products/1067) marketplaces. We are the designers of this modem and therefore have full control of the modem's construction and design. This gives us the ability to react even to non-standard requests for modification or functions.
+The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly from [Tindie store](https://www.tindie.com/products/34682/) or [Lectronz](https://lectronz.com/products/1067) marketplaces. We are the designers of this modem and therefore have full control of the modem's construction and manufacturing. This gives us the ability to react even to non-standard requests for modification or functions by adopting our in-house European production. 
 
 
 ## Overview
