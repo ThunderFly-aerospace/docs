@@ -27,15 +27,21 @@ This integration enables high-resolution mapping of radiation intensity in three
 
 At the heart of AIRDOS03 is the USTSIPIN02 silicon PIN diode-based detection system, which enables:
 
-* Measurement of deposited energy of ionizing radiation in the 60 keV to 7 MeV
+* Measurement of the deposited energy of ionizing radiation in the 40 keV to 80 MeV
 * Energy resolution 15 ±2 keV per channel (firmware-dependent)
+* Effective number of energy channels: ~65000
 * 44 mm³ detection volume
+* Radiation spectra integration time: 10 s (configurable by firmware)
+* Environmental sensors
+  * Relative Humidity 0 to 100 %RH (accuracy 2	%RH)
+  * Temperature -40 to 125 °C (accuracy 0.5 °C)
+  * Barometric pressure 1 to 120 kPa (accuracy 150 Pa)
 * Lightweight, compact electronics
-  * 91 × 51 × 12 mm
+  * 91 × 51 × 20 mm
   * 40 grams
-* Dual interface options: USB-C and UART (Pixhawk-compatible)
-
-This makes the device suitable for real-time spectrum measurement and in-flight data logging.
+* Interface options: UART (Pixhawk-compatible)
+  * UART could be converted to USB-C by [TFUSBSERIAL01](/avionics/TFUSBSERIAL01/)
+  * Device suitable for real-time spectrum measurement and in-flight data logging.
 
 ### Key Features
 
