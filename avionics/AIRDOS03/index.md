@@ -39,7 +39,7 @@ At the heart of AIRDOS03 is the USTSIPIN02 silicon PIN diode-based detection sys
 * Lightweight, compact electronics
   * 91 × 51 × 20 mm
   * 40 grams
-* Interface options: UART (Pixhawk-compatible)
+* Interface options: UART (JST-GH - Pixhawk-compatible)
   * UART could be converted to USB-C by [TFUSBSERIAL01](/avionics/TFUSBSERIAL01/)
   * Device suitable for real-time spectrum measurement and in-flight data logging.
 
@@ -53,12 +53,12 @@ At the heart of AIRDOS03 is the USTSIPIN02 silicon PIN diode-based detection sys
 
 ### Connector Pinout
 
-AIRDOS03 provides both USB-C and UART (JST-GH) connectivity. The UART interface is compatible with the Pixhawk standard and enables integration with onboard telemetry systems or autopilot controllers.
+AIRDOS03 provides TELEM/UART connectivity. The UART interface is compatible with the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) and enables integration with onboard telemetry systems or flight controllers.
 
 #### UART (JST-GH) Pinout
 
-| Signal | Pixhawk Color                                                                                                        | ThunderFly Color                                                                                                       |
-| ------ | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Signal | Pixhawk Color                            | ThunderFly Color                                              |
+| ------ | ------------------------------------------------- | ---------------------------------------------- |
 | +5V    | ![Red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red     | ![Red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red       |
 | RX     | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![White](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png) White   |
 | TX     | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green   |
@@ -68,10 +68,11 @@ AIRDOS03 provides both USB-C and UART (JST-GH) connectivity. The UART interface 
 
 #### Auxiliary IO (JST-GH)
 
-These signals provide additional functions, including synchronization or inter-device communication.
+These signals provide additional functions, including synchronization or inter-device communication. This connector is primarily intended for time synchronization with the [TFGPS01 GNSS module](/avionics/TFGPS01), which provides PPS and time pulse signals on "Payload Connector".
 
-| Signal    | Pixhawk Color                                                                                                        | ThunderFly Color                                                                                                       |
-| --------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+
+| Signal    | Pixhawk Color                | ThunderFly Color                                  |
+| --------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | TIMEPULSE | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png) Blue     |
 | EXTINT    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow |
 | GPIO | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![White](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png) White   |
@@ -81,7 +82,6 @@ These signals provide additional functions, including synchronization or inter-d
 | RX        | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green   |
 | GND       | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
 
-This connector is primarily intended for time synchronization with the [TFGPS01 GNSS module](/avionics/TFGPS01), which provides PPS and time pulse signals compatible with this interface.
 
 ### Use Cases
 
@@ -94,6 +94,6 @@ This connector is primarily intended for time synchronization with the [TFGPS01 
 
 AIRDOS03 can be purchased directly from ThunderFly via our [contact page](https://www.thunderfly.cz/contact-us.html). For larger orders or special configurations, feel free to reach out with your requirements.
 
-Although AIRDOS03 was developed in partnership with [Universal Scientific Technologies](https://www.ust.cz), the ThunderFly team handles sales, support, and integration for airborne applications.
+Although AIRDOS03 was developed in partnership with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), the ThunderFly team handles sales, support, and integration for airborne applications.
 
 
