@@ -35,7 +35,6 @@ At the heart of AIRDOS03 is the USTSIPIN02 silicon PIN diode-based detection sys
 * Environmental sensors
   * Relative Humidity 0 to 100 %RH (accuracy 2	%RH)
   * Temperature -40 to 125 °C (accuracy 0.5 °C)
-  * Barometric pressure 1 to 120 kPa (accuracy 150 Pa)
 * Lightweight, compact electronics
   * 91 × 51 × 20 mm
   * 40 grams
