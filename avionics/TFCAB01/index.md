@@ -17,13 +17,20 @@ ThunderFly offers three main cable types:
 - **UAVCAN Cables**: Designed for CAN bus communication.
 - **UART/TELEM/SERIAL Cables**: Used for serial data transmission.
 
-Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). All cables use **JST-GH connectors** for robust and secure connections.
+Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). All cables use **JST-GH connectors** for robust and secure connections. All cables could be purchased on correspondin links or via direct email inquiry at sale@thunderfly.cz.
 
 ## I²C Cables
 
 The TFCABxxI2C01 series is optimized for **I²C communication**, featuring a twisted design to minimize internal cross-talk and capacitance. This ensures reliable data transmission in avionics environments.
 
 ![TFCABxxI2C01](https://user-images.githubusercontent.com/5196729/234793444-a4d4c73b-5eb9-4614-a92b-722d95fa6c30.jpg)
+
+## Where to Buy
+
+TFCAB I2C cables can be purchased from:
+
+  * [Lectronz](https://lectronz.com/products/1060)
+  * [Tindie](https://www.tindie.com/products/30113/)
 
 ### Specifications
 
@@ -49,7 +56,16 @@ The TFCABxxI2C01 series is optimized for **I²C communication**, featuring a twi
 
 The TFCABxxCAN01 series is designed for **UAVCAN communication**, optimized for EMI resistance through specific cable twisting.
 
+## Where to Buy
+
+TFCAB CAN cables can be purchased from:
+
+  * [Lectronz](https://lectronz.com/products/1195)
+  * [Tindie](https://www.tindie.com/products/30124/)
+
+
 ### Specifications
+
 - **Lengths**: 15 cm, 30 cm, 45 cm
 - **Connector Type**: JST-GH
 - **Number of Pins**: 4
@@ -95,8 +111,5 @@ The TFCABxxUART01 series is used for **serial communication**, connecting autopi
 - **Twisting is not recommended** for UART cables to prevent increased cross-talk.
 - **Straight-through wiring**: Ensure that RX/TX and RTS/CTS are properly swapped in devices.
 
-## Where to Buy
-TFCAB cables can be purchased from [Lectronz](https://lectronz.com/products/1060), [Tindie](https://www.tindie.com/products/30113/), or via direct email inquiry at sale@thunderfly.cz.
-For additional contacts, visit the [ThunderFly website](https://www.thunderfly.cz/contact-us.html).
 
 
