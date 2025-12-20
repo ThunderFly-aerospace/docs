@@ -66,6 +66,48 @@ Generic SiK firmware features are described in the [TFSIK01 documentation](/avio
 
 ⚠️ Regulatory compliance is entirely deployment‑dependent. TFSIK02 hardware is configured per project and not user‑retunable across bands.
 
+
+#### Example of software parameters 
+
+The TFSIK02 parameters could be read exactly the same as in [TFSIK01 documentation](/avionics/TFSIK01).
+
+    picocom /dev/ttyUSB0 -b 57600
+    +++
+    OK
+    ATI5
+    S0:FORMAT=26
+    S1:SERIAL_SPEED=57
+    S2:AIR_SPEED=64
+    S3:NETID=25
+    S4:TXPOWER=35
+    S6:MAVLINK=1
+    S7:OPPRESEND=0
+    S8:MIN_FREQ=433050
+    S9:MAX_FREQ=434790
+    S10:NUM_CHANNELS=10
+    S11:DUTY_CYCLE=100
+    S12:LBT_RSSI=0
+    S13:MANCHESTER=0
+    S14:RTSCTS=0
+    S15:MAX_WINDOW=131
+    S16:ENCRYPTION_LEVEL=1
+
+In addition to these standard parameters. The TFSIK02 has an encryption feature. 
+
+#### Encryption key setup
+
+The encryption level stored in `S16` picks the key length, so set it before writing the key (1 → 128 bit/32 hex chars, 2 → 192 bit/48 hex chars, 3 → 256 bit/64 hex chars). Example for a 128‑bit key:
+
+```
++++
+OK
+ATS16=1          # select 128-bit key
+AT&E=00112233445566778899AABBCCDDEEFF   # set key (32 hex chars)
+AT&E?            # read back the key
+AT&W             # save to flash
+ATZ              # reboot to apply
+```
+
 ## Secure Communication and Encryption Concepts
 
 TFSIK02 supports multiple encryption and key‑management models, depending on how the modem pair is deployed and integrated. Its general principle is drop-in replacement of an unencrypted Mavlink modem connected on UART, by an encrypted wireless datalink between two UART ports. 
