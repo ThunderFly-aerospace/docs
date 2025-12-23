@@ -78,6 +78,8 @@ The preferred orientation of the mounted sensor is PCB up. This position ensures
 
 ![TFPITOT01 schematics](TFPITOT01-schematic.png)
 
+The sensor could be hardware-configured by the resistor R4 to three different I2C addresses. In case you need to connect more TFPITOT01 sensors on the same I2C bus, the [TFI2CADT01 address translator](/avionics/TFI2CADT01/) could be used to connect a higher number of sensors. 
+
 ### Calibration
 Follow the calibration check procedure as outlined in the documentation for your flight control firmware (PX4/Ardupilot) to achieve optimal accuracy.
 
