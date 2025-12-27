@@ -12,9 +12,13 @@ The converter is designed to service and debug operations on UAVs. It respects t
 
 ![TFUSBSERIAL01 Enclosure](TFUSBSERIAL01.JPG)
 
+TFUSBSERIAL01 enables a computer to communicate with UART-based telemetry devices such as flight management units (FMUs / autopilots) and serial peripherals including radio modems, companion computers, and various onboard sensors.
+
+The interface exposes two dedicated Pixhawk telemetry connectors — one for an FMU port and one for a peripheral port — both following the standard 6-pin telemetry pinout (TX, RX, RTS, CTS, VCC, GND) with 3.3 V logic levels. This allows direct, 1:1 cabling without custom RX/TX crossover cables and makes the device suitable for configuration, debugging, monitoring, and passive sniffing of UART telemetry links between an autopilot and its peripherals.
+
 ## Key features
 
-  * Could be connected to both the peripheral and FMUs
+  * Could be connected to both the peripheral and FMUs UART based telemetry links
   * The FMU and peripheral connectors are separated; therefore, there is no need for a special RX/TX cross-cable
   * Could be used for sniffing serial communication on telemetry links between autopilot and its peripheral (Both connectors could be used at once)
   * Supports hardware flow control
