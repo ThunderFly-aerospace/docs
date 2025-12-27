@@ -14,12 +14,12 @@ The converter is designed to service and debug operations on UAVs. It respects t
 
 ## Key features
 
-  * Could be connected to both peripheral or FMUs
-  * The FMU and peripheral connectors are separated, therefore there is no need for a special RX/TX cross-cable
+  * Could be connected to both the peripheral and FMUs
+  * The FMU and peripheral connectors are separated; therefore, there is no need for a special RX/TX cross-cable
   * Could be used for sniffing serial communication on telemetry links between autopilot and its peripheral (Both connectors could be used at once)
   * Supports hardware flow control
-  * The power delivered from USB is protected from excess current possibly drawn by peripheral or FMU
-  * The accidental power from FMU to USB is protected by reverse diode
+  * The power delivered from USB is protected from excess current, possibly drawn by the peripheral or FMU
+  * The accidental power from the FMU to the USB is protected by a reverse diode
 
 ## How to Buy
 
@@ -38,4 +38,4 @@ The proper function and cable could be easily tested by connecting the cable bet
 
 ![TFUSBSERIAL01 self test](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUSBSERIAL01/TFUSBSERIAL01A/doc/img/TFUSBSERIAL01_self-test.jpg)
 
-All communication sent by UART is in that case forwarded in the loop. Therefore the cable behaves the same as "local echo".
+All communication sent by UART is, in that case, forwarded in the loop. Therefore, the cable behaves the same as "local echo".
