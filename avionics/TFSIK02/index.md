@@ -34,7 +34,7 @@ Compared to [TFSIK01](/avionics/TFSIK01), TFSIK02 emphasizes:
 * **Dual‑antenna diversity** - for spatial robustness
 * **FHSS + TDM architecture** - resilient against narrowband jamming
 * **Multiple encryption and key‑handling concepts** - Explicit cryptographic workflows detailed in description below
-* **Point‑to‑point operational model** - solves encrypted transmission between the two UART ports (UAV <-> GCS)
+* **Point‑to‑point operational model** - solves encrypted transmission between the two UART Telemetry ports (UAV <-> GCS)
 * **Deterministic link pairing** - removes accidental association with third‑party radios
 
 Generic SiK firmware features are described in the [TFSIK01 documentation](/avionics/TFSIK01) and are not repeated here. The modem remains based on open and inspectable hardware and firmware principles, which allows security audits and controlled deployment, while avoiding black‑box radio behavior.
@@ -154,7 +154,7 @@ This model assumes the existence of a trusted pre‑deployment infrastructure, p
 
 Unauthorized pairing of third‑party radios is prevented at the cryptographic level. A TFSIK02 modem will only establish a functional link if the peer modem possesses the correct cryptographic key. Without the valid key, received frames are discarded, and no valid telemetry or command stream is produced.
 
-As a consequence, passive eavesdropping using SDR receivers yields encrypted data only, while active attempts to inject or replay packets fail without knowledge of the cryptographic key. Accidental pairing with foreign or third‑party SiK‑based radios is therefore effectively impossible. This makes common SDR‑based penetration techniques (traffic replay, packet injection, blind fuzzing) ineffective unless the cryptographic material is compromised.
+As a consequence, passive eavesdropping using SDR receivers yields encrypted data only, while active attempts to inject or replay packets fail without knowledge of the cryptographic key. Accidental pairing with foreign or third‑party SiK‑based radios is, therefore, effectively impossible. This makes common SDR‑based penetration techniques (traffic replay, packet injection, blind fuzzing) ineffective unless the cryptographic configuration is compromised.
 
 ### Loss or Capture of UAV
 
