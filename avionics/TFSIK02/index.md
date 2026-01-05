@@ -15,7 +15,7 @@ TFSIK02 is developed and manufactured in‑house and localised in the EU, which 
 
 ## Overview
 
-TFSIK02 is a defense‑oriented variant of the TFSIK telemetry modem, designed for secure and long-range command, control, and telemetry links in environments where interference resistance, controlled frequency allocation, and link confidentiality are primary requirements.
+TFSIK02 is a European-made defense‑oriented variant of the TFSIK telemetry modem, designed for secure and long-range command, control, and telemetry links (UAV C2 link) in environments where interference resistance, controlled frequency allocation, and link confidentiality are primary requirements.
 
 While TFSIK02 is technically derived from the [TFSIK01](/avionics/TFSIK01) design, it is not intended  for hobby or civil UAV telemetry. Instead, it targets:
 
