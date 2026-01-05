@@ -19,7 +19,7 @@ The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 
 The SiK Telemetry Radio is a small, light, and inexpensive open-source radio platform that typically allows ranges significantly better than one kilometer with a basic whip antenna kit. The range can be extended to several kilometers using a directional antenna on the ground. This radio is plug-and-play with all Pixhawk Standard and other flight controllers, providing the easiest way to set up a telemetry connection between the UAV and a ground control station. It uses open-source firmware specially designed to work well with MAVLink packets and to integrate with Mission Planner, Ardupilot, QGroundControl, and PX4 Autopilot.
 
-The TFSIK01 is a state-of-the-art SiK-based unmanned vehicle C2 and telemetry modem incorporating dual antenna diversity and exceptional resistance to noise. This open-source hardware solution employs the advanced [Si1060](https://www.silabs.com/documents/public/data-sheets/Si106x-8x.pdf) chip from the Si10xx series and is further enhanced by the Si4463 EZRadioPRO transceiver, ensuring robust and secure communication capabilities. The modem's design prioritizes immunity to interference from out-of-band frequencies, guaranteeing reliable performance in challenging environments and securing its position as a top choice for UAV systems that demand the utmost data integrity and security.
+The TFSIK01 is a European-made state-of-the-art SiK-based unmanned vehicle C2 and telemetry modem incorporating dual antenna diversity and exceptional resistance to noise. This open-source hardware solution employs the advanced [Si1060](https://www.silabs.com/documents/public/data-sheets/Si106x-8x.pdf) chip from the Si10xx series and is further enhanced by the Si4463 EZRadioPRO transceiver, ensuring robust and secure communication capabilities. The modem's design prioritizes immunity to interference from out-of-band frequencies, guaranteeing reliable performance in challenging environments and securing its position as a top choice for UAV systems that demand the utmost data integrity and security.
 
 ### Key Features
 
@@ -57,7 +57,7 @@ The TFSIK01 is a state-of-the-art SiK-based unmanned vehicle C2 and telemetry mo
 | Dimensions | 55x10x35mm | Housing dimensions |
 | Weather resistance | [IP40](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
 
-For encryption or higher RF power go to [TFSIK02](/avionics/TFSIK02). 
+For encryption or higher RF power, go to [TFSIK02](/avionics/TFSIK02). 
 
 ### Frequency Band Specifications
 
@@ -432,7 +432,7 @@ Always verify the modem's compliance with local regulations and laws concerning 
 
 ### Could I increase RF output power above 20 dBm?
 
-The power limit conforms to civil use-cases for military and defense applications go for [TFSIK02](/avionics/TFSIK02). 
+The power limit conforms to civil use-cases for military and defense applications, go for [TFSIK02](/avionics/TFSIK02). 
 
 ### How can I connect it to a PC/mobile/tablet?
 
