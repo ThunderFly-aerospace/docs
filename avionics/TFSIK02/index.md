@@ -33,7 +33,7 @@ Compared to [TFSIK01](/avionics/TFSIK01), TFSIK02 emphasizes:
 * **Controlled frequency planning** - outside standard hobby ISM usage
 * **Dual‑antenna diversity** - for spatial robustness
 * **FHSS + TDM architecture** - resilient against narrowband jamming
-* **Multiple encryption and key‑handling concepts** - Explicit cryptographic workflows detailed in description below
+* **Multiple AEAD encryption and key‑handling concepts** - Explicit cryptographic workflows detailed in description below
 * **Point‑to‑point operational model** - solves encrypted transmission between the two UART Telemetry ports (UAV <-> GCS)
 * **Deterministic link pairing** - removes accidental association with third‑party radios
 
