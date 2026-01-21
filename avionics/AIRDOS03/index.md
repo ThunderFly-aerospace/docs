@@ -24,6 +24,14 @@ The AIRDOS03, also known as "UAVDOS," is a compact ionizing radiation detector a
 * Mapping radiation gradients near ground-based or airborne sources
 * Scientific support for space weather and high-altitude dosimetry research
 
+### Key Features
+
+* Fully compatible with [TF-ATMON](/instruments/TF-ATMON) and Pixhawk ecosystem
+* Lightweight and low-power (5 V / 3 mA)
+* Spectral data output for scientific analysis
+* Can operate in real-time streaming mode or store data onboard
+* Modular open-source firmware for custom scientific missions
+
 ### UAV Integration
 
 AIRDOS03 is designed as a sensor for the [TF-ATMON](/instruments/TF-ATMON) system and seamlessly connects to the avionics of UAVs, especially the [ThunderFly TF-G2 autogyro](/instruments/TF-G2). It supports shared power supply, data logging, and telemetry with onboard systems, reducing weight and maximizing flight endurance.
@@ -57,19 +65,9 @@ Although AIRDOS03 was developed in partnership with [Universal Scientific Techno
   
 For more detailed technical description of the radiation sensor go to [UST's AIRDOS03 documentation](https://docs.dos.ust.cz/airdos/AIRDOS03).
 
-### Key Features
-
-* Fully compatible with [TF-ATMON](/instruments/TF-ATMON) and Pixhawk ecosystem
-* Lightweight and low-power (5 V / 3 mA)
-* Spectral data output for scientific analysis
-* Can operate in real-time streaming mode or store data onboard
-* Modular open-source firmware for custom scientific missions
-
-### Connector Pinout
-
 AIRDOS03 provides TELEM/UART connectivity. The UART interface is compatible with the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) and enables integration with onboard telemetry systems or flight controllers.
 
-#### UART (JST-GH) Pinout
+#### UART Pinout
 
 | Signal | Pixhawk Color                            | ThunderFly Color                                              |
 | ------ | ------------------------------------------------- | ---------------------------------------------- |
