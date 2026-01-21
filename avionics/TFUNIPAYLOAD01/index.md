@@ -82,7 +82,7 @@ The UART interface is compatible with the [Pixhawk connector standard](https://g
 | GND    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
 
 
-### SPI master
+#### SPI master
 
 This SPI master interface should be used for the connection of external sensors or alternative communication devices like [TFLORA01](/avionics/TFLORA01/). 
 
