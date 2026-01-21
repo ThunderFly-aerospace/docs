@@ -60,7 +60,7 @@ The sensor detects RPM by measuring the rotation of a diametrically magnetized p
 
 ![TFRPMMAG01 Diagram](TFRPMMAG01_magnet_diagram.png)
 
-Place a diametrically magnetized disc magnet above the sensing area on the TOP side and keep it centered. Maintain a small axial air gap and avoid axial magnetization. Any rotation angle is acceptable; RPM is derived from the change of angle over time.
+Place a diametrically magnetized disc magnet above the sensing area on the TOP side and keep it centered. Maintain a small axial air gap (< 1 mm) and avoid axial magnetization. Any rotation angle is acceptable; RPM is derived from the change of angle over time.
 
 ## PX4 Autopilot Integration
 
