@@ -23,11 +23,15 @@ Its key advantage lies in the use of [MAVLink Tunnel packets](https://mavlink.io
 
 ## Hardware Overview
 
-The TFUNIPAYLOAD01 module is based on the [MLAB ATmegaTQ4401](https://www.mlab.cz/module/ATmegaTQ4401/) board equipped with an ATmega1284P microcontroller. This hardware platform provides:
+The TFUNIPAYLOAD01 module is based on the [MLAB ATmegaTQ4401](https://www.mlab.cz/module/ATmegaTQ4401/) board equipped with an ATmega1284P microcontroller.
+
+![TFUNIPAYLOAD01](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUNIPAYLOAD01/refs/heads/TFUNIPAYLOAD01B/doc/gen/img/TFUNIPAYLOAD01-top.png)
+
+This hardware platform provides:
 
 * 128 kB Flash and 16 kB RAM – sufficient for MAVLink message handling
 * Multiple UARTs for communication with both sensors and the autopilot
-* Standard [MLAB form factor](https://www.mlab.cz/) for mechanical and electrical compatibility with other modules
+* Standard [MLAB form factor](https://www.mlab.cz/) for mechanical and electrical compatibility with peripheral and sensor modules
 
 ## Intended Use Case
 
