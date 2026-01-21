@@ -11,7 +11,11 @@ has_children: false
 
 The AIRDOS03, also known as "UAVDOS," is a compact ionizing radiation detector and spectrometer developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz) and optimized for integration with unmanned aerial vehicles (UAVs).
 
-![AIRDOS03 electronics]()
+
+![TFUNIPAYLOAD01 AIRDOS03 control board](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUNIPAYLOAD01/refs/heads/TFUNIPAYLOAD01B/doc/gen/img/TFUNIPAYLOAD01-top.png)
+
+
+![USTSIPIN03 AIRDOS03 sensor board](https://raw.githubusercontent.com/ust-modules/USTSIPIN03/refs/heads/USTSIPIN03C/doc/gen/img/USTSIPIN03-top.png)
 
 ### Applications
 
@@ -45,11 +49,13 @@ Although AIRDOS03 was developed in partnership with [Universal Scientific Techno
   * Relative Humidity 0 to 100 %RH (accuracy 2	%RH)
   * Temperature -40 to 125 °C (accuracy 0.5 °C)
 * Lightweight, compact electronics
-  * 91 × 51 × 20 mm
+  * 71 × 51 × 25 mm
   * 40 grams
 * Interface options: UART (JST-GH - Pixhawk-compatible)
   * UART could be converted to USB-C by [TFUSBSERIAL01](/avionics/TFUSBSERIAL01/)
   * Device suitable for real-time spectrum measurement and in-flight data logging.
+  
+For more detailed technical description of the radiation sensor go to [UST's AIRDOS03 documentation](https://docs.dos.ust.cz/airdos/AIRDOS03).
 
 ### Key Features
 
