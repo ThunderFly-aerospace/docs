@@ -12,7 +12,7 @@ TFUNIPAYLOAD01 is a universal interface board designed for seamless integration 
 
 ![TF-ATMON with TFUNIPAYLOAD01 block diagram](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUNIPAYLOAD01/refs/heads/TFUNIPAYLOAD01A/doc/img/block_schematics.svg)
 
-Its key advantage lies in the use of [MAVLink Tunnel packets](https://mavlink.io/en/services/tunnel.html), eliminating the need to modify autopilot firmware. This solution is suited for rapid deployment and testing of new environmental or scientific sensors without the need to delve into autopilot firmware development. It provides a plug-and-play bridge between your sensor and the powerful MAVLink ecosystem.
+Its key advantage lies in the use of [MAVLink Tunnel packets](https://mavlink.io/en/services/tunnel.html), eliminating the need to modify autopilot firmware. This solution is suited for rapid deployment and testing of new environmental or scientific sensors without the need to delve into autopilot firmware development. It provides a plug-and-play bridge between your sensor and the powerful [TF-ATMON ecosystem](/instruments/TF-ATMON/).
 
 ## Intended Use Case
 
@@ -20,7 +20,7 @@ TFUNIPAYLOAD01 is intended for users developing or deploying atmospheric or scie
 
 * Experimental sensors under development
 * Rare or proprietary measurement devices
-* Quick integration of payloads without altering autopilot code
+* Quick integration of simple payloads without altering autopilot/flight stack code
 
 The example of this approach is the [TFPM01 airborne particulate matter sensor](/avionics/TFPM01/) demonstrator. 
 
@@ -33,8 +33,8 @@ The TFUNIPAYLOAD01 module is based on the [MLAB ATmegaTQ4401](https://www.mlab.c
 This hardware platform provides:
 
 * 128 kB Flash and 16 kB RAM – sufficient for MAVLink message handling
-* Multiple UARTs for communication with both sensors and the autopilot
-* Standard [MLAB form factor](https://www.mlab.cz/) for mechanical and electrical compatibility with peripheral and sensor modules
+* Multiple UARTs for communication with both sensors,[GNSS receiver](/avionics/TFGPS01/), and the flight controller
+* Standard [MLAB form factor](https://www.mlab.cz/) is used for mechanical and electrical compatibility with peripheral and sensor modules
 
 ### Connector Pinout
 
@@ -42,7 +42,7 @@ TFUNIPAYLOAD01 provides TELEM/UART, I2C, SPI, and Payload connectivity.
 
 #### TF Payload connector
 
-These signals provide additional functions, including synchronization or inter-device communication. This connector is primarily intended for time synchronization with the [TFGPS01 GNSS receiver](/avionics/TFGPS01), which provides location and time pulse signals (PPS) on its "Payload Connector".
+This connector is primarily intended for time synchronization with the [TFGPS01 GNSS receiver](/avionics/TFGPS01), which provides location and time pulse signals (PPS) on its "Payload Connector".
 
 
 | Signal    | Pixhawk Color                | ThunderFly Color                                  |
@@ -105,20 +105,19 @@ Sensor data is processed on the TFUNIPAYLOAD01 module using **Arduino-compatible
 * Logged automatically by the autopilot (if configured correctly)
 * Forwarded to the Ground Control Station (GCS) with software such as QGroundControl or [TF-ATMON](/instruments/TF-ATMON)
 
-The [TF-ATMON system](/instruments/TF-ATMON) is specifically optimized to receive and process such sensor data using MAVLink Tunnel messages, while enabling the TF-ATMON system to visualize and geolocate the sensor measurements in time and space. This allows users to quickly gain insight into the measured environment without requiring any sensor-specific firmware changes in PX4 or ArduPilot.
+The [TF-ATMON system](/instruments/TF-ATMON) is designed to receive and process such sensor data in the form of MAVLink Tunnel messages. That enabling the TF-ATMON system to visualize and geolocate the sensor measurements in time and space. This allows users to quickly gain insight into the measured environment without requiring any sensor-specific firmware changes in PX4 or ArduPilot.
 
 ### Advantages of the MAVLink Tunnel Approach
 
 * **No firmware modification** of PX4 or ArduPilot is necessary
 * **Standardized MAVLink interface** allows inspection and logging tools (QGC, uLog, MAVSDK)
-* **Sensor abstraction**: Only the payload firmware knows the sensor-specific protocol and interface
+* **Sensor abstraction**: Only the TFUNIPAYLOAD01's firmware knows the sensor-specific protocol and interface
 * **Flexible and portable**: The same approach works across multiple autopilot flight stacks
 
 ## Integration Workflow
 
-1. **Connect your sensor** to one of the TFUNIPAYLOAD01's UART or analog interfaces.
+1. **Connect your sensor** to one of the TFUNIPAYLOAD01's digital or analog interfaces.
 2. **Develop a small Arduino sketch** for the ATmega1284P to:
-
    * Read data from the sensor
    * Format it as a `MAVLink TUNNEL` message
    * Send it via serial port to the autopilot
@@ -127,7 +126,7 @@ The [TF-ATMON system](/instruments/TF-ATMON) is specifically optimized to receiv
 
 ## PX4 Parameter Configuration
 
-The following PX4 parameters must be set (example for TELEM2):
+The following PX4 parameters must be set to make TFUNIPAYLOAD01 working (example for TELEM2):
 
 | Parameter          | Value   | Description                              |
 | ------------------ | ------- | ---------------------------------------- |
@@ -139,7 +138,7 @@ The following PX4 parameters must be set (example for TELEM2):
 
 ## Example Firmware
 
-Refer to the `TFUNIPAYLOAD_MINIMAL` sketch for a lightweight example that sends only `HEARTBEAT` and `TUNNEL` messages:
+Refer to the [`TFUNIPAYLOAD_MINIMAL` sketch](https://github.com/ThunderFly-aerospace/TFUNIPAYLOAD01/tree/TFUNIPAYLOAD01B/SW/arduino/src/TFUNIPAYLOAD_MINIMAL) for a lightweight example that sends only `HEARTBEAT` and `TUNNEL` messages:
 
 ```cpp
 mav.SendTunnelData(data, sizeof(data), sensor_id, 1, 1);
@@ -158,13 +157,13 @@ mav.SendTunnelData(data, sizeof(data), sensor_id, 1, 1);
 
 ### Using QGroundControl
 
-Ensure your autopilot is connected via a telemetry radio or USB-UART bridge, not via its USB port. The following steps allow you to inspect incoming MAVLink TUNNEL messages:
+Ensure your autopilot is connected via a [telemetry radio](/avionics/TFSIK01/) or [USB-UART bridge](/avionics/TFUSBSERIAL01/), do not use the flight controller's USB port directly. The following steps allow you to inspect incoming MAVLink TUNNEL messages:
 
 1. Open QGroundControl and connect the autopilot.
 2. Click the QGC logo (top left corner), navigate to **Analyze Tools**, then select **MAVLink Inspector**.
 3. Look for messages of type `TUNNEL`. These confirm correct reception and forwarding.
 
-> **Note:** This requires the messages to be broadcast (sysid = 0, compid = 0), and QGC must be on a MAVLink-enabled link (not USB).
+> **Note:** This requires the messages to be broadcast (sysid = 0, compid = 0), and QGC must be on a MAVLink-enabled link (not applicable for direct USB connection).
 
 
 ![MavLink Tunnel messages in QGC](https://user-images.githubusercontent.com/5196729/99434203-cec17d00-290e-11eb-93a7-e089ba893775.png)
