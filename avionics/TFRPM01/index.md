@@ -81,7 +81,9 @@ These special cable conductors' winding method greatly improves the signal integ
 
 ### I²C Address Configuration
 
-By default, the TFRPM01 sensor is manufactured with a 0x50 I²C address. This address is possible to change to 0x51 by altering the JP1 solder junction. The junction connection to GND needs to be cut with a knife and then soldered to the opposite side of Vcc.
+By default, the TFRPM01 sensor is manufactured with a 0x50 I²C address. This address is possible to change to 0x51 by altering the JP1 solder junction. The junction connection to GND needs to be cut with a knife and then soldered to the opposite side of Vcc. Then the PX4 driver could be started on an alternative I2C address by
+
+    pcf8583 start -X -b <bus number> -a 0x51
 
 The default configuration of the junction corresponds to the following picture, where the center pin is connected to GND by a copper trace.
 
