@@ -112,4 +112,15 @@ The TFCABxxUART01 series is used for **serial communication**, connecting autopi
 - **Straight-through wiring**: Ensure that RX/TX and RTS/CTS are properly swapped in devices.
 
 
+### SPI
+
+|Signal| Pixhawk Color | ThunderFly color |
+|--------|------------------|---------------------|
+| +5V  |     Red    |   ![red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png)  Red   |
+| SCK  |    Black  |    ![yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png)  Yellow | 
+| MISO |   Black  |   ![blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png) Blue  | 
+| MOSI |   Black  |   ![green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green | 
+| CS!  |     Black  |  ![white](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png) White | 
+| CS2 |    Black   | ![blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png)  Blue | 
+| GND |   Black   |   ![black](https://user-images.githubusercontent.com/5196729/102204896-b8d1b880-3eca-11eb-8b73-656cac9104e4.png) Black  |
 
