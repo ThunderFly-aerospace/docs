@@ -9,11 +9,16 @@ has_children: false
 
 ## AIRDOS03 - UAS Radiation Dosimeter and Spectrometer
 
-The AIRDOS03, also known as "UAVDOS," is a compact ionizing radiation detector and spectrometer developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz) and optimized for integration with unmanned aerial vehicles (UAVs). It is based on the proven USTSIPIN02 electronics and is tailored for use in airborne radiation research missions.
+The AIRDOS03, also known as "UAVDOS," is a compact ionizing radiation detector and spectrometer developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz) and optimized for integration with unmanned aerial vehicles (UAVs).
 
+![AIRDOS03 electronics]()
 
-![AIRDOS03 internal electronics](USTSIPIN02_top.png)
+### Applications
 
+* UAV-based atmospheric radiation surveys
+* Detection of increased ionizing radiation in convective storm regions
+* Mapping radiation gradients near ground-based or airborne sources
+* Scientific support for space weather and high-altitude dosimetry research
 
 ### UAV Integration
 
@@ -23,9 +28,13 @@ This integration enables high-resolution mapping of radiation intensity in three
 
 ![AIRDOS03 mounted on TF-G2](AIRDOS03_TF-G2.jpg)
 
-### Core Technology
+### Where to get it?
 
-At the heart of AIRDOS03 is the USTSIPIN02 silicon PIN diode-based detection system, which enables:
+AIRDOS03 can be purchased directly from ThunderFly via our [contact page](https://www.thunderfly.cz/contact-us.html). For larger orders or special configurations, feel free to reach out with your requirements.
+
+Although AIRDOS03 was developed in partnership with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), the ThunderFly team handles sales, support, and integration for airborne applications.
+ 
+### Technical parameters
 
 * Measurement of the deposited energy of ionizing radiation in the 40 keV to 80 MeV
 * Energy resolution 15 ±2 keV per channel (firmware-dependent)
@@ -65,10 +74,9 @@ AIRDOS03 provides TELEM/UART connectivity. The UART interface is compatible with
 | RTS    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow |
 | GND    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
 
-#### Auxiliary IO (JST-GH)
+#### TF Payload connector
 
 These signals provide additional functions, including synchronization or inter-device communication. This connector is primarily intended for time synchronization with the [TFGPS01 GNSS module](/avionics/TFGPS01), which provides PPS and time pulse signals on "Payload Connector".
-
 
 | Signal    | Pixhawk Color                | ThunderFly Color                                  |
 | --------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -82,17 +90,12 @@ These signals provide additional functions, including synchronization or inter-d
 | GND       | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
 
 
-### Use Cases
+## Obsolete USTSIPIN02-based hardware
 
-* UAV-based atmospheric radiation surveys
-* Detection of increased ionizing radiation in convective storm regions
-* Mapping radiation gradients near ground-based or airborne sources
-* Scientific support for space weather and high-altitude dosimetry research
+![AIRDOS03 internal electronics](USTSIPIN02_top.png)
 
-### Where to get it?
+Original hardware was based on the USTSIPIN02 electronics and modified for use in airborne radiation research missions.
 
-AIRDOS03 can be purchased directly from ThunderFly via our [contact page](https://www.thunderfly.cz/contact-us.html). For larger orders or special configurations, feel free to reach out with your requirements.
 
-Although AIRDOS03 was developed in partnership with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), the ThunderFly team handles sales, support, and integration for airborne applications.
 
 
