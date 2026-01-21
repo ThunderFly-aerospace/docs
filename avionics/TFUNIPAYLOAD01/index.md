@@ -14,12 +14,15 @@ TFUNIPAYLOAD01 is a universal interface board designed for seamless integration 
 
 Its key advantage lies in the use of [MAVLink Tunnel packets](https://mavlink.io/en/services/tunnel.html), eliminating the need to modify autopilot firmware. This solution is suited for rapid deployment and testing of new environmental or scientific sensors without the need to delve into autopilot firmware development. It provides a plug-and-play bridge between your sensor and the powerful MAVLink ecosystem.
 
-## Advantages of the MAVLink Tunnel Approach
+## Intended Use Case
 
-* **No firmware modification** of PX4 or ArduPilot is necessary
-* **Standardized MAVLink interface** allows inspection and logging tools (QGC, uLog, MAVSDK)
-* **Sensor abstraction**: Only the payload firmware knows the sensor-specific protocol and interface
-* **Flexible and portable**: The same approach works across multiple autopilot flight stacks
+TFUNIPAYLOAD01 is intended for users developing or deploying atmospheric or scientific sensors where direct driver support in PX4/ArduPilot is not yet available or practical. Common use cases include:
+
+* Experimental sensors under development
+* Rare or proprietary measurement devices
+* Quick integration of payloads without altering autopilot code
+
+The example of this approach is the [TFPM01 airborne particulate matter sensor](/avionics/TFPM01/) demonstrator. 
 
 ## Hardware Overview
 
@@ -33,15 +36,37 @@ This hardware platform provides:
 * Multiple UARTs for communication with both sensors and the autopilot
 * Standard [MLAB form factor](https://www.mlab.cz/) for mechanical and electrical compatibility with peripheral and sensor modules
 
-## Intended Use Case
+### Connector Pinout
 
-TFUNIPAYLOAD01 is intended for users developing or deploying atmospheric or scientific sensors where direct driver support in PX4/ArduPilot is not yet available or practical. Common use cases include:
+TFUNIPAYLOAD01 provides TELEM/UART connectivity. The UART interface is compatible with the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) and enables integration with onboard telemetry systems or flight controllers.
 
-* Experimental sensors under development
-* Rare or proprietary measurement devices
-* Quick integration of payloads without altering autopilot code
+#### UART (JST-GH) Pinout
 
-The example of this approach is the [TFPM01 airborne particulate matter sensor](/avionics/TFPM01/) demonstrator. 
+| Signal | Pixhawk Color              | ThunderFly Color          |
+| ------ | -------------------------- | ---------------------- |
+| +5V    | ![Red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red     | ![Red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red       |
+| RX     | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![White](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png) White   |
+| TX     | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green   |
+| CTS    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png) Blue     |
+| RTS    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow |
+| GND    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
+
+
+#### TF Payload connector
+
+These signals provide additional functions, including synchronization or inter-device communication. This connector is primarily intended for time synchronization with the [TFGPS01 GNSS receiver](/avionics/TFGPS01), which provides PPS and time pulse signals on its "Payload Connector".
+
+
+| Signal    | Pixhawk Color                | ThunderFly Color                                  |
+| --------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| TIMEPULSE | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png) Blue     |
+| EXTINT    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow |
+| GPIO | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![White](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png) White   |
+| SDA       | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green   |
+| SCL       | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow |
+| TX        | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![White](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png) White   |
+| RX        | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green   |
+| GND       | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
 
 ## Communication Principle
 
@@ -52,6 +77,13 @@ Sensor data is processed on the TFUNIPAYLOAD01 module using **Arduino-compatible
 * Forwarded to the Ground Control Station (GCS) with software such as QGroundControl or [TF-ATMON](/instruments/TF-ATMON)
 
 The [TF-ATMON system](/instruments/TF-ATMON) is specifically optimized to receive and process such sensor data using MAVLink Tunnel messages, while enabling the TF-ATMON system to visualize and geolocate the sensor measurements in time and space. This allows users to quickly gain insight into the measured environment without requiring any sensor-specific firmware changes in PX4 or ArduPilot.
+
+### Advantages of the MAVLink Tunnel Approach
+
+* **No firmware modification** of PX4 or ArduPilot is necessary
+* **Standardized MAVLink interface** allows inspection and logging tools (QGC, uLog, MAVSDK)
+* **Sensor abstraction**: Only the payload firmware knows the sensor-specific protocol and interface
+* **Flexible and portable**: The same approach works across multiple autopilot flight stacks
 
 ## Integration Workflow
 
