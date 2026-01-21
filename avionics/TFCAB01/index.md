@@ -109,10 +109,12 @@ The TFCABxxUART01 series is used for **serial communication**, connecting autopi
 ### Important Notes
 - **UART cables should be kept as short as possible** to minimize EMI interference.
 - **Twisting is not recommended** for UART cables to prevent increased cross-talk.
-- **Straight-through wiring**: Ensure that RX/TX and RTS/CTS are properly swapped in devices.
+- **Straight-through wiring**: Ensure that RX/TX and RTS/CTS are properly swapped in device connectors. The cable itself is 1:1.
 
 
 ### SPI
+
+This cable is used for the connection of SPI bus devices. 
 
 |Signal| Pixhawk Color | ThunderFly color |
 |--------|------------------|---------------------|
@@ -124,3 +126,6 @@ The TFCABxxUART01 series is used for **serial communication**, connecting autopi
 | CS2 |    Black   | ![blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png)  Blue | 
 | GND |   Black   |   ![black](https://user-images.githubusercontent.com/5196729/102204896-b8d1b880-3eca-11eb-8b73-656cac9104e4.png) Black  |
 
+### Important Notes
+- **SPI cables should be kept as short as possible** to minimize EMI interference.
+- **Twisting is not recommended** in case of SPI cables to prevent increased cross-talk.
