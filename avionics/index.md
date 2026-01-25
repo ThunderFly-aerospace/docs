@@ -128,6 +128,10 @@ The dimensions of the PCB are defined by three parameters:
 > Most commonly, the module width is 15 mm or 20 mm (e.g., a=0 or a=5), depending on the JST-GH connector number of pins (typically 4-pin for I²C).
 > Mounting notches with a radius of 1.5 mm are positioned on both sides of the PCB. May be skipped (even asymmetrically) for relevant construction reasons. Their placement is measured from the connector edge.
 
+#### Connectors
+
+[Dronecode](https://dronecode.org/) standard connectors are used where applicable (e.g., JST-GH).  For RF components, ThunderFly uses primarily [MCX connectors](https://en.wikipedia.org/wiki/MCX_connector), the reason is that this type of connector can be easily operated without tools.  An additional feature is its possibility to be unplugged by extensive force in case of a crash landing, and therefore often saves the PCBs from damage. 
+
 #### Status Indicators
 
 Each ThunderFly avionics module is equipped with status LEDs to provide quick visual feedback during operation. Typical meaning is as follows: 
