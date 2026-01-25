@@ -6,14 +6,14 @@ parent: "Power & Motor Control"
 nav_order: "11"
 ---
 
-# TFESC03 - Miniature BLDC Motor Driver Module with I2C Interface
+# TFESC03 - Miniature BLDC Motor Driver with I2C Interface
 
 ![TFESC03 - BLDC Motor Driver PCB top side](TFESC03-top.png)
 
 ![TFESC03 - BLDC Motor Driver PCB bottom side](TFESC03-bottom.png)
 
 
-The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs and other embedded systems where space and efficiency are critical. It is based on the [MCF8316C-Q1](https://www.ti.com/product/MCF8316C-Q1) integrated circuit, enabling **sensorless Field Oriented Control (FOC)**. TFESC03 integrates directly into UAV avionics through an PixHawk I2C interface and is fully compatible with PX4 autopilot firmware.
+The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs and other embedded systems where space and efficiency are critical. It is based on the [MCF8316C-Q1](https://www.ti.com/product/MCF8316C-Q1) integrated circuit, enabling **sensorless Field Oriented Control (FOC)**. TFESC03 integrates directly into UAV avionics through a PixHawk I2C interface and is fully compatible with PX4 autopilot firmware.
 
 ## Features
 
@@ -51,9 +51,9 @@ The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs a
 
 The TFESC03 provides seamless integration into UAV avionics through its I2C interface. It allows precise speed control, torque optimization, and diagnostics directly from autopilot systems such as PX4 parameters. Its efficiency and compact size make it suitable for propulsion systems in micro and small UAVs, as well as robotic and industrial automation applications.
 
-### Energy Efficiency and Extended Runtime
+### Improved Energy Efficiency
 
-The advanced FOC algorithm and integrated regulators minimize power losses while maximizing torque efficiency. Built-in **soft-start/stop** and **dead-time compensation** improve acoustic performance and extend component lifetime.
+The advanced FOC algorithm and integrated regulators minimize power losses while maximizing torque efficiency and extending runtime. Built-in soft-start/stop and dead-time compensation improve acoustic performance and extend motor winding lifetime.
 
 ### Applications
 
