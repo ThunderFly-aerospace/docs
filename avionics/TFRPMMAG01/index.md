@@ -62,6 +62,12 @@ The sensor detects RPM by measuring the rotation of a diametrically magnetized p
 
 Place a diametrically magnetized disc magnet above the sensing area on the TOP side and keep it centered. Maintain a small axial air gap (< 1 mm) and avoid axial magnetization. Any rotation angle is acceptable; RPM is derived from the change of angle over time.
 
+Dimensions of the sensor follow. The overal thickness is 0.6 mm PCB + 1.2 mm Sensor IC height. Therefore 1.8mm in total. 2 mm wide slit is usually good starting design, which allows manipulation with the sensor during maintenance.  
+
+![TFRPMMAG01 Dimensions](TFRPMMAG01-dimensions.png)
+
+Nominal hole diameter in PCB is 2.2 mm. Acceptable screw head diameter is up to 4.4 mm.
+
 ## PX4 Autopilot Integration
 
 The PX4 firmware includes support for the TFRPMMAG01. When connected to the I2C bus of a Pixhawk flight controller, it is automatically detected and can be configured through standard PX4 parameters.
