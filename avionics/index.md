@@ -178,6 +178,8 @@ The following table lists wholesale prices for avionics components for orders up
 | [TFGPSLITE02](https://docs.thunderfly.cz/avionics/TFGPSLITE02/) | €143,00 | €135,85 | €128,70 |
 | [TFI2CEXT01](https://docs.thunderfly.cz/avionics/TFI2CEXT01/) | €52,00 | €49,40 | €46,80 |
 | [TFSIK01](https://docs.thunderfly.cz/avionics/TFSIK01/) | €161,92 |	€153,82 |	€145,72 |
+| [TFESC02](https://docs.thunderfly.cz/avionics/TFESC02/) |	€50,00 |	€47,50 |	€45,00 |
+| [TFESC03](https://docs.thunderfly.cz/avionics/TFESC03/) |	€42,00 |	€39,90 |	€37,80 |
 | [TFCAB15I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €8,00 | €7,60 | €7,20 |
 | [TFCAB30I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €8,50 | €8,08 | €7,65 |
 | [TFCAB45I2C01](https://docs.thunderfly.cz/avionics/TFCAB01/) | €9,00 | €8,55 | €8,10 |
