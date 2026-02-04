@@ -41,6 +41,9 @@ The TFSIK01 is a European-made state-of-the-art SiK-based unmanned vehicle C2 an
 
 ## Hardware Parameters
 
+
+![TFSIK01 modem PCB without RF shielding](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/refs/heads/TFSIK01C/doc/img/TFSIK01_3.jpg)
+
 | Parameter | Value | Description |
 |-----------|-------|-------------|
 | Frequency range | 142 MHz - 1050 MHz | The Exact frequency band has to be set by the factory; commonly used bands are 433MHz, 868 MHz, and 915 MHz|
