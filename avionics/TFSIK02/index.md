@@ -108,11 +108,11 @@ AT&W             # save to flash
 ATZ              # reboot to apply
 ```
 
-##### Optional One-Time-Pad (Vernam) Encryption Mode
+##### One-Time-Pad (Vernam) Encryption Mode
 
-For special defense deployments, TFSIK02 can operate in an optional [Vernam (One-Time-Pad) encryption mode](https://en.wikipedia.org/wiki/One-time_pad) using a pre-generated random key stream stored on external memory. The key material is prepared prior to deployment for the full anticipated mission duration and loaded into both the UAV and ground modem under controlled conditions.
+For special defense deployments, TFSIK02 can operate in an optional [Vernam (One-Time-Pad) encryption mode](https://en.wikipedia.org/wiki/One-time_pad) using a pre-generated random key stream stored on external memory. The key material is prepared before deployment for the full mission duration and loaded into both the UAV and ground modem under controlled conditions.
 
-During operation, telemetry data on the UART interface is encrypted by a direct XOR operation with the continuously read key stream. Both endpoints consume key sequentially from a prepared external memory. No over-the-air key exchange or algorithm negotiation takes place.
+During operation, telemetry data on the UART interface is encrypted by a direct XOR operation with the continuously read key stream. Both endpoints consume keys sequentially from a prepared external memory. No over-the-air key exchange or algorithm negotiation takes place.
 
 ```
 +++
@@ -121,9 +121,9 @@ ATS16=200        # select Vernam OTP mode
 AT&W             # save to flash
 ATZ              # reboot to apply
 ```
-The key sequence is then read after power up from external media. 
+The key sequence is then read after powering up from external media. 
 
-This mode provides information confidentiality independent of computational attack capability (including quantum computing). It is therefore suitable for environments where deterministic behavior, minimal algorithmic attack surface are required. But operational discipline is essential. Key material must be securely generated, distributed, protected, and permanently destroyed after use. Reuse of key segments invalidates security.
+This mode provides the highest possible information confidentiality independent of computational attack capability (including quantum computing). It is therefore suitable for environments where a minimal algorithmic attack surface is required. But operational discipline is essential. Key material must be securely generated, distributed, protected, and permanently destroyed after use. Reuse of key segments invalidates security.
 
 ## Secure Communication and Encryption Concepts
 
