@@ -108,6 +108,23 @@ AT&W             # save to flash
 ATZ              # reboot to apply
 ```
 
+##### Optional One-Time-Pad (Vernam) Encryption Mode
+
+For special defense deployments, TFSIK02 can operate in an optional [Vernam (One-Time-Pad) encryption mode](https://en.wikipedia.org/wiki/One-time_pad) using a pre-generated random key stream stored on external memory. The key material is prepared prior to deployment for the full anticipated mission duration and loaded into both the UAV and ground modem under controlled conditions.
+
+During operation, telemetry data on the UART interface is encrypted by a direct XOR operation with the continuously read key stream. Both endpoints consume key sequentially from a prepared external memory. No over-the-air key exchange or algorithm negotiation takes place.
+
+```
++++
+OK
+ATS16=200        # select Vernam OTP mode
+AT&W             # save to flash
+ATZ              # reboot to apply
+```
+The key sequence is then read after power up from external media. 
+
+This mode provides information confidentiality independent of computational attack capability (including quantum computing). It is therefore suitable for environments where deterministic behavior, minimal algorithmic attack surface are required. But operational discipline is essential. Key material must be securely generated, distributed, protected, and permanently destroyed after use. Reuse of key segments invalidates security.
+
 ## Secure Communication and Encryption Concepts
 
 TFSIK02 supports multiple encryption and key‑management models, depending on how the modem pair is deployed and integrated. Its general principle is drop-in replacement of an unencrypted Mavlink modem connected on UART, by an encrypted wireless datalink between two UART ports. 
