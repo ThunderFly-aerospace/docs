@@ -92,7 +92,7 @@ The TFSIK02 parameters could be read exactly the same as in [TFSIK01 documentati
     S15:MAX_WINDOW=131
     S16:ENCRYPTION_LEVEL=1
 
-In addition to these standard parameters. The TFSIK02 has an encryption feature. 
+In addition to these standard parameters. The TFSIK02 has the following encryption features: 
 
 #### Encryption key setup
 
