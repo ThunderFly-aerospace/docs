@@ -23,11 +23,7 @@ While TFSIK02 is technically derived from the [TFSIK01](/avionics/TFSIK01) desig
 * Government and institutional unmanned systems
 * Applications where key management and link isolation are required
 
-For general SiK firmware operation, radio principles (FHSS, TDM, LBT), and AT‑command configuration, refer to the corresponding sections in the [TFSIK01 documentation](/avionics/TFSIK01).
-
-## Designed for Defense Use
-
-Compared to [TFSIK01](/avionics/TFSIK01), TFSIK02 emphasizes:
+For general SiK firmware operation, radio principles (FHSS, TDM, LBT), and AT‑command configuration, refer to the corresponding sections in the [TFSIK01 documentation](/avionics/TFSIK01). Compared to [TFSIK01](/avionics/TFSIK01), TFSIK02 emphasizes:
 
 * **High RF output power**  - up to 35 dBm, using robust hardware Power Amplifier
 * **Controlled frequency planning** - outside standard hobby ISM usage
@@ -38,92 +34,6 @@ Compared to [TFSIK01](/avionics/TFSIK01), TFSIK02 emphasizes:
 * **Deterministic link pairing** - removes accidental association with third‑party radios
 
 Generic SiK firmware features are described in the [TFSIK01 documentation](/avionics/TFSIK01) and are not repeated here. The modem remains based on open and inspectable hardware and firmware principles, which allows security audits and controlled deployment, while avoiding black‑box radio behavior.
-
-
-## Hardware Parameters
-
-| Parameter             | Value                      | Notes                                            |
-| --------------------- | -------------------------- | ------------------------------------------------ |
-| Frequency range       | 142 MHz – 1050 MHz         | Factory configured, band‑specific RF front‑end   |
-| RF output power       | 20 dBm – 35 dBm            | Fixed per configuration, regulatory dependent    |
-| Receiver sensitivity  | ≤ −117 dBm                 | 64 kbps air data rate                         |
-| RF bandwidth          | < 4 MHz                    | Hardware‑filtered                                     |
-| Antenna connectors    | MCX (dual)                 | Supports diversity                               |
-| Interface             | 3.3 V UART (JST‑GH)        | Pixhawk‑compatible                               |
-| Supply voltage        | 5 V                        | Power consumption depends on RF power (Up to 2A) |
-| Operating temperature | −20 °C to +40 °C           | Cooling‑limited                                  |
-
-## Frequency Bands of Interest for Defense Users
-
-| Nominal Band    | Typical Use Case                   |
-| --------------- | ---------------------------------- |
-| **225–400 MHz** | Military UHF / long‑range LOS      |
-| **400–450 MHz** | Tactical UAV telemetry             |
-| **433 MHz**     | Shared / experimental environments |
-| **460–500 MHz** | Government‑allocated channels      |
-| **800–900 MHz** | High‑throughput short‑range links  |
-| **915 MHz**     | Export‑friendly configurations     |
-
-⚠️ Regulatory compliance is entirely deployment‑dependent. TFSIK02 hardware is configured per project and not user‑retunable across bands.
-
-
-#### Example of software parameters 
-
-The TFSIK02 parameters could be read exactly the same as in [TFSIK01 documentation](/avionics/TFSIK01).
-
-    picocom /dev/ttyUSB0 -b 57600
-    +++
-    OK
-    ATI5
-    S0:FORMAT=26
-    S1:SERIAL_SPEED=57
-    S2:AIR_SPEED=64
-    S3:NETID=25
-    S4:TXPOWER=35
-    S6:MAVLINK=1
-    S7:OPPRESEND=0
-    S8:MIN_FREQ=433050
-    S9:MAX_FREQ=434790
-    S10:NUM_CHANNELS=10
-    S11:DUTY_CYCLE=100
-    S12:LBT_RSSI=0
-    S13:MANCHESTER=0
-    S14:RTSCTS=0
-    S15:MAX_WINDOW=131
-    S16:ENCRYPTION_LEVEL=1
-
-In addition to these standard parameters. The TFSIK02 has the following encryption features: 
-
-#### Encryption key setup
-
-The encryption level stored in `S16` picks the key length, so set it before writing the key (1 → 128 bit/32 hex chars, 2 → 192 bit/48 hex chars, 3 → 256 bit/64 hex chars). Example for a 128‑bit key:
-
-```
-+++
-OK
-ATS16=1          # select 128-bit key
-AT&E=00112233445566778899AABBCCDDEEFF   # set key (32 hex chars)
-AT&E?            # read back the key
-AT&W             # save to flash
-ATZ              # reboot to apply
-```
-
-##### One-Time-Pad (Vernam) Encryption Mode
-
-For special defense deployments, TFSIK02 can operate in an optional [Vernam (One-Time-Pad) encryption mode](https://en.wikipedia.org/wiki/One-time_pad) using a pre-generated random key stream stored on external memory. The key material is prepared before deployment for the full mission duration and loaded into both the UAV and ground modem under controlled conditions.
-
-During operation, telemetry data on the UART interface is encrypted by a direct XOR operation with the continuously read key stream. Both endpoints consume keys sequentially from a prepared external memory. No over-the-air key exchange or algorithm negotiation takes place.
-
-```
-+++
-OK
-ATS16=200        # select Vernam OTP mode
-AT&W             # save to flash
-ATZ              # reboot to apply
-```
-The key sequence is then read after powering up from external media. 
-
-This mode provides the highest possible information confidentiality independent of computational attack capability (including quantum computing). It is therefore suitable for environments where a minimal algorithmic attack surface is required. But operational discipline is essential. Key material must be securely generated, distributed, protected, and permanently destroyed after use. Reuse of key segments invalidates security.
 
 ## Secure Communication and Encryption Concepts
 
@@ -165,7 +75,93 @@ This model assumes the existence of a trusted pre‑deployment infrastructure, p
 **Advantages:** Highest security level, Compartmentalization of missions
 **Typical use:** reusable defense UAVs, long‑term platforms.
 
-## Threat Model
+
+## Hardware Parameters
+
+| Parameter             | Value                      | Notes                                            |
+| --------------------- | -------------------------- | ------------------------------------------------ |
+| Frequency range       | 142 MHz – 1050 MHz         | Factory configured, band‑specific RF front‑end   |
+| RF output power       | 20 dBm – 35 dBm            | Fixed per configuration, regulatory dependent    |
+| Receiver sensitivity  | ≤ −117 dBm                 | 64 kbps air data rate                         |
+| RF bandwidth          | < 4 MHz                    | Hardware‑filtered                                     |
+| Antenna connectors    | MCX (dual)                 | Supports diversity                               |
+| Interface             | 3.3 V UART (JST‑GH)        | Pixhawk‑compatible                               |
+| Supply voltage        | 5 V                        | Power consumption depends on RF power (Up to 2A) |
+| Operating temperature | −20 °C to +40 °C           | Cooling‑limited                                  |
+
+## Frequency Bands of Interest for Defense Users
+
+| Nominal Band    | Typical Use Case                   |
+| --------------- | ---------------------------------- |
+| **225–400 MHz** | Military UHF / long‑range LOS      |
+| **400–450 MHz** | Tactical UAV telemetry             |
+| **433 MHz**     | Shared / experimental environments |
+| **460–500 MHz** | Government‑allocated channels      |
+| **800–900 MHz** | High‑throughput short‑range links  |
+| **915 MHz**     | Export‑friendly configurations     |
+
+⚠️ Regulatory compliance is entirely deployment‑dependent. TFSIK02 hardware is configured per project and not user‑retunable across bands.
+
+
+## List of software configurable parameters 
+
+The TFSIK02 parameters could be read exactly the same as in [TFSIK01 documentation](/avionics/TFSIK01).
+
+    picocom /dev/ttyUSB0 -b 57600
+    +++
+    OK
+    ATI5
+    S0:FORMAT=26
+    S1:SERIAL_SPEED=57
+    S2:AIR_SPEED=64
+    S3:NETID=25
+    S4:TXPOWER=35
+    S6:MAVLINK=1
+    S7:OPPRESEND=0
+    S8:MIN_FREQ=433050
+    S9:MAX_FREQ=434790
+    S10:NUM_CHANNELS=10
+    S11:DUTY_CYCLE=100
+    S12:LBT_RSSI=0
+    S13:MANCHESTER=0
+    S14:RTSCTS=0
+    S15:MAX_WINDOW=131
+    S16:ENCRYPTION_LEVEL=1
+
+In addition to these standard parameters. The TFSIK02 has the following encryption features: 
+
+### Encryption key setup
+
+The encryption level stored in `S16` picks the key length, so set it before writing the key (1 → 128 bit/32 hex chars, 2 → 192 bit/48 hex chars, 3 → 256 bit/64 hex chars). Example for a 128‑bit key:
+
+```
++++
+OK
+ATS16=1          # select 128-bit key
+AT&E=00112233445566778899AABBCCDDEEFF   # set key (32 hex chars)
+AT&E?            # read back the key
+AT&W             # save to flash
+ATZ              # reboot to apply
+```
+
+### One-Time-Pad (Vernam) Encryption Mode
+
+For special defense deployments, TFSIK02 can operate in an optional [Vernam (One-Time-Pad) encryption mode](https://en.wikipedia.org/wiki/One-time_pad) using a pre-generated random key stream stored on external memory. The key material is prepared before deployment for the full mission duration and loaded into both the UAV and ground modem under controlled conditions.
+
+During operation, telemetry data on the UART interface is encrypted by a direct XOR operation with the continuously read key stream. Both endpoints consume keys sequentially from a prepared external memory. No over-the-air key exchange or algorithm negotiation takes place.
+
+```
++++
+OK
+ATS16=200        # select Vernam OTP mode
+AT&W             # save to flash
+ATZ              # reboot to apply
+```
+The key sequence is then read after powering up from external media. 
+
+This mode provides the highest possible information confidentiality independent of computational attack capability (including quantum computing). It is therefore suitable for environments where a minimal algorithmic attack surface is required. But operational discipline is essential. Key material must be securely generated, distributed, protected, and permanently destroyed after use. Reuse of key segments invalidates security.
+
+## Threat Mitigation Models
 
 ### Unauthorized Pairing and Link Takeover
 
@@ -197,7 +193,7 @@ TFSIK02 provides the technical mechanisms to support these workflows, while proc
 
 Mechanical installation, antenna placement, and UART wiring follow the same principles as described in the [TFSIK01](/avionics/TFSIK01) Hardware Setup and Installation sections. Only band‑specific antenna systems and RF power considerations differ.
 
-## Export and Use Disclaimer
+### Export and Use Disclaimer
 
 TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance, and cryptographic policy. Because it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01](/avionics/TFSIK01). Depending on the selected frequency band, output power, and cryptographic configuration, the device may be subject to export control.
 
@@ -205,9 +201,9 @@ The responsibility for the following activities rests solely with the user or pu
 
 * Compliance with national and international regulations
 * Frequency allocation and licensing
-* Cryptographic policy and approval
+* Cryptographic policy and management
 
-ThunderFly s.r.o. supplies TFSIK02 as a configurable hardware platform. Final system classification, certification, and lawful use depend on how the device is integrated and deployed.
+[ThunderFly s.r.o.](https://www.thunderfly.cz/) supplies TFSIK02 as a configurable hardware platform. Final system classification, certification, and lawful use depend on how the device is integrated and deployed.
 
 
 
