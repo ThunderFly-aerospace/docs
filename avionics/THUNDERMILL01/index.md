@@ -73,7 +73,7 @@ The THUNDERMILL01 sensor is integrated into the TF-ATMON avionics system in the 
 
 ![THUNDERMILL01 stator connectors](https://raw.githubusercontent.com/ust-modules/USTTHUNDERMILLPCB01/refs/heads/USTTHUNDERMILLPCB01B/doc/img/USTTHUNDERMILLPCB01A_top.png)
 
-#### TF Payload connector
+#### TF Payload port
 
 This connector is primarily intended for time synchronization with the [TFGPS01 GNSS receiver](/avionics/TFGPS01), which provides location and time pulse signals (PPS) on its "Payload Connector".
 
@@ -89,9 +89,9 @@ This connector is primarily intended for time synchronization with the [TFGPS01 
 | RX        | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green   |
 | GND       | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
 
-#### UART Peripheral
+#### J6 - Debug & programming UART Port
 
-The UART interface is compatible with the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) as a peripheral device and enables integration with onboard flight controllers.
+The UART interface is compatible with the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) as a peripheral device and enables integration with onboard flight controllers. CTS is disconnected, and the RTS signal is used for the MCU reset for bootloader activation. 
 
 | Signal | Pixhawk Color              | ThunderFly Color          |
 | ------ | -------------------------- | ---------------------- |
@@ -101,6 +101,9 @@ The UART interface is compatible with the [Pixhawk connector standard](https://g
 | Not connected (CTS)  | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png) Blue     |
 | RTS    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow |
 | GND    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
+
+#### J1 - Pixhawk UART & I2C
+
 
 | Pin | Signal    | Voltage level | Pixhawk Color    | ThunderFly Color  |
 |-----|-----------|---------| -------|---------|
