@@ -42,8 +42,8 @@ The TFGPS01 is designed as open hardware (GPL v3), and all documentation is avai
 
 ### PCB Layout
 <p float="left">
-<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS01A_top_big.jpg" width="45%" />
-<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS01A_bot_big.jpg" width="45%" />
+<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01C/doc/gen/img/TFGPS01-top.png" width="45%" />
+<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01C/doc/gen/img/TFGPS01-bottom.png" width="45%" />
 </p>
 
 ### Enclosure
