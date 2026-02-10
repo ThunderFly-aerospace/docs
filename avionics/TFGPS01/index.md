@@ -8,7 +8,10 @@ nav_order: "11"
 
 # TFGPS01 - UAV GNSS Navigation Module with RTK Capability
 
-![TFGPS01 without enclosure](https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS01A_top.jpg)
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS_1.jpg" alt="3D printed box" width="80%" />
+</p>
 
 ## Overview
 The TFGPS01 is a high-end precision GNSS navigation module designed for UAV applications. It features multi-constellation reception, high noise immunity, and RTK capability, making it suitable for various drone navigation and payload synchronization tasks. The module can operate as both a standalone UART GPS and a USB GPS receiver.
@@ -40,21 +43,24 @@ The ThunderFly TFGPS01 GNSS receiver is optimized for operation in RF-noisy envi
 ## Hardware
 The TFGPS01 is designed as open hardware (GPL v3), and all documentation is available in the GitHub repository.
 
+![TFGPS01 without enclosure](https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS01A_top.jpg)
+
 ### PCB Layout
+
 <p float="left">
 <img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01C/doc/gen/img/TFGPS01-top.png" width="45%" />
 <img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01C/doc/gen/img/TFGPS01-bottom.png" width="45%" />
 </p>
 
 ### Enclosure
+
 A 3D-printed protective enclosure is available and customizable in OpenSCAD.
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS_1.jpg" alt="3D printed box" width="80%" />
-</p>
+![TFGPS01 enclosure](https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01C/doc/img/tfgps01_cap.png)
 
 ### Mechanical Drawing
-> TBD
+
+![TFGPS01 dimensions](https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01C/doc/img/TFGPS01_dimensions.png)
 
 ### Connection Diagram
 The **TFGPS01** module can be connected simultaneously to an **Autopilot** and **Payload**. Below is a standard setup:
@@ -115,7 +121,7 @@ I2C AUX is I2C1 output from the autopilot. No other device is connected to the I
 ### Payload Connector
 
 
-The module is equipped with a connector designed for payload connection; this feature is useful for time-sync and navigation data, time-stamping, or geofencing.
+The module is equipped with a connector designed for payload connection; this feature is useful for time-sync and navigation data, time-stamping, or geofencing. This connection is extensively used with [TF-ATMON sensors](/instruments/TF-ATMON).
 
 The connector is labeled as `Payload GPS Interface`.
 
