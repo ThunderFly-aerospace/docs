@@ -94,12 +94,5 @@ These signals provide additional functions, including synchronization or inter-d
 | GND       | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
 
 
-## Obsolete USTSIPIN02-based hardware
-
-![AIRDOS03 internal electronics](USTSIPIN02_top.png)
-
-Original hardware was based on the USTSIPIN02 electronics and modified for use in airborne radiation research missions.
-
-
 
 
