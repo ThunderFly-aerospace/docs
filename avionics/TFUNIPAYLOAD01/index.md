@@ -22,7 +22,11 @@ TFUNIPAYLOAD01 is intended for users developing or deploying atmospheric or scie
 * Rare or proprietary measurement devices
 * Quick integration of simple payloads without altering autopilot/flight stack code
 
-The example of this approach is the [TFPM01 airborne particulate matter sensor](/avionics/TFPM01/) demonstrator. 
+The example of expected approach is the [TFPM01 airborne particulate matter sensor](/avionics/TFPM01/) or [AIRDOS03 radiation sensor](/avionics/AIRDOS03/).  The hardware platform provides:
+
+* 128 kB Flash and 16 kB RAM – sufficient for MAVLink message handling
+* Multiple UARTs for communication with both sensors,[GNSS receiver](/avionics/TFGPS01/), and the flight controller
+* Standard [MLAB form factor](https://www.mlab.cz/) is used for mechanical and electrical compatibility with peripheral and sensor modules
 
 ## Hardware Overview
 
@@ -30,11 +34,19 @@ The TFUNIPAYLOAD01 module is based on the [MLAB ATmegaTQ4401](https://www.mlab.c
 
 ![TFUNIPAYLOAD01](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUNIPAYLOAD01/refs/heads/TFUNIPAYLOAD01B/doc/gen/img/TFUNIPAYLOAD01-top.png)
 
-This hardware platform provides:
+| Parameter      | Value         |Description                                       |
+| ----------- | --------------------------- | ----------------------------------------- |
+| Main Microcontroller (MCU)      | ATmega1284P                               | 128 kB Flash, 16 kB RAM                            |
+| I2C Connector                   | 4-pin JST-GH                              | Pixhawk standard                    |
+| FMU Communication Port         | 1x TELEM/UART                             | Main data input and output                                |
+| Operating Voltage               | 5V (nominal), supported range 4.5-5.5V        | Power supplied via UART Peripheral port, Protected overvoltage and reverse polarity |
+| Power Consumption               | Dependent on connected devices                | Current consumption varies based on attached payload  200mA expected maximum  |
+| Operating Temperature           | −20°C to +50°C                                |                                    |
+| Mass                            | 25g (PCB)                          | Mass of cabling needs to be added            |
+| Dimensions                      | 70.61x50.29 mm (PCB) / Custom case dimensions      | Refer to case drawings                                     |
+| MAVLink Communication Protocol  | MAVLink Tunnel over UART                   | No need for autopilot firmware modification                       |
+| Time Synchronization (PPS)      | Yes, via external GPS ([TFGPS01](/avionics/TFGPS01))               | Syncs to GPS pulse signals                                        |
 
-* 128 kB Flash and 16 kB RAM – sufficient for MAVLink message handling
-* Multiple UARTs for communication with both sensors,[GNSS receiver](/avionics/TFGPS01/), and the flight controller
-* Standard [MLAB form factor](https://www.mlab.cz/) is used for mechanical and electrical compatibility with peripheral and sensor modules
 
 ### Connector Pinout
 
