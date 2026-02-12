@@ -8,7 +8,7 @@ nav_order: "77"
 
 # TFUNIPAYLOAD01 – Universal MAVLink Sensor Interface for UAV Payloads
 
-TFUNIPAYLOAD01 is a universal interface board designed for seamless integration of custom sensors with PX4 or ArduPilot-based UAVs, especially when no dedicated driver exists for the sensor within the flight stack.
+TFUNIPAYLOAD01 is a universal interface board designed for seamless integration of custom sensors with PX4- or ArduPilot-based UAVs, especially when no dedicated driver for the sensor exists in the flight stack.
 
 ![TF-ATMON with TFUNIPAYLOAD01 block diagram](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUNIPAYLOAD01/refs/heads/TFUNIPAYLOAD01A/doc/img/block_schematics.svg)
 
@@ -38,7 +38,7 @@ This hardware platform provides:
 
 ### Connector Pinout
 
-TFUNIPAYLOAD01 provides TELEM/UART, I2C, SPI, and Payload connectivity. 
+TFUNIPAYLOAD01 provides a TELEM/UART port for connection to a flight controller and I2C, SPI, and GPIO for Payload connectivity. 
 
 #### TF Payload connector
 
@@ -58,11 +58,11 @@ This connector is primarily intended for time synchronization with the [TFGPS01 
 
 #### I2C master 
 
-The connector is used for the connection of auxiliary payload sensors. The [humidity and temperature sensors](/avionics/TFHT01/) is common example.
+The connector is used for the connection of auxiliary payload sensors. The [humidity and temperature sensors](/avionics/TFHT01/) are a common example.
 
 |Signal | Pixhawk Color | ThunderFly color |
 |--------|------------------|---------------------|
-| +5V    | Red | ![red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red |
+| +5V (out)   | Red | ![red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red |
 | SCL  | Black |  ![yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow  |
 | SDA  | Black |  ![green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green |
 | GND | Black  | ![black](https://user-images.githubusercontent.com/5196729/102204896-b8d1b880-3eca-11eb-8b73-656cac9104e4.png) Black |
@@ -70,11 +70,11 @@ The connector is used for the connection of auxiliary payload sensors. The [humi
 
 #### UART Peripheral
 
-The UART interface is compatible with the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) as a peripheral device and enables integration with onboard flight controllers.
+The UART interface is compatible with the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) as a peripheral device and enables integration with onboard flight controllers. It is the main power input for TFUNIPAYLOAD01 and connected devices. The 5V input is protected against reverse current from the TFUNIPAYLOAD01 and connected devices. 
 
 | Signal | Pixhawk Color              | ThunderFly Color          |
 | ------ | -------------------------- | ---------------------- |
-| +5V    | ![Red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red     | ![Red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red       |
+| +5V (in)  | ![Red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red     | ![Red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red       |
 | RX     | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![White](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png) White   |
 | TX     | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green   |
 | CTS    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png) Blue     |
@@ -88,7 +88,7 @@ This SPI master interface should be used for the connection of external sensors 
 
 |Signal| Pixhawk Color | ThunderFly color |
 |--------|------------------|---------------------|
-| +5V  |     Red    |   ![red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png)  Red   |
+| +5V (out) |     Red    |   ![red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png)  Red   |
 | SCK  |    Black  |    ![yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png)  Yellow | 
 | MISO |   Black  |   ![blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png) Blue  | 
 | MOSI |   Black  |   ![green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green | 
@@ -105,7 +105,7 @@ Sensor data is processed on the TFUNIPAYLOAD01 module using **Arduino-compatible
 * Logged automatically by the autopilot (if configured correctly)
 * Forwarded to the Ground Control Station (GCS) with software such as QGroundControl or [TF-ATMON](/instruments/TF-ATMON)
 
-The [TF-ATMON system](/instruments/TF-ATMON) is designed to receive and process such sensor data in the form of MAVLink Tunnel messages. That enabling the TF-ATMON system to visualize and geolocate the sensor measurements in time and space. This allows users to quickly gain insight into the measured environment without requiring any sensor-specific firmware changes in PX4 or ArduPilot.
+The [TF-ATMON system](/instruments/TF-ATMON) is designed to receive and process such sensor data in the form of MAVLink Tunnel messages. This enables the TF-ATMON system to visualize and geolocate the sensor measurements in time and space. This allows users to quickly gain insight into the measured environment without requiring any sensor-specific firmware changes in PX4 or ArduPilot.
 
 ### Advantages of the MAVLink Tunnel Approach
 
