@@ -17,6 +17,7 @@ nav_order: "10"
   * Improved low-speed resolution compared to [traditional pitot tubes](../avionics/TFPITOT01/).
   * Reduced tendency for clogging due to the absence of a stagnation point.
   * Directly integrated differential pressure sensor, eliminating the need for additional tubing.
+  * Integrated magnetometer improves navigation reliability. 
   * Customizable 3D-printed case to fit specific applications.
   * Integrated IMU to vibration diagnostics on AoA measurement.
 
@@ -40,11 +41,11 @@ nav_order: "10"
 | Dimensions | 35x40x35mm | Default 3D printed Case |
 | Weather resistance | [IP42](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
 
-The TFSLOT uses the [TFASPDIMU02 electronics](https://github.com/ThunderFly-aerospace/TFASPDIMU02) which has many more options for how can be used, please look at its documentation for more details and parameters. In cases where you need a lightweight Pitot Tube the [TFPITOT01](../avionics/TFPITOT01/) could be the better option. 
+The TFSLOT uses the [TFASPDIMU02 electronics](https://github.com/ThunderFly-aerospace/TFASPDIMU02), which has many more options for how it can be used. Please look at its documentation for more details and parameters. In cases where you need a lightweight Pitot Tube, the [TFPITOT01](../avionics/TFPITOT01/) could be the better option. 
 
 ## Connection to the Pixhawk-based autopilots
 
-The I²C interface connectors respect the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The signal and color coding of the connector and supplied cable are described by following table (ThunderFly color scheme):
+The I²C interface connectors respect the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The signal and color coding of the connector and supplied cable are described by the following table (ThunderFly color scheme):
 
 |Signal | Pixhawk Color | ThunderFly color |
 |--------|------------------|---------------------|
@@ -102,22 +103,22 @@ Where
 
 ### Comparison to pitot-static tube
 
-In contrast to classical [Pitot tube](https://en.wikipedia.org/wiki/Pitot_tube), the TFSLOT design is the perfect choice for low airspeed measurement (generally below 10 m/s).
+In contrast to the classical [Pitot tube](https://en.wikipedia.org/wiki/Pitot_tube), the TFSLOT design is the perfect choice for low airspeed measurement (generally below 10 m/s).
 The design has the following advantages compared to a pitot probe:
 
   * Better resolution on low airspeeds (where kinetic pressure is small)
-  * Less tendency to clogging (due to the absence of stagnation point)
+  * Less tendency to clogging (due to the absence of a stagnation point)
   * Direct differential pressure sensor integration without any additional tubing
 
-The improved resolution on low airspeeds is the principal difference from the pitot-static tube. This could be explained by comparing it with the classical equation for pitot-static tube:
+The improved resolution on low airspeeds is the principal difference from the pitot-static tube. This could be explained by comparing it with the classical equation for the pitot-static tube:
 
 ![Pitot-static tube airspeed equation](https://latex.codecogs.com/png.image?\large&space;\dpi{110}v_\infty=\sqrt{\frac{2\Delta&space;p}{\rho}})
 
-The equation for TFSLOT venturi-based sensor (see equations above) differs from it by a factor
+The equation for the TFSLOT venturi-based sensor (see equations above) differs from it by a factor
 
 ![TFSLOT sensitivity factor](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\left(\frac{A_D}{A_d}\right)^2-1)
 
-That means the TFSLOT sensor is more sensitive (e.g. has a higher measurable pressure difference at the same airspeed) than the pitot-static tube (at the same air density) in every configuration where
+That means the TFSLOT sensor is more sensitive (e.g., has a higher measurable pressure difference at the same airspeed) than the pitot-static tube (at the same air density) in every configuration where
 
 ![TFSLOT sensitivity compared to pitot](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\frac{A_D}{A_d}>\sqrt{2})
 
@@ -125,9 +126,9 @@ The advantage of the higher sensitivity results in increased drag, but it could 
 
 # Usage
 
-TFSLOT is equipped with [TFASPDIMU](https://github.com/ThunderFly-aerospace/TFASPDIMU02) electronics, which contain the required differential pressure sensor and an IMU unit through which the pressure sensor is connected. To activate I2C access to it, it is necessary to set the pass-through mode in the IMU unit. The [TFASPDIMU02](https://github.com/ThunderFly-aerospace/TFASPDIMU02) has many options for how it can be used. Please look at its documentation for more details.
+TFSLOT is equipped with [TFASPDIMU](https://github.com/ThunderFly-aerospace/TFASPDIMU02) electronics, which contain the required differential pressure sensor (SDP33) and an IMU (ICM-20948) through which the pressure sensor is connected. To activate I2C access to it, it is necessary to set the pass-through mode in the IMU unit. The [TFASPDIMU02](https://github.com/ThunderFly-aerospace/TFASPDIMU02) has many options for how it can be used. Please look at its documentation for more details.
 
-## PX4 autopilot
+## PX4 flight stack
 
 PX4 can initialize the sensor itself. All you have to do is add the following two lines to the [startup configuration file](https://docs.px4.io/master/en/concept/system_startup.html#replacing-the-system-startup) on the Autopilot's SD card.
 
@@ -162,6 +163,11 @@ The procedure is performed with the help of a calibration tool in a few steps:
   1. PX4 calibration should now be completed, confirmed by a beep, and in the QGC.
 
 ![calibration procedure](https://user-images.githubusercontent.com/5196729/154794029-8daf515e-4c26-449b-a836-17f068259a1b.png)
+
+
+## Ardupilot
+
+The TFSLOT01 sensor uses standard ICs, which have driver support in ArduPilot, although for the use of airspeed sensing. The IMU (ICM-20948) must be set to pass-through mode. 
 
 
 ## FAQ
