@@ -30,7 +30,7 @@ The example of expected approach is the [TFPM01 airborne particulate matter sens
 
 ## Hardware Overview
 
-The TFUNIPAYLOAD01 module is based on the [MLAB ATmegaTQ4401](https://www.mlab.cz/module/ATmegaTQ4401/) board equipped with an ATmega1284P microcontroller.
+The TFUNIPAYLOAD01 module is based on the [MLAB ATmegaTQ4401](https://www.mlab.cz/module/ATmegaTQ4401/) board equipped with an [ATmega1284P microcontroller](https://www.microchip.com/wwwproducts/en/ATmega1284p).
 
 ![TFUNIPAYLOAD01](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUNIPAYLOAD01/refs/heads/TFUNIPAYLOAD01B/doc/gen/img/TFUNIPAYLOAD01-top.png)
 
