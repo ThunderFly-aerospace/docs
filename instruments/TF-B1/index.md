@@ -67,7 +67,7 @@ TF-B1 enables high-resolution measurements of temperature, humidity, and gas com
 
 ### Aerospace and materials testing
 
-The balloon gondola provides near-space conditions such as isolated environment, extreme temperatures, and increased radiation. This environment is ideal for testing spacecraft components, electronics, and materials before deployment in orbit.
+The balloon gondola provides near-space conditions such as an isolated environment, extreme temperatures, and increased radiation. This environment is ideal for testing spacecraft components, electronics, and materials before deployment in orbit.
 
 ### Educational and outreach missions
 
@@ -93,6 +93,15 @@ Low-level LoRa PX4 driver based on the LMIC stack. Responsible for radio configu
 **`lora_gps_vcmd`**
 Application layer used in TF-B1. This module generates the beacon message, encodes GPS telemetry into a compact binary format, and schedules periodic transmissions. It also implements a dual spreading-factor operation used to balance transmission range and airtime.
 
+#### PX4 Parameters
+
+The `lora_gps_vcmd` module uses PX4 parameters to control the LoRa GPS beacon transmission interval. Parameter updates are monitored during runtime and applied without restarting the module.
+
+| Parameter      | Group | Default | Range    | Description                                                |
+| -------------- | ----- | ------- | -------- | ---------------------------------------------------------- |
+| `LORA_GPS_INT` | LoRA  | 120     | 20–86400 | Interval between LoRatransmissions in seconds. |
+
+The module checks the elapsed time since the last transmission once the configured interval has passed.
 
 ### Beacon Transmission
 
