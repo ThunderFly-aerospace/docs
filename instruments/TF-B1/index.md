@@ -71,6 +71,83 @@ TF-B1 has been successfully deployed in multiple missions:
 * [FIK-6 high-altitude balloon flight](https://github.com/ODZ-UJF-AV-CR/FIK-6)
 * [FIK-5 experiment](https://github.com/ODZ-UJF-AV-CR/FIK-5)
 
+## LoRa Beacon Configuration
+
+TF-B1 includes a long-range recovery beacon implemented using the [TFLORA01 LoRa modem](/avionics/TFLORA01/). The beacon periodically transmits a compact GPS telemetry packet that allows recovery of the payload even when the primary telemetry link is unavailable.
+
+The LoRa subsystem is implemented using two software modules. Only the application layer is platform-specific:
+
+**`tflora`**
+Low-level LoRa PX4 driver based on the LMIC stack. Responsible for radio configuration, packet transmission, spreading factor control, and scheduling of radio activity. This module is generic TFLORA01 driver and intended to remain unchanged across different platforms.
+
+**`lora_gps_vcmd`**
+Application layer used in TF-B1. This module generates the beacon message, encodes GPS telemetry into a compact binary format, and schedules periodic transmissions. It also implements dual spreading-factor operation used to balance transmission range and airtime.
+
+
+### Beacon Transmission
+
+The beacon periodically transmits a compact navigation packet containing the latest navigation data. The firmware may alternate between two spreading factors to increase the probability of reception at long distances while maintaining acceptable airtime.
+
+### Beacon Payload Format
+
+The used LoRa frame contains a fixed-size binary structure optimized for minimal payload length. Total payload size is 17 bytes.
+
+```
+Byte offset
+0   1       5       9     11    13    15    17
++---+-------+-------+-----+-----+-----+-----+
+|Flg|  Lat  |  Lon  | Age | Alt | Crs | Spd |
++---+-------+-------+-----+-----+-----+-----+
+```
+
+| Offset | Size | Field             |
+| ------ | ---- | ----------------- |
+| 0      | 1    | Flags             |
+| 1–4    | 4    | Latitude (int32)  |
+| 5–8    | 4    | Longitude (int32) |
+| 9–10   | 2    | GPS age           |
+| 11–12  | 2    | Altitude          |
+| 13–14  | 2    | Course            |
+| 15–16  | 2    | Speed             |
+
+
+#### Field Description
+
+| Field     | Type   | Description                |
+| --------- | ------ | -------------------------- |
+| Flags     | uint8  | Measurement validity flags |
+| Latitude  | int32  | Latitude scaled by 2²²     |
+| Longitude | int32  | Longitude scaled by 2²²    |
+| GPS age   | uint16 | Age of GPS solution [s]    |
+| Altitude  | int16  | Altitude above MSL [m]     |
+| Course    | uint16 | Course over ground         |
+| Speed     | uint16 | Ground speed               |
+
+Latitude and longitude use a fixed-point representation:
+
+```
+encoded = coordinate_deg × 2^22
+```
+
+This encoding provides sub-meter resolution while keeping the payload small.
+
+#### Flags byte
+
+```
+bit7 bit6 bit5 bit4 bit3 bit2 bit1 bit0
+ +----+----+----+----+----+----+----+----+
+ |            reserved          | V | F |
+ +----+----+----+----+----+----+----+----+
+```
+
+Where bit meanings are:
+
+| Bit | Meaning               |
+| --- | --------------------- |
+| F   | GPS fix available     |
+| V   | Navigation data valid |
+
+
 ## Professional support
 
 Professional support for the ThunderFly TF-B1 stratospheric balloon platform is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). For inquiries, contact us at **[info@thunderfly.cz](mailto:info@thunderfly.cz)**.
