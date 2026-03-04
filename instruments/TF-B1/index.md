@@ -20,12 +20,22 @@ The [TF-B1](https://github.com/ThunderFly-aerospace/TF-B1) stratospheric balloon
 * Onboard positioning and timing with [TFGPS01](/avionics/TFGPS01)
 * Gondola orientation tracking
 * Atmospheric sensing with [TFHT01](/avionics/TFHT01) or [TFHT02](/avionics/TFHT02)
-  * Number of sensors is higly expandable by use of [TFI2CADT01](/avionics/TFI2CADT01)
+  * Number of sensors is highly expandable by use of [TFI2CADT01](/avionics/TFI2CADT01)
 * Reliable power distribution using [TFSBEC01 power module](/avionics/TFSBEC01)
   * Designed for relatively high-power payloads up to tens of Watts
 * Support for scientific instruments with [TFUNIPAYLOAD01 payload interface](/avionics/TFUNIPAYLOAD01)
 * Continuous pre-flight charging and power monitoring for maximal uptime
   * Ground monitoring direcly by [TFUSBSERIAL01](/avionics/TFUSBSERIAL01)
+
+
+## Professional support
+
+Professional support for the ThunderFly TF-B1 stratospheric balloon platform is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). For inquiries, contact us at **[info@thunderfly.cz](mailto:info@thunderfly.cz)**.
+
+
+## Scientific papers
+
+  * [MEASUREMENT OF THE REGENER-PFOTZER MAXIMUM USING DIFFERENT TYPES OF IONISING RADIATION DETECTORS AND A NEW TELEMETRY SYSTEM TF-ATMON ](https://pubmed.ncbi.nlm.nih.gov/36005953/)
 
 
 ## Technical specifications
@@ -78,10 +88,10 @@ TF-B1 includes a long-range recovery beacon implemented using the [TFLORA01 LoRa
 The LoRa subsystem is implemented using two software modules. Only the application layer is platform-specific:
 
 **`tflora`**
-Low-level LoRa PX4 driver based on the LMIC stack. Responsible for radio configuration, packet transmission, spreading factor control, and scheduling of radio activity. This module is generic TFLORA01 driver and intended to remain unchanged across different platforms.
+Low-level LoRa PX4 driver based on the LMIC stack. Responsible for radio configuration, packet transmission, spreading factor control, and scheduling of radio activity. This module is a generic TFLORA01 driver and is intended to remain unchanged across different platforms. For the configuration of this software module looks in [TFLORA01 documentation](/avionics/TFLORA01/).
 
 **`lora_gps_vcmd`**
-Application layer used in TF-B1. This module generates the beacon message, encodes GPS telemetry into a compact binary format, and schedules periodic transmissions. It also implements dual spreading-factor operation used to balance transmission range and airtime.
+Application layer used in TF-B1. This module generates the beacon message, encodes GPS telemetry into a compact binary format, and schedules periodic transmissions. It also implements a dual spreading-factor operation used to balance transmission range and airtime.
 
 
 ### Beacon Transmission
@@ -115,7 +125,7 @@ Byte offset
 
 | Field     | Type   | Description                |
 | --------- | ------ | -------------------------- |
-| Flags     | uint8  | Measurement validity flags |
+| Type / Flags  | uint8  | Packet type identifier or navigation validity flags |
 | Latitude  | int32  | Latitude scaled by 2²²     |
 | Longitude | int32  | Longitude scaled by 2²²    |
 | GPS age   | uint16 | Age of GPS solution [s]    |
@@ -136,7 +146,7 @@ This encoding provides sub-meter resolution while keeping the payload small.
 ```
 bit7 bit6 bit5 bit4 bit3 bit2 bit1 bit0
  +----+----+----+----+----+----+----+----+
- |            reserved          | V | F |
+ | Packet type identifier      | V  |  F |
  +----+----+----+----+----+----+----+----+
 ```
 
@@ -144,16 +154,83 @@ Where bit meanings are:
 
 | Bit | Meaning               |
 | --- | --------------------- |
+| 4-7 | Housekeeping telemetry packet (0xF0) or Navigation beacon packet |  
 | F   | GPS fix available     |
 | V   | Navigation data valid |
 
 
-## Professional support
+### The Things Network Decoder Example
 
-Professional support for the ThunderFly TF-B1 stratospheric balloon platform is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). For inquiries, contact us at **[info@thunderfly.cz](mailto:info@thunderfly.cz)**.
+For integration with [The Things Network (TTN)](https://www.thethingsnetwork.org/), the following JavaScript decoder can be used to convert the binary LoRa payload into structured telemetry fields. The decoder runs on the server and interprets the received byte array.
 
+```
 
-## Scientific papers
+function Decoder(b, port) {
+  if (b[0] == 0xf0) {
+    var temperature;
+    var current;
+    var battery_voltage = b[1] + 175;
+    var current_sign = b[3] & 1;
+    var battery_current = b[2];
+    if (current_sign) {
+      current = 0xFFFFFF00 | battery_current;  // fill in most significant bits with 1's
+    }
+    else {
+      current = battery_current;
+    }
+      
+    var voltage = battery_voltage / 100;
+    
+    var temp = b[3] >> 1;
+    var temp_sign = b[3] >> 7;
+    if (temp_sign) {
+      temperature = 0xFFFFFF80 | temp;  // fill in most significant bits with 1's
+    }
+    else {
+      temperature = temp;
+    }
+    
+    var hits = b[4] + (b[5] << 8);
+    
+    return {
+      'V' : voltage,
+      'mA' : current,
+      '°C' : temperature,
+      'hits' : hits
+    };
+  }
+  else {
+    var lat = (b[1]<<24)|(b[2]<<16)|(b[3]<<8)|b[4];
+    var lon = (b[5]<<24)|(b[6]<<16)|(b[7]<<8)|b[8];
+    var latlon_age = (b[9]<<8)|b[10];
+    var alt = (b[11]<<8)|b[12];
+    var course = (b[13]<<8)|b[14];
+    var speed = (b[15]<<8)|b[16];
+    
+    var decoded = {
+      "lat": lat/4194304.0,
+      "lon": lon/4194304.0,
+      "latlon_ok": b[0]&0x01,
+      "latlon_age_s": latlon_age,
+      "alt_m": alt,
+      "alt_okay": (b[0]>>1)&0x01,
+      "course": course/64.0,
+      "course_ok": (b[0]>>3)&0x01,
+      "speed_mps": speed/16.0,
+      "speed_ok": (b[0]>>4)&0x01
+    };
+    return decoded;
+  }
+}
+```
 
-  * [MEASUREMENT OF THE REGENER-PFOTZER MAXIMUM USING DIFFERENT TYPES OF IONISING RADIATION DETECTORS AND A NEW TELEMETRY SYSTEM TF-ATMON ](https://pubmed.ncbi.nlm.nih.gov/36005953/)
+The decoder distinguishes two packet types based on the first byte:
+
+* **`0xF0` telemetry packet** – used for housekeeping data such as battery voltage, current, temperature, and detector hit counters.
+* **Navigation beacon packet** – all other values of the first byte are interpreted as the navigation payload described above.
+
+The boolean fields such as `latlon_ok`, `alt_okay`, `course_ok`, and `speed_ok` are derived from the flag bits stored in the first byte of the payload. These flags indicate whether the corresponding measurements were valid at the time of transmission. Even when a measurement is marked invalid, the payload may still contain the last available numeric value; therefore, applications should always check the validity flags before using the decoded data.
+
+The decoder operates purely on the application payload and is independent of the LoRaWAN regional parameters. The same payload structure can therefore be used globally, regardless of the radio-frequency plan or regional network configuration.
+
 
