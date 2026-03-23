@@ -54,8 +54,7 @@ TFUNIPAYLOAD01 provides a TELEM/UART port for connection to a flight controller 
 
 #### TF Payload connector
 
-This connector is primarily intended for time synchronization with the [TFGPS01 GNSS receiver](/avionics/TFGPS01), which provides location and time pulse signals (PPS) on its "Payload Connector".
-
+This connector is primarily intended for time synchronization with the [TFGPS01 GNSS receiver](/avionics/TFGPS01), which provides location and time pulse signals (PPS) on its "Payload Connector". The device side of the Payload connector has the following pinout. The RX and TX are crossed at the master side (TFGPS).
 
 | Signal    | Pixhawk Color                | ThunderFly Color                                  |
 | --------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------- |
