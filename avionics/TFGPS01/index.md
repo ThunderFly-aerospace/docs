@@ -123,18 +123,19 @@ I2C AUX is I2C1 output from the autopilot. No other device is connected to the I
 
 The module is equipped with a connector designed for payload connection; this feature is useful for time-sync and navigation data, time-stamping, or geofencing. This connection is extensively used with [TF-ATMON sensors](/instruments/TF-ATMON).
 
-The connector is labeled as `Payload GPS Interface`.
+The connector is labeled as `Payload GPS Interface`. 
 
-| Pin | Name | Description |
-|-----|------|-------------|
-| 1   | TIMEPULSE | Time-pulse signal from uBlox GNSS receiver |
-| 2   | EXTINT | Interrupt output from uBlox |
-| 3   | GEO_STAT | GeoStat output from uBlox |
-| 4   | SDA | I2C from uBlox |
-| 5   | SCL | I2C from uBlox |
-| 6   | RX | Rx of uBlox, parallel to the autopilot via a protective resistor |
-| 7   | TX | Tx of uBlox, parallel to the autopilot via a protective resistor |
-| 8   | GND | Autopilot GND |
+| Pin | Name | Description | ThunderFly color |
+|-----|------|-------------|---------------------|
+| 1   | TIMEPULSE | Time-pulse signal from uBlox GNSS receiver |  ![blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png)  Blue             |
+| 2   | EXTINT | Interrupt output from uBlox | ![yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow         |
+| 3   | GEO_STAT | GeoStat output from uBlox | ![white](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png) White         |
+| 4   | SDA | I2C from uBlox | ![green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green            | 
+| 5   | SCL | I2C from uBlox |  ![yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow         |
+| 6   | RX | Rx of uBlox, parallel to the autopilot via a protective resistor | ![white](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png) White         |
+| 7   | TX | Tx of uBlox, parallel to the autopilot via a protective resistor | ![green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green            |
+| 8   | GND | Autopilot GND | ![black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black               |
+
 
 ### USB-C Connector
 USB is connected directly to the uBlox module for configuration and testing.
