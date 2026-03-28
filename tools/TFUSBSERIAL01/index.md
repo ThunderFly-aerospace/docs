@@ -1,9 +1,11 @@
 ---
 layout: page
 title: "TFUSBSERIAL01 - USB Serial Telemetry Interface"
-permalink: /avionics/TFUSBSERIAL01/
-parent: "Communication & Interfaces"
+permalink: /tools/TFUSBSERIAL01/
+parent: "Development Tools"
 nav_order: "4"
+redirect_from:
+  - /avionics/TFUSBSERIAL01/
 ---
 
 # TFUSBSERIAL01 - USB-C to serial converter with Pixhawk telemetry connectors
