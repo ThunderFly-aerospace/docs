@@ -8,18 +8,18 @@ has_toc: true
 nav_order: 20
 ---
 
+## Development and Testing Tools
 
-## Avionics Components  
+ThunderFly's Tools category includes a range of development, testing, and integration tools that are designed to help you bring your UAV projects to life. These tools are intended for developers, engineers, and researchers who need reliable hardware solutions for rapid prototyping, system integration, and validation.
 
-ThunderFly's avionics system consists of **high-performance hardware** designed to enhance the capabilities of standard unmanned aerial vehicles (multicopter, airplane, etc.). ThunderFly avionics components are built for seamless integration into existing UAV platforms like [PX4](https://px4.io/) or [Ardupilot](https://ardupilot.org/).  The following clickable diagram shows an example interconnection of different ThunderFly avionics components; usually, only a fraction of this diagram is used in the actual UAV:
+Our tools are used for a variety of tasks such as testing sensors and interfaces. These tools can be integrated with existing platforms like [PX4](https://px4.io/), [Ardupilot](https://ardupilot.org/) or [ROS](https://www.ros.org/).
 
 ### How to Order
 
-You can order avionics components in the following ways:
+You can order ThunderFly tools in the following ways:
 
-- **Directly from ThunderFly** — use our [Contact us](https://www.thunderfly.cz/contact-us.html) page to request a quotation, check lead times, or discuss bulk pricing.
+- **Directly from ThunderFly** — use our [Contact Us](https://www.thunderfly.cz/contact-us.html) page to request a quotation, check lead times, or discuss bulk pricing.
 - **Online marketplaces**
   - **[Tindie](https://www.tindie.com/stores/thunderfly/)** — suitable for worldwide orders
   - **[Lectronz](https://lectronz.com/stores/thunderfly)** — recommended for customers in Europe.
-
 
