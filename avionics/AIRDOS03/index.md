@@ -27,7 +27,8 @@ The AIRDOS03, also known as "UAVDOS," is a compact ionizing radiation detector a
 ### Key Features
 
 * Fully compatible with [TF-ATMON](/instruments/TF-ATMON) and Pixhawk ecosystem
-* Lightweight and low-power (5 V / 3 mA)
+  * MAVlink sensor for direct connection to FMU 
+* Lightweight and low-power (5 V @ 3 mA)
 * Spectral data output for scientific analysis
 * Can operate in real-time streaming mode or store data onboard
 * Modular open-source firmware for custom scientific missions
