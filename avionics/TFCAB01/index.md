@@ -17,7 +17,7 @@ ThunderFly offers three main cable types:
 - **UAVCAN Cables**: Designed for CAN bus communication.
 - **UART/TELEM/SERIAL Cables**: Used for serial data transmission.
 
-Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). All cables use **JST-GH connectors** for robust and secure connections. All cables could be purchased on correspondin links or via direct email inquiry at sale@thunderfly.cz.
+Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). Majority of cables use [JST-GH connectors](https://www.jst.com/products/crimp-style-connectors-wire-to-board-type/gh-connector/) for robust connections. All cables could be purchased on correspondin links or via direct email inquiry at sale@thunderfly.cz.
 
 ## I²C Cables
 
