@@ -2,7 +2,7 @@
 title: "TF-B1 - Stratospheric Balloon Experimental Platform"
 layout: page
 permalink: /instruments/TF-B1
-parent: Instruments
+parent: Instrument Platforms
 nav_order: "2"
 ---
 
@@ -242,5 +242,3 @@ The decoder distinguishes two packet types based on the first byte:
 The boolean fields such as `latlon_ok`, `alt_okay`, `course_ok`, and `speed_ok` are derived from the flag bits stored in the first byte of the payload. These flags indicate whether the corresponding measurements were valid at the time of transmission. Even when a measurement is marked invalid, the payload may still contain the last available numeric value; therefore, applications should always check the validity flags before using the decoded data.
 
 The decoder operates purely on the application payload and is independent of the LoRaWAN regional parameters. The same payload structure can therefore be used globally, regardless of the radio-frequency plan or regional network configuration.
-
-

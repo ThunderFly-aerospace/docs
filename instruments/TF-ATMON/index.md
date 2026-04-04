@@ -3,7 +3,7 @@
 title: "TF-ATMON - Toolchain for Atmospheric measurement"
 layout: page
 permalink: /instruments/TF-ATMON
-parent: Instruments
+parent: Instrument Platforms
 nav_order: "4"
 ---
 
@@ -66,4 +66,3 @@ The entire TF-ATMON system is also compatible with the [TF-Simulator](/instrumen
 
   * [MEASUREMENT OF THE REGENER-PFOTZER MAXIMUM USING DIFFERENT TYPES OF IONISING RADIATION DETECTORS AND A NEW TELEMETRY SYSTEM TF-ATMON ](https://pubmed.ncbi.nlm.nih.gov/36005953/)
   
-

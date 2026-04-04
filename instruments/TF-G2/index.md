@@ -2,7 +2,7 @@
 title: "TF-G2 - Unmanned Autogyro Development Kit"
 layout: page
 permalink: /instruments/TF-G2
-parent: Instruments
+parent: Instrument Platforms
 nav_order: "2"
 ---
 
@@ -80,4 +80,3 @@ The charged particles present in thunderstorms create strong electric fields, wh
 ### Ionizing radiation monitoring
 
 Ionizing radiation monitoring in the atmosphere involves detecting and quantifying radioactive particles using specialized devices like semiconductor-based ionizing radiation [AIRDOS03](/avionics/AIRDOS03) spectrometer and dosimeter. This instrument measures the intensity and spectral distribution of ionizing radiation, such as alpha, beta, gamma, and X-ray emissions that can originate from natural sources or human activities. The compact semiconductor-based devices allow for the detection and quantification of radiation intensity. Monitoring atmospheric ionizing radiation for assessing environmental radiation hazards, managing nuclear emergencies, and supporting research in fields such as meteorology, geology, and climate science.
-

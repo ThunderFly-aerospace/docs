@@ -2,7 +2,7 @@
 title: "TF-simulator - Mission Training Toolchain"
 layout: page
 permalink: /instruments/TF-simulator
-parent: Instruments
+parent: Instrument Platforms
 nav_order: "5"
 has_children: true
 ---
@@ -130,6 +130,4 @@ Custom UAVs can be added by:
 3. Adding the model into PX4 build system (`sitl_target.cmake`).
 
 Further development and customization are possible via the [PX4-FlightGear-Bridge source code](https://github.com/ThunderFly-aerospace/PX4-FlightGear-Bridge).
-
-
 

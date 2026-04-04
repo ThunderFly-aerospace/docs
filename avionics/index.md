@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Avionics
-alt_text: Avionics
+title: UAV Avionics
+alt_text: UAV Avionics
 permalink: /avionics/
 has_children: true
 has_toc: true
@@ -191,4 +191,3 @@ The following table lists wholesale prices for avionics components for orders up
 > - **Shipping**: Costs depend on destination and carrier; quotes available on request.
 > - **Lead time**: Standard quantities are usually shipped within a week, with a maximum lead time of up to 4 weeks. Lead times for bulk orders may vary.
 > - **Warranty**: Standard 6-month warranty. Extended warranty options are available on request.
-

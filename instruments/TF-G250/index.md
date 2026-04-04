@@ -2,7 +2,7 @@
 title: "TF-G250 - Unmanned Aerological Autogyro"
 layout: page
 permalink: /instruments/TF-G250
-parent: Instruments
+parent: Instrument Platforms
 nav_order: "3"
 ---
 

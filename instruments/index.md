@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Instruments
-alt_text: ThunderFly Instruments
+title: Instrument Platforms
+alt_text: ThunderFly Instrument Platforms
 permalink: /instruments/
 has_children: true
 nav_order: 10
