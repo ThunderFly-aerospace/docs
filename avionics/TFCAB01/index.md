@@ -91,7 +91,7 @@ TFCAB CAN cables can be purchased from:
 
 The TFCABxxUART01 series is used for **serial communication**, connecting autopilots and peripherals. UART cables do not support networking and must be connected directly.
 
-![TFCABxxSERIAL01](TFCABxxSERIAL.jpg)
+![TFCABxxUART01](TFCAB15UART01.jpg)
 
 ### Specifications
 - **Lengths**: 15 cm, 30 cm, 45 cm
