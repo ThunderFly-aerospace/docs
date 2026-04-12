@@ -93,6 +93,11 @@ The TFCABxxUART01 series is used for **serial communication**, connecting autopi
 
 ![TFCABxxUART01](TFCAB15UART01.jpg)
 
+TFCAB UART cables can be purchased from:
+
+  * [Lectronz](https://lectronz.com/products/1346)
+  * [Tindie](https://www.tindie.com/products/41886/)
+
 ### Specifications
 - **Lengths**: 15 cm, 30 cm, 45 cm
 - **Connector Type**: JST-GH
