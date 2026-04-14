@@ -4,7 +4,7 @@ title: Instrument Platforms
 alt_text: ThunderFly Instrument Platforms
 permalink: /instruments/
 has_children: true
-nav_order: 10
+nav_order: 3
 ---
 
 ## Design for Interoperability
