@@ -23,12 +23,13 @@ The TF-G250 combines the simplicity of a balloon with the control of a drone —
 
 The TF-G250 addresses a rapidly growing global demand for cost-effective, reusable atmospheric sounding tools. Unlike traditional radiosonde solutions, the TF-G250 meteo autogyro drone offers significant operational advantages due to its lightweight, absence of a parachute, inherent safety mechanisms, and safe-descent design.
 
-## Why Choose Autogyro?
+## Why Choose Aerological Autogyro?
 
 * **Fully controlled and safe descent** — autorotation eliminates the need for a parachute.
 * **Energy-efficient design** — energy recuperation during descent reduces battery mass.
 * **Low operating cost and high reusability** — unlike disposable sondes.
 * **Greater usable ceiling** than typical multirotors of comparable weight.
+* **Good icing conditions resistance** - an autogyro can fly for minutes in volume with supercooled liquid water (SLW) content.
 * **Wind gust resistance** — The autogyro airframe is inherently stable by principle of flight and, therefore, less affected by sudden gusts than multirotor or fixed-wing platforms, ensuring operation even under turbulent weather.
 * **Benign glide path** ensures low airspace risk in case of emergency.
 
@@ -56,10 +57,10 @@ We are the original developers and manufacturers of the TF-G250 platform, which 
 
 | Parameter                     | Specification                                           |
 | ----------------------------- | ------------------------------------------------------- |
-| Maximum Take-off Weight       | 250 grams (C0 category)                                   |
+| Maximum Take-off Weight       | 250 grams (C0 category)                                 |
 | Operational Altitude          | ~3.2 km AGL self-powered, ~32km AMSL balloon-launched   |
-| Power Supply                  | 2S Li-ion battery (2×18650, ~19 Wh)                    |
-| Endurance                     | ~17 min climb / ~25 min total cycle                    |
+| Power Supply                  | 2S Li-ion battery (2×18650, ~19 Wh)                     |
+| Endurance                     | ~17 min climb / ~25 min total cycle                     |
 | Temperature Range             | –40 to +40 °C                                           |
 | Temperature Accuracy          | ±0.2 °C (typical)                                       |
 | Temperature Resolution        | 0.01 °C                                                 |
@@ -69,7 +70,8 @@ We are the original developers and manufacturers of the TF-G250 platform, which 
 | Pressure Range                | 3–110 kPa                                               |
 | Pressure Accuracy             | ±20 Pa (typical)                                        |
 | Pressure Resolution           | 1 Pa                                                    |
-| Wind Speed Range              | TBD                                                     |
+| Wind Speed Range              | < 26 m/s (limited by maximum fly speed)                 |
+| Wind gust resistance          | > 10 m/s s⁻¹ (instantaneous wind acceleration)          |
 | Wind Speed Accuracy           | ±0.2 m/s                                                |
 | Wind Speed Resolution         | 0.1 m/s                                                 |
 | Wind Direction Range          | 0 to 360°                                               |
@@ -112,7 +114,7 @@ The TF-G250 is ideally suited for detailed [atmospheric boundary layer (ABL)](ht
 
 ![Temperature and Humidity Profile](Temperature_and_relative_humidity_profile.png)
 
-Temperature and relative humidity plotted against altitude above ground level (AGL). A slight difference between ascent and descent is visible, with increased humidity during descent due to the overflight of vegetated terrain near a water body.
+Temperature and relative humidity are plotted against altitude above ground level (AGL). A slight difference between ascent and descent is visible, with increased humidity during descent due to the overflight of vegetated terrain near a water body.
 
 ![Wind Hodograph](wind_hodograph.png)
 
