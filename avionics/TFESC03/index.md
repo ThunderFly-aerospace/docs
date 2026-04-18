@@ -19,7 +19,7 @@ The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs a
   * Built-in EEPROM for non-volatile configuration.
   * Wide input range: 4.5 V to 35 V (40 V abs max).
     * Integrated buck regulator (3.3 V / 5 V, from I2C peripheral power supply).
-  * Primary: I2C (100 kHz).
+  * Primary: I2C (400 kHz maximum).
   * Alternative: PWM, analog voltage, or frequency-based control.
   * nFAULT and ALARM LEDs for system diagnostics.
   * Integrated FG pin for speed feedback.
@@ -34,7 +34,8 @@ The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs a
 * **Control Interfaces**: I2C (primary), PWM, Analog, Frequency
 * **Integrated Regulators**: 3.3 V / 5 V buck (170 mA), 3.3 V LDO (20 mA)
 * **Operating Temperature**: –40°C to +125°C
-* **Dimensions**: 34.0x15.0 mm Compact PCB, optimized for UAV integration
+* **Dimensions**: 34x15 mm Compact PCB
+* **Mass:** 10 grams
 
 ![TFESC03 - BLDC Motor Driver schematics](TFESC03-schematic.png)
 
