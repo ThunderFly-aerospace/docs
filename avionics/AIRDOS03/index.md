@@ -34,9 +34,7 @@ The AIRDOS03 is a compact ionizing radiation detector and spectrometer developed
 
 ### UAV Integration
 
-AIRDOS03 is designed as a sensor for the [TF-ATMON](/instruments/TF-ATMON) system and seamlessly connects to the avionics of UAVs, especially the [ThunderFly TF-G2 autogyro](/instruments/TF-G2). It supports shared power supply, data logging, and telemetry with onboard systems, reducing weight and maximizing flight endurance.
-
-This integration enables high-resolution mapping of radiation intensity in three dimensions and supports dynamic measurements in variable atmospheric conditions.
+AIRDOS03 is designed as a sensor for the [TF-ATMON](/instruments/TF-ATMON) system and seamlessly integrates into the UAVs. This integration enables high-resolution mapping of radiation intensity in three dimensions and supports dynamic measurements in variable atmospheric conditions. The solution supports shared power supply, data logging, and telemetry with onboard systems, reducing weight and maximizing flight endurance. This approach allows the use of an ionizing radiation sensor on multiple unmanned airframes (multirotor drone, plane, or [stratospheric balloon](/instruments/TF-B1)).  The AIRDOS03 is especially useful with [ThunderFly TF-G2 autogyro](/instruments/TF-G2), wchich slow-fly and the absence of downwash, allowing for safe and precise location of the radiation source.
 
 ![AIRDOS03 mounted on TF-G2](AIRDOS03_TF-G2.jpg)
 
