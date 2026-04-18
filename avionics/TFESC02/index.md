@@ -3,7 +3,7 @@ layout: page
 title: "TFESC02 - BLDC Motor Driver with I2C Interface"
 permalink: /avionics/TFESC02/
 parent: "Power & Motor Control"
-nav_order: "10"
+nav_order: "3"
 ---
 
 # TFESC02 - BLDC Motor Driver Module with I2C Interface
