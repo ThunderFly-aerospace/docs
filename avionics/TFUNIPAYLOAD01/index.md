@@ -47,6 +47,12 @@ The TFUNIPAYLOAD01 module is based on the [MLAB ATmegaTQ4401](https://www.mlab.c
 | MAVLink Communication Protocol  | MAVLink Tunnel over UART                   | No need for autopilot firmware modification                       |
 | Time Synchronization (PPS)      | Yes, via external GPS ([TFGPS01](/avionics/TFGPS01))               | Syncs to GPS pulse signals                                        |
 
+### Board dimensions
+
+The TFUNIPAYLOAD01 PCB is designed to be mechanically compatible with [MLAB kit system](https://www.mlab.cz/) to enable rapid prototyping of new designs on standard [MLAB grid 400mils (10.16mm) boards](https://www.mlab.cz/modules/albase/).
+
+![TFUNIPAYLOAD01 dimensions](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUNIPAYLOAD01/refs/heads/TFUNIPAYLOAD01B/doc/img/TFUNIPAYLOAD01_dimensions.png)
+
 
 ### Connector Pinout
 
