@@ -9,13 +9,12 @@ has_children: false
 
 ## AIRDOS03 - UAS Radiation Dosimeter and Spectrometer
 
-The AIRDOS03, also known as "UAVDOS," is a compact ionizing radiation detector and spectrometer developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz) and optimized for integration with unmanned aerial vehicles (UAVs).
+The AIRDOS03 is a compact ionizing radiation detector and spectrometer developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz) and optimized for integration with unmanned aerial vehicles (UAVs).
 
+![USTSIPIN03 AIRDOS03 sensor board](https://raw.githubusercontent.com/UniversalScientificTechnologies/AIRDOS03/refs/heads/AIRDOS03B/doc/img/AIRDOS03.jpg)
 
-![TFUNIPAYLOAD01 AIRDOS03 control board](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUNIPAYLOAD01/refs/heads/TFUNIPAYLOAD01B/doc/gen/img/TFUNIPAYLOAD01-top.png)
+![TFUNIPAYLOAD01 AIRDOS03 control board](https://raw.githubusercontent.com/UniversalScientificTechnologies/AIRDOS03/refs/heads/AIRDOS03B/doc/img/AIRDOS03_Parallel-shape_interface_board.jpg)
 
-
-![USTSIPIN03 AIRDOS03 sensor board](https://raw.githubusercontent.com/ust-modules/USTSIPIN03/refs/heads/USTSIPIN03C/doc/gen/img/USTSIPIN03-top.png)
 
 ### Applications
 
@@ -27,7 +26,7 @@ The AIRDOS03, also known as "UAVDOS," is a compact ionizing radiation detector a
 ### Key Features
 
 * Fully compatible with [TF-ATMON](/instruments/TF-ATMON) and Pixhawk ecosystem
-  * MAVlink sensor for direct connection to FMU 
+  * Serial MAVlink sensor for direct connection to FMU 
 * Lightweight and low-power (5 V @ 3 mA)
 * Spectral data output for scientific analysis
 * Can operate in real-time streaming mode or store data onboard
@@ -64,9 +63,9 @@ Although AIRDOS03 was developed in partnership with [Universal Scientific Techno
   * UART could be converted to USB-C by [TFUSBSERIAL01](/avionics/TFUSBSERIAL01/)
   * Device suitable for real-time spectrum measurement and in-flight data logging.
   
-For more detailed technical description of the radiation sensor go to [UST's AIRDOS03 documentation](https://docs.dos.ust.cz/airdos/AIRDOS03).
+For a more detailed technical description of the radiation sensor, go to [UST's AIRDOS03 documentation](https://docs.dos.ust.cz/airdos/AIRDOS03).
 
-AIRDOS03 provides TELEM/UART connectivity. The UART interface is compatible with the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) and enables integration with onboard telemetry systems or flight controllers.
+AIRDOS03 provides TELEM/UART connectivity. The UART interface is provided by [TFUNIPAYLOAD01 board](/avionics/TFUNIPAYLOAD01/) and enables integration with onboard telemetry systems or flight controllers.
 
 #### UART Pinout
 
