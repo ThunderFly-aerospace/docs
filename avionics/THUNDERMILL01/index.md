@@ -66,7 +66,7 @@ The THUNDERMILL01 sensor is integrated into the TF-ATMON avionics system in the 
 
 <!-- Source file https://docs.google.com/document/d/1RnSLQsT7pjinYLa-HK6KVlrG_cCLhdmITvdLSoMm3nQ/edit?tab=t.0 -->
 
-![THUNDERMILL01 system diagram](TF-ATMON-THUNDERMILL.svg)
+![THUNDERMILL01 system diagram](https://raw.githubusercontent.com/UniversalScientificTechnologies/THUNDERMILL01/9aeb357aecc0af62c202f1a69637f40b58a45524/doc/img/TF-ATMON-THUNDERMILL.svg)
 
 ### Connector pinouts
 
