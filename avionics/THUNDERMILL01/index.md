@@ -3,7 +3,7 @@ layout: page
 title: "THUNDERMILL01: Airborne E-field sensor"
 permalink: /avionics/THUNDERMILL01/
 parent: "Sensors"
-nav_order: "99"
+nav_order: "100"
 has_children: false
 ---
 
@@ -53,16 +53,18 @@ Main technical parameters, like resolution and measurement range, could be custo
 | **Mass**                       | 34 grams (without cabling) |
 | **Mounting Options**           | Autogyro rotor, wing, nose      |
 | **Orientation**                | Up-looking (standard) or Side-looking (optional) |
-| **EFM Power Input**            | 20mA  @  5V DC  + External rotation force (5 W maximum)  |
+| **Power Input**            | 20mA  @  5V DC  + External rotation force (5 W maximum)  |
 | **Data Interface**             | (Pixhawk 6 pin JST-GH UART Telemetry)[/avionics/TFCAB01/#uarttelemserial-cables]    |
 | **Data Visualization**         | [TF-ATMON](/instruments/TF-ATMON) sensor views  |
-| **EFM Temperature Range**      | -40°C to 40°C                         |
-| **EFM Humidity Range**         | 0–90% RH                                                 |
+| **Temperature Range**      | -40°C to 40°C                         |
+| **Humidity Range**         | 0–90% RH                                                 |
 | **Weatherproof Rating**        | IP03                                              |
 
 ### System Diagram
 
 The THUNDERMILL01 sensor is integrated into the TF-ATMON avionics system in the following way:
+
+<!-- Source file https://docs.google.com/document/d/1RnSLQsT7pjinYLa-HK6KVlrG_cCLhdmITvdLSoMm3nQ/edit?tab=t.0 -->
 
 ![THUNDERMILL01 system diagram](TF-ATMON-THUNDERMILL.svg)
 
