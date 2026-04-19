@@ -10,7 +10,7 @@ nav_order: "5"
 
 ![TFESC03 - BLDC Motor Driver](TFESC03.jpg)
 
-The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs and other embedded systems where space and efficiency are critical. It is based on the [MCF8316C-Q1](https://www.ti.com/product/MCF8316C-Q1) integrated circuit, enabling **sensorless Field Oriented Control (FOC)**. TFESC03 integrates directly into UAV avionics through a PixHawk I2C interface.
+The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs and other embedded systems where space and efficiency are critical. It is based on the [MCF8316C-Q1](https://www.ti.com/product/MCF8316C-Q1) integrated circuit, enabling **[sensorless Field Oriented Control (FOC)](https://en.wikipedia.org/wiki/Field-oriented_control)**. TFESC03 integrates directly into UAV avionics through a PixHawk I2C interface.
 
 ## Features
 
@@ -53,10 +53,8 @@ The TFESC03 is a compact, high-performance BLDC motor driver designed for UAVs a
 
 The TFESC03 provides integration into UAV avionics through its I2C interface. It allows precise speed control, torque optimization, and diagnostics directly from autopilot systems such as PX4 parameters. Its efficiency and compact size make it suitable for propulsion systems in micro and small UAVs, as well as robotic and industrial automation applications.
 
-
 {: .note }
 A full driver integration into the PX4 autopilot firmware is still under development. 
-
 
 ### Improved Energy Efficiency
 
@@ -73,7 +71,7 @@ The advanced FOC algorithm and integrated regulators minimize power losses while
 
 ## Availability
 
-The TFESC03 preliminary product is available upon request from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
+The TFESC03 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 
 * For commercial inquiries, contact: [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
 * Customization or mounting modifications are available upon request.
