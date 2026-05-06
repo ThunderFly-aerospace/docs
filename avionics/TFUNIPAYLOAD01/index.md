@@ -99,6 +99,10 @@ The UART interface is compatible with the [Pixhawk connector standard](https://g
 | GND    | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black | ![Black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png) Black   |
 
 
+{: .highlight }
+To debug and development purposes the [TFUSBSERIAL USB adapter](/tools/TFUSBSERIAL01/) could be connected to this UART port.
+
+
 #### SPI master
 
 This SPI master interface should be used for the connection of external sensors or alternative communication devices like [TFLORA01](/avionics/TFLORA01/). 
@@ -169,6 +173,16 @@ mav.SendTunnelData(data, sizeof(data), sensor_id, 1, 1);
 * `sysid`: usually `1`, or `0` for broadcast
 * `compid`: usually `1`, or `0` for broadcast
 
+### Firmware Upload
+
+The board has UART bootloader preprogrammed. Therefore an USB-UART adapter e.g. [TFUSBSERIAL USB adapter](/tools/TFUSBSERIAL01/) should be used to upload a firmware. The bootloader mode is activated either by toggling CTS pin if jumper `JP1` is soldered or power on reset. To upload generated `.hex` firmware use `avrdude`:
+
+```bash
+avrdude -v -patmega1284p -carduino -P/dev/ttyUSB0 -b57600 -D -Uflash:w:./firmware.hex:i
+```
+
+{: .important }
+Distribution's avrdude use only the DTR signal to generate MCU reset. Therefore the Arduino's avrdude binary (which generate MCU reset on both CTS and DTR signals) is needed for use of TFUSBSERIAL01 adapter. 
 
 ## How to Verify MAVLink Message Reception
 
@@ -215,7 +229,7 @@ MAVLink TUNNEL messages are logged in PX4 `.ulg` logs. Although tools like Fligh
 * Use QGroundControl with a radio modem to inspect `TUNNEL` messages in real time
 * For post-processing, extract data from `.ulg` logs using custom tools or PlotJuggler
 
-## Limitations
+### Limitations
 
 * Autopilot memory is limited – avoid sending excessive data
 * Max 3 MAVLink instances (incl. modem) due to PX4 firmware constraints
