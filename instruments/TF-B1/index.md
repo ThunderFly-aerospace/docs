@@ -32,11 +32,13 @@ The [TF-B1](https://github.com/ThunderFly-aerospace/TF-B1) stratospheric balloon
 
 TF-B1 has been successfully deployed in multiple missions:
 
+* [FIK-10 flight](https://github.com/ODZ-UJF-AV-CR/FIK-10)
 * [FIK-9 experiment](https://github.com/ODZ-UJF-AV-CR/FIK-9)
 * [FIK-6 high-altitude balloon flight](https://github.com/ODZ-UJF-AV-CR/FIK-6)
 * [FIK-5 experiment](https://github.com/ODZ-UJF-AV-CR/FIK-5)
 
-The result from these missions is the following scientific paper [MEASUREMENT OF THE REGENER-PFOTZER MAXIMUM USING DIFFERENT TYPES OF IONISING RADIATION DETECTORS AND A NEW TELEMETRY SYSTEM TF-ATMON ](https://pubmed.ncbi.nlm.nih.gov/36005953/)
+
+The result from these missions is the following scientific paper [MEASUREMENT OF THE REGENER-PFOTZER MAXIMUM USING DIFFERENT TYPES OF IONISING RADIATION DETECTORS AND A NEW TELEMETRY SYSTEM TF-ATMON](https://pubmed.ncbi.nlm.nih.gov/36005953/)
 
 
 ## Applications
