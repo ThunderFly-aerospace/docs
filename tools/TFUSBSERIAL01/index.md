@@ -30,7 +30,7 @@ The interface exposes two dedicated Pixhawk telemetry connectors — one for an 
 ## How to Buy
 
 - Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) to request quotations, customization details, or volume pricing provided by ThunderFly s.r.o.
-- [Purchase TFUSBSERIAL01 on Lectronz](https://lectronz.com/products/1066) for streamlined EU fulfillment.
+- [Purchase TFUSBSERIAL01 on Lectronz](https://lectronz.com/products/1066) preffered for EU fulfillment.
 - [Purchase TFUSBSERIAL01 on Tindie](https://www.tindie.com/products/34364/) for worldwide availability.
 
 
