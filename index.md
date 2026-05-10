@@ -39,4 +39,4 @@ The avionics devices are versatile and modular to solve a wide range of engineer
 
 ## Get in Touch
 
-Ready to elevate your UAV capabilities with ThunderFly? Contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz) or visit our [website](https://www.thunderfly.cz/contact-us.html) for more information.
+Ready to elevate your UAV capabilities with ThunderFly? Contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz) or visit our [website](https://www.thunderfly.cz/) for more information.

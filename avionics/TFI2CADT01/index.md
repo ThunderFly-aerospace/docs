@@ -19,8 +19,9 @@ The module is designed and optimized for use on Pixhawk-compatible drones, espec
 ## How to Buy
 
 - Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for quotations, customizations, or volume pricing handled directly by ThunderFly s.r.o.
-- [Purchase TFI2CADT01 on Lectronz](https://lectronz.com/products/1063) for EU-friendly fulfillment.
-- [Purchase TFI2CADT01 on Tindie](https://www.tindie.com/products/thunderfly/tfi2cadt01-i2c-address-translator/) for worldwide availability.
+- [Purchase TFI2CADT01 on Lectronz](https://lectronz.com/products/1063) for online orders.
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/thunderfly/tfi2cadt01-i2c-address-translator/ -->
 
 ## Translation function
 

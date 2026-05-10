@@ -17,8 +17,9 @@ Sensors mounted on UAVs can be used for a variety of purposes. TFHT can measure 
 ## How to Buy
 
 - Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for quotations, customization requests, or volume purchases handled by ThunderFly s.r.o.
-- [Purchase TFHT01 on Lectronz](https://lectronz.com/products/1064) for EU-based fulfillment.
-- [Purchase TFHT01 on Tindie](https://www.tindie.com/products/thunderfly/tfht01-aerial-hygrometer-and-thermometer/) for worldwide shipping.
+- [Purchase TFHT01 on Lectronz](https://lectronz.com/products/1064) for online orders.
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/thunderfly/tfht01-aerial-hygrometer-and-thermometer/ -->
 
 ## Parameters
 

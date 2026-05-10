@@ -21,9 +21,11 @@ The TFPITOT01 is an ultra-lightweight pitot tube that integrates the SDP33 senso
 ## Availability and Customization
 
 The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
-- Direct orders can be placed via [Lectronz](https://lectronz.com/products/1062) or [Tindie store](https://www.tindie.com/products/37220/).
-- For commercial inquiries, contact sale@thunderfly.cz.
+- Online orders can be placed via [Lectronz](https://lectronz.com/products/1062).
+- For direct orders or commercial inquiries, contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 - Customization, including length, diameter, or mounting modifications, is available upon request (typical lead time: 3 weeks).
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/37220/ -->
 
 ## Technical Specifications
 
@@ -112,4 +114,3 @@ For best results, the probe should be placed:
 - In clean airflow, away from propeller wash and frame turbulence.  
 - The tube tip should be facing directly into the relative wind to ensure accurate measurements.  
 - Ideally, on a boom or mast extending forward to minimize aerodynamic disturbances.  
-

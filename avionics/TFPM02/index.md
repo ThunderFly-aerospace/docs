@@ -59,11 +59,10 @@ The modified SPS30 sensor is connected to PX4 autopilot-supported hardware using
 
 ## Availability
 
-The ThunderFly TFPM02 sensors (both A and B variants) are commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Please contact [sale@thunderfly.cz](mailto:info@thunderfly.cz) for inquiries, pricing, or customization.
+The ThunderFly TFPM02 sensors (both A and B variants) are commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Please contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for inquiries, pricing, or customization.
 
 ## Demonstration
 
 A typical use-case and demonstration of the TFPM02 sensor in flight onboard a [TF-G2 autogyro](https://github.com/ThunderFly-aerospace/TF-G2) can be viewed in the following video:
 
 [![TF-ATMON particulate matter sensing demonstration](https://img.youtube.com/vi/KUhktPDEi8I/hqdefault.jpg)](https://www.youtube.com/watch?v=KUhktPDEi8I)
-

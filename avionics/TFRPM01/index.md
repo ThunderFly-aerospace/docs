@@ -20,7 +20,9 @@ The hardware is intended to measure helicopter and autogyro rotor RPM, but its c
 
 ## Where to get it?
 
-ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to sale@thunderfly.cz or shop at [Lectronz](https://lectronz.com/products/1055) or [Tindie](https://www.tindie.com/products/20376/) stores.
+ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Write an email to [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for direct orders, quotations, or custom requirements, or shop online at [Lectronz](https://lectronz.com/products/1055).
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/20376/ -->
 
 ## Main Features
 

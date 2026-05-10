@@ -26,7 +26,7 @@ The TFSBEC01 module is designed to provide a stable and efficient power supply f
 ## Availability and Customization
 
 The TFSBEC01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
-- For commercial inquiries, contact sale@thunderfly.cz.
+- For commercial inquiries, contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 - Customization, or mounting modifications, is available upon request.
 
 ## Technical Specifications
@@ -65,7 +65,6 @@ Where:
 - `B = 0.33` (BAT_V_OFFS_CURR)
 
 For precise calibration, it is recommended to use QGC's built-in measurement feature to adjust these parameters based on the specific piece in use, but precise calibration is not required in cases where %5 precision is acceptable. For more details, refer to the [LMR14050](https://www.ti.com/lit/ds/symlink/lmr14050.pdf) and [ACS780](https://www.allegromicro.com/-/media/files/datasheets/acs780-datasheet.pdf) datasheets.
-
 
 
 

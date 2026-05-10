@@ -24,8 +24,9 @@ nav_order: "10"
 ## How to Buy
 
 - Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) with your requirements for quotations or tailored configurations provided by ThunderFly s.r.o.
-- [Purchase TFSLOT01 on Lectronz](https://lectronz.com/products/1058) for convenient EU logistics.
-- [Purchase TFSLOT01 on Tindie](https://www.tindie.com/products/21790/) for global delivery options.
+- [Purchase TFSLOT01 on Lectronz](https://lectronz.com/products/1058) for online orders.
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/21790/ -->
 
 ## Technical Parameters
 

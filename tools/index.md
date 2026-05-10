@@ -18,8 +18,7 @@ Our tools are used for a variety of tasks such as testing sensors and interfaces
 
 You can order ThunderFly tools in the following ways:
 
-- **Directly from ThunderFly** — use our [Contact Us](https://www.thunderfly.cz/contact-us.html) page to request a quotation, check lead times, or discuss bulk pricing.
-- **Online marketplaces**
-  - **[Tindie](https://www.tindie.com/stores/thunderfly/)** — suitable for worldwide orders
-  - **[Lectronz](https://lectronz.com/stores/thunderfly)** — recommended for customers in Europe.
+- **Directly from ThunderFly** — email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) to request a quotation, check lead times, or discuss bulk pricing.
+- **Online marketplace** — use **[Lectronz](https://lectronz.com/stores/thunderfly)** for a self-service online purchase.
 
+<!-- Tindie store link kept for possible future restoration: https://www.tindie.com/stores/thunderfly/ -->

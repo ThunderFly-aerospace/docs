@@ -154,14 +154,14 @@ This approach results in avionics modules that are mechanically protected while 
 
 You can order avionics components in the following ways:
 
-- **Directly from ThunderFly** — use our [Contact us](https://www.thunderfly.cz/contact-us.html) page to request a quotation, check lead times, or discuss bulk pricing.
-- **Online marketplaces**
-  - **[Tindie](https://www.tindie.com/stores/thunderfly/)** — suitable for worldwide orders
-  - **[Lectronz](https://lectronz.com/stores/thunderfly)** — recommended for customers in Europe.
+- **Directly from ThunderFly** — email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) to request a quotation, check lead times, or discuss bulk pricing.
+- **Online marketplace** — use **[Lectronz](https://lectronz.com/stores/thunderfly)** for a self-service online purchase.
+
+<!-- Tindie store link kept for possible future restoration: https://www.tindie.com/stores/thunderfly/ -->
 
 ### Components Pricing
 
-The following table lists wholesale prices for avionics components for orders up to 50 units. For bulk pricing, unlisted items or special requirements, please directly contact sale@thunderfly.cz.
+The following table lists wholesale prices for avionics components for orders up to 50 units. For bulk pricing, unlisted items or special requirements, please directly contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 
 | Product Name       | Price (1–3 pcs) | Price (4–10 pcs) | Price (11–50 pcs) |
 |--------------------|------------------|-------------------|--------------------|

@@ -17,7 +17,7 @@ ThunderFly offers three main cable types:
 - **UAVCAN Cables**: Designed for CAN bus communication.
 - **UART/TELEM/SERIAL Cables**: Used for serial data transmission.
 
-Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). The majority of cables use [JST-GH connectors](https://www.jst.com/products/crimp-style-connectors-wire-to-board-type/gh-connector/) for robust connections. All cables could be purchased on the corresponding links or via direct email inquiry at sale@thunderfly.cz.
+Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). The majority of cables use [JST-GH connectors](https://www.jst.com/products/crimp-style-connectors-wire-to-board-type/gh-connector/) for robust connections. All cables can be purchased through the corresponding Lectronz links or via direct email inquiry at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 
 ## I²C Cables
 
@@ -29,8 +29,10 @@ The TFCABxxI2C01 series is optimized for **I²C communication**, featuring a twi
 
 TFCAB I2C cables can be purchased from:
 
+  * Direct inquiry at [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
   * [Lectronz](https://lectronz.com/products/1060)
-  * [Tindie](https://www.tindie.com/products/30113/)
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/30113/ -->
 
 ### Specifications
 
@@ -62,8 +64,10 @@ The TFCABxxCAN01 series is designed for **UAVCAN communication**, optimized for 
 
 TFCAB CAN cables can be purchased from:
 
+  * Direct inquiry at [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
   * [Lectronz](https://lectronz.com/products/1195)
-  * [Tindie](https://www.tindie.com/products/30124/)
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/30124/ -->
 
 
 ### Specifications
@@ -95,8 +99,10 @@ The TFCABxxUART01 series is used for **serial communication**, connecting autopi
 
 TFCAB UART cables can be purchased from:
 
+  * Direct inquiry at [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
   * [Lectronz](https://lectronz.com/products/1346)
-  * [Tindie](https://www.tindie.com/products/41886/)
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/41886/ -->
 
 ### Specifications
 - **Lengths**: 15 cm, 30 cm, 45 cm

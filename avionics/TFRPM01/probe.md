@@ -30,8 +30,9 @@ The sensor is specifically designed for simple RPM measurement with the TFRPM01 
 ## How to Buy
 
 - Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for tailored quotations or volume orders handled by ThunderFly s.r.o.
-- [Purchase TFPROBE01 on Lectronz](https://lectronz.com/products/1065) for EU-friendly logistics.
-- [Purchase TFPROBE01 on Tindie](https://www.tindie.com/products/20377/) for worldwide shipping options.
+- [Purchase TFPROBE01 on Lectronz](https://lectronz.com/products/1065) for online orders.
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/20377/ -->
 
 ### Magnetic Sensing
 

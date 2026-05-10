@@ -28,9 +28,10 @@ The TFGPS01 is a high-end precision GNSS navigation module designed for UAV appl
 ## Availability
 
 The TFGPS01A module is available for purchase from:
-- [ThunderFly s.r.o.](https://www.thunderfly.cz/)
-- [Lectronz](https://lectronz.com/products/1057) or [Tindie](https://www.tindie.com/products/21789/)
-- For inquiries, contact: sale@thunderfly.cz
+- [ThunderFly s.r.o.](https://www.thunderfly.cz/) by direct inquiry at [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
+- [Lectronz](https://lectronz.com/products/1057) for online orders
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/21789/ -->
 
 ## Compatible GNSS Receiver Modules
 The module is by default equipped with:
@@ -152,5 +153,3 @@ For more detailed documentation and open-hardware design files, refer to the [Gi
 ## Handling Precautions
 - The TFGPS01 is a highly sensitive device; handle it with care.
 - Avoid direct contact with the antenna to prevent damage from sweat acids.
-
-

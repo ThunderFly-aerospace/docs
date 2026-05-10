@@ -23,7 +23,9 @@ The TFHT02 is a compact and precise hygrometer and temperature sensor designed f
 ## Where to Buy?
 The TFHT02 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). 
 
-For a quotation or support, contact us at sale@thunderfly.cz or visit our [Tindie store](https://www.tindie.com/stores/thunderfly/).
+For a quotation, direct order, or support, contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz). Online purchases are available through our [Lectronz store](https://lectronz.com/stores/thunderfly).
+
+<!-- Tindie store link kept for possible future restoration: https://www.tindie.com/stores/thunderfly/ -->
 
 ## Technical Specifications
 
@@ -102,4 +104,3 @@ sht4x <command> [arguments...]
 ## Ardupilot Support
 
 Currently, Ardupilot does not support the TFHT02 sensor as the sht4x driver is missing. Contributions to add support are welcome.
-

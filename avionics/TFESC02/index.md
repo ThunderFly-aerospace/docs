@@ -37,7 +37,7 @@ The TFESC02 is a high-performance BLDC motor driver device designed specifically
 ## Availability and Customization
 
 The TFESC02 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
-- For commercial inquiries, contact sale@thunderfly.cz.
+- For commercial inquiries, contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 - Customization, or mounting modifications, is available upon request.
 
 ## Technical Specifications
@@ -64,5 +64,4 @@ The TFESC02’s sensorless FOC algorithm simplifies motor control without the ne
 ### Reliable Operation in Demanding Environments
 
 The TFESC02 includes extensive protection features to ensure reliability in challenging UAV environments. Its built-in overcurrent and thermal protections safeguard both the electronics and the motor, while the anti-voltage surge mechanism prevents damage from unexpected power spikes. Additionally, fault diagnostics via the I2C interface allow developers to quickly identify and address issues or allow the control system to take relevant countermeasures. 
-
 

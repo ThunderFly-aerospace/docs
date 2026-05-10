@@ -61,7 +61,7 @@ In this mode, Flipper Zero is used as a payload device, connected between a TF P
 
 You can order TFFLIP2PH and other ThunderFly tools in the following ways:
 
-- Directly from ThunderFly — use our [Contact Us](https://www.thunderfly.cz/contact-us.html) page to request a quotation, check lead times, or discuss bulk pricing.
-- Online marketplaces:
-  - [Tindie](https://www.tindie.com/stores/thunderfly/) — suitable for worldwide orders
-  - [Lectronz](https://lectronz.com/stores/thunderfly) — recommended for customers in Europe.
+- Directly from ThunderFly — email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) to request a quotation, check lead times, or discuss bulk pricing.
+- Online marketplace — use [Lectronz](https://lectronz.com/stores/thunderfly) for a self-service online purchase.
+
+<!-- Tindie store link kept for possible future restoration: https://www.tindie.com/stores/thunderfly/ -->

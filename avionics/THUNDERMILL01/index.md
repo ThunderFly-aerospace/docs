@@ -32,7 +32,7 @@ The THUNDERMILL01 is an [electric field mill](https://en.wikipedia.org/wiki/Fiel
 
 ### Where to get it?
 
-THUNDERMILL01 was developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), who contributed to the initial design and continue to support the open-source hardware ecosystem. THUNDERMILL01 can be bought directly from ThunderFly via our [contact email](https://www.thunderfly.cz/contact-us.html). The same email can be used if you have specific requirements for custom modifications or if the product is to be purchased in large quantities.
+THUNDERMILL01 was developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), who contributed to the initial design and continue to support the open-source hardware ecosystem. THUNDERMILL01 can be bought directly from ThunderFly by email at [sale@thunderfly.cz](mailto:sale@thunderfly.cz). The same email can be used if you have specific requirements for custom modifications or if the product is to be purchased in large quantities.
 
 ## Technical Specifications
 
@@ -126,7 +126,6 @@ The design has undergone extensive testing on the [ThunderFly TF-G2 autogyro](/i
 ### Electromagnetic Considerations for UAV Mounting
 
 Although the sensor can also be installed on multirotor UAVs, such configurations tend to introduce higher levels of electromagnetic noise. In such cases, appropriate shielding and post-processing techniques may be necessary to ensure data quality. Therefore, ram-powered rotation should be preferred where possible. Mounting the THUNDERMILL01 on the [TF-G2 autogyro](/instruments/TF-G2) has the unique property of an unpowered rotor, which has a very low electromagnetic signature. This allows for cleaner readings of the ambient electric field.
-
 
 
 

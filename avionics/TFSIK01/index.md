@@ -12,7 +12,9 @@ nav_order: "10"
 
 ### Purchasing Information
 
-The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at sale@thunderfly.cz for a commercial quotation or shop directly from [Tindie store](https://www.tindie.com/products/34682/) or [Lectronz](https://lectronz.com/products/1067) marketplaces. We are the designers of this modem and therefore have full control of the modem's construction and manufacturing. This gives us the ability to react even to non-standard requests for modification or functions by adopting our in-house European production. 
+The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for a commercial quotation, custom configuration, or volume order, or shop directly through [Lectronz](https://lectronz.com/products/1067). We are the designers of this modem and therefore have full control of the modem's construction and manufacturing. This gives us the ability to react even to non-standard requests for modification or functions by adopting our in-house European production.
+
+<!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/34682/ -->
 
 
 ## Overview
@@ -495,7 +497,4 @@ If SNR is consistently insufficient, consider:
   - **Reducing interference**: improve RF shielding and move away modem and antenna from EMI emitting devices such as power supplies, or switching regulators.
   - **Lowering the air data rate**: slower rates improve link robustness and increase receiver sensitivity.
   - **Using directional antennas** (especially on the ground side) to improve gain and reject side noise.
-
-
-
 
