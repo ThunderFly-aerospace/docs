@@ -10,6 +10,8 @@ nav_order: "10"
 
 The TFCO201 sensor measures carbon dioxide (CO2) concentrations in airborne applications. It supports integration with UAVs and can be used with a Pixhawk autopilot system or as a part of the TF-ATMON monitoring system.
 
+For quotations, direct orders, or custom configurations, please contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+
 
 ![TFCO201 sensor](https://github.com/ThunderFly-aerospace/TFCO201/assets/5196729/bca47559-f115-4941-bb79-61ccec8639b7)
 
@@ -58,4 +60,3 @@ The sensor can be integrated directly with UAV systems. The PX4 autopilot suppor
 
 ## Datasheet Reference
 For more detailed technical specifications of the CO2 sensor used, refer to the [Sensirion SCD41 Datasheet](https://sensirion.com/media/documents/E0F04247/631EF271/CD_DS_SCD40_SCD41_Datasheet_D1.pdf).
-

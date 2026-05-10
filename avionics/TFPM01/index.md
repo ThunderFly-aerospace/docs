@@ -16,6 +16,8 @@ The sensor firmware is Arduino-based and runs on an ATmega1284P microcontroller.
 
 > **Note**: [TFPM01]((https://github.com/ThunderFly-aerospace/TFPM01)) is now considered obsolete and has been succeeded by [TFPM02](/avionics/TFPM02), which integrates more directly with PX4.
 
+For availability of replacement hardware, legacy support, or custom requirements, please contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+
 
 ## Example Deployment: Fireworks Pollution Study
 
@@ -63,7 +65,6 @@ TFPM01 outputs data via MAVLink TUNNEL messages over a serial port connected to 
 * Visualized in TF-ATMON tools with spatiotemporal tagging
 
 For further instructions, refer to the [TFUNIPAYLOAD01 documentation](/avionics/TFUNIPAYLOAD01).
-
 
 
 
