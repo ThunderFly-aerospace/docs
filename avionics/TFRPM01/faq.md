@@ -17,7 +17,7 @@ RPM is calculated from measured values (pulses per interval) as follows
 
 ![RPM equation](https://latex.codecogs.com/png.image?\dpi{110}RPM=\frac{N_c60}{N\tau})
 
-Therefore the resolution of measured RPM is the follows:
+Therefore, the resolution of measured RPM is as follows:
 
 ![Resolution equation](https://latex.codecogs.com/png.image?\dpi{110}Res=\frac{60}{N\tau})
 
@@ -25,10 +25,10 @@ Therefore the resolution of measured RPM is the follows:
 Where:
   * N is pulses per revolution
   * τ is the pooling interval in seconds
-  * Nc is pules counted during the measurement pooling interval
+  * Nc is pulses counted during the measurement pooling interval
   * Res is the absolute resolution of measurement in +/- RPM
 
-Therefore the absolute resolution of the sensor is independent of the current RPM measured and remains constant depending on sensor configuration, however, relative resolution increases with the RPM measured.  The absolute resolution strongly depends on the length of the pooling interval (a longer interval gets better resolution). The resolution also increases with the number of pulses per revolution, where more pulses per revolution give better RPM resolution. Related terms like precision and accuracy are more difficult to analyze because they depend on hardware and firmware versions of Pixhawk, but these errors could be neglected in the usual use cases.
+Therefore, the absolute resolution of the sensor is independent of the current RPM measured and remains constant depending on sensor configuration; however, relative resolution increases with the RPM measured.  The absolute resolution strongly depends on the length of the pooling interval (a longer interval gets better resolution). The resolution also increases with the number of pulses per revolution, where more pulses per revolution give better RPM resolution. Related terms like precision and accuracy are more difficult to analyze because they depend on hardware and firmware versions of Pixhawk, but these errors could be neglected in the usual use cases.
 
 
 
@@ -38,7 +38,7 @@ If you cannot find parameters related to the `PCF8583` sensor or if you receive 
 
 This issue occurs because the PCF8583 driver was disabled in the firmware by the PX4 development team due to memory constraints on some autopilots. However, the solution is simple.
 
-You need to enable the `drivers/rpm/pcf8583` driver in the board configuration in PX4 and then recompile the firmware. This will make the TFRPM01D (pcf8583) driver available on your autopilot. For more details on enabling the driver, please refer to the [official PX4 documentation](https://docs.px4.io/main/en/peripherals/serial_configuration.html#configuration-parameter-missing-from-qgroundcontrol).
+You need to enable the `drivers/rpm/pcf8583` driver in the board configuration in PX4 and then recompile the firmware. This will make the TFRPM01 (pcf8583) driver available on your autopilot. For more details on enabling the driver, please refer to the [official PX4 menuconfig documentation](https://docs.px4.io/main/en/hardware/porting_guide_config#px4-menuconfig-setup).
 
 
 ## How many TFRPM01 sensors can I connect to the autopilot?
@@ -51,17 +51,17 @@ If you use the [TFI2CADT](../TFI2CADT01) address translator, you can connect 6 T
 ![](multiple_tfrpm.jpg)
 
 
-It is then recommended to use an additional I2C port for next 6 pices, which will double the possible number of sensors, or to integrate another I2C translator ([TFI2CADT](../TFI2CADT01)) with different address translations into the structure.
+It is then recommended to use an additional I2C port for the next 6 pieces, which will double the possible number of sensors, or to integrate another I2C translator ([TFI2CADT](../TFI2CADT01)) with different address translations into the structure.
 
 So, you can connect quite a lot of TFRPM01 sensors to a single autopilot—far more than 6, 8, or even 12 units.
 
 
 ## Does it connect to RPM output from ESC?
 
-Generally yes, the TFRPM could be connected to revolution output from an ESC in case the output logic confirms to 5V TTL.
+Generally, yes, the TFRPM could be connected to a revolution output from an ESC in case the output logic conforms to 5V TTL.
 The limitation is the RPM resolution here because many ESCs get one pulse per revolution. Please take a look at the formula above for an explanation.
 
 ## Could be used for internal combustion engines?
 
-Yes, it could measure the RPM of the IC Engine. However, it needs a pulse signal to count the rotation speed. The pulsed signal could be either obtained either from [Electronic control unit](https://en.wikipedia.org/wiki/Electronic_control_unit) (ECU) or from an [Optical or magnetic probe](https://github.com/ThunderFly-aerospace/TFPROBE01) mounted on the proper location of the engine unit. Direct connection of TFRPM to ignition or sensing coils is not possible without signal conditioning, because the voltage of signals coming from coils will likely destroy the TTL-based RPM input of TFRPM. Required signal conditioning could be realized by a resistor network in many cases. Contact [ThunderFly s.r.o.](https://www.thunderfly.cz/contact-us.html) in case you need professional support.
+Yes, it could measure the RPM of the IC Engine. However, it needs a pulse signal to count the rotation speed. The pulsed signal could be obtained either from [Electronic control unit](https://en.wikipedia.org/wiki/Electronic_control_unit) (ECU) or from an [Optical or magnetic probe](https://github.com/ThunderFly-aerospace/TFPROBE01) mounted on the proper location of the engine unit. Direct connection of TFRPM to ignition or sensing coils is not possible without signal conditioning, because the voltage of signals coming from coils will likely destroy the TTL-based RPM input of TFRPM. Required signal conditioning could be realized by a resistor network in many cases. Contact [ThunderFly s.r.o.](https://www.thunderfly.cz/contact-us.html) in case you need professional support.
 
