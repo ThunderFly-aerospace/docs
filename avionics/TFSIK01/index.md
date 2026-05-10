@@ -26,19 +26,18 @@ The TFSIK01 is a European-made state-of-the-art SiK-based unmanned vehicle C2 an
 ### Key Features
 
 - **Plug-n-play** for Pixhawk Standard Flight Controllers. The easiest way to connect your flight controller in the airframe to the Ground Station 
+  - Offers a transparent serial link
+  - Facilitates air data rates reaching up to 250kbps
+  - Integrates MAVLink protocol framing and status reporting
+  - Achieves multi-kilometer range with a small whip antenna
 - **Superior Noise Immunity**: With a hardware-optimized RF front-end, the modem excels in environments plagued by out-of-band signal interference. The feature applies to multiple frequency bands.
 - **Robust Hardware Design**: Housed in a customizable 3D printed enclosure with electromagnetic shielding, it promises both durability and adaptability.
 - **Antenna Diversity**: Employs dual external antennas via MCX connectors, enhancing connectivity flexibility across different frequency bands requiring different antenna systems.
-- **Cutting-Edge Communication Technologies**:
+- **High-End Radio Communication Technologies**:
   - Implements Frequency-Hopping Spread Spectrum (FHSS)
   - Utilizes Adaptive Time Division Multiplexing (TDM) with Configurable duty cycle
   - Supports Listen Before Talk (LBT) and Adaptive Frequency Agility (AFA)
   - Error correction corrects up to 25% of bit errors
-- **High-Performance Metrics**:
-  - Offers a transparent serial link
-  - Facilitates air data rates reaching up to 250kbps
-  - Integrates MAVLink protocol framing and status reporting
-  - Achieves several kilometers of range with a small whip antenna
 - **Open-Source and Highly Configurable**: Loaded with SiK firmware for enhanced customization through AT and RT commands, it supports the MAVLink 2 protocol, Configurable through Mission Planner & APM Planner
 
 ## Hardware Parameters
