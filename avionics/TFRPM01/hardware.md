@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Hardware"
-permalink: /avionics/TFRPM01/hardware
+permalink: /avionics/TFRPM01/hardware/
 parent: "TFRPM01: RPM sensor"
 nav_order: "0"
 ---

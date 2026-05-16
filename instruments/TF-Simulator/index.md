@@ -1,7 +1,7 @@
 ---
 title: "TF-simulator - Mission Training Toolchain"
 layout: page
-permalink: /instruments/TF-simulator
+permalink: /instruments/TF-simulator/
 parent: Instrument Platforms
 nav_order: "5"
 has_children: true

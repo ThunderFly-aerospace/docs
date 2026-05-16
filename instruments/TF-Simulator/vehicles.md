@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Available Vehicles"
-permalink: /instruments/TF-simulator/Vehicles
+permalink: /instruments/TF-simulator/Vehicles/
 parent: "TF-simulator - Mission Training Toolchain"
 nav_order: "0"
 ---

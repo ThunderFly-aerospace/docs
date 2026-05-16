@@ -1,7 +1,7 @@
 ---
 title: "TF-GCS02 - Portable Ground Control Station"
 layout: page
-permalink: /instruments/TF-GCS02
+permalink: /instruments/TF-GCS02/
 parent: Instrument Platforms
 nav_order: "6"
 ---

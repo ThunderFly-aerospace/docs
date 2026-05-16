@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Multi-Vehicle Simulation"
-permalink: /instruments/TF-simulator/Multi-Vehicle
+permalink: /instruments/TF-simulator/Multi-Vehicle/
 parent: "TF-simulator - Mission Training Toolchain"
 nav_order: "0"
 ---

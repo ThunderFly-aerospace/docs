@@ -2,7 +2,7 @@
 
 title: "TF-ATMON - Toolchain for Atmospheric measurement"
 layout: page
-permalink: /instruments/TF-ATMON
+permalink: /instruments/TF-ATMON/
 parent: Instrument Platforms
 nav_order: "4"
 ---

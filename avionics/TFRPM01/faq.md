@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Frequently asked questions"
-permalink: /avionics/TFRPM01/faq
+permalink: /avionics/TFRPM01/faq/
 parent: "TFRPM01: RPM sensor"
 nav_order: "2"
 has_toc: true

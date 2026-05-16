@@ -1,7 +1,7 @@
 ---
 title: "TF-G2 - Unmanned Autogyro Development Kit"
 layout: page
-permalink: /instruments/TF-G2
+permalink: /instruments/TF-G2/
 parent: Instrument Platforms
 nav_order: "2"
 ---

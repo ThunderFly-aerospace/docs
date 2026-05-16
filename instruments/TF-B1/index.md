@@ -1,7 +1,7 @@
 ---
 title: "TF-B1 - Stratospheric Balloon Experimental Platform"
 layout: page
-permalink: /instruments/TF-B1
+permalink: /instruments/TF-B1/
 parent: Instrument Platforms
 nav_order: "2"
 ---
