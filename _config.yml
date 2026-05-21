@@ -152,6 +152,9 @@ callouts:
   warning:
     title: Warning
     color: red
+  origin:
+    title: "Origin story"
+    color: yellow
 
 # Google Analytics Tracking (optional)
 ga_tracking: G-P1F66E4DZK

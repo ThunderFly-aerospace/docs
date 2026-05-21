@@ -1,5 +1,4 @@
 
-
 .site-header {
     border-bottom: 2px solid #b97a04;
 }
@@ -10,4 +9,15 @@
 
 .site-nav, .nav-list {
     color: #fab20b;
+}
+
+// Origin story callout — ThunderFly amber branding
+.callout.origin {
+    background-color: rgba(250, 178, 11, 0.08);
+    border-color: #b97a04;
+
+    .callout-title {
+        background-color: rgba(185, 122, 4, 0.18);
+        color: #5c3d01;
+    }
 }

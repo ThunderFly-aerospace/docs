@@ -10,6 +10,9 @@ nav_order: "10"
 
 ![TFSIK01 modem](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/refs/heads/TFSIK01C/doc/img/TFSIK01.jpg)
 
+{: .origin }
+We built TFSIK01 because we were not satisfied with the reliability of available SiK telemetry modems. During our UAV flights, vibrations caused antenna connectors to loosen and links to drop at the worst possible moments. We traced the open-source SiK platform, identified the weak points, and designed our own modem — adding dual antenna diversity so the link holds even when one antenna is damaged or misoriented. The modem was born out of operational necessity and has since proven itself in hundreds of missions, including stratospheric balloon flights reaching over 30 km altitude.
+
 ### Purchasing Information
 
 The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for a commercial quotation, custom configuration, or volume order, or shop directly through [Lectronz](https://lectronz.com/products/1067). We are the designers of this modem and therefore have full control of the modem's construction and manufacturing. This gives us the ability to react even to non-standard requests for modification or functions by adopting our in-house European production.
