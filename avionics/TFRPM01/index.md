@@ -18,6 +18,9 @@ The hardware is intended to measure helicopter and autogyro rotor RPM, but its c
   <img src="/avionics/TFRPM01/TFRPM01D.jpg" />
 </p>
 
+{: .origin }
+TFRPM01 was created to solve a specific challenge in automating the launch of our [TF-G2 autogyro](/instruments/TF-G2) (and the earlier TF-G1). An autogyro's rotor must reach a minimum RPM before takeoff is safe — without rotor speed feedback, the autopilot is operating blind during the most critical phase of flight. We needed the autopilot to read rotor RPM reliably, but without tying the system to hardware-specific timer peripherals that differ between flight controller boards. An I²C counter was the clean solution: it offloads pulse counting to dedicated hardware and required only a [single driver added to PX4](https://docs.px4.io/main/en/sensor/thunderfly_tachometer.html), making the integration portable across all Pixhawk-standard autopilots.
+
 ## Where to get it?
 
 ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Write an email to [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for direct orders, quotations, or custom requirements, or shop online at [Lectronz](https://lectronz.com/products/1055).
