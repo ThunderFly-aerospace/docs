@@ -13,7 +13,7 @@ The [TF-B1](https://github.com/ThunderFly-aerospace/TF-B1) stratospheric balloon
 ![Example of experimental gondola](https://raw.githubusercontent.com/ODZ-UJF-AV-CR/FIK-6/refs/heads/FIK-6/doc/img/FIK-6_gondola_weight.jpg)
 
 {: .origin }
-TF-B1 was born from our need to test ThunderFly avionics under genuinely extreme conditions — stratospheric cold down to −60 °C, near-vacuum pressure, and intense UV radiation that quickly degrades most off-the-shelf electronics. Rather than adapting to the limitations of existing platforms, we built our own stratospheric balloon system tailored to our avionics testing requirements. After successfully validating our sensors and modems at 30 km altitude across multiple missions, we realized the platform itself was valuable — and we now offer it to other researchers and engineering teams facing the same challenge.
+TF-B1 was created, based on our need to test ThunderFly avionics under extreme conditions — stratospheric cold down to −60 °C, near-vacuum pressure, and intense radiation that quickly degrades most off-the-shelf electronics. Rather than adapting of existing platforms, we built our own stratospheric balloon system tailored to our atmospheric sensors testing requirements. After successfully validating our telemetry links at 30 km altitude across multiple missions, we realized the platform itself was valuable — and we now offer it to other researchers and engineering teams facing simillar challenge.
 
 ## Main design highlights
 
