@@ -13,6 +13,9 @@ nav_order: "11"
 <img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFGPS01/refs/heads/TFGPS01B/doc/img/TFGPS_1.jpg" alt="3D printed box" width="80%" />
 </p>
 
+{: .origin }
+We built TFGPS01 because standard commercial UAV GPS receivers proved unreliable in the electromagnetic environment we operate in. The worst moment was takeoff: at full throttle, the standard ESCs generate broadband RF noise across the frequency bands, and the telemetry modem transmitting nearby GNSS antenna makes the situation even worse. The result was degraded positioning accuracy exactly when it mattered most. We needed a receiver with a high-linearity LNA that could maintain fix under these conditions and remain usable even while flying through the RF environment of an actual thunderstorm. A second requirement pushed us in the same direction: to timestamp transient events like lightning strikes recorded by [THUNDERMILL01](/avionics/THUNDERMILL01/) and other [TF-ATMON](/instruments/TF-ATMON/) instruments, we needed a GPS-disciplined PPS signal accurate to sub-microsecond level. Both demands require a noise-hardened receiver with a dedicated timing output.
+
 ## Overview
 The TFGPS01 is a high-end precision GNSS navigation module designed for UAV applications. It features multi-constellation reception, high noise immunity, and RTK capability, making it suitable for various drone navigation and payload synchronization tasks. The module can operate as both a standalone UART GPS and a USB GPS receiver.
 

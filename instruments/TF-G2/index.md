@@ -16,6 +16,9 @@ To enhance the ease of learning autogyro technology, we made it possible to [sim
 
 ![TF-G2 during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_fly_clouds.jpg)
 
+{: .origin }
+TF-G2 grew out of research conducted within the [CRREAT project](https://crreat.eu/), which required carrying heavy scientific instruments into or close to thunderstorm clouds to study ionizing radiation. Because those instruments were not originally designed for UAVs, the first platform we built TF-G1 had to be large and powerful enough to carry them as-is. Over time, the [TF-ATMON](/instruments/TF-ATMON/) toolchain gave us the means to systematically miniaturize and optimize each instrument for UAV integration. Once the payload shrank, the carrier could shrink with it: TF-G2 enables similar measurement capability as TF-G1, but in a significantly lighter and simpler airframe that is far cheaper to train on, easier to transport, and quicker to deploy for routine atmospheric measurements.
+
 ## The main design highlights
 
   * Micro payload load capacity suitable for multiple types of [TF-ATMON atmospheric sensors](/instruments/TF-ATMON)
