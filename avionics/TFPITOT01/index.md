@@ -38,10 +38,10 @@ The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
 - **Repeatability:** ±3% of measured value (corresponds to ±1.5 m/s @ 50 m/s)
 - **Zero Point Accuracy:** 0.2 Pa
 - **Operating Temperature Range:** -40 °C to +65 °C
-- **Default tube dimensions:** L 80 mm, D 5.1 mm
+- **Default tube dimensions:** L 80 mm, D 5 mm
 - **Weight:**
-    - L 80 mm, D 5.1 mm, 4.1 g, 6.3 g enclosure included 
-    - L 45 mm, D 5.1 mm, 3.8 grams
+    - L 80 mm, D 5 mm, 4.1 g (6.3 g including enclosure)
+    - L 45 mm, D 5 mm, 3.8 grams
     - Electronics only 1.8 g
 - **Default I2C Address:** 0x21 (configurable to 0x22 or 0x23)
 
