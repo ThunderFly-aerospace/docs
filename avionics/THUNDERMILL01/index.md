@@ -32,7 +32,7 @@ The THUNDERMILL01 is an [electric field mill](https://en.wikipedia.org/wiki/Fiel
 
 ### Where to get it?
 
-THUNDERMILL01 was developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), who contributed to the initial design and continue to support the open-source hardware ecosystem. THUNDERMILL01 can be bought directly from ThunderFly by email at [sale@thunderfly.cz](mailto:sale@thunderfly.cz). The same email can be used if you have specific requirements for custom modifications or if the product is to be purchased in large quantities.
+THUNDERMILL01 was developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), who contributed to the [initial THUNDERMILL design](https://docs.ust.cz/THUNDERMILL/THUNDERMILL01/) and continue to support the open-source hardware ecosystem. THUNDERMILL01 can be bought directly from ThunderFly by email at [sale@thunderfly.cz](mailto:sale@thunderfly.cz). The same email can be used if you have specific requirements for custom modifications or if the product is to be purchased in large quantities.
 
 ## Technical Specifications
 
@@ -54,7 +54,7 @@ Main technical parameters, like resolution and measurement range, could be custo
 | **Mounting Options**           | Autogyro rotor, wing, nose      |
 | **Orientation**                | Up-looking (standard) or Side-looking (optional) |
 | **Power Input**            | 20mA  @  5V DC  + External rotation force (5 W maximum)  |
-| **Data Interface**             | (Pixhawk 6 pin JST-GH UART Telemetry)[/avionics/TFCAB01/#uarttelemserial-cables]    |
+| **Data Interface**             | [Pixhawk 6 pin JST-GH UART Telemetry](/avionics/TFCAB01/#uarttelemserial-cables)    |
 | **Data Visualization**         | [TF-ATMON](/instruments/TF-ATMON) sensor views  |
 | **Temperature Range**      | -40°C to 40°C                         |
 | **Humidity Range**         | 0–90% RH                                                 |
