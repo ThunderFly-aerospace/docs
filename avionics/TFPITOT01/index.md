@@ -13,7 +13,7 @@ nav_order: "10"
 The TFPITOT01 is an ultra-lightweight pitot tube that integrates the SDP33 sensor, providing a compact and reliable airspeed measurement solution. This design eliminates common issues associated with traditional low-cost pitot tubes, including temperature drift, offset, and the failure of tubing systems.
 
 {: .origin }
-TFPITOT01 has its roots in an earlier problem we solved with the [TFSLOT01](/avionics/TFSLOT01/) airspeed sensor. It worked very well. As we pushed into smaller platforms, however, particularly during the development of the [TF-G250](/instruments/TF-G250/) miniature autogyro, weight became the limiting factor. On a sub-250 g autogyro, the absence of a stagnation point matters far less than every gram of total weight. We therefore designed TFPITOT01 as an ultra-lightweight airspeed sensor, while retaining as much clogging resistance as possible through the choice of materials and internal geometry of tube that prevents liquid water from blocking the pressure ports.
+TFPITOT01 has its roots in an earlier problem we solved with the [TFSLOT01](/avionics/TFSLOT01/) airspeed sensor. It worked very well. As we developed smaller platforms, like the [TF-G250](/instruments/TF-G250/) autogyro, weight became the limiting factor. On a sub-250 g autogyro, the absence of a stagnation point matters far less than every gram of total weight. We therefore designed TFPITOT01 as an ultra-lightweight airspeed sensor, while retaining as much clogging resistance as possible through the choice of materials and internal geometry of the tube that prevents liquid water from blocking the pressure ports.
 
 ## Key Features
 - **Compact Design** – Eliminates external tubing, reducing weight and enhancing reliability.
@@ -54,14 +54,14 @@ The TFPITOT01 is designed for Unmanned Aerial Vehicles (UAVs), providing precise
 
 ## Installation Guide
 
-The airspeed sensor is supposed to be mounted in an aircraft's nose or a wing. 
+The airspeed sensor is supposed to be mounted in an aircraft's nose or a wing.  The required orientation of the mounted sensor is PCB up to ensure that it experiences at least +1g force for more than 95% of the time. This requirement ensures that ingressed water can flow out or evaporate. This mounting is especially useful in situations where mounting is inside the wing. The sensor should be screwed to the bottom of the wing, and the electronics covered by a cap. 
 
 ![TFPITOT01 aircraft wing mount](TFPITOT01_wing_mount.png)
 
 
 ![TFPITOT01 aircraft nose mount](TFPITOT01_nose_mount.png)
 
-In typical UAV applications, it is generally sufficient for the static pressure ports to be positioned at a distance of approximately 10 times the outer diameter of the tube from nearby airframe structures (such as the nose). Longer protrusions introduce unnecessary challenges related to stiffness, vibrations, and structural stability, unless used for specialized aerodynamic measurements.
+In typical UAV applications, it is generally sufficient for the static pressure ports to be positioned at a distance of approximately 10 times the outer diameter of the tube from nearby airframe structures (such as the nose). Longer protrusions introduce unnecessary challenges related to stiffness, vibrations, and structural stability; unless required for specialized aerodynamic measurements, it is not recommended.
 
 Modern flight controllers (e.g., PX4, ArduPilot) further reduce the need for extended pitot tubes by dynamically correcting Indicated Airspeed (IAS) to Calibrated (CAS) and Equivalent Airspeed (EAS) using GPS and IMU data. These corrections effectively mitigate airframe-induced pressure distortions and allow for reliable airspeed readings even with shorter tubes.
 
@@ -73,9 +73,9 @@ To ensure reliable airspeed measurements, the pitot tube must be installed corre
 2. Mounting possibilities:
    - **Clamp Mounting:** Use a dedicated bracket or clamp to secure the tube.
    - **Adhesive Bonding:** Bond the tube into a pre-fabricated socket or flange on the fuselage or wing structure.
-3. Ensure that the electronic components and I2C cable are sealed against moisture. Only the intake holes at the front of the pitot tube should be exposed to airflow.
+3. Ensure that the electronic components and the I2C cable are sealed against moisture. Only the intake holes at the front of the pitot tube should be exposed to airflow.
 
-The preferred orientation of the mounted sensor is PCB up. This position ensures that ingressed water can flow out or evaporate. This mounting is especially useful in situations where mounting is inside the wing. The sensor should be screwed to the bottom of the wing, and the electronics covered by a cap. 
+
 
 ### Electrical Connection
 - Connect the TFPITOT01 to an unused I2C port on the flight controller. It is recommended to use the [EMC enhanced TFCAB01 I2C cables](/avionics/TFCAB01/).
