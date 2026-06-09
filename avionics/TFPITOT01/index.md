@@ -13,7 +13,7 @@ nav_order: "7"
 The TFPITOT01 is an ultra-lightweight pitot tube that integrates the SDP33 sensor, providing a compact and reliable airspeed measurement solution. This design eliminates common issues associated with traditional low-cost pitot tubes, including temperature drift, offset, and the failure of tubing systems.
 
 {: .origin }
-TFPITOT01 has its roots in an earlier problem we solved with the [TFSLOT01](/avionics/TFSLOT01/) airspeed sensor. It worked very well. As we developed smaller platforms, like the [TF-G250](/instruments/TF-G250/) autogyro, weight became the limiting factor. On a sub-250 g autogyro, the absence of a stagnation point matters far less than every gram of total weight. We therefore designed TFPITOT01 as an ultra-lightweight airspeed sensor, while retaining as much clogging resistance as possible through the choice of materials and internal geometry of the tube that prevents liquid water from blocking the pressure ports.
+As we solved airspeed sensor reliability problems with the [TFSLOT01](/avionics/TFSLOT01/), we then moved development to smaller platforms, like the [TF-G250](/instruments/TF-G250/) autogyro, where weight became the limiting factor. On a sub-250 g autogyro, the absence of a stagnation point matters less than total weight. We therefore designed TFPITOT01 as an ultra-lightweight airspeed sensor, while retaining as much clogging resistance as possible through the choice of materials and internal geometry of the tube that prevents liquid water from blocking the pressure ports.
 
 ## Key Features
 - **Compact Design** – Eliminates external tubing, reducing weight and enhancing reliability.
