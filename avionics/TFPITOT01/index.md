@@ -82,10 +82,19 @@ To ensure reliable airspeed measurements, the pitot tube must be installed corre
 
 ![TFPITOT01 schematics](TFPITOT01-schematic.png)
 
-The sensor could be hardware-configured by the resistor R4 to three different I2C addresses. In case you need to connect more TFPITOT01 sensors on the same I2C bus, the [TFI2CADT01 address translator](/avionics/TFI2CADT01/) could be used to connect a higher number of sensors. 
+The sensor could be hardware-configured by the resistor R4 to three different I2C addresses. In case you need to connect more TFPITOT01 sensors on the same I2C bus, the [TFI2CADT01 address translator](/avionics/TFI2CADT01/) could be used to connect a higher number of sensors.
 
-### Calibration
-Follow the calibration check procedure as outlined in the documentation for your flight control firmware (PX4/Ardupilot) to achieve optimal accuracy.
+### Firmware Configuration
+
+**PX4:** The sensor is supported via the [sdp3x airspeed driver](https://docs.px4.io/main/en/modules/modules_driver_airspeed_sensor#sdp3x). No additional configuration is required; the driver is started automatically when the sensor is detected on the I2C bus.
+
+**ArduPilot:** The corresponding sensor type is selected via the [`ARSPD_TYPE` parameter](https://ardupilot.org/plane/docs/parameters-Plane-stable-V4.6.2.html#arspd-type-airspeed-type). Set it to the value matching the SDP3x sensor family.
+
+#### Sensor Verification
+
+Flight stacks (PX4 and ArduPilot) include a built-in airspeed calibration procedure that applies a scaling factor and offset correction. This procedure is designed to compensate for the inherent inaccuracies of low-cost membrane-based differential pressure sensors, which are prone to offset drift and temperature sensitivity.
+
+The SDP33 used in TFPITOT01 has a stable and well-characterized offset and does not require this type of correction. When performed with the TFPITOT01, the procedure effectively serves as a **verification step** — confirming that the sensor reads zero when no airflow is present and that the measured values are within the expected range. It is still recommended to complete it, as the flight stack requires it before enabling airspeed-dependent flight modes.
 
 ## FAQ: Frequently Asked Questions
 
