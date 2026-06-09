@@ -3,7 +3,7 @@ layout: page
 title: "TFPITOT01: Pitot Tube with Integrated Differential Pressure Sensor"
 permalink: /avionics/TFPITOT01/
 parent: Sensors
-nav_order: "10"
+nav_order: "7"
 ---
 
 # TFPITOT01 - Lightweight Pitot Tube with Integrated Differential Pressure Sensor

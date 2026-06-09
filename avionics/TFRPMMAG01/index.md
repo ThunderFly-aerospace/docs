@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "TFRPMMAG01 - Magnetic RPM Sensor"
+title: "TFRPMMAG01: Magnetic RPM Sensor"
 permalink: /avionics/TFRPMMAG01/
 parent: Sensors
-nav_order: "30"
+nav_order: "11"
 ---
 
 # TFRPMMAG01 - Magnetic RPM Sensor with I2C Interface

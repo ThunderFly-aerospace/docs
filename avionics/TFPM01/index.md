@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "TFPM01 - UAS Particulate matter sensor"
+title: "TFPM01: UAS Particulate matter sensor"
 permalink: /avionics/TFPM01/
 parent: Sensors
-nav_order: "55"
+nav_order: "8"
 ---
 
 # TFPM01 – TFUNIPAYLOAD01-based TF-ATMON Particulate Matter Sensor

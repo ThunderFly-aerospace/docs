@@ -3,7 +3,7 @@ layout: page
 title: "THUNDERMILL01: Airborne E-field sensor"
 permalink: /avionics/THUNDERMILL01/
 parent: "Sensors"
-nav_order: "100"
+nav_order: "13"
 has_children: false
 ---
 

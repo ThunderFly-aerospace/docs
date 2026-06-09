@@ -3,7 +3,7 @@ layout: page
 title: "TFSLOT01: Clogging-free airspeed sensor"
 permalink: /avionics/TFSLOT01/
 parent: Sensors
-nav_order: "10"
+nav_order: "12"
 ---
 
 # TFSLOT01 - Clogging-free airspeed sensor for low-speed UAVs

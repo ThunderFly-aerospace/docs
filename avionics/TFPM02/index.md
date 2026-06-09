@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "TFPM02 - Particulate matter and NOx sensor"
+title: "TFPM02: Particulate matter and NOx sensor"
 permalink: /avionics/TFPM02/
 parent: Sensors
-nav_order: "54"
+nav_order: "9"
 ---
 
 # TFPM02 - Particulate Matter Sensor for ThunderFly TF-ATMON system

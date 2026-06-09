@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "TFHT02 - Fast response UAV Humidity and Temperature Sensor"
+title: "TFHT02: Fast response UAV Humidity and Temperature Sensor"
 permalink: /avionics/TFHT02/
 parent: Sensors
-nav_order: "20"
+nav_order: "6"
 ---
 
 # TFHT02 - Fast response miniature UAV Humidity and Temperature Sensor

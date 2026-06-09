@@ -3,7 +3,7 @@ layout: page
 title: "AIRDOS03: Airborne Ionizing Radiation Spectrometer"
 permalink: /avionics/AIRDOS03/
 parent: "Sensors"
-nav_order: "999"
+nav_order: "1"
 has_children: false
 ---
 

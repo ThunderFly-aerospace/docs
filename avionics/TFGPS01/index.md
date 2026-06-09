@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "TFGPS01 - UAV GNSS Tracking Module with PPS Timestamping"
+title: "TFGPS01: UAV GNSS Tracking Module with PPS Timestamping"
 permalink: /avionics/TFGPS01/
 parent: Sensors
-nav_order: "11"
+nav_order: "3"
 ---
 
 # TFGPS01 - UAV GNSS Navigation Module with PPS, Position and Time-stamping Capability
