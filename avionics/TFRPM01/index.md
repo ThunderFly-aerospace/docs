@@ -30,7 +30,7 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
 ## Main Features
 
   * [Schmitt trigger input](https://en.wikipedia.org/wiki/Schmitt_trigger) to shape a non-uniform signal from the RPM sensing element. 
-  * Offload the flight controller's MCU, by self-counting and storing the number of counted pulses in I²C accessible internal memory
+  * Offloads the flight controller's MCU by self-counting and storing the number of counted pulses in I²C-accessible internal memory
   * Input status LED indicator - for easy debugging of the mechanical configuration
   * Short circuit protection on the probe connector
   * Pass-through I²C connectors to allow a daisy chain of additional or multiple sensors
@@ -45,7 +45,7 @@ ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https:
 | RPM Pulse input connector | 3-pin 2.54mm pitch pin header | Internal 22k Ohm pull-up resistor |
 | RPM Pulse input voltage range | 0-5V | Negative voltage or overvoltage could damage the input |
 | RPM pulse input switching thresholds | +VT 1.88 V, -VT 1.12 V  Typically@25°C| Hysteresis between VT+ and VT- is 0.756 V |
-| I2C address | 0x50 default | By switching JP1 possible change to 0x51 |
+| I2C address | 0x50 default | By switching JP1, it is possible to change to 0x51 |
 | I2C SCL clock frequency | Max 100 kHz | Operation on 400 kHz is possible, but unreliable|
 | Operating and storage temperature | −20°C to +40°C | Limited by case material |
 | Operational power voltage | +3.6V to +5.4V | Overvoltage internally protected by Zener diode, Undervoltage is not treated. Current consumption is defined mainly by the used probe. |

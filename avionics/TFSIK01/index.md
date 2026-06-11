@@ -395,7 +395,7 @@ External antennas are connected to the TFSIK modem by a pair of [MCX connectors]
 ![Typical whip antenna radiation pattern](./whip_antenna_radiation_pattern.png)
 
 
-Two mechanically different variants of the antenna kit are available, optimized for different use cases. The both antenna kits are mounted to the flat surface using two screws through the mounting holes. The each antenna kit contains two antennas. The optimal installation depends on your exact setup, but generally, the antennae should be orthogonal to each other due to the "donut" radiation pattern of the each antenna.
+Two mechanically different variants of the antenna kit are available, optimized for different use cases. Both antenna kits are mounted to the flat surface using two screws through the mounting holes. Each antenna kit contains two antennas. The optimal installation depends on your exact setup, but generally, the antennas should be orthogonal to each other due to the "donut" radiation pattern of each antenna.
 
 #### UAV variant (vibration-resistant)
 

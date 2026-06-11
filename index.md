@@ -16,7 +16,7 @@ Our state-of-the-art measurement solutions for UAV technology. These tools are d
 ![UAV autogyro during flight](https://raw.githubusercontent.com/ThunderFly-aerospace/TF-G2/4s/doc/img/TF-G2_fly_clouds.jpg)
 
 - **Measuring Devices Carriers**: The autogyro airframes (TF-G1, [TF-G2](/instruments/TF-G2) and [TF-G250](/instruments/TF-G250)) are engineered for extreme stability in adverse weather conditions.
-- **[TF-ATMON Toolchain](/instruments/TF-ATMON)**: Transform data into actionable insights by advanced processing software, tailored for atmospheric analysis.
+- **[TF-ATMON Toolchain](/instruments/TF-ATMON)**: Transform data into actionable insights with advanced processing software, tailored for atmospheric analysis.
 - **[TF-Simulator](/instruments/TF-simulator)**: Prepare for measuring campaigns with our software simulator, ensuring the mission's success.
 
 ## ThunderFly avionics

@@ -18,7 +18,7 @@ An essential accessory of unmanned vehicles is a ground station that ensures a s
 The ground station consists of several parts:
  * A computing unit that takes care of logging data from the flight and manages individual software tasks
  * Network IP interface (at least two Ethernet interfaces, WiFi connection)
- * Data-link modem providing data transfers from the drone. Support MIMO 2x2, based on SIK firmware
+ * Data-link modem providing data transfers from the drone. Supports MIMO 2x2, based on SiK firmware
  * Data storage
  * A pair of high-quality telemetry antennas
  * Backup power supply for temporary operation without external power supply.
@@ -28,6 +28,6 @@ The ground station consists of several parts:
 ## Basic usage
 
 Configure [mavlink-router](https://github.com/mavlink-router/mavlink-router) to forward packets to the specific IP address of the UAV operator's terminal by adding another UDP target or editing an existing one.
-For connection, both WiFi and Ethernet interfaces could be used to ssh connection:
+For connection, both WiFi and Ethernet interfaces could be used for an SSH connection:
 
     ssh tf@TF-GCS.lan  

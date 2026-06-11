@@ -41,7 +41,7 @@ Connect the FMU or peripheral device to the corresponding PixHawk connector.  Th
 
 ### Self-test
 
-The proper function and cable could be easily tested by connecting the cable between the "to FMU" and "to Peripheral" connectors.
+Proper function and cable integrity can be easily tested by connecting a cable between the "to FMU" and "to Peripheral" connectors.
 
 ![TFUSBSERIAL01 self test](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUSBSERIAL01/TFUSBSERIAL01A/doc/img/TFUSBSERIAL01_self-test.jpg)
 

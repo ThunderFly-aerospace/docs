@@ -10,7 +10,7 @@ nav_order: "3"
 
 ![TFESC02 - BLDC Motor Driver PCB](https://raw.githubusercontent.com/ThunderFly-aerospace/TFESC02/refs/heads/TFESC02A/doc/img/TFESC02_top3.jpg)
 
-The TFESC02 is a high-performance BLDC motor driver device designed specifically for unmanned aerial vehicle (UAV) applications. At its core uses the [MCF8329A](https://www.ti.com/product/MCF8329A) integrated circuit, which enables advanced Field Oriented Control (FOC) without requiring feedback sensors. The TFESC02 is optimized for integration into UAV systems via the I2C interface and is fully compatible with PX4 autopilot firmware, providing a seamless solution for propulsion systems in small and micro UAVs.
+The TFESC02 is a high-performance BLDC motor driver device designed specifically for unmanned aerial vehicle (UAV) applications. At its core, it uses the [MCF8329A](https://www.ti.com/product/MCF8329A) integrated circuit, which enables advanced Field Oriented Control (FOC) without requiring feedback sensors. The TFESC02 is optimized for integration into UAV systems via the I2C interface and is fully compatible with PX4 autopilot firmware, providing a seamless solution for propulsion systems in small and micro UAVs.
 
 ## Features
 
@@ -51,7 +51,7 @@ The TFESC02 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
 
 ## Integration with UAV Systems
 
-The TFESC02 is designed for seamless integration into UAV propulsion systems. Exposing the I2C interface for engine control. This allows direct compatibility with the PX4 autopilot firmware, a widely used platform in UAV development. Using I2C, the autopilot can precisely control motor speed, torque, and power, while continuously monitoring system parameters for optimal performance.
+The TFESC02 is designed for seamless integration into UAV propulsion systems. It exposes the I2C interface for engine control. This allows direct compatibility with the PX4 autopilot firmware, a widely used platform in UAV development. Using I2C, the autopilot can precisely control motor speed, torque, and power, while continuously monitoring system parameters for optimal performance.
 
 ### Energy Efficiency for Extended Flight Time
 

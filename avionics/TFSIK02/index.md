@@ -11,7 +11,7 @@ nav_order: "11"
 ### Purchasing Information
 
 The device can be purchased from ThunderFly s.r.o. For commercial quotations or special configurations (frequency bands, output power, cryptographic handling), contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
-TFSIK02 is developed and manufactured in‑house and localised in the EU, which allows  hardware configuration and traceable customization required by defense and security‑sensitive users.
+TFSIK02 is developed and manufactured in‑house and is localized in the EU, which allows  hardware configuration and traceable customization required by defense and security‑sensitive users.
 
 ## Overview
 
@@ -195,7 +195,7 @@ Mechanical installation, antenna placement, and UART wiring follow the same prin
 
 ### Export and Use Disclaimer
 
-TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance, and cryptographic policy. Because it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01](/avionics/TFSIK01). Depending on the selected frequency band, output power, and cryptographic configuration, the device may be subject to export control.
+TFSIK02 is not a consumer or hobby telemetry device. It is supplied exclusively for professional, institutional, or governmental users who are responsible for frequency allocation, regulatory compliance, and cryptographic policy, as it is designed for professional, governmental, and defense‑related applications. For civil and research UAV applications, refer to [TFSIK01](/avionics/TFSIK01). Depending on the selected frequency band, output power, and cryptographic configuration, the device may be subject to export control.
 
 The responsibility for the following activities rests solely with the user or purchasing organization.
 

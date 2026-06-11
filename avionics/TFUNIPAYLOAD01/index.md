@@ -102,7 +102,7 @@ The UART interface is compatible with the [Pixhawk connector standard](https://g
 
 
 {: .highlight }
-To debug and development purposes the [TFUSBSERIAL USB adapter](/tools/TFUSBSERIAL01/) could be connected to this UART port.
+For debugging and development purposes, the [TFUSBSERIAL USB adapter](/tools/TFUSBSERIAL01/) could be connected to this UART port.
 
 
 #### SPI master

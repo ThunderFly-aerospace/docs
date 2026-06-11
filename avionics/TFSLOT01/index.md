@@ -22,7 +22,7 @@ TFSLOT01 was born out of a recurring failure we encountered with our TF-G1 and [
   * Directly integrated differential pressure sensor, eliminating the need for additional tubing.
   * Integrated magnetometer improves navigation reliability. 
   * Customizable 3D-printed case to fit specific applications.
-  * Integrated IMU to vibration diagnostics on AoA measurement.
+  * Integrated IMU for vibration diagnostics and AoA measurement.
 
 ## How to Buy
 
@@ -72,7 +72,7 @@ These special cable conductors' winding method greatly improves the signal integ
 
 ## Working Principle
 
-The sensor uses the [Venturi Effect](https://en.wikipedia.org/wiki/Venturi_effect#Instrumentation_and_measurement) to measure fly velocity in the air.
+The sensor uses the [Venturi Effect](https://en.wikipedia.org/wiki/Venturi_effect#Instrumentation_and_measurement) to measure flight velocity in the air.
 
 ![TFSLOT01 cross section](/avionics/TFSLOT01/tfslot_crossection.svg)
 

@@ -38,7 +38,7 @@ The following table summarises existing (in production) sensor devices. Other se
 | [TFHT01](/avionics/TFHT01) and [TFHT02](/avionics/TFHT02) | 2         | Humidity and temperature sensors                                         |
 | [THUNDERMILL01](/avionics/THUNDERMILL01)                  | 3         | Electric field sensors                                                   |
 | [AIRDOS03 ("UAVDOS")](/avionics/AIRDOS03/)                | 4         | Semiconductor-based ionising radiation spectrometers designed for drones |
-| [TFCO201](/avionics/TFCO201)                              | 5         | Opto-aucoustic CO2 concentration sensor                                  |
+| [TFCO201](/avionics/TFCO201)                              | 5         | Opto-acoustic CO2 concentration sensor                                  |
 
 Additional sensors could be connected by using the [TFUNIPAYLOAD01](/avionics/TFUNIPAYLOAD01) hardware, which slightly increases the weight, but does not require the development of a PX4/Ardupilot-specific sensor driver.
 
@@ -49,7 +49,7 @@ TF-ATMON has been successfully integrated into various aerial platforms for atmo
 * **Autogyros**
 
   * [TF-G250](/instruments/TF-G250) – Ultra-compact aerological autogyro platform for atmospheric sounding
-  * [TF-G2](/instruments/TF-G2) – larger, more robust autogyro platform suitable for advanced sensor integration and research flights
+  * [TF-G2](/instruments/TF-G2) – a larger, more robust autogyro platform suitable for advanced sensor integration and research flights
 * **Multicopters** – Customer specific integrations
 * **Stratospheric balloons**
   

@@ -20,7 +20,7 @@ The sensor could also be used with other probe types. We designed the [TFPROBE01
 
 ## TFPROBE01 - Omnipolar magnetic and reflective optical sensor probe
 
-The sensor is specifically designed for simple RPM measurement with the TFRPM01 sensor board. The probe consists dual sensing technique - optical or magnetic. Therefore, the user should select the one most suitable for the application.
+The sensor is specifically designed for simple RPM measurement with the TFRPM01 sensor board. The probe consists of a dual sensing technique — optical or magnetic. Therefore, the user should select the one most suitable for the application.
 
 <p float="center">
 <img src="https://raw.githubusercontent.com/ThunderFly-aerospace/TFPROBE01/TFPROBE01A/doc/img/TFPROBE01A_connector.jpg" width="48%" />

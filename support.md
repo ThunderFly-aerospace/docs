@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Products Support
+title: Product Support
 permalink: /support/
 nav_order: 999
 ---

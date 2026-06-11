@@ -13,7 +13,7 @@ The [TF-B1](https://github.com/ThunderFly-aerospace/TF-B1) stratospheric balloon
 ![Example of experimental gondola](https://raw.githubusercontent.com/ODZ-UJF-AV-CR/FIK-6/refs/heads/FIK-6/doc/img/FIK-6_gondola_weight.jpg)
 
 {: .origin }
-TF-B1 was created, based on our need to test ThunderFly avionics under extreme conditions — stratospheric cold down to −60 °C, near-vacuum pressure, and intense radiation that quickly degrades most off-the-shelf electronics. Rather than adapting of existing platforms, we built our own stratospheric balloon system tailored to our atmospheric sensors testing requirements. After successfully validating our telemetry links at 30 km altitude across multiple missions, we realized the platform itself was valuable — and we now offer it to other researchers and engineering teams facing simillar challenge.
+TF-B1 was created, based on our need to test ThunderFly avionics under extreme conditions — stratospheric cold down to −60 °C, near-vacuum pressure, and intense radiation that quickly degrades most off-the-shelf electronics. Rather than adapting existing platforms, we built our own stratospheric balloon system tailored to our atmospheric sensors testing requirements. After successfully validating our telemetry links at 30 km altitude across multiple missions, we realized the platform itself was valuable — and we now offer it to other researchers and engineering teams facing a similar challenge.
 
 ## Main design highlights
 
@@ -28,7 +28,7 @@ TF-B1 was created, based on our need to test ThunderFly avionics under extreme c
   * Designed for relatively high-power payloads up to tens of Watts
 * Support for scientific instruments with [TFUNIPAYLOAD01 payload interface](/avionics/TFUNIPAYLOAD01)
 * Continuous pre-flight charging and power monitoring for maximal uptime
-  * Ground monitoring direcly by [TFUSBSERIAL01](/avionics/TFUSBSERIAL01)
+  * Ground monitoring directly by [TFUSBSERIAL01](/avionics/TFUSBSERIAL01)
 
 ## Reference flights
 
@@ -93,7 +93,7 @@ TF-B1 includes a long-range recovery beacon implemented using the [TFLORA01 LoRa
 The LoRa subsystem is implemented using two software modules. Only the application layer is platform-specific:
 
 **`tflora`**
-Low-level LoRa PX4 driver based on the LMIC stack. Responsible for radio configuration, packet transmission, spreading factor control, and scheduling of radio activity. This module is a generic TFLORA01 driver and is intended to remain unchanged across different platforms. For the configuration of this software module looks in [TFLORA01 documentation](/avionics/TFLORA01/).
+Low-level LoRa PX4 driver based on the LMIC stack. Responsible for radio configuration, packet transmission, spreading factor control, and scheduling of radio activity. This module is a generic TFLORA01 driver and is intended to remain unchanged across different platforms. For the configuration of this software module, see the [TFLORA01 documentation](/avionics/TFLORA01/).
 
 **`lora_gps_vcmd`**
 Application layer used in TF-B1. This module generates the beacon message, encodes GPS telemetry into a compact binary format, and schedules periodic transmissions. It also implements a dual spreading-factor operation used to balance transmission range and airtime.

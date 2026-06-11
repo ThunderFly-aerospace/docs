@@ -13,7 +13,7 @@ ThunderFly instruments are designed as a toolset that spans the entire mission l
 
 - **Airborne platforms** – Autogyros, [balloons](/instruments/TF-B1/), and specialized payload carriers cover a wide envelope of altitudes, mission endurance, and [sensor capabilities](/avionics/sensors/).  Their avionics share common hardware, software stacks, and diagnostic tools.
 - **Ground segment** – [TF-GCS02](/instruments/TF-GCS02/) provides command and monitoring, while [TF-simulator](/instruments/TF-simulator/) allows for rehearsing mission control logic and payload models before deployment.
-- **Support toolset** – Integration toolchain such as [TF-ATMON](/instruments/TF-ATMON/) streamlines atmospheric data acquisition, while shared avionics bridge different use-cases.
+- **Support toolset** – Integration toolchain such as [TF-ATMON](/instruments/TF-ATMON/) streamlines atmospheric data acquisition, while shared avionics bridge different use cases.
 
 Together, ThunderFly instruments form an ecosystem where upgrades to one element (for example, a new payload or telemetry link) can be fielded across the rest of the fleet with minimal additional effort.
 
@@ -25,12 +25,12 @@ ThunderFly maintains multiple autogyro configurations to address diverse researc
 | --- | --- | --- | --- | --- |
 | [**TF-G1**](https://github.com/ThunderFly-aerospace/TF-G1) | Heavy-lift autogyro platform | Carrying multi-kilogram scientific payloads and mission prototypes | Substantial research payloads with high power or mechanical integration needs | upon request (typically tens of thousands EUR) |
 | [**TF-G2**](/instruments/TF-G2/) | Development kit for unmanned autogyros | Applied research, integration testing, operator training | Medium payloads (hundreds of grams) requiring frequent reconfiguration | ≈ 7 900 EUR |
-| [**TF-G250**](/instruments/TF-G250/) | Aerological autogyro | Atmospheric profiling or micro-sensor payloads | Lighweight payloads with limited power and data needs | ≈ 1 000 EUR |
+| [**TF-G250**](/instruments/TF-G250/) | Aerological autogyro | Atmospheric profiling or micro-sensor payloads | Lightweight payloads with limited power and data needs | ≈ 1 000 EUR |
 | [**TF-B1**](/instruments/TF-B1/) (HAB platform) | Stratospheric balloon system | High-altitude experiments | Modular atmospheric and remote-sensing payloads | 900 – 2 500 EUR |
 
 \*Prices are indicative and depend on configuration, export conditions, accessories, and included payload interfaces.
 
-Across the lineup, ThunderFly autogyros stand out for their inherent stability in turbulent weather at low forward speeds.  These make them ideal for atmospheric sampling, scientific payload testing. The [TF-B1 balloon platform](/instruments/TF-B1/) extends reach into the stratosphere. Because all platforms adopt standardized [ThunderFly avionics](/avionics/), teams can migrate payloads, ground control procedures, and maintenance practices from one airframe to another with minimal retraining.
+Across the lineup, ThunderFly autogyros stand out for their inherent stability in turbulent weather at low forward speeds.  These make them ideal for atmospheric sampling and scientific payload testing. The [TF-B1 balloon platform](/instruments/TF-B1/) extends reach into the stratosphere. Because all platforms adopt standardized [ThunderFly avionics](/avionics/), teams can migrate payloads, ground control procedures, and maintenance practices from one airframe to another with minimal retraining.
 
 ### Learning resources
 

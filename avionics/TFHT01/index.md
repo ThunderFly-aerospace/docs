@@ -31,7 +31,7 @@ Sensors mounted on UAVs can be used for a variety of purposes. TFHT can measure 
 | Operating temperature range| 0 °C - +65 °C | Sensor physically measures in range -40°C to +120°C with reduced accuracy |
 | Operating humidity range| 0-100 % | At humidity above 80% the performance of the sensor could be degraded in case of prolonged periods |
 | I2C connector | 4-pin JST-GH | The second connector could be installed on the opposite side |
-| I2C address | 0x44 default | By switching of JP1 is possible change address to 0x45 |
+| I2C address | 0x44 default | By switching JP1 it is possible to change the address to 0x45 |
 | Storage temperature range| -20 °C - +40 °C |  |
 | Operational input voltage | 3.6 - 5.4V | Overvoltage internally protected by zener diode |
 | Mass | 2 g | PCB without cabling |

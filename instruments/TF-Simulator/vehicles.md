@@ -72,7 +72,7 @@ make px4_sitl_nolockstep flightgear_tf-g1
 
 ### TF-G2 UAV Autogyro
 
-The anothe UAV autogyro model supported by FlightGear is [TF-G2 Autogyro](/instruments/TF-G2).
+Another UAV autogyro model supported by FlightGear is the [TF-G2 Autogyro](/instruments/TF-G2).
 
 ```sh
 make px4_sitl_nolockstep flightgear_tf-g2
@@ -96,7 +96,7 @@ make px4_sitl_nolockstep flightgear_tf-r1
 ## Quadrotor
 
 There is only an [incomplete multirotor model](https://github.com/ThunderFly-aerospace/FlightGear-TF-Mx1).
-This is not yet usable (it is numerically unstable and needs an additional work).
+This is not yet usable (it is numerically unstable and needs additional work).
 
 ## Adding a New Vehicle
 
