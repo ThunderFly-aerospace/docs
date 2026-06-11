@@ -107,7 +107,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 nav_external_links:
    - title: ThunderFly Company
      url: https://www.thunderfly.cz/
-   - title: Contact
+   - title: Sales & Contact
      url: https://www.thunderfly.cz/contact-us.html
 
 # Footer content

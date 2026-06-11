@@ -35,8 +35,8 @@ The avionics devices are versatile and modular to solve a wide range of engineer
 
 - **Innovation**: At the core of our products is a commitment to innovation, pushing the boundaries of what UAVs can achieve.
 - **Quality**: We prioritize European reliability and precision, using only the highest quality materials and stringent testing procedures.
-- **Support**: Our team is here to support you from selection through implementation, ensuring you get the most out of our products.
+- **Support**: Our team is here to support you from selection through implementation. Verified customers can access [technical support](/support/) using their product serial number.
 
 ## Get in Touch
 
-Ready to elevate your UAV capabilities with ThunderFly? Contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz) or visit our [website](https://www.thunderfly.cz/) for more information.
+Ready to elevate your UAV capabilities with ThunderFly? For sales and general inquiries, contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz) or visit our [website](https://www.thunderfly.cz/). Existing customers looking for technical assistance can find information on the [Support](/support/) page.
