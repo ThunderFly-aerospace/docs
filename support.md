@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Support
+title: Products Support
 permalink: /support/
-nav_order: 10
+nav_order: 999
 ---
 
 # Technical Support
