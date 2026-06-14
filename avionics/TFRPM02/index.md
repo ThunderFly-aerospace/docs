@@ -15,7 +15,7 @@ The TFRPM02 is a compact RPM sensor for UAVs designed for direct connection to P
 <img src="TFRPM02-bottom.png" width="45%" />
 </p>
 
-The sensor accepts a pulse signal from an external sensing probe (optical encoder, Hall-effect sensor, etc.). Pulses are counted by the on-board NXP PCF8593 I²C counter and read out periodically by the flight controller. The PCF8593 is register-compatible with the PCF8583, so the TFRPM02 uses the same PX4 `pcf8583` driver as the TFRPM01.
+The sensor accepts a pulse signal from an external sensing probe (optical encoder, Hall-effect sensor, etc.). Pulses are counted by the on-board I²C counter and read out periodically by the flight controller. The TFRPM02 uses the same PX4 `pcf8583` driver as the TFRPM01.
 
 ## Where to Buy?
 
@@ -36,7 +36,6 @@ For a quotation or support, contact us at [sale@thunderfly.cz](mailto:sale@thund
 
 | Parameter | Value | Description |
 | --- | --- | --- |
-| **Counter IC** | NXP PCF8593 | I²C event counter, register-compatible with PCF8583 |
 | **Signal conditioning** | 74LVC1G14 Schmitt trigger | Single-channel inverting Schmitt trigger |
 | **I²C address** | 0x50 (default) | Changeable to 0x51 via JP2 solder jumper |
 | **I²C SCL frequency** | Max 100 kHz | |
@@ -76,7 +75,7 @@ After changing the address, the PX4 driver must be started with the `-a 0x51` ar
 
 ## PX4 Autopilot Integration
 
-The TFRPM02 is supported by the PX4 `pcf8583` driver. The PCF8593 counter IC is register-compatible with the PCF8583, so no separate driver is needed.
+The TFRPM02 is supported by the PX4 `pcf8583` driver.
 
 ### Enabling the Driver
 
@@ -129,7 +128,6 @@ For probe selection guidance, see the [TFRPM01 probe selection page](/avionics/T
 
 | Feature | TFRPM01 | TFRPM02 |
 | --- | --- | --- |
-| Counter IC | PCF8583 | PCF8593 (register-compatible) |
 | PCB size | 37.5 × 19 mm | 25 × 20 mm |
 | I²C connectors | 2× JST-GH (pass-through) | 1× JST-GH |
 | Power supply | Direct 5 V | 5 V with on-board 3.3 V LDO |
