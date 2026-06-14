@@ -70,7 +70,47 @@ Nominal hole diameter in PCB is 2.2 mm. Acceptable screw head diameter is up to 
 
 ## PX4 Autopilot Integration
 
-The PX4 firmware includes support for the TFRPMMAG01. When connected to the I2C bus of a Pixhawk flight controller, it is automatically detected and can be configured through standard PX4 parameters.
+The PX4 firmware includes a dedicated driver for the TFRPMMAG01 based on the S35770 I2C counter IC. The driver is part of the `rpm_sensor` module group.
+
+### Enabling the Driver
+
+The driver can be enabled permanently by setting the `SENS_EN_S35770` parameter to `1` in QGroundControl or via the MAVLink console:
+
+```
+param set SENS_EN_S35770 1
+```
+
+A reboot is required after changing this parameter. After reboot the driver starts automatically.
+
+### Manual Start via Console
+
+To start the driver manually from the PX4 NSH console (e.g., via MAVLink Shell), run:
+
+```
+s35770 start -X -a 50
+```
+
+Where `-X` selects the external I2C bus and `-a 50` sets the I2C address (decimal 50 = 0x32). To verify the driver is running:
+
+```
+s35770 status
+```
+
+To stop the driver:
+
+```
+s35770 stop
+```
+
+### Driver Parameters
+
+| Parameter | Default | Unit | Description |
+| --- | --- | --- | --- |
+| `SENS_EN_S35770` | 0 | — | Enable driver: `0` = disabled, `1` = enabled. Requires reboot. |
+| `S35770_POOL` | 1 000 000 | µs | Sensor poll interval. Requires reboot. |
+| `S35770_MAGNET` | 1000 | counts/rev | Number of counter pulses per one full rotation of the actuator. Adjust to match the number of pole pairs or magnet pulses. Requires reboot. |
+
+The `S35770_MAGNET` parameter is the most important one to configure correctly — it determines the RPM calculation accuracy. Set it to the number of magnetic pulses generated per revolution by your specific rotating assembly.
 
 ## Applications
 
