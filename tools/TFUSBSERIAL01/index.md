@@ -16,7 +16,7 @@ The converter is designed to service and debug operations on UAVs. It respects t
 
 TFUSBSERIAL01 enables a computer to communicate with UART-based telemetry devices such as flight management units (FMUs / autopilots) and serial peripherals including radio modems, companion computers, and various onboard sensors.
 
-The interface exposes two dedicated Pixhawk telemetry connectors — one for an FMU port and one for a peripheral port — both following the standard 6-pin telemetry pinout (TX, RX, RTS, CTS, VCC, GND) with 3.3 V logic levels. This allows direct, 1:1 cabling without custom RX/TX crossover cables and makes the device suitable for configuration, debugging, monitoring, and passive sniffing of UART telemetry links between an autopilot and its peripherals.
+The interface exposes two dedicated Pixhawk telemetry connectors — one for an FMU port and one for a peripheral port — both following the standard 6-pin telemetry pinout (TX, RX, RTS, CTS, VCC, GND) with 3.3 V logic levels. This allows direct, 1:1 cabling without custom RX/TX crossover cables and makes the device suitable for configuration, debugging, monitoring, and passive sniffing of UART telemetry links between an autopilot and its peripherals. A matching straight-through cable is available as the [TFCAB01 UART/TELEM/SERIAL cable](/avionics/TFCAB01/#uarttelemserial-cables).
 
 ## Key features
 
@@ -41,7 +41,7 @@ Connect the FMU or peripheral device to the corresponding PixHawk connector.  Th
 
 ### Self-test
 
-Proper function and cable integrity can be easily tested by connecting a cable between the "to FMU" and "to Peripheral" connectors.
+Proper function and cable integrity can be easily tested by connecting a cable between the "to FMU" and "to Peripheral" connectors. A [TFCAB01 UART/TELEM/SERIAL cable](/avionics/TFCAB01/#uarttelemserial-cables) is well suited for this loopback test.
 
 ![TFUSBSERIAL01 self test](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUSBSERIAL01/TFUSBSERIAL01A/doc/img/TFUSBSERIAL01_self-test.jpg)
 

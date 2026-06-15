@@ -57,7 +57,7 @@ The TFSIK01 is a European-made state-of-the-art SiK-based unmanned vehicle C2 an
 | Receiver sensitivity|  -117 dBm or better | Depends on datalink bandwidth configuration |
 | Bandwidth |  < 4 MHz | RF filter selective |
 | RF connectors| [MCX](https://en.wikipedia.org/wiki/MCX_connector) on both RF ports | snap-on function prevents damage of connector by extensive external forces|
-| Serial interface| 3.3 V UART | 6-position JST-GH connector with [handshake available](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) |
+| Serial interface| 3.3 V UART | 6-position JST-GH connector with [handshake available](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter); see the [TFCAB01 UART cable](/avionics/TFCAB01/#uarttelemserial-cables) for the matching pinout |
 | Operating and storage temperature | −20°C to +40°C | Limited by case material |
 | Operational power voltage | +5V to +5.4V, 500mA max | Undervoltage is not treated. Current consumption is defined mainly by the set RF power. Receive current is 25 mA|
 | Mass | 18g | Including the housing |
@@ -413,7 +413,7 @@ In this variant, the SMA connectors are not mechanically locked, allowing the an
 
 ### Connecting to Autopilot
 
-Connection to the autopilot flight controller is facilitated through a JST-GH cable with a 6-pin connector. While PX4 firmware initially configures the TELEM1 port for telemetry connections, adjustments in the PX4 or Ardupilot firmware settings allow for modem connections through any available UART port. 
+Connection to the autopilot flight controller is facilitated through a JST-GH cable with a 6-pin connector. ThunderFly offers a ready-made [TFCAB01 UART/TELEM/SERIAL cable](/avionics/TFCAB01/#uarttelemserial-cables) for this purpose, with the matching 6-pin JST-GH pinout and color coding documented there. While PX4 firmware initially configures the TELEM1 port for telemetry connections, adjustments in the PX4 or Ardupilot firmware settings allow for modem connections through any available UART port. 
 
 ### Ground Station Connectivity
 
@@ -423,7 +423,9 @@ The TFSIK01 modem directly interfaces with ground stations via its UART port, en
 
 #### USB Connectivity
 
-To connect the modem to a computer, a USB to UART conversion is essential. The [TFUSBSERIAL01 module](/avionics/TFUSBSERIAL01), specifically designed for this purpose, features an FTDI-based USB chip for reliable data transmission and includes a USB-C connector for easy linking to computers or mobile devices, alongside a UART JST-GH connector for straightforward connection to the TFSIK01 modem.
+To connect the modem to a computer, a USB to UART conversion is essential. The [TFUSBSERIAL01 module](/tools/TFUSBSERIAL01/), specifically designed for this purpose, features an FTDI-based USB chip for reliable data transmission and includes a USB-C connector for easy linking to computers or mobile devices, alongside a UART JST-GH connector for straightforward connection to the TFSIK01 modem.
+
+The TFSIK01 must be connected to the **peripheral port** of the TFUSBSERIAL01 (the connector labeled "to Peripheral"). The TFSIK01 modem behaves as a peripheral device, not as an FMU/autopilot, so the peripheral port provides the correct RX/TX orientation for a direct 1:1 cable. Use a [TFCAB01 UART/TELEM/SERIAL cable](/avionics/TFCAB01/#uarttelemserial-cables) to make this connection.
 
 ![TFSIK01 pair with USB-C converter](https://raw.githubusercontent.com/ThunderFly-aerospace/TFSIK01/TFSIK01A/doc/img/TFSIK01_pair.jpg)
 
