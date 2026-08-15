@@ -10,7 +10,7 @@ nav_order: "77"
 
 TFUNIPAYLOAD01 is a universal interface board designed for seamless integration of custom sensors with PX4- or ArduPilot-based UAVs, especially when no dedicated driver for the sensor exists in the flight stack.
 
-For quotations, direct orders, or custom payload integration, please contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing). For custom payload integration, please contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 
 ![TF-ATMON with TFUNIPAYLOAD01 block diagram](https://raw.githubusercontent.com/ThunderFly-aerospace/TFUNIPAYLOAD01/refs/heads/TFUNIPAYLOAD01A/doc/img/block_schematics.svg)
 

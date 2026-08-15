@@ -17,7 +17,7 @@ The TFLORA01 device is designed for long-range telemetry transmission from UAVs 
 
 This module does not contain any onboard firmware, providing greater flexibility for custom implementations. Firmware for communication protocols such as MAVLink is provided by out-of-tree driver in the PX4 autopilot system. The absence of firmware in the transceiver module allows for enhanced versatility, such as the ability to send standard MAVLink telemetry streams while occasionally transmitting LoRa packets to a LoRaWAN IoT network.
 
-For detailed usage instructions or custom integration, please contact **[sale@thunderfly.cz](mailto:sale@thunderfly.cz)**.
+For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing). For detailed usage instructions or custom integration, please contact **[sale@thunderfly.cz](mailto:sale@thunderfly.cz)**.
 
 ## Features
 

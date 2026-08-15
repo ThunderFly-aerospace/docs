@@ -71,11 +71,8 @@ The advanced FOC algorithm and integrated regulators minimize power losses while
 
 ## Availability
 
-The TFESC03 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
-
-* For commercial inquiries or direct orders, contact: [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
-* Customization or mounting modifications are available upon request.
-
-Standard configuration can also be purchased online through [Lectronz](https://lectronz.com/products/1791/).
+- [Purchase TFESC03 on Lectronz](https://lectronz.com/products/1791/) for online, self-service orders.
+- For pricing, bulk orders, or a direct quotation, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
+- Customization or mounting modifications are available upon request.
 
 <!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/41942/ -->

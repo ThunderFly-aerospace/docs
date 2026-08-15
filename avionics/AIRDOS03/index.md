@@ -40,7 +40,7 @@ AIRDOS03 is designed as a sensor for the [TF-ATMON](/instruments/TF-ATMON) syste
 
 ### Where to get it?
 
-AIRDOS03 can be purchased directly from ThunderFly by email at [sale@thunderfly.cz](mailto:sale@thunderfly.cz). For larger orders or special configurations, feel free to reach out with your requirements.
+For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 Although AIRDOS03 was developed in partnership with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), the ThunderFly team handles sales, support, and integration for airborne applications.
  

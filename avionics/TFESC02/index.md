@@ -36,8 +36,7 @@ The TFESC02 is a high-performance BLDC motor driver device designed specifically
 
 ## Availability and Customization
 
-The TFESC02 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
-- For commercial inquiries, contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+- For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 - Customization, or mounting modifications, is available upon request.
 
 ## Technical Specifications

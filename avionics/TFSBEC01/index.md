@@ -25,8 +25,7 @@ The TFSBEC01 module is designed to provide a stable and efficient power supply f
 
 ## Availability and Customization
 
-The TFSBEC01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
-- For commercial inquiries, contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+- For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 - Customization, or mounting modifications, is available upon request.
 
 ## Technical Specifications

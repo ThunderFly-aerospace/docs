@@ -59,7 +59,7 @@ The modified SPS30 sensor is connected to PX4 autopilot-supported hardware using
 
 ## Availability
 
-The ThunderFly TFPM02 sensors (both A and B variants) are commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Please contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for inquiries, pricing, or customization.
+The ThunderFly TFPM02 sensors (both A and B variants) are commercially available. For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 ## Demonstration
 

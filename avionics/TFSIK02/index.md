@@ -10,7 +10,7 @@ nav_order: "11"
 
 ### Purchasing Information
 
-The device can be purchased from ThunderFly s.r.o. For commercial quotations or special configurations (frequency bands, output power, cryptographic handling), contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+For pricing and general ordering information, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing). For special configurations (frequency bands, output power, cryptographic handling), contact us directly at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
 TFSIK02 is developed and manufactured in‑house and is localized in the EU, which allows  hardware configuration and traceable customization required by defense and security‑sensitive users.
 
 ## Overview

@@ -17,7 +17,7 @@ ThunderFly offers three main cable types:
 - **UAVCAN Cables**: Designed for CAN bus communication.
 - **UART/TELEM/SERIAL Cables**: Used for serial data transmission.
 
-Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). The majority of cables use [JST-GH connectors](https://www.jst.com/products/crimp-style-connectors-wire-to-board-type/gh-connector/) for robust connections. All cables can be purchased through the corresponding Lectronz links or via direct email inquiry at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). The majority of cables use [JST-GH connectors](https://www.jst.com/products/crimp-style-connectors-wire-to-board-type/gh-connector/) for robust connections. Each variant has its own Lectronz link below; for pricing and other ordering options, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 ## I²C Cables
 
@@ -27,10 +27,8 @@ The TFCABxxI2C01 series is optimized for **I²C communication**, featuring a twi
 
 ## Where to Buy
 
-TFCAB I2C cables can be purchased from:
-
-  * Direct inquiry at [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
-  * [Lectronz](https://lectronz.com/products/1060)
+- [Purchase TFCABxxI2C01 on Lectronz](https://lectronz.com/products/1060) for online, self-service orders.
+- For pricing, bulk orders, or a direct quotation, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 <!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/30113/ -->
 
@@ -62,10 +60,8 @@ The TFCABxxCAN01 series is designed for **UAVCAN communication**, optimized for 
 
 ## Where to Buy
 
-TFCAB CAN cables can be purchased from:
-
-  * Direct inquiry at [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
-  * [Lectronz](https://lectronz.com/products/1195)
+- [Purchase TFCABxxCAN01 on Lectronz](https://lectronz.com/products/1195) for online, self-service orders.
+- For pricing, bulk orders, or a direct quotation, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 <!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/30124/ -->
 
@@ -97,10 +93,8 @@ The TFCABxxUART01 series is used for **serial communication**, connecting autopi
 
 ![TFCABxxUART01](TFCAB15UART01.jpg)
 
-TFCAB UART cables can be purchased from:
-
-  * Direct inquiry at [sale@thunderfly.cz](mailto:sale@thunderfly.cz)
-  * [Lectronz](https://lectronz.com/products/1346)
+- [Purchase TFCABxxUART01 on Lectronz](https://lectronz.com/products/1346) for online, self-service orders.
+- For pricing, bulk orders, or a direct quotation, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 <!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/41886/ -->
 

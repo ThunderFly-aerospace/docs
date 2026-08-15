@@ -15,7 +15,10 @@ We built TFSIK01 because we were not satisfied with the reliability of available
 
 ### Purchasing Information
 
-The device can be purchased from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Contact us by email at [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for a commercial quotation, custom configuration, or volume order, or shop directly through [Lectronz](https://lectronz.com/products/1067). We are the designers of this modem and therefore have full control of the modem's construction and manufacturing. This gives us the ability to react even to non-standard requests for modification or functions by adopting our in-house European production.
+- [Purchase TFSIK01 on Lectronz](https://lectronz.com/products/1067) for online, self-service orders.
+- For pricing, bulk orders, or a direct quotation, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
+
+We are the designers of this modem and therefore have full control of the modem's construction and manufacturing. This gives us the ability to react even to non-standard requests for modification or functions by adopting our in-house European production.
 
 <!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/34682/ -->
 

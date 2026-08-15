@@ -23,7 +23,8 @@ TFRPM01 was created to solve a specific challenge in automating the launch of ou
 
 ## Where to get it?
 
-ThunderFly RPM counter is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). Write an email to [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for direct orders, quotations, or custom requirements, or shop online at [Lectronz](https://lectronz.com/products/1055).
+- [Purchase TFRPM01 on Lectronz](https://lectronz.com/products/1055) for online, self-service orders.
+- For pricing, bulk orders, or a direct quotation, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 <!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/20376/ -->
 

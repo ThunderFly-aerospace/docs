@@ -21,9 +21,8 @@ The TFHT02 is a compact and precise hygrometer and temperature sensor designed f
 - **Flexible Integration**: Can be used with TF-ATMON and Pixhawk.
 
 ## Where to Buy?
-The TFHT02 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/). 
 
-For a quotation, direct order, or support, contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz). Online purchases are available through our [Lectronz store](https://lectronz.com/stores/thunderfly).
+For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 <!-- Tindie store link kept for possible future restoration: https://www.tindie.com/stores/thunderfly/ -->
 

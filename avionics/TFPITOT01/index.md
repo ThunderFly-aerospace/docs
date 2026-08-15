@@ -23,9 +23,8 @@ As we solved airspeed sensor reliability problems with the [TFSLOT01](/avionics/
 
 ## Availability and Customization
 
-The TFPITOT01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/)
-- Online orders can be placed via [Lectronz](https://lectronz.com/products/1062).
-- For direct orders or commercial inquiries, contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+- [Purchase TFPITOT01 on Lectronz](https://lectronz.com/products/1062) for online, self-service orders.
+- For pricing, bulk orders, or a direct quotation, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 - Customization, including length, diameter, or mounting modifications, is available upon request (typical lead time: 3 weeks).
 
 <!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/37220/ -->

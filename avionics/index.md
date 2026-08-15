@@ -150,18 +150,16 @@ The standardized PCB form factor allows straightforward design of **protective e
 
 This approach results in avionics modules that are mechanically protected while still being lightweight and accessible to service.  The described modular block concept allows either grouping multiple avionics units together or distributing them in different airframe compartments, depending on application requirements.
 
-### How to Order
+### Components Pricing
 
-You can order avionics components in the following ways:
+Every ThunderFly avionics component can be ordered in one of two ways:
 
-- **Directly from ThunderFly** — email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) to request a quotation, check lead times, or discuss bulk pricing.
-- **Online marketplace** — use **[Lectronz](https://lectronz.com/stores/thunderfly)** for a self-service online purchase.
+- **Directly from ThunderFly** — email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) to request a quotation, check lead times, or discuss bulk pricing. This is also how to order components that are not listed in the table below.
+- **Online marketplace** — buy self-service through **[Lectronz](https://lectronz.com/stores/thunderfly)**; where available, a direct product link is provided on the component's own documentation page.
 
 <!-- Tindie store link kept for possible future restoration: https://www.tindie.com/stores/thunderfly/ -->
 
-### Components Pricing
-
-The following table lists wholesale prices for avionics components for orders up to 50 units. For bulk pricing, unlisted items or special requirements, please directly contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+The following table lists wholesale prices for orders up to 50 units. For bulk pricing, unlisted items, or special requirements, please contact [sale@thunderfly.cz](mailto:sale@thunderfly.cz) directly.
 
 | Product Name       | Price (1–3 pcs) | Price (4–10 pcs) | Price (11–50 pcs) |
 |--------------------|------------------|-------------------|--------------------|

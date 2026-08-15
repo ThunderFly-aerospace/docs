@@ -32,7 +32,7 @@ The THUNDERMILL01 is an [electric field mill](https://en.wikipedia.org/wiki/Fiel
 
 ### Where to get it?
 
-THUNDERMILL01 was developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), who contributed to the [initial THUNDERMILL design](https://docs.ust.cz/THUNDERMILL/THUNDERMILL01/) and continue to support the open-source hardware ecosystem. THUNDERMILL01 can be bought directly from ThunderFly by email at [sale@thunderfly.cz](mailto:sale@thunderfly.cz). The same email can be used if you have specific requirements for custom modifications or if the product is to be purchased in large quantities.
+THUNDERMILL01 was developed in collaboration with [Universal Scientific Technologies s.r.o.](https://www.ust.cz), who contributed to the [initial THUNDERMILL design](https://docs.ust.cz/THUNDERMILL/THUNDERMILL01/) and continue to support the open-source hardware ecosystem. For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 ## Technical Specifications
 

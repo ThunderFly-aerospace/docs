@@ -25,9 +25,7 @@ The TFRPMMAG01 is a compact sensor designed for measuring the RPM of diametrical
 
 ## Where to Buy?
 
-The TFRPMMAG01 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
-
-For a quotation or support, contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 ## Technical Specifications
 

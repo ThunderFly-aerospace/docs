@@ -29,8 +29,8 @@ The sensor is specifically designed for simple RPM measurement with the TFRPM01 
 
 ## How to Buy
 
-- Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) for tailored quotations or volume orders handled by ThunderFly s.r.o.
-- [Purchase TFPROBE01 on Lectronz](https://lectronz.com/products/1065) for online orders.
+- [Purchase TFPROBE01 on Lectronz](https://lectronz.com/products/1065) for online, self-service orders.
+- For pricing, bulk orders, or a direct quotation, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 <!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/20377/ -->
 

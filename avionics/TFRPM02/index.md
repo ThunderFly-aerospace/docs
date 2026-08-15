@@ -19,9 +19,7 @@ The sensor accepts a pulse signal from an external sensing probe (optical encode
 
 ## Where to Buy?
 
-The TFRPM02 is available from [ThunderFly s.r.o.](https://www.thunderfly.cz/).
-
-For a quotation or support, contact us at [sale@thunderfly.cz](mailto:sale@thunderfly.cz).
+For pricing, ordering, and quotations, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 ## Main Features
 

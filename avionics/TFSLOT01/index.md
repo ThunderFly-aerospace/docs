@@ -26,8 +26,8 @@ TFSLOT01 was born out of a recurring failure we encountered with our TF-G1 and [
 
 ## How to Buy
 
-- Direct order — Email [sale@thunderfly.cz](mailto:sale@thunderfly.cz) with your requirements for quotations or tailored configurations provided by ThunderFly s.r.o.
-- [Purchase TFSLOT01 on Lectronz](https://lectronz.com/products/1058) for online orders.
+- [Purchase TFSLOT01 on Lectronz](https://lectronz.com/products/1058) for online, self-service orders.
+- For pricing, bulk orders, or a direct quotation, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
 <!-- Tindie link kept for possible future restoration: https://www.tindie.com/products/21790/ -->
 
