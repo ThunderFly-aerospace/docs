@@ -26,10 +26,10 @@ The AIRDOS03 is a compact ionizing radiation detector and spectrometer developed
 ### Key Features
 
 * Fully compatible with [TF-ATMON](/instruments/TF-ATMON) and Pixhawk ecosystem
-  * Serial MAVlink sensor for direct connection to FMU 
+  * Serial MAVLink sensor for direct connection to FMU 
 * Lightweight and low-power (5 V @ 3 mA)
 * Spectral data output for scientific analysis
-* Can operate in real-time streaming mode or store data onboard
+* Can operate in real-time streaming mode or store data onboard the UAV
 * Modular open-source firmware for custom scientific missions
 
 ### UAV Integration
@@ -46,8 +46,8 @@ Although AIRDOS03 was developed in partnership with [Universal Scientific Techno
  
 ### Technical parameters
 
-* Measurement of the deposited energy of ionizing radiation in the 40 keV to 80 MeV
-* Energy resolution 15 ±2 keV per channel (firmware-dependent)
+* Measurement of the deposited energy of ionizing radiation from 40 keV to 80 MeV
+* Energy resolution: 15 ±2 keV per channel (firmware-dependent)
 * Effective number of energy channels: ~65000
 * 44 mm³ detection volume
 * Radiation spectra integration time: 10 s (configurable by firmware)
