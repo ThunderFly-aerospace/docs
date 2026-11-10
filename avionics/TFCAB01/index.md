@@ -8,6 +8,15 @@ nav_order: "50"
 
 # TFCAB - ThunderFly Pixhawk Compatible Cabling System
 
+**Cable types on this page:**
+
+| Cable type | Bus | Pins |
+|------------|-----|------|
+| [TFCABxxI2C01](#i2c-cables) | I²C | 4 |
+| [TFCABxxCAN01](#uavcan-cables) | UAVCAN (CAN bus) | 4 |
+| [TFCABxxUART01](#uarttelemserial-cables) | UART / TELEM / SERIAL | 6 |
+| [SPI cable](#spi-cables) | SPI | 7 |
+
 TFCABxxyy01 cables are high-quality silicone cables designed for avionics applications in Pixhawk-based drone systems. These cables ensure reliable connectivity, enhanced mechanical resistance, and reduced electromagnetic interference (EMI). Each cable type follows a structured color-coding scheme to ensure easy identification and reduce connection errors.
 
 ## Available Cable Variants
@@ -19,7 +28,7 @@ ThunderFly offers three main cable types:
 
 Each cable type is available in different lengths (15 cm, 30 cm, and 45 cm). The majority of cables use [JST-GH connectors](https://www.jst.com/products/crimp-style-connectors-wire-to-board-type/gh-connector/) for robust connections. Each variant has its own Lectronz link below; for pricing and other ordering options, see [Components Pricing & Ordering](https://docs.thunderfly.cz/avionics/#components-pricing).
 
-## I²C Cables
+## I²C Cables {#i2c-cables}
 
 The TFCABxxI2C01 series is optimized for **I²C communication**, featuring a twisted design to minimize internal cross-talk and capacitance. This ensures reliable data transmission in avionics environments.
 
@@ -52,7 +61,7 @@ The TFCABxxI2C01 series is optimized for **I²C communication**, featuring a twi
 - **10 turns per 30 cm** for SCL/VCC and SDA/GND pairs.
 - **4 turns per 30 cm** for the combined cable.
 
-## UAVCAN Cables
+## UAVCAN Cables {#uavcan-cables}
 
 The TFCABxxCAN01 series is designed for **UAVCAN communication**, optimized for EMI resistance through specific cable twisting.
 
@@ -87,7 +96,7 @@ The TFCABxxCAN01 series is designed for **UAVCAN communication**, optimized for 
 - **10 turns per 30 cm** for GND/VCC and CAN_L/CAN_H pairs.
 - **4 turns per 30 cm** for the combined cable.
 
-## UART/TELEM/SERIAL Cables
+## UART/TELEM/SERIAL Cables {#uarttelemserial-cables}
 
 The TFCABxxUART01 series is used for **serial communication**, connecting autopilots and peripherals. UART cables do not support networking and must be connected directly.
 
@@ -121,7 +130,7 @@ The TFCABxxUART01 series is used for **serial communication**, connecting autopi
 - **Straight-through wiring**: Ensure that RX/TX and RTS/CTS are properly swapped in device connectors. The cable itself is 1:1.
 
 
-### SPI
+## SPI Cables {#spi-cables}
 
 This cable is used for the connection of SPI bus devices. 
 
